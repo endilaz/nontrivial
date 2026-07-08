@@ -40,9 +40,12 @@ unstudied." It is:
 > tasks, using two complementary behavioral methods, plus activation-probe
 > triangulation on the same open model that also sits in the behavioral panel.**
 
-A deep-research literature sweep was started 2026-07-07 and paused (token budget).
-Completing it (or a slimmer rerun) is a Phase 0 task; update this section with what
-it finds, especially anything from Feb–Jul 2026.
+A deep-research literature sweep was started 2026-07-07 and stopped early (token
+budget); no results were saved. Completing it is a Phase 0 task: plan a **slimmer
+fresh run** (fewer sources, single verification vote, tighter fetch cap) — the old
+run (wf_5ba027e2-9b5) cannot be resumed across sessions, so don't count on its
+cache. It is token-heavy; launch only with the researcher's explicit go-ahead.
+Update this section with what it finds, especially anything from Feb–Jul 2026.
 
 **Two directions:**
 - **Direction 1 (primary, behavioral):** CoT step corruption + hint paradigm, run via

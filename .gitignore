@@ -1,0 +1,20 @@
+# Secrets — API keys live here (ground rule 7). NEVER commit.
+.env
+
+# Virtual environment
+.venv/
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+
+# Response cache (ground rule 8) — regenerable from the pipeline, not an artifact.
+data/cache/
+
+# Test / tooling caches
+.pytest_cache/
+notebooks/.ipynb_checkpoints/
+
+# NOTE: data/results/ and logs/ are deliberately NOT ignored — they are
+# reproducible experimental artifacts (raw API responses, cost log) that must
+# be committed. See CLAUDE.md ground rules 1 & 4.

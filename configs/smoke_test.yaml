@@ -1,0 +1,31 @@
+# Phase 0 smoke-test run config (ground rule 4).
+#
+# Targets a PLACEHOLDER workhorse model. gpt-5.4-mini is a cheap-workhorse
+# CANDIDATE (CLAUDE.md Section 4) — its price is UNVERIFIED until the Phase 0
+# capability matrix, so the smoke test records cost_usd=null for it rather than
+# inventing a number. Swap provider/model here once the workhorse is chosen.
+#
+# thinking_setting is recorded on every run (hidden-reasoning policy, Section 4).
+# For the prompted-CoT default we keep native thinking "disabled" where the API
+# allows it.
+
+run_id: smoke_test_v1
+provider: openai
+model: gpt-5.4-mini
+temperature: 0.0
+max_tokens: 512
+thinking_setting: disabled
+seed: 0
+# The reasoning stays free-form; every response must end with a single
+# `Final answer: X` line (researcher decision, 2026-07-07).
+prompt_template: |
+  Solve the following problem. Think step by step, then end your response with a
+  single line of exactly the form `Final answer: X`.
+
+  {problem}
+prefill_mechanism: null
+date: "2026-07-08"
+notes: >
+  Phase 0 end-to-end smoke test on 5 trivial hardcoded problems. Validates the
+  JSONL output schema and the full generate -> parse -> cost -> log path. Not run
+  in Phase 0 (no keys, no spend authorized).

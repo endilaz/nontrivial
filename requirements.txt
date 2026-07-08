@@ -1,0 +1,28 @@
+# CoT Faithfulness Research — Phase 0 dependencies (pinned; ground rule 4).
+#
+# Direct dependencies only, pinned to the exact versions installed and tested in
+# .venv on 2026-07-08 (Python 3.13.6, Windows). Transitive dependencies are
+# resolved by pip; run `pip freeze` for the full locked set if you need one.
+#
+# Deliberately NOT included yet (arrive in later phases): pandas, numpy, torch,
+# transformers, transformer-lens, scikit-learn, matplotlib. Add them in Phase 5/6.
+
+# Provider SDKs (provider-agnostic generation client)
+anthropic==0.116.0
+openai==2.44.0
+google-genai==2.10.0
+
+# Config / secrets / validation
+python-dotenv==1.2.2
+PyYAML==6.0.3
+pydantic==2.13.4
+
+# Cost estimation (token counting)
+tiktoken==0.13.0
+
+# Tests
+pytest==9.1.1
+
+# NOTE on retry/backoff: implemented by hand in src/generation.py (inspectable,
+# no decorator magic), so `tenacity` is NOT a direct dependency. It may still be
+# pulled in transitively by a provider SDK; that is fine.
