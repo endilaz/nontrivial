@@ -47,5 +47,6 @@ def test_smoke_test_config_is_valid():
     # The committed example config must load and validate.
     cfg = load_run_config(REPO_ROOT / "configs" / "smoke_test.yaml")
     assert cfg.run_id == "smoke_test_v1"
-    assert cfg.provider == "openai"
+    assert cfg.provider == "deepseek"  # approved workhorse (2026-07-08)
+    assert cfg.model == "deepseek-v4-flash"
     assert "{problem}" in cfg.prompt_template

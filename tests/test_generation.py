@@ -9,6 +9,8 @@ hardest.
 import pytest
 
 from src.generation import (
+    PREFILL_INSTRUCTION,
+    PREFILL_NATIVE,
     GenerationClient,
     GenerationRequest,
     cache_key,
@@ -136,6 +138,21 @@ def test_force_fresh_bypasses_read_but_still_writes(tmp_path, monkeypatch):
     assert hit.cache_hit is True
     assert hit.text == fresh.text  # force_fresh overwrote the cached entry
     assert calls["n"] == 2
+
+
+# --------------------------------------------------------------------------- #
+# Prefill mechanism resolution (capability matrix, 2026-07-08)
+# --------------------------------------------------------------------------- #
+
+
+def test_prefill_mode_deepseek_native_others_instruction_only(tmp_path):
+    # Researcher decision 2026-07-08: instruction-only is the primary mechanism
+    # everywhere; native prefill only where the provider supports it (DeepSeek).
+    client = GenerationClient(cache_dir=tmp_path, load_env=False, sleep_fn=lambda s: None)
+    assert client._prefill_mode("deepseek", True) == PREFILL_NATIVE
+    for provider in ("openai", "anthropic", "google", "openrouter", "together"):
+        assert client._prefill_mode(provider, True) == PREFILL_INSTRUCTION
+    assert client._prefill_mode("deepseek", False) is None  # no prefill requested
 
 
 # --------------------------------------------------------------------------- #

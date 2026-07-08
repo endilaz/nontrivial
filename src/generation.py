@@ -14,10 +14,12 @@ flows. It exists to satisfy three CLAUDE.md ground rules:
 
 Supported providers:
   * ``openai``      — OpenAI chat-completions
-  * ``anthropic``   — Anthropic Messages API (native assistant prefill)
+  * ``anthropic``   — Anthropic Messages API
   * ``google``      — Google Gemini (google-genai)
   * ``openrouter``  — OpenAI-compatible endpoint (custom base_url)
   * ``together``    — OpenAI-compatible endpoint (custom base_url)
+  * ``deepseek``    — DeepSeek first-party API (OpenAI-compatible; native
+                      prefill via the beta Chat Prefix Completion endpoint)
 
 Design notes
 ------------
@@ -74,6 +76,7 @@ PROVIDER_ENV_VARS: Dict[str, str] = {
     "google": "GEMINI_API_KEY",
     "openrouter": "OPENROUTER_API_KEY",
     "together": "TOGETHER_API_KEY",
+    "deepseek": "DEEPSEEK_API_KEY",
 }
 
 #: base_url for the OpenAI-compatible providers.
@@ -81,20 +84,31 @@ OPENAI_COMPATIBLE_BASE_URLS: Dict[str, Optional[str]] = {
     "openai": None,  # SDK default
     "openrouter": "https://openrouter.ai/api/v1",
     "together": "https://api.together.xyz/v1",
+    "deepseek": "https://api.deepseek.com",
 }
+
+#: DeepSeek's Chat Prefix Completion (native prefill) lives on the beta base URL:
+#: https://api-docs.deepseek.com/guides/chat_prefix_completion (2026-07-08).
+DEEPSEEK_BETA_BASE_URL = "https://api.deepseek.com/beta"
 
 #: Whether a provider supports a NATIVE assistant-prefill (a trailing assistant
 #: message that the model continues). When False, the prefill text is folded
 #: into a strict "state the answer only" instruction and the mechanism is
 #: recorded as ``instruction_only`` — the prefill is never silently dropped.
-#: These defaults are conservative starting points; the Phase 0 capability
-#: matrix refines them per model.
+#:
+#: Values set from the Phase 0 capability matrix (docs/capability_matrix.md,
+#: 2026-07-08): Anthropic's current AND legacy models 400 on prefill; OpenAI
+#: and Gemini have no prefill mechanism; only DeepSeek's first-party API (beta
+#: Chat Prefix Completion) supports it among API providers. Per the researcher
+#: decision (2026-07-08), instruction-only is the PRIMARY Phase 3 mechanism on
+#: all models; prefill additionally runs where True here (robustness arm).
 PROVIDER_PREFILL_SUPPORT: Dict[str, bool] = {
-    "openai": True,
-    "anthropic": True,
-    "google": True,
-    "openrouter": True,
-    "together": True,
+    "openai": False,
+    "anthropic": False,
+    "google": False,
+    "openrouter": False,
+    "together": False,
+    "deepseek": True,  # beta Chat Prefix Completion — confirm in smoke test
 }
 
 #: HTTP statuses we retry on (rate limit, transient server / gateway errors,
@@ -427,7 +441,7 @@ class GenerationClient:
         prefill_mechanism, system_fingerprint, raw_response.
         """
         provider = request.provider
-        if provider in ("openai", "openrouter", "together"):
+        if provider in ("openai", "openrouter", "together", "deepseek"):
             return self._invoke_openai_compatible(request)
         if provider == "anthropic":
             return self._invoke_anthropic(request)
@@ -447,14 +461,20 @@ class GenerationClient:
 
         api_key = self._get_key(request.provider)
         base_url = OPENAI_COMPATIBLE_BASE_URLS.get(request.provider)
-        client = openai.OpenAI(api_key=api_key, base_url=base_url) if base_url else openai.OpenAI(api_key=api_key)
 
         leading, prefill = _split_prefill(request.messages)
         mode = self._prefill_mode(request.provider, prefill is not None)
 
         messages = list(leading)
         if prefill is not None:
-            if mode == PREFILL_NATIVE:
+            if mode == PREFILL_NATIVE and request.provider == "deepseek":
+                # DeepSeek Chat Prefix Completion (beta): the trailing assistant
+                # message carries "prefix": true and the call must go to the
+                # /beta base URL. Interaction with thinking mode is UNVERIFIED
+                # (capability matrix open question) — confirm in the smoke test.
+                base_url = DEEPSEEK_BETA_BASE_URL
+                messages.append({"role": "assistant", "content": prefill, "prefix": True})
+            elif mode == PREFILL_NATIVE:
                 messages.append({"role": "assistant", "content": prefill})
             else:  # instruction_only: fold prefill into a strict instruction
                 messages.append(
@@ -466,6 +486,8 @@ class GenerationClient:
                         ),
                     }
                 )
+
+        client = openai.OpenAI(api_key=api_key, base_url=base_url) if base_url else openai.OpenAI(api_key=api_key)
 
         kwargs: Dict[str, Any] = {
             "model": request.model,

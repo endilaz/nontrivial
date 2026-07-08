@@ -118,10 +118,13 @@ non-trivial-research/            # repo root
 
 | Role | Model | Notes |
 |---|---|---|
-| Cheap workhorse (development + bulk) | Gemini 3 Flash or GPT-5.4-mini — chosen by the Phase 0 capability matrix, not price alone | All pipeline debugging happens here |
-| Bridge model (behavioral ↔ probing) | **DeepSeek-R1-Distill-Qwen-7B** (local, or via Together/OpenRouter) | Same checkpoint as Direction 2; required so probe results can be triangulated against Direction 1 results from the *same* model |
-| Open-weight reasoning | GLM-5.2 (via OpenRouter/Together) and/or DeepSeek | Verify the API returns **raw** thinking tokens, not a summary, before relying on native traces |
-| Closed frontier | Claude Sonnet 4.6 and/or GPT-5.4 (re-verify current model lineup at Phase 0) | Capability-scaling comparison |
+| Cheap workhorse (development + bulk) | **deepseek-v4-flash** (non-thinking mode) — approved 2026-07-08; fallback: Gemini 2.5 Flash | All pipeline debugging happens here. Only API candidate passing both hard gates (prefill + full thinking-disable); pending smoke-test confirmation of beta prefix-completion and zero-thinking behavior |
+| Bridge model (behavioral ↔ probing) | **DeepSeek-R1-Distill-Qwen-7B** (**local only** — no live serverless endpoint on Together/OpenRouter as of 2026-07-08) | Same checkpoint as Direction 2; required so probe results can be triangulated against Direction 1 results from the *same* model |
+| Open-weight reasoning | GLM-5.2 (raw `reasoning_content` verified in docs; pin ONE provider — OpenRouter routing varies — then verify its price) and/or DeepSeek | Confirm the pinned provider passes **raw** thinking tokens through unmodified before relying on native traces |
+| Closed frontier | **Decision pending.** Sonnet 4.6 is legacy (still served; accepts temperature 0; rejects prefill). Current options: Sonnet 5 / Opus 4.8 (temperature locked to provider default) or GPT-5.4. Claude Fable 5 cannot disable thinking → separate stratum if included | Capability-scaling comparison |
+
+Full sourced matrix: `docs/capability_matrix.md` (2026-07-08) — including every
+UNVERIFIED cell and the live API probes the smoke test must run.
 
 **Phase 0 capability matrix (gates workhorse and panel selection).** For each
 candidate model/provider, record:
@@ -184,20 +187,29 @@ in the shell (nohup / tmux), **not** kept alive inside an interactive session.
 Work through phases in order. Each phase ends with a checkpoint the researcher reviews.
 
 ### Phase 0 — Setup (week 1)
-- [ ] Initialize repo, venv, pinned `requirements.txt`, `.env` template.
-- [ ] `src/generation.py`: provider-agnostic client (OpenAI, Anthropic, Google,
-      OpenRouter) with retry/backoff and the **response cache** (ground rule 8).
-- [ ] `src/costs.py`: cost estimator + logger. Every batch is estimated in code
-      before launch (ground rule 2).
-- [ ] **Capability matrix** for all candidate models (Section 4): prefill support,
+- [x] Initialize repo, venv, pinned `requirements.txt`, `.env` template.
+      *(Done 2026-07-08.)*
+- [x] `src/generation.py`: provider-agnostic client (OpenAI, Anthropic, Google,
+      OpenRouter, Together, DeepSeek) with retry/backoff and the **response
+      cache** (ground rule 8). *(Done 2026-07-08; adapters not yet exercised
+      against live APIs — the smoke test does that.)*
+- [x] `src/costs.py`: cost estimator + logger. Every batch is estimated in code
+      before launch (ground rule 2). *(Done 2026-07-08; prices filled from the
+      capability matrix.)*
+- [x] **Capability matrix** for all candidate models (Section 4): prefill support,
       thinking-disable support, batch API, raw-vs-summarized reasoning, prices.
       Workhorse and panel are chosen from this matrix.
-- [ ] **Literature refresh:** finish the paused 2026-07-07 deep-research sweep (or a
-      slimmer rerun). Verify/refute the positioning in Section 1 — especially
+      *(Done 2026-07-08: `docs/capability_matrix.md`; workhorse approved —
+      Section 9. Closed-frontier choice still open.)*
+- [ ] **Literature refresh:** **ON HOLD — launch only when the researcher
+      explicitly triggers it** (decision 2026-07-08). Plan a slimmer fresh sweep
+      (see Section 1). Verify/refute the positioning in Section 1 — especially
       Arcuschin et al. 2025, Tutek et al. 2025, and anything Feb–Jul 2026 on
       open-ended CoT faithfulness. Update Section 1 with findings.
-- [ ] Smoke test: 5 problems through the workhorse model end-to-end; verify JSONL
-      output schema.
+- [ ] Smoke test: 5 problems through `deepseek-v4-flash` end-to-end; verify JSONL
+      output schema. Doubles as the live capability probe run (prefix-completion
+      works; non-thinking mode emits zero reasoning; see the matrix's
+      open-questions section for the full probe list). Needs API keys in `.env`.
 - **Checkpoint:** researcher reviews output schema, cost estimator, capability
   matrix, and updated positioning.
 
@@ -274,13 +286,18 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       also record the answer that would follow if the corrupted step were carried
       through faithfully (computable directly for math/logic; LLM-assisted with
       spot-checks elsewhere; N/A where undefined). Enables the outcome coding below.
-- [ ] **Re-injection with forced immediate answer** (researcher decision,
-      2026-07-07): present the corrupted CoT as the model's own prior reasoning and
-      force the final answer with no further reasoning — assistant prefill
-      (`Therefore, the final answer is`) where the provider supports it, otherwise a
-      strict "state the final answer only" instruction. Log the mechanism per model.
-      No free continuation in the primary condition. (Optional exploratory arm:
-      free continuation, workhorse only, labeled exploratory.)
+- [ ] **Re-injection with forced immediate answer** (researcher decisions,
+      2026-07-07 and 2026-07-08): present the corrupted CoT as the model's own
+      prior reasoning and force the final answer with no further reasoning. The
+      **primary mechanism on ALL models is a strict "state the final answer
+      only" instruction** (uniform across the panel — most 2026 APIs reject or
+      lack prefill; see the capability matrix). Where native prefill exists
+      (DeepSeek API, local bridge model), an **additional prefill arm**
+      (`Therefore, the final answer is`) runs as a robustness check /
+      within-model mechanism comparison. Log the mechanism per call and include
+      it as an analysis covariate. No free continuation in the primary
+      condition. (Optional exploratory arm: free continuation, workhorse only,
+      labeled exploratory.)
 - [ ] **Outcome coding (3-way, not binary):**
       - `followed_corruption` — answer matches the corruption-implied answer;
       - `changed_other` — answer changed but doesn't match it;
@@ -416,7 +433,10 @@ Exploratory analyses are allowed after these are computed and must be labeled as
   (~2–2.5K tokens), so the pass is input-heavy: order of **10M input / 1–2M output
   tokens per panel model**. Ballpark $10–60 per mid-tier model, more for frontier —
   but **the only numbers that matter come from `src/costs.py` before each batch**;
-  this paragraph is orientation, not authority.
+  this paragraph is orientation, not authority. The prefill robustness arm
+  (decision 2026-07-08) adds up to 13 extra re-injections/problem on
+  prefill-capable models only (DeepSeek API / local bridge — the cheapest
+  panel members).
 - Develop exclusively on the cheap workhorse. Frontier models run only finalized
   configs.
 - Batch API (~50% discount, up to 24h turnaround) + prompt caching (stem-first
@@ -450,3 +470,6 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-07 | **Every problem gets every corruption condition** (9 corruption + 3 truncation + 1 clean control = 13 re-injections). |
 | 2026-07-07 | **Constrained final-answer formats for all task types**; ethics uses a forced yes/no stance. |
 | 2026-07-07 | **DeepSeek-R1-Distill-Qwen-7B** is the Direction 2 model **and** joins the Direction 1 panel as the bridge model. |
+| 2026-07-08 | **Workhorse = `deepseek-v4-flash` (non-thinking mode)**; fallback Gemini 2.5 Flash. Pending smoke-test confirmation (beta prefix-completion works; non-thinking mode emits zero reasoning). Pin this model id — legacy `deepseek-chat`/`deepseek-reasoner` names sunset 2026-07-24. |
+| 2026-07-08 | Phase 3 forced-answer mechanism: **strict instruction-only is the primary mechanism on all models**; assistant prefill runs **additionally** where supported (DeepSeek API, local bridge model) as a robustness arm. Mechanism logged per call; analysis covariate. |
+| 2026-07-08 | **Literature refresh on hold** — launched only on the researcher's explicit trigger. |
