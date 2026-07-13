@@ -1,0 +1,23 @@
+run_id: smoke_test_v1
+provider: deepseek
+model: deepseek-v4-flash
+temperature: 0.0
+max_tokens: 512
+thinking_setting: disabled
+seed: 0
+prompt_template: 'Solve the following problem. Think step by step, then end your response
+  with a
+
+  single line of exactly the form `Final answer: X`.
+
+
+  {problem}
+
+  '
+prefill_mechanism: null
+date: '2026-07-08'
+notes: 'Phase 0 end-to-end smoke test on 5 trivial hardcoded problems. Validates the
+  JSONL output schema and the full generate -> parse -> cost -> log path. Not run
+  in Phase 0 (no keys, no spend authorized).
+
+  '
