@@ -206,7 +206,7 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       (see Section 1). Verify/refute the positioning in Section 1 — especially
       Arcuschin et al. 2025, Tutek et al. 2025, and anything Feb–Jul 2026 on
       open-ended CoT faithfulness. Update Section 1 with findings.
-- [ ] Smoke test: 5 problems through `deepseek-v4-flash` end-to-end; verify JSONL
+- [x] Smoke test: 5 problems through `deepseek-v4-flash` end-to-end; verify JSONL
       output schema. Doubles as the live capability probe run (prefix-completion
       works; non-thinking mode emits zero reasoning; see the matrix's
       open-questions section for the full probe list). Needs API keys in `.env`.
