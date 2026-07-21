@@ -69,3 +69,8 @@ timestamp,run_id,model,provider,input_tokens,output_tokens,cached_tokens,cost_us
 2026-07-21T12:35:49.522219+00:00,baseline_gpt_5_4_v1,gpt-5.4,openai,85,49,0,0.000947,0.086924
 2026-07-21T12:35:52.929203+00:00,baseline_gpt_5_4_v1,gpt-5.4,openai,294,233,0,0.004230,0.091153
 2026-07-21T12:35:55.765869+00:00,baseline_gpt_5_4_v1,gpt-5.4,openai,69,78,0,0.001342,0.092496
+2026-07-21T13:21:55.576663+00:00,baseline_glm_5_2_openrouter_v1,z-ai/glm-5.2,openrouter,117,300,0,0.000991,0.093486
+2026-07-21T13:21:55.578882+00:00,baseline_glm_5_2_openrouter_v1,z-ai/glm-5.2,openrouter,83,225,0,0.000739,0.094225
+2026-07-21T13:22:19.496007+00:00,baseline_glm_5_2_openrouter_v1,z-ai/glm-5.2,openrouter,96,467,0,0.001462,0.095687
+2026-07-21T13:22:19.498341+00:00,baseline_glm_5_2_openrouter_v1,z-ai/glm-5.2,openrouter,303,860,0,0.002810,0.098497
+2026-07-21T13:22:19.500037+00:00,baseline_glm_5_2_openrouter_v1,z-ai/glm-5.2,openrouter,76,10240,0,0.030176,0.128673

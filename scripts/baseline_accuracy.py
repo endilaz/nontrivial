@@ -44,7 +44,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from src import costs  # noqa: E402
 from src.config import RunConfig, load_run_config, save_run_config  # noqa: E402
-from src.evaluation import parse_final_answer  # noqa: E402
+from src.evaluation import parse_final_answer, evaluate_with_llm  # noqa: E402
 from src.generation import GenerationClient, GenerationRequest  # noqa: E402
 
 DEFAULT_TASKS_PATH = REPO_ROOT / "data" / "tasks" / "task_set.jsonl"
@@ -227,9 +227,9 @@ def score_answer(
         is_correct=(
             predicted_text is not None
             and truth_text is not None
-            and predicted_text == truth_text
+            and evaluate_with_llm(predicted_text, truth_text)["score"] > 0.5
         ),
-        method="normalized_string_exact",
+        method="normalized_string_llm",
         normalized_prediction=predicted_text,
         normalized_ground_truth=truth_text,
     )

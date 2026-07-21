@@ -49,27 +49,6 @@ def parse_final_answer(text: Optional[str]) -> Optional[str]:
     answer = answer.strip("*").strip()
     return answer or None
 
-# ---------------------------------------------------------------------------
-# LLM‑based answer evaluation
-# ---------------------------------------------------------------------------
-# The following helper uses an LLM (e.g. OpenAI GPT‑4o) to judge whether a
-# model‑generated answer matches a reference answer.  It is intentionally
-# lightweight so it can be called from unit tests or a larger evaluation
-# pipeline.
-
-from __future__ import annotations
-
-import os
-from typing import Dict, Any
-
-try:
-    # The OpenAI Python SDK is optional; the function will raise a clear
-    # error if it is not installed.
-    import openai
-except Exception as exc:  # pragma: no cover
-    openai = None  # type: ignore
-
-
 def _build_llm_prompt(
     model_answer: str,
     reference_answer: str,
@@ -99,12 +78,31 @@ def _build_llm_prompt(
     if context:
         prompt.append("Context:\n" + context.strip())
     prompt.append(
-        "Return a JSON object with two keys: "
+        "Return exactly a JSON object with two keys: "
         "'score' (float 0‑1) indicating similarity, and "
-        "'explanation' (short text). Do not add any other keys."
+        "'explanation' (short text). Do not add any other keys or additional formatting."
     )
     return "\n\n".join(prompt)
 
+# ---------------------------------------------------------------------------
+# LLM‑based answer evaluation
+# ---------------------------------------------------------------------------
+# The following helper uses an LLM (e.g. OpenAI GPT‑4o) to judge whether a
+# model‑generated answer matches a reference answer.  It is intentionally
+# lightweight so it can be called from unit tests or a larger evaluation
+# pipeline.
+import os
+from typing import Dict, Any
+
+try:
+    # The OpenAI Python SDK is optional; the function will raise a clear
+    # error if it is not installed.
+    import openai
+except Exception as exc:  # pragma: no cover
+    openai = None  # type: ignore
+
+import requests
+import json
 
 def evaluate_with_llm(
     model_answer: str,
@@ -124,7 +122,7 @@ def evaluate_with_llm(
     reference_answer:
         The ground‑truth answer.
     model:
-        The OpenAI model name.  Defaults to ``gpt-4o-mini``.
+        The model name.  Defaults to ``gpt-4o-mini``.
     temperature:
         Controls randomness; 0.0 gives deterministic output.
     context:
@@ -139,36 +137,33 @@ def evaluate_with_llm(
         The parsed JSON response from the LLM containing ``score`` and
         ``explanation``.
     """
-
-    if openai is None:  # pragma: no cover
-        raise RuntimeError(
-            "openai package is required for evaluate_with_llm. Install with "
-            "pip install openai"
-        )
-
-    if api_key is None:
-        api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise ValueError("OpenAI API key not provided and OPENAI_API_KEY not set")
-
-    openai.api_key = api_key
-
-    prompt = _build_llm_prompt(model_answer, reference_answer, context)
-
-    response = openai.ChatCompletion.create(
-        model=model,
-        temperature=temperature,
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=256,
+    # First API call with reasoning
+    response = requests.post(
+        url="https://openrouter.ai/api/v1/chat/completions",
+        headers={
+            "Authorization": "Bearer " + (os.getenv("OPENROUTER_API_KEY")),
+            "Content-Type": "application/json",
+        },
+        data=json.dumps({
+            "model": "openrouter/free",
+            "messages": [
+                {
+                "role": "user",
+                "content": _build_llm_prompt(model_answer, reference_answer, context)
+                }
+            ],
+            "reasoning": {"enabled": True}
+        })
     )
-    content = response.choices[0].message.content
-    try:
-        import json
 
-        result = json.loads(content)
+    # Extract the assistant message with reasoning_details
+    response = response.json()
+    response = response['choices'][0]['message']['content']
+    try:
+        result = json.loads(response)
     except Exception as exc:  # pragma: no cover
         raise ValueError(
-            f"LLM returned non‑JSON output: {content!r}. Error: {exc}"
+            f"LLM returned non‑JSON output: {response!r}. Error: {exc}"
         )
     if "score" not in result or "explanation" not in result:
         raise ValueError(
