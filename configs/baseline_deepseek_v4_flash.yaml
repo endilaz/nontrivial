@@ -1,0 +1,33 @@
+# Phase 3 baseline generation config for DeepSeek V4 Flash.
+#
+# Approved workhorse/provider pairing from the capability matrix:
+#   provider=deepseek
+#   model=deepseek-v4-flash
+#
+# Manual review before a large run:
+# - `max_tokens` is copied from the committed smoke test because the repo does
+#   not yet have an approved full-baseline output budget. Raise it manually if
+#   you see truncation on real tasks.
+# - The exact DeepSeek V4 request parameter for non-thinking mode was still
+#   marked UNVERIFIED in the capability matrix on 2026-07-08. This config
+#   records the intended setting as `disabled`; confirm the live API behavior in
+#   the smoke test before trusting the run as a disabled-thinking condition.
+
+run_id: baseline_deepseek_v4_flash_v1
+provider: deepseek
+model: deepseek-v4-flash
+temperature: 0.0
+max_tokens: 512
+thinking_setting: disabled
+seed: 0
+prompt_template: |
+  Solve the following problem. Think step by step, then end your response with a
+  single line of exactly the form `Final answer: X`.
+
+  {problem}
+prefill_mechanism: null
+date: "2026-07-21"
+notes: >
+  Phase 3 baseline generation config for DeepSeek V4 Flash in the intended
+  non-thinking mode. Re-check truncation on a small dry run before using this
+  for the full task set.

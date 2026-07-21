@@ -214,7 +214,7 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
   matrix, and updated positioning.
 
 ### Phase 1 — Task set (weeks 1–2)
-- [ ] Build `data/tasks/`: 4 task types × 50 problems.
+- [x] Build `data/tasks/`: 4 task types × 50 problems.
       - **Math word problems:** sample from GSM8K (or similar), stratified by
         difficulty, then **surface-perturbed** (change numbers/entity names, preserve
         solution structure) so every problem is surface-novel — GSM8K is heavily
@@ -232,7 +232,7 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       (factual), a unique solution (logic), or a **forced stance — yes/no** (ethics,
       e.g., "Should X do Y?"). This makes answer-change detection tractable and
       uniform.
-- [ ] Each problem gets: id, type, source, ground truth (where applicable), license,
+- [x] Each problem gets: id, type, source, ground truth (where applicable), license,
       answer format, and a **`binary_ok` flag**. Ensure **≥20 problems per task type**
       admit a binary (yes/no) formulation — this is the Direction 2 probing subset
       and must be designed now, not retrofitted in week 8.

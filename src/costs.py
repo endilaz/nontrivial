@@ -168,11 +168,15 @@ PRICES: Dict[str, ModelPrice] = {
     # Open-weight reasoning: price depends on which host serves it (OpenRouter
     # cheapest ~$0.93/$3.00 via DeepInfra; Z.ai/Together tier $1.40/$4.40).
     # Pin one provider for reproducibility, then verify that provider's price.
-    "glm-5.2": ModelPrice(None, None),
+    "glm-5.2": ModelPrice(
+        input_per_mtok=0.93, output_per_mtok=2.94, cached_input_per_mtok=0.18,
+        status="verified", last_verified="2026-07-21", source="https://openrouter.ai/z-ai/glm-5.2#providers"),
     # Bridge model: NO live serverless endpoint on Together/OpenRouter as of
     # 2026-07-08 — runs locally, so its cost is GPU time, not per-token. This
     # entry stays UNVERIFIED permanently unless a hosted endpoint is adopted.
-    "deepseek-r1-distill-qwen-7b": ModelPrice(None, None),
+    "deepseek-r1-distill-qwen-7b": ModelPrice(
+        input_per_mtok=None, output_per_mtok=None, cached_input_per_mtok=None,
+        status="UNVERIFIED — fill from capability matrix", last_verified=None, source=None,),
 }
 
 

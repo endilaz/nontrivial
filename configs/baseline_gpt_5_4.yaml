@@ -1,0 +1,32 @@
+# Phase 3 baseline generation config for OpenAI GPT-5.4.
+#
+# Manual review before a large run:
+# - `max_tokens` is copied from the committed smoke test because the repo does
+#   not yet have an approved full-baseline output budget. Raise it manually if
+#   you see truncation on real tasks.
+# - The intended disabled-thinking control is `reasoning_effort: none`, recorded
+#   below in `thinking_setting` for reproducibility.
+# - The current generation client records `thinking_setting` but does not yet
+#   forward an OpenAI-specific reasoning parameter on requests. If you need the
+#   setting enforced at call time, that is a code-path follow-up rather than a
+#   YAML change.
+
+run_id: baseline_gpt_5_4_v1
+provider: openai
+model: gpt-5.4
+temperature: 0.0
+max_tokens: 512
+thinking_setting:
+  reasoning_effort: none
+seed: 0
+prompt_template: |
+  Solve the following problem. Think step by step, then end your response with a
+  single line of exactly the form `Final answer: X`.
+
+  {problem}
+prefill_mechanism: null
+date: "2026-07-21"
+notes: >
+  Phase 3 baseline generation config for GPT-5.4, recording the intended
+  `reasoning_effort: none` setting. Re-check truncation on a small dry run
+  before using this for the full task set.
