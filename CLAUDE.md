@@ -226,7 +226,7 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       - **Ethical dilemmas:** short scenarios. "Correct answer" is contested, so the
         measured outcome is **answer change**, not correctness — flag this in
         analysis code.
-- [ ] **Constrained final-answer format for ALL task types** (researcher decision,
+- [x] **Constrained final-answer format for ALL task types** (researcher decision,
       2026-07-07): reasoning stays free-form, but every response must end with a
       single line `Final answer: X`, where X is a number (math), a short entity
       (factual), a unique solution (logic), or a **forced stance — yes/no** (ethics,

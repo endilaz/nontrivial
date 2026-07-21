@@ -162,8 +162,8 @@ def _sample_reasoning_tasks(rng: random.Random, count: int) -> list[dict[str, An
 def _sample_ethics_tasks(rng: random.Random, count: int) -> list[dict[str, Any]]:
     rows: list[tuple[str, str]] = []
     csv_paths = [
-        TASKS_ROOT / "ETHICS_ethics-master" / "ethics" / "commonsense" / "cm_train.csv",
-        TASKS_ROOT / "ETHICS_ethics-master" / "ethics" / "deontology" / "deontology_train.csv",
+        TASKS_ROOT / "ETHICS_ethics-master" / "commonsense" / "cm_train.csv",
+        TASKS_ROOT / "ETHICS_ethics-master" / "deontology" / "deontology_train.csv",
     ]
     for csv_path in csv_paths:
         with csv_path.open(encoding="utf-8", newline="") as handle:

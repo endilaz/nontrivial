@@ -1,0 +1,10 @@
+run_id,provider,model,task_type,n_tasks,n_correct,accuracy,n_parse_failures,n_cache_hits,total_cost_usd,scoring_policy
+baseline_glm_5_2_openrouter_v1,openrouter,z-ai/glm-5.2,ethics,1,1,1.0,0,0,0.00073869,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_glm_5_2_openrouter_v1,openrouter,z-ai/glm-5.2,logic,1,1,1.0,0,0,0.00281019,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_glm_5_2_openrouter_v1,openrouter,z-ai/glm-5.2,reasoning,3,1,0.3333333333333333,1,0,0.03262935,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,ethics,1,1,1.0,0,0,0.00010416,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,logic,1,1,1.0,0,0,0.00025382,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,reasoning,3,3,1.0,0,0,0.00038276,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_gpt_5_4_v1,openai,gpt-5.4,ethics,1,1,1.0,0,0,0.000325,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_gpt_5_4_v1,openai,gpt-5.4,logic,1,1,1.0,0,0,0.00423,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_gpt_5_4_v1,openai,gpt-5.4,reasoning,3,2,0.6666666666666666,0,0,0.0033,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge

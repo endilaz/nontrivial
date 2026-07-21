@@ -498,6 +498,9 @@ class GenerationClient:
             # capability matrix. Scaffold uses the classic chat-completions shape.
             "max_tokens": request.max_tokens,
         }
+        if request.provider == "openai":
+            kwargs.update({"max_completion_tokens": request.max_tokens})
+            kwargs.pop("max_tokens")
         if request.seed is not None:
             kwargs["seed"] = request.seed
 

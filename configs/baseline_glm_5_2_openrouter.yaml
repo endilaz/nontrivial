@@ -24,10 +24,11 @@ temperature: 0.0
 max_tokens: 10240
 thinking_setting:
   thinking:
-    type: enabled
+    type: disabled
 seed: 0
 prompt_template: |
-  Solve the following problem. Think step by step, then end your response with a
+  Solve the following problem. If the answer is a person, answer with their full legal name. 
+  Think step by step, then end your response with a
   single line of exactly the form `Final answer: X`.
 
   {problem}

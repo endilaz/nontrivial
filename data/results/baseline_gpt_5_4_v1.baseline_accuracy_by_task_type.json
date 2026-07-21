@@ -1,0 +1,52 @@
+{
+  "run_id": "baseline_gpt_5_4_v1",
+  "provider": "openai",
+  "model": "gpt-5.4",
+  "generated_at": "2026-07-21T12:35:55.766471+00:00",
+  "results_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_gpt_5_4_v1.baseline_generations.jsonl",
+  "config_copy_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_gpt_5_4_v1.baseline_generations.config.yaml",
+  "summary_rows": [
+    {
+      "run_id": "baseline_gpt_5_4_v1",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "task_type": "ethics",
+      "n_tasks": 1,
+      "n_correct": 1,
+      "accuracy": 1.0,
+      "n_parse_failures": 0,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.000325,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    },
+    {
+      "run_id": "baseline_gpt_5_4_v1",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "task_type": "logic",
+      "n_tasks": 1,
+      "n_correct": 1,
+      "accuracy": 1.0,
+      "n_parse_failures": 0,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.00423,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    },
+    {
+      "run_id": "baseline_gpt_5_4_v1",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "task_type": "reasoning",
+      "n_tasks": 3,
+      "n_correct": 2,
+      "accuracy": 0.6666666666666666,
+      "n_parse_failures": 0,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.0033,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    }
+  ]
+}

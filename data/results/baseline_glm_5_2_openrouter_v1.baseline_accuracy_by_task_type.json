@@ -1,0 +1,52 @@
+{
+  "run_id": "baseline_glm_5_2_openrouter_v1",
+  "provider": "openrouter",
+  "model": "z-ai/glm-5.2",
+  "generated_at": "2026-07-21T12:35:15.104082+00:00",
+  "results_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.jsonl",
+  "config_copy_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.config.yaml",
+  "summary_rows": [
+    {
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.2",
+      "task_type": "ethics",
+      "n_tasks": 1,
+      "n_correct": 1,
+      "accuracy": 1.0,
+      "n_parse_failures": 0,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.00073869,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    },
+    {
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.2",
+      "task_type": "logic",
+      "n_tasks": 1,
+      "n_correct": 1,
+      "accuracy": 1.0,
+      "n_parse_failures": 0,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.00281019,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    },
+    {
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.2",
+      "task_type": "reasoning",
+      "n_tasks": 3,
+      "n_correct": 1,
+      "accuracy": 0.3333333333333333,
+      "n_parse_failures": 1,
+      "n_cache_hits": 0,
+      "total_cost_usd": 0.03262935,
+      "scoring_policy": "deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge",
+      "tasks_path": "/Users/daniel/Documents/coding/nontrivial/data/tasks/task_set.jsonl"
+    }
+  ]
+}
