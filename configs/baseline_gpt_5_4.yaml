@@ -15,9 +15,9 @@ run_id: baseline_gpt_5_4_v1
 provider: openai
 model: gpt-5.4
 temperature: 0.0
-max_tokens: 512
+max_tokens: 10240
 thinking_setting:
-  reasoning_effort: none
+  reasoning_effort: medium
 seed: 0
 prompt_template: |
   Solve the following problem. Think step by step, then end your response with a

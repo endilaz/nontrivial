@@ -1,0 +1,4 @@
+run_id,provider,model,task_type,n_tasks,n_correct,accuracy,n_parse_failures,n_cache_hits,total_cost_usd,scoring_policy
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,ethics,1,1,1.0,0,0,2.59e-05,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,logic,1,0,0.0,1,0,0.00018256,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge
+baseline_deepseek_v4_flash_v1,deepseek,deepseek-v4-flash,reasoning,3,1,0.3333333333333333,1,0,0.00026306,deterministic_only:number|yes_no|normalized_string_exact; no LLM equivalence judge

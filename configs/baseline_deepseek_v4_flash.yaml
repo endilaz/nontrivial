@@ -17,8 +17,8 @@ run_id: baseline_deepseek_v4_flash_v1
 provider: deepseek
 model: deepseek-v4-flash
 temperature: 0.0
-max_tokens: 512
-thinking_setting: disabled
+max_tokens: 10240
+thinking_setting: enabled
 seed: 0
 prompt_template: |
   Solve the following problem. Think step by step, then end your response with a
