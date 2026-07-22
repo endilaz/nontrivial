@@ -1,0 +1,16 @@
+# A3 live capability probe #3: OpenAI no-reasoning + output cap -> 0 reasoning tokens.
+# Verifies matrix open-question #2/#3: reasoning_effort:"none" keeps reasoning
+# tokens at zero even when an output cap (max_tokens) is set (a known bug can
+# silently re-enable reasoning). gpt-5.4-mini is the cheapest way to resolve the
+# mini-specific unknown.
+probe_id: openai_no_reasoning_zero
+provider: openai
+model: gpt-5.4-mini
+capability: thinking_disabled
+assertion: reasoning_tokens_zero
+thinking_setting: disabled   # -> reasoning_effort:"none" in the adapter
+max_tokens: 32
+temperature: 0.0
+messages:
+  - role: user
+    content: "What is 40 + 2? Reply with just the number."

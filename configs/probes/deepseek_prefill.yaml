@@ -1,0 +1,20 @@
+# A3 live capability probe #2: DeepSeek beta Chat Prefix Completion continues the
+# supplied assistant prefix. The trailing assistant message is the prefill; the
+# adapter routes it to the /beta base URL with prefix:true. thinking_setting is
+# an empty dict so NO thinking parameter is sent (default mode) — this probe
+# tests only prefix continuation, not the (separately-blocked) non-thinking
+# control. The researcher eyeballs the transcript; the runner marks pass only if
+# native prefill was used and produced continuation text.
+probe_id: deepseek_prefill_continues
+provider: deepseek
+model: deepseek-v4-flash
+capability: native_prefill
+assertion: prefill_continues
+thinking_setting: {}   # no thinking param -> provider default mode
+max_tokens: 32
+temperature: 0.0
+messages:
+  - role: user
+    content: "Compute 40 + 2. Give the final answer as a single number."
+  - role: assistant
+    content: "The final answer is"
