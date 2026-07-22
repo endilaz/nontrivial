@@ -33,10 +33,10 @@ paid calls stay blocked until it is.
 
 | Provider | Dashboard total (USD) | Period covered | Verified by | Date |
 |---|---|---|---|---|
-| DeepSeek | _TBD_ | | | |
-| OpenRouter (GLM-5.2) | _TBD_ | | | |
-| OpenAI (gpt-5.4) | _TBD_ | | | |
-| **Total historical spend** | _TBD_ | | | |
+| DeepSeek | 0.01 | 7/21 | Daniel | 7/22 |
+| OpenRouter (GLM-5.2) | 0.05 | 7/21 | Daniel | 7/22 |
+| OpenAI (gpt-5.4) | 0.00 | N/A | Daniel | 7/22 |
+| **Total historical spend** | 0.08 | 7/21 | Daniel | 7/22 |
 
 Once filled in, carry the approved total into `budget_state.json` (Milestone A4)
 and cite this file as its provenance.
