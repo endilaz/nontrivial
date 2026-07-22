@@ -1,0 +1,591 @@
+{
+  "schema": "invalidation_manifest",
+  "schema_version": 1,
+  "invalidation_date": "2026-07-21",
+  "generated_by": "src/invalidation.py",
+  "code_revision": "a95d502cbe579debbcc071dcb10fb917ecf98a3f",
+  "reason_summary": "Invalidated by the 2026-07-21 project audit: invalid math answer labels, invalid ETHICS label semantics, missing HotpotQA context/provenance, invalid binary formulations, unenforced thinking settings, untracked LLM-judge calls, and duplicate cache-hit cost accounting. Preserved for audit; regenerated canonically under new schema versions and run IDs.",
+  "artifact_count": 58,
+  "artifacts": [
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_accuracy_summary",
+      "original_path": "data/results/baseline_accuracy_summary.csv",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_accuracy_summary.csv",
+      "sha256": "688c8f005fd9eb7ce2a3ca724a90678186cf754836891a31dc8d9eeb87e8adf7",
+      "size_bytes": 1599
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_accuracy_summary",
+      "original_path": "data/results/baseline_accuracy_summary.json",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_accuracy_summary.json",
+      "sha256": "2b3006345ff065b2e8460067e4547de53f393a7c26247f5015adc556086618eb",
+      "size_bytes": 4621
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_deepseek_v4_flash_v1",
+      "original_path": "data/results/baseline_deepseek_v4_flash_v1.baseline_accuracy_by_task_type.csv",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_deepseek_v4_flash_v1.baseline_accuracy_by_task_type.csv",
+      "sha256": "7b19897d40160372cde95a22530c1507507665e8c7df29e0b8d0194d1cf225e9",
+      "size_bytes": 635
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_deepseek_v4_flash_v1",
+      "original_path": "data/results/baseline_deepseek_v4_flash_v1.baseline_accuracy_by_task_type.json",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_deepseek_v4_flash_v1.baseline_accuracy_by_task_type.json",
+      "sha256": "664addbe1ea2ec94fd08b43abf0b3e7ba3cfe77bb8157c7cda213377e8d221ec",
+      "size_bytes": 1998
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_deepseek_v4_flash_v1",
+      "original_path": "data/results/baseline_deepseek_v4_flash_v1.baseline_generations.config.yaml",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_deepseek_v4_flash_v1.baseline_generations.config.yaml",
+      "sha256": "fffe01edea426a29555d4e679b68b4822cef13012403f31e0140cf8be030aab4",
+      "size_bytes": 617
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_deepseek_v4_flash_v1",
+      "original_path": "data/results/baseline_deepseek_v4_flash_v1.baseline_generations.jsonl",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_deepseek_v4_flash_v1.baseline_generations.jsonl",
+      "sha256": "3da8e7bc853b18f352386bf7f487eb316aef97a0a25039c6c6cf77b96a6df456",
+      "size_bytes": 11284
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "original_path": "data/results/baseline_glm_5_2_openrouter_v1.baseline_accuracy_by_task_type.csv",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_glm_5_2_openrouter_v1.baseline_accuracy_by_task_type.csv",
+      "sha256": "1ed6dbff9bc83e658f15e78655bda499db9b12d4690099649e506ea9a325a22b",
+      "size_bytes": 644
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "original_path": "data/results/baseline_glm_5_2_openrouter_v1.baseline_accuracy_by_task_type.json",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_glm_5_2_openrouter_v1.baseline_accuracy_by_task_type.json",
+      "sha256": "e89dbeec8f85f7237de42841f1e4c09b242cce63c804ceaabba95dbdf872bad7",
+      "size_bytes": 2007
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "original_path": "data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.config.yaml",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_glm_5_2_openrouter_v1.baseline_generations.config.yaml",
+      "sha256": "e5d3942aacba284b81f1ba1d23967a83a8dc49fdce213a84c45e9f43ae105187",
+      "size_bytes": 643
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_glm_5_2_openrouter_v1",
+      "original_path": "data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.jsonl",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_glm_5_2_openrouter_v1.baseline_generations.jsonl",
+      "sha256": "fc70e05ecbadec4d90593d58e76cd0faf09810436f29c68f98752c4a2bbfba90",
+      "size_bytes": 12617
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_gpt_5_4_v1",
+      "original_path": "data/results/baseline_gpt_5_4_v1.baseline_accuracy_by_task_type.csv",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_gpt_5_4_v1.baseline_accuracy_by_task_type.csv",
+      "sha256": "a37d3374454d70f94573c89d264195c8a3d85b94c3bddfdb092971f6b155d4c9",
+      "size_bytes": 560
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_gpt_5_4_v1",
+      "original_path": "data/results/baseline_gpt_5_4_v1.baseline_accuracy_by_task_type.json",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_gpt_5_4_v1.baseline_accuracy_by_task_type.json",
+      "sha256": "4009d63ae0732dee83f19c709034f707ba065774a43e880637f535f99a825e85",
+      "size_bytes": 1881
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_gpt_5_4_v1",
+      "original_path": "data/results/baseline_gpt_5_4_v1.baseline_generations.config.yaml",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_gpt_5_4_v1.baseline_generations.config.yaml",
+      "sha256": "0f018db47efc24f5cac3c2475b539fafaa35dd6979a40ccd8c4ea11ed7961d30",
+      "size_bytes": 626
+    },
+    {
+      "category": "baseline_result",
+      "reason_code": "INVALID_BASELINE_RESULT",
+      "reason": "Baseline generation/accuracy output built on the invalidated task set, with unenforced thinking settings and untracked judge calls. Re-run under Milestone C after valid tasks and evaluation exist.",
+      "run_id": "baseline_gpt_5_4_v1",
+      "original_path": "data/results/baseline_gpt_5_4_v1.baseline_generations.jsonl",
+      "invalidated_path": "data/results/invalidated/2026-07-21/baseline_gpt_5_4_v1.baseline_generations.jsonl",
+      "sha256": "351fdb6020bd189982f27f590a2a84402090701b6548c2bdc88067a1e20ca4ff",
+      "size_bytes": 11736
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/03f79f07a46e1f1c0c57ece0609fef173fee39f25f85cc3b41fe6c488ce48dfd.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/03f79f07a46e1f1c0c57ece0609fef173fee39f25f85cc3b41fe6c488ce48dfd.json",
+      "sha256": "8977eef2da61af3fb5abb3e0effaaedf826e20adaf367b90a1bb189746f65f8f",
+      "size_bytes": 2113
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/053634a4ecaf6b998a524b7c3dc531f4fa062f3f46750fe5d2c5d60e830d811c.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/053634a4ecaf6b998a524b7c3dc531f4fa062f3f46750fe5d2c5d60e830d811c.json",
+      "sha256": "0aba46cd472d69d8e8ed5ae05cf42c525d71a138dc41051b91daf04b36b3a097",
+      "size_bytes": 1974
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/06fc304b80968688b42dd9adaa1a12d6a4955ac2004cefb76e6b4b9af66cc4d4.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/06fc304b80968688b42dd9adaa1a12d6a4955ac2004cefb76e6b4b9af66cc4d4.json",
+      "sha256": "94a5891cf026ed21612caca58c6b6bc3f89568ee0853d0a29090726fbe391bcd",
+      "size_bytes": 3129
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/0f312e822e3d262ff6030572727afb50e9d74472baa256edc6de7e90e7f66347.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/0f312e822e3d262ff6030572727afb50e9d74472baa256edc6de7e90e7f66347.json",
+      "sha256": "a1764312fbaacae883c2d1192143bd120e1aaf6bb71a76fbf708bc7c2b8ff080",
+      "size_bytes": 1868
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/10cd5f092a53386ac1470eec55a89c37824c3ba83035218438629a3705c143a7.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/10cd5f092a53386ac1470eec55a89c37824c3ba83035218438629a3705c143a7.json",
+      "sha256": "efd36ae7886b3beb6c479aa02943fc45848b8035e713d7ab37733f190ad9de81",
+      "size_bytes": 2094
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/12305b81f138525e79779690a4a6529a565f0f59e9ea0137fc8f0239a1cce657.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/12305b81f138525e79779690a4a6529a565f0f59e9ea0137fc8f0239a1cce657.json",
+      "sha256": "f18b3efe14568c83868fde59002950a40d7864e74b98cf47794662cadb093225",
+      "size_bytes": 2932
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/13d1b3b804a664cf364a7488e5958e2dca058f3fbceacc65fb5aa249e5103339.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/13d1b3b804a664cf364a7488e5958e2dca058f3fbceacc65fb5aa249e5103339.json",
+      "sha256": "7a1c84eca17325822fa5b79e4685973c9dd75000ade65bc2a9aa6a5e6ef0ff85",
+      "size_bytes": 4427
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/1f572f0f43a27b223783bff4d03566a99bdcf750d5c5bb4e08897b7902b5ac47.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/1f572f0f43a27b223783bff4d03566a99bdcf750d5c5bb4e08897b7902b5ac47.json",
+      "sha256": "21292ff5e411abc678b27cbca9cb9bda90d4b7e98e6a1695dbe7e127cac11018",
+      "size_bytes": 8778
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/24e15072b0585d5cbc984e6063738804fef6d5a8820d8ee75267fb6332320ba1.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/24e15072b0585d5cbc984e6063738804fef6d5a8820d8ee75267fb6332320ba1.json",
+      "sha256": "0933ad81f1a213b5990cd05432fd40602f88a55727b0b338fb6faa95493f650b",
+      "size_bytes": 11682
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/30652a0d0657ae3830bac95a50066c7d9892d18efc34febfce652d58df84d414.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/30652a0d0657ae3830bac95a50066c7d9892d18efc34febfce652d58df84d414.json",
+      "sha256": "17e7127d26842ba4b81e37954da0bfbf684fde65a86686e7f3bb4423e3dbfc35",
+      "size_bytes": 5269
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/32a9b545c65328ae43c34d2a5f9b0291a7e30a81d4f78e6d42285861134fbd28.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/32a9b545c65328ae43c34d2a5f9b0291a7e30a81d4f78e6d42285861134fbd28.json",
+      "sha256": "1db37c590173142ef1a5c5d1d0fcc6ac0922f6f5db04ccdc4da5dfb735310d1b",
+      "size_bytes": 2004
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/34a680cf1ce549eef9f5080610f21efd7724ec301a72309def1ad194125b3cc0.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/34a680cf1ce549eef9f5080610f21efd7724ec301a72309def1ad194125b3cc0.json",
+      "sha256": "a02d13787b25f186c74a7f34e665b722acb921a6f6a5122721fad0ed08053cb3",
+      "size_bytes": 4902
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/34e89c7b9baea617b569e304556c988a0bf46c21dc6e0c4ff58d9aa167f5c8f4.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/34e89c7b9baea617b569e304556c988a0bf46c21dc6e0c4ff58d9aa167f5c8f4.json",
+      "sha256": "e9248a99caaf4a4f1bde4a7e90260c78aa76ca8c548637d9933a5e7b74820db6",
+      "size_bytes": 3884
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/35285640f5cf107bd90522fc54b68d95778a3e718916205e43b9a8ef957115d5.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/35285640f5cf107bd90522fc54b68d95778a3e718916205e43b9a8ef957115d5.json",
+      "sha256": "960c78512fb80d4ef95403f5ccc08d5ecada50ed95b93895ab205fb3797d974e",
+      "size_bytes": 1611
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/40d06e56e5378e8016cdc01a5139aa171c66941179fb728d44e55f370dd018a9.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/40d06e56e5378e8016cdc01a5139aa171c66941179fb728d44e55f370dd018a9.json",
+      "sha256": "bc0617e80e1bfdf4a7768a4cb51ed2b47a54cea254c3ae7095126d8c84b19b06",
+      "size_bytes": 1727
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/4153606682b43a9e52d220c11b5f359ee8d56381abb68534f772b404115a2b12.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/4153606682b43a9e52d220c11b5f359ee8d56381abb68534f772b404115a2b12.json",
+      "sha256": "ebc605feb5108669fd6094a3151465f751f5b7bd1dd7b498c1732bcd121a5475",
+      "size_bytes": 4905
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/4ac073dcad41478caa703b90977510015d0d0c79ff8e62704c43c707fc5da651.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/4ac073dcad41478caa703b90977510015d0d0c79ff8e62704c43c707fc5da651.json",
+      "sha256": "9157115129d1f6bd7ec66d6dc6fc2176a7b8b9c85f4dd4a45bbee43133feeb8e",
+      "size_bytes": 1761
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/72c27b06bc2bd730ac93acfd6b9cc710db42c04b84f433bad417008e13d991b2.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/72c27b06bc2bd730ac93acfd6b9cc710db42c04b84f433bad417008e13d991b2.json",
+      "sha256": "a3512edfb2c6e303c995e4036cd29e664a8288a4b84d00f30feacbc2a9bb1a40",
+      "size_bytes": 2966
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/8101e9529e26287e9539a8645490582790c34ca0ce71300a2b62ea3bc6ee51d8.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/8101e9529e26287e9539a8645490582790c34ca0ce71300a2b62ea3bc6ee51d8.json",
+      "sha256": "52a594b39693b0fe9434f2301ecba28f288015159d099b79fa2c3fe7801f1cc6",
+      "size_bytes": 1755
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/842308b1f1608a8fbb3a7225d824225089952ef90b4fbe855d574865cbda7de7.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/842308b1f1608a8fbb3a7225d824225089952ef90b4fbe855d574865cbda7de7.json",
+      "sha256": "4a7650e6df31816eb382a2215b9a643af49568e8e4246021b0c1bafff1635588",
+      "size_bytes": 2087
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/84543138e43f6a13a5bcc0418970acd15cc6e98daba2c58026c8ba7f59c2f443.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/84543138e43f6a13a5bcc0418970acd15cc6e98daba2c58026c8ba7f59c2f443.json",
+      "sha256": "43168260f3636774edecce409d93a0ebc76820b601588e47915f7d115765eedb",
+      "size_bytes": 1870
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/8a405a18f23753c5026952153b80ac0318759a38066de6f28149604d0134fb5b.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/8a405a18f23753c5026952153b80ac0318759a38066de6f28149604d0134fb5b.json",
+      "sha256": "9149d14107579be0a800a83dc447db29dad77efd799e796b3acc7a83d4de6c5e",
+      "size_bytes": 66122
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/8aead705614d310c7d49152d9426120e866d55ff09815390ac627683ec344a29.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/8aead705614d310c7d49152d9426120e866d55ff09815390ac627683ec344a29.json",
+      "sha256": "3fe535bf1352a68735ca77361de5d58d740821ff170b60a1e80c56aa222fcfa4",
+      "size_bytes": 2058
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/99eb1e76705f49c73659abcaa7dae1e1ac604d044d90b2c0a8f39af4e6cf65e2.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/99eb1e76705f49c73659abcaa7dae1e1ac604d044d90b2c0a8f39af4e6cf65e2.json",
+      "sha256": "564adb75b72723d4f1ed2fa49a64c415dd88f5538140cbca642147f0dfbe3962",
+      "size_bytes": 1395
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/9e24ee63390f8be1660c63f31337692aebe4b84e6472d21297b0ead3ddf89134.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/9e24ee63390f8be1660c63f31337692aebe4b84e6472d21297b0ead3ddf89134.json",
+      "sha256": "114af0aef34e57470d6fad83a283389245505c782359b8fb1c34f5a5486ec4eb",
+      "size_bytes": 3178
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/a55ac6a48c1babc858b7786c37be976760b4394006986f655592f19be42686bf.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/a55ac6a48c1babc858b7786c37be976760b4394006986f655592f19be42686bf.json",
+      "sha256": "b605aef29278260a98213e2f00eaec9e68015a928394738f5000dc020d672a98",
+      "size_bytes": 2670
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/adfcd3fbc1251243b67397fad9f6dd3741cf49380f9f62f65d60dabff7cbcff0.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/adfcd3fbc1251243b67397fad9f6dd3741cf49380f9f62f65d60dabff7cbcff0.json",
+      "sha256": "2fdd17e271caf20af981a0120069f0c657b68d21dc1ae600f664cd23fbd3585f",
+      "size_bytes": 4163
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/b6ef6dbe4aa1d5fd87a816fc10dbf3e341ca568a6c004088c333c7610156e03d.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/b6ef6dbe4aa1d5fd87a816fc10dbf3e341ca568a6c004088c333c7610156e03d.json",
+      "sha256": "c4a34b991fcb0de2342d0ec13199ba1dcb9cc9b9f8569ba740787f68661584e6",
+      "size_bytes": 1623
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/c39ceee1e889772afe0241fd2806353e5707582e1c0a5ae953e104a176154e25.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/c39ceee1e889772afe0241fd2806353e5707582e1c0a5ae953e104a176154e25.json",
+      "sha256": "7d121d526b9c9c8fb14bd149366a3536b58fdfcc0720a0aff59cc5c01be1eb44",
+      "size_bytes": 1848
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/cec9f5fd81d26854aaac33c2aa7c2524fc7b7f9aa5ede6b9cf0e2093486d6cfa.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/cec9f5fd81d26854aaac33c2aa7c2524fc7b7f9aa5ede6b9cf0e2093486d6cfa.json",
+      "sha256": "9175810d453a803514890d3e876dc3f8a46dec64760c5037b551e5a3ac034be2",
+      "size_bytes": 1579
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/d36acec198b80ff30861c008db20adf5e99963286554f51af7a15be38b0578e3.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/d36acec198b80ff30861c008db20adf5e99963286554f51af7a15be38b0578e3.json",
+      "sha256": "897bf5c83bed1202da2ec2bdce603d59a6b87eacc5d1c9e78fc632d5804446f9",
+      "size_bytes": 5348
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/d5bf2c17d1740d419aba63a8a11fd4ddb823408e47cb6a1ca29753f9ff22da3a.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/d5bf2c17d1740d419aba63a8a11fd4ddb823408e47cb6a1ca29753f9ff22da3a.json",
+      "sha256": "8f7bd6e44b7ba9937c0c52a327e4818a6a02e1093d0e1af951a3c29307945945",
+      "size_bytes": 3548
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/e597efced50bb30d22be743b5c80d1935b97db92fa2cb07610c7bd491e0d522d.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/e597efced50bb30d22be743b5c80d1935b97db92fa2cb07610c7bd491e0d522d.json",
+      "sha256": "ab6fbe709d10e37ef5cb600445ce5f3e55504048c05ff17e7bf34ab68e7adde9",
+      "size_bytes": 4147
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/e5fa4ad57bf7d22bed9b139a465a38fa5b52790af0c500ed167d5daaad5e5725.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/e5fa4ad57bf7d22bed9b139a465a38fa5b52790af0c500ed167d5daaad5e5725.json",
+      "sha256": "f1fbbac3d286493e346eddfbb9e3bee1b33c7e4f39922ac6721edf7f5f58d816",
+      "size_bytes": 1842
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/ebde1e0013e239e72392b40179a27ca7454664d10bd1c0df733a99dc93da16d3.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/ebde1e0013e239e72392b40179a27ca7454664d10bd1c0df733a99dc93da16d3.json",
+      "sha256": "0dcc60640bf9eeda0a255aa5acbc0f08e4cccfdd401bf911e08f78c47649e97a",
+      "size_bytes": 3513
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/edd667d24cbb3855eba030b41148edf614ba4937a9e84529ead859a07284ba25.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/edd667d24cbb3855eba030b41148edf614ba4937a9e84529ead859a07284ba25.json",
+      "sha256": "36bcc0e01ebe9092b4e83cdc11e8f1d540a26346420d2c4f7a6317ae574e5902",
+      "size_bytes": 1912
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/f417143735aa0cc48f493a9a06e983da2a0f7588535a524e59dded2c566f5c56.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/f417143735aa0cc48f493a9a06e983da2a0f7588535a524e59dded2c566f5c56.json",
+      "sha256": "288c53854fbf3e0830f671ef7478c0a32f146fe6e8d463b120780faa7a4445b7",
+      "size_bytes": 8330
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/f4b10f5c0b7b0b8cb73db1896d86f7bf7371216ad25a03c883ebdc6a1ffa8ffe.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/f4b10f5c0b7b0b8cb73db1896d86f7bf7371216ad25a03c883ebdc6a1ffa8ffe.json",
+      "sha256": "e352a5dbe9fdd47a89020926eb27977dfb16b4f9a59d3dcb4e2cd8324f4928fd",
+      "size_bytes": 2546
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/f87b2df23a35af4ffae4713852f8eb70c9ef559f7fb8982ab7a6950b366ee669.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/f87b2df23a35af4ffae4713852f8eb70c9ef559f7fb8982ab7a6950b366ee669.json",
+      "sha256": "74a2a4d993c98b6641aac009abc35ba19ff354a6aa656de122a3f8b83ed77a9f",
+      "size_bytes": 3797
+    },
+    {
+      "category": "cache_v1",
+      "reason_code": "INVALID_CACHE_V1",
+      "reason": "Cache schema v1 receipts: the recorded thinking_setting cannot be trusted as actually applied. Superseded by cache schema v2 under data/cache/v2/.",
+      "run_id": null,
+      "original_path": "data/cache/fd0b5b77fe66f7ac6f3778f13325a2c4da0718a0d419c684580b3ab6e8bfd659.json",
+      "invalidated_path": "data/cache/invalidated/2026-07-21/fd0b5b77fe66f7ac6f3778f13325a2c4da0718a0d419c684580b3ab6e8bfd659.json",
+      "sha256": "d9f37203f3491048921e9b51492a18275719a38460a383718eb6f5f1800c2b9f",
+      "size_bytes": 5763
+    },
+    {
+      "category": "cost_ledger",
+      "reason_code": "INVALID_COST_LEDGER",
+      "reason": "Cost ledger inflated by duplicate cache-hit accounting and missing prior judge spend. Not a trustworthy remaining-budget source until A4 reconciliation against provider dashboards.",
+      "run_id": null,
+      "original_path": "logs/cost_log.csv",
+      "invalidated_path": "logs/invalidated/2026-07-21/cost_log.csv",
+      "sha256": "82c5d3ba6f2b133c689519da56a020e2280219ea18984855240766a671daec81",
+      "size_bytes": 10262
+    },
+    {
+      "category": "smoke",
+      "reason_code": "INVALID_SMOKE",
+      "reason": "Smoke/capability run did not exercise prefill and recorded disabled-thinking despite nonzero reasoning tokens in the raw receipt. Re-run only after Milestone A3.",
+      "run_id": "smoke_test",
+      "original_path": "data/results/smoke_test.config.yaml",
+      "invalidated_path": "data/results/invalidated/2026-07-21/smoke_test.config.yaml",
+      "sha256": "7328d2314dbcd5f31900a5a97fb8938eb816265f4437d1dc6bd329bfc6995203",
+      "size_bytes": 566
+    },
+    {
+      "category": "smoke",
+      "reason_code": "INVALID_SMOKE",
+      "reason": "Smoke/capability run did not exercise prefill and recorded disabled-thinking despite nonzero reasoning tokens in the raw receipt. Re-run only after Milestone A3.",
+      "run_id": "smoke_test",
+      "original_path": "data/results/smoke_test.jsonl",
+      "invalidated_path": "data/results/invalidated/2026-07-21/smoke_test.jsonl",
+      "sha256": "b52c59c53571b77d2292a4ba27881cabcf330ba2d08bae011f890ad2edee4d97",
+      "size_bytes": 6174
+    },
+    {
+      "category": "task_set",
+      "reason_code": "INVALID_TASK_SET",
+      "reason": "Generated task set with invalid math labels after numeric perturbation, invalid ETHICS label semantics, missing HotpotQA context/provenance, and invalid/missing binary formulations. Rebuilt under Milestone B.",
+      "run_id": null,
+      "original_path": "data/tasks/task_set.jsonl",
+      "invalidated_path": "data/tasks/invalidated/2026-07-21/task_set.jsonl",
+      "sha256": "97598bb1eaee732916547358e3e011ce4fa96df8aa8b67286be8913e9b3488d9",
+      "size_bytes": 214206
+    }
+  ]
+}
