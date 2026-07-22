@@ -1,0 +1,73 @@
+{
+  "schema": "baseline_final_summary",
+  "schema_version": 1,
+  "run_id": "baseline_deepseek_v4_flash_v2_full",
+  "created_at": "2026-07-22T14:11:57.114045+00:00",
+  "scoring": "C1 deterministic (post-2026-07-22 currency-aware parser) + approved judge (answer-equivalence rubric 1.0.0) for the 14 unscored records. Original responses.jsonl/summary.json unchanged (append-only).",
+  "as_run_including_tombstoned": {
+    "ethics": {
+      "categories": {
+        "correct": 42,
+        "incorrect": 8
+      },
+      "source_label_agreement": 0.84
+    },
+    "factual": {
+      "categories": {
+        "correct": 46,
+        "incorrect": 4
+      },
+      "accuracy": 0.92
+    },
+    "logic": {
+      "categories": {
+        "correct": 48,
+        "incorrect": 2
+      },
+      "accuracy": 0.96
+    },
+    "math": {
+      "categories": {
+        "correct": 48,
+        "incorrect": 2
+      },
+      "accuracy": 0.96
+    }
+  },
+  "amended_canonical_view": {
+    "ethics": {
+      "categories": {
+        "correct": 42,
+        "incorrect": 8
+      },
+      "source_label_agreement": 0.84
+    },
+    "factual": {
+      "categories": {
+        "correct": 47,
+        "incorrect": 2,
+        "unscored": 1
+      },
+      "accuracy": 0.9591836734693877
+    },
+    "logic": {
+      "categories": {
+        "correct": 48,
+        "incorrect": 2
+      },
+      "accuracy": 0.96
+    },
+    "math": {
+      "categories": {
+        "correct": 48,
+        "incorrect": 2
+      },
+      "accuracy": 0.96
+    }
+  },
+  "notes": [
+    "factual-041/044 tombstoned by amendment amend-factual-041-044-2026-07-22; amended view replaces them with factual-051 (correct) and factual-052 (unscored->judged incorrect: 'Am Rong' vs 'filmmaker').",
+    "factual-023 kept in the canonical set (researcher confirmed correct gold 2026-07-22); model answered 'No' vs gold 'yes' -> incorrect.",
+    "factual-042: model answered the actor where gold is the show -> judged incorrect."
+  ]
+}

@@ -8,7 +8,7 @@
   "max_tokens": 512,
   "thinking_setting": { "thinking": { "type": "disabled" } },
   "confidence_threshold": 0.5,
-  "enabled": false,
+  "enabled": true,
   "prompt_template": "You are grading whether two short answers to the same question are equivalent.\n\nRules:\n- Equivalent means they express the same final answer, allowing for aliases, abbreviations, name-order or formatting differences, missing honorifics/titles, and equivalent numeric forms (e.g. \"0.75\" vs \"3/4\" vs \"75%\").\n- Different entities, different numbers, or different yes/no stances are NOT equivalent.\n- Extra correct detail alongside the same core answer is still equivalent; extra detail that changes the referent is not.\n- Judge ONLY the final answers given, not any reasoning.\n\nAnswer A: {answer_a}\nAnswer B: {answer_b}\n\nReply with exactly one JSON object, no other text:\n{\"equivalent\": true or false, \"confidence\": number between 0 and 1, \"rationale\": one short sentence}",
   "reply_schema": {
     "type": "object",
@@ -21,9 +21,15 @@
     "additionalProperties": false
   },
   "provenance": {
-    "status": "pending_validation",
+    "status": "approved",
     "validation_set": "data/validation/judge_validation_v1.jsonl",
     "validation_set_sha256": "3d52603c40606ca3beacf7267c6f7f5d24affa3fece698d66b789bbff23b1af6",
-    "note": "Enable only after the researcher labels the frozen validation set, the measured accuracy threshold and tie policy are approved, and this status is set to 'approved' (plan.md C1/C3)."
+    "labeled_set_sha256": "64b60b281269c16e5030e9fa8fb6a54d267139b0419e1664df435c48ecf7ba17",
+    "validation_report": "docs/validation/judge_answer-equivalence_rubric_1.0.md",
+    "approved_on": "2026-07-22",
+    "approved_by": "researcher",
+    "tie_policy": "confidence < 0.5 or malformed reply -> unscored; otherwise the judge's equivalent/not_equivalent stands",
+    "dev_metrics": "sensitivity 1.0, specificity 1.0, accuracy 1.0 on 26 dev pairs (95% CI on accuracy approx [0.87, 1.0]); holdout split untouched",
+    "note": "Approved after C3 validation (researcher, 2026-07-22). Unscored/abstain outputs always surface as unscored, never guessed."
   }
 }
