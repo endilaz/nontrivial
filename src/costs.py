@@ -193,6 +193,10 @@ class ConfirmationRequired(RuntimeError):
     """Raised when a batch estimate exceeds the confirmation threshold."""
 
 
+class BudgetExceededError(RuntimeError):
+    """Raised when projected spend exceeds the remaining hard project budget."""
+
+
 # --------------------------------------------------------------------------- #
 # Token estimation
 # --------------------------------------------------------------------------- #
@@ -288,6 +292,23 @@ def cost_for_usage(
         + output_tokens / 1_000_000 * price.output_per_mtok  # type: ignore[operator]
     )
     return cost
+
+
+def incremental_cost_for_result(model: str, result: Any) -> float:
+    """Return new API spend represented by a generation result.
+
+    A local response-cache hit is a reuse of an earlier receipt and therefore
+    has zero incremental spend. Provider-side cached input is still a real API
+    call and uses the provider's discounted cached-input rate.
+    """
+    if bool(getattr(result, "cache_hit", False)):
+        return 0.0
+    return cost_for_usage(
+        model,
+        int(getattr(result, "input_tokens", 0) or 0),
+        int(getattr(result, "output_tokens", 0) or 0),
+        cached_input_tokens=int(getattr(result, "cached_input_tokens", 0) or 0),
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -397,6 +418,14 @@ def estimate_batch(
     est = compute_estimate(requests, prices=prices)
     if verbose:
         print_estimate(est)
+
+    cumulative = _read_cumulative(DEFAULT_LOG_PATH)
+    if cumulative + est.total_usd > PROJECT_BUDGET_USD:
+        remaining = max(0.0, PROJECT_BUDGET_USD - cumulative)
+        raise BudgetExceededError(
+            f"Batch estimate ${est.total_usd:.2f} exceeds the remaining "
+            f"project budget ${remaining:.2f}."
+        )
 
     if est.total_usd > threshold_usd and not confirmed:
         msg = (

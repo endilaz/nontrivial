@@ -6,6 +6,9 @@ would cause accidental double-spend or non-reproducible runs, so it is tested
 hardest.
 """
 
+import sys
+from types import SimpleNamespace
+
 import pytest
 
 from src.generation import (
@@ -65,6 +68,8 @@ def test_cache_key_is_stable_across_identical_requests():
         ("max_tokens", 1024),
         ("seed", 99),
         ("thinking_setting", {"type": "adaptive"}),
+        ("provider_route", "pinned-provider"),
+        ("prompt_template_version", "v2"),
         ("replicate_index", 1),
         ("messages", [{"role": "user", "content": "different"}]),
     ],
@@ -138,6 +143,100 @@ def test_force_fresh_bypasses_read_but_still_writes(tmp_path, monkeypatch):
     assert hit.cache_hit is True
     assert hit.text == fresh.text  # force_fresh overwrote the cached entry
     assert calls["n"] == 2
+    assert len(list((tmp_path / "history").glob("*.json"))) == 1
+
+
+def _install_fake_openai(monkeypatch):
+    captured = {}
+
+    class FakeCompletions:
+        def create(self, **kwargs):
+            captured.update(kwargs)
+            usage = SimpleNamespace(
+                prompt_tokens=10,
+                completion_tokens=5,
+                prompt_tokens_details=SimpleNamespace(cached_tokens=3),
+                completion_tokens_details=SimpleNamespace(reasoning_tokens=0),
+            )
+            choice = SimpleNamespace(
+                message=SimpleNamespace(content="Final answer: 42"),
+                finish_reason="stop",
+            )
+            return SimpleNamespace(
+                choices=[choice],
+                usage=usage,
+                system_fingerprint="fp_test",
+                model_dump=lambda: {"ok": True},
+            )
+
+    class FakeOpenAI:
+        def __init__(self, **_kwargs):
+            self.chat = SimpleNamespace(completions=FakeCompletions())
+
+    monkeypatch.setitem(sys.modules, "openai", SimpleNamespace(OpenAI=FakeOpenAI))
+    return captured
+
+
+def test_openai_adapter_applies_disabled_reasoning(monkeypatch, tmp_path):
+    captured = _install_fake_openai(monkeypatch)
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    client = GenerationClient(cache_dir=tmp_path, load_env=False)
+
+    result = client._invoke_openai_compatible(make_request())
+
+    assert captured["reasoning_effort"] == "none"
+    assert "max_tokens" not in captured
+    assert captured["max_completion_tokens"] == 256
+    assert result["applied_settings"] == {"reasoning_effort": "none"}
+    assert result["cached_input_tokens"] == 3
+
+
+def test_openrouter_adapter_pins_route_and_thinking(monkeypatch, tmp_path):
+    captured = _install_fake_openai(monkeypatch)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
+    client = GenerationClient(cache_dir=tmp_path, load_env=False)
+    request = make_request(
+        provider="openrouter",
+        model="z-ai/glm-5.2",
+        provider_route="DeepInfra",
+        thinking_setting={"thinking": {"type": "disabled"}},
+    )
+
+    client._invoke_openai_compatible(request)
+
+    assert captured["extra_body"]["thinking"] == {"type": "disabled"}
+    assert captured["extra_body"]["provider"] == {
+        "order": ["DeepInfra"],
+        "allow_fallbacks": False,
+    }
+
+
+def test_openrouter_adapter_rejects_unpinned_route(monkeypatch, tmp_path):
+    _install_fake_openai(monkeypatch)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
+    client = GenerationClient(cache_dir=tmp_path, load_env=False)
+    request = make_request(
+        provider="openrouter",
+        model="z-ai/glm-5.2",
+        thinking_setting={"thinking": {"type": "disabled"}},
+    )
+
+    with pytest.raises(ValueError, match="pinned provider_route"):
+        client._invoke_openai_compatible(request)
+
+
+def test_deepseek_adapter_rejects_unapplied_string_setting(monkeypatch, tmp_path):
+    _install_fake_openai(monkeypatch)
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "test-key")
+    client = GenerationClient(cache_dir=tmp_path, load_env=False)
+    request = make_request(
+        provider="deepseek",
+        model="deepseek-v4-flash",
+        thinking_setting="disabled",
+    )
+
+    with pytest.raises(ValueError, match="provider-specific dict"):
+        client._invoke_openai_compatible(request)
 
 
 # --------------------------------------------------------------------------- #

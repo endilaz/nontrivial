@@ -11,12 +11,14 @@ import pytest
 from src import costs
 from src.costs import (
     BatchEstimate,
+    BudgetExceededError,
     ConfirmationRequired,
     UnverifiedPriceError,
     check_budget,
     compute_estimate,
     cost_for_usage,
     estimate_batch,
+    incremental_cost_for_result,
     log_cost,
 )
 
@@ -54,6 +56,36 @@ def test_cost_for_usage_cached_input_uses_cached_rate():
         "claude-haiku-4-5", input_tokens=1000, output_tokens=0, cached_input_tokens=1000
     )
     assert cost == pytest.approx(1000 / 1_000_000 * 0.10)
+
+
+def test_incremental_cost_for_local_cache_hit_is_zero():
+    result = type(
+        "Result",
+        (),
+        {
+            "cache_hit": True,
+            "input_tokens": 1000,
+            "output_tokens": 100,
+            "cached_input_tokens": 0,
+        },
+    )()
+    assert incremental_cost_for_result("deepseek-v4-flash", result) == 0.0
+
+
+def test_incremental_cost_uses_provider_cached_tokens():
+    result = type(
+        "Result",
+        (),
+        {
+            "cache_hit": False,
+            "input_tokens": 1000,
+            "output_tokens": 0,
+            "cached_input_tokens": 1000,
+        },
+    )()
+    assert incremental_cost_for_result("claude-haiku-4-5", result) == pytest.approx(
+        1000 / 1_000_000 * 0.10
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -118,6 +150,12 @@ def test_estimate_batch_under_threshold_no_gate():
     # Tiny batch well under $5 should not require confirmation.
     est = estimate_batch(_cheap_reqs(1), verbose=False)
     assert est.total_usd < costs.CONFIRM_THRESHOLD_USD
+
+
+def test_estimate_batch_hard_budget_cannot_be_bypassed(monkeypatch):
+    monkeypatch.setattr(costs, "_read_cumulative", lambda _path: 449.99999)
+    with pytest.raises(BudgetExceededError):
+        estimate_batch(_cheap_reqs(1), confirmed=True, verbose=False)
 
 
 # --------------------------------------------------------------------------- #

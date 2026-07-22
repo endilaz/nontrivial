@@ -44,7 +44,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from src import costs  # noqa: E402
 from src.config import RunConfig, load_run_config, save_run_config  # noqa: E402
-from src.evaluation import parse_final_answer, evaluate_with_llm  # noqa: E402
+from src.evaluation import parse_final_answer  # noqa: E402
 from src.generation import GenerationClient, GenerationRequest  # noqa: E402
 
 DEFAULT_TASKS_PATH = REPO_ROOT / "data" / "tasks" / "task_set.jsonl"
@@ -227,9 +227,9 @@ def score_answer(
         is_correct=(
             predicted_text is not None
             and truth_text is not None
-            and evaluate_with_llm(predicted_text, truth_text)["score"] > 0.5
+            and predicted_text == truth_text
         ),
-        method="normalized_string_llm",
+        method="normalized_string_exact",
         normalized_prediction=predicted_text,
         normalized_ground_truth=truth_text,
     )
@@ -240,12 +240,14 @@ def build_request(task: dict[str, Any], config: RunConfig, force_fresh: bool) ->
     return GenerationRequest(
         provider=config.provider,
         model=config.model,
+        provider_route=config.provider_route,
         messages=[{"role": "user", "content": prompt}],
         temperature=config.temperature,
         max_tokens=config.max_tokens,
         seed=config.seed,
         thinking_setting=config.thinking_setting,
         force_fresh=force_fresh,
+        prompt_template_version=config.prompt_template_version,
     )
 
 
@@ -359,15 +361,11 @@ def run_one_config(
             cost_usd = None
             cost_note = None
             try:
-                cost_usd = costs.cost_for_usage(
-                    config.model,
-                    result.input_tokens or 0,
-                    result.output_tokens or 0,
-                )
+                cost_usd = costs.incremental_cost_for_result(config.model, result)
             except costs.UnverifiedPriceError as exc:
                 cost_note = str(exc)
 
-            if cost_usd is not None:
+            if cost_usd is not None and not result.cache_hit:
                 costs.log_cost(
                     run_id=config.run_id,
                     model=config.model,
@@ -375,6 +373,7 @@ def run_one_config(
                     input_tokens=result.input_tokens or 0,
                     output_tokens=result.output_tokens or 0,
                     cost_usd=cost_usd,
+                    cached_tokens=result.cached_input_tokens,
                 )
 
             record = {
@@ -393,10 +392,18 @@ def run_one_config(
                 "usage": {
                     "input_tokens": result.input_tokens,
                     "output_tokens": result.output_tokens,
+                    "cached_input_tokens": result.cached_input_tokens,
+                    "reasoning_tokens": result.reasoning_tokens,
                 },
                 "cost_usd": cost_usd,
                 "cost_note": cost_note,
                 "cache_hit": result.cache_hit,
+                "cache_key": result.cache_key,
+                "provider_timestamp": result.timestamp,
+                "system_fingerprint": result.system_fingerprint,
+                "finish_reason": result.finish_reason,
+                "prefill_mechanism": result.prefill_mechanism,
+                "applied_settings": result.applied_settings,
                 "config": config.model_dump(),
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }

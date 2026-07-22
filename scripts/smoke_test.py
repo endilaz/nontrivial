@@ -66,23 +66,32 @@ def run() -> None:
     config = load_run_config(CONFIG_PATH)
     client = GenerationClient()  # loads .env; uses data/cache response cache
 
+    requests = []
+    for item in SMOKE_PROBLEMS:
+        prompt = config.prompt_template.format(problem=item["problem"])
+        requests.append(
+            GenerationRequest(
+                provider=config.provider,
+                model=config.model,
+                provider_route=config.provider_route,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=config.temperature,
+                max_tokens=config.max_tokens,
+                seed=config.seed,
+                thinking_setting=config.thinking_setting,
+                prompt_template_version=config.prompt_template_version,
+            )
+        )
+    costs.estimate_batch(requests, interactive=True, verbose=True)
+
     RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
     # Save the run config alongside the outputs (ground rule 4).
     save_run_config(config, CONFIG_COPY_PATH)
 
     n_written = 0
     with RESULTS_PATH.open("w", encoding="utf-8") as fh:
-        for item in SMOKE_PROBLEMS:
-            prompt = config.prompt_template.format(problem=item["problem"])
-            request = GenerationRequest(
-                provider=config.provider,
-                model=config.model,
-                messages=[{"role": "user", "content": prompt}],
-                temperature=config.temperature,
-                max_tokens=config.max_tokens,
-                seed=config.seed,
-                thinking_setting=config.thinking_setting,
-            )
+        for item, request in zip(SMOKE_PROBLEMS, requests):
+            prompt = request.messages[0]["content"]
             result = client.generate(request)
             final_answer = parse_final_answer(result.text)
 
@@ -91,15 +100,11 @@ def run() -> None:
             cost_usd = None
             cost_note = None
             try:
-                cost_usd = costs.cost_for_usage(
-                    config.model,
-                    result.input_tokens or 0,
-                    result.output_tokens or 0,
-                )
+                cost_usd = costs.incremental_cost_for_result(config.model, result)
             except costs.UnverifiedPriceError as exc:
                 cost_note = str(exc)
 
-            if cost_usd is not None:
+            if cost_usd is not None and not result.cache_hit:
                 costs.log_cost(
                     run_id=config.run_id,
                     model=config.model,
@@ -107,6 +112,7 @@ def run() -> None:
                     input_tokens=result.input_tokens or 0,
                     output_tokens=result.output_tokens or 0,
                     cost_usd=cost_usd,
+                    cached_tokens=result.cached_input_tokens,
                 )
 
             record = {
@@ -119,11 +125,19 @@ def run() -> None:
                 "usage": {
                     "input_tokens": result.input_tokens,
                     "output_tokens": result.output_tokens,
+                    "cached_input_tokens": result.cached_input_tokens,
+                    "reasoning_tokens": result.reasoning_tokens,
                 },
                 "cost_usd": cost_usd,
                 "cost_note": cost_note,
                 "config": config.model_dump(),
                 "cache_hit": result.cache_hit,
+                "cache_key": result.cache_key,
+                "provider_timestamp": result.timestamp,
+                "system_fingerprint": result.system_fingerprint,
+                "finish_reason": result.finish_reason,
+                "prefill_mechanism": result.prefill_mechanism,
+                "applied_settings": result.applied_settings,
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }
             fh.write(json.dumps(record, ensure_ascii=False) + "\n")

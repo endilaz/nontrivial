@@ -28,12 +28,14 @@ class RunConfig(BaseModel):
     run_id: str
     provider: str
     model: str
+    provider_route: Optional[str] = None
     temperature: float = 0.0
     max_tokens: int = 512
     thinking_setting: Union[str, Dict[str, Any]] = "disabled"
     seed: Optional[int] = None
     prompt_template: str = "{problem}"
     prefill_mechanism: Optional[str] = None  # native_prefill | instruction_only | None
+    prompt_template_version: str = "v1"
     date: str = ""
     notes: Optional[str] = None
 

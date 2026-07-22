@@ -84,89 +84,15 @@ def _build_llm_prompt(
     )
     return "\n\n".join(prompt)
 
-# ---------------------------------------------------------------------------
-# LLM‑based answer evaluation
-# ---------------------------------------------------------------------------
-# The following helper uses an LLM (e.g. OpenAI GPT‑4o) to judge whether a
-# model‑generated answer matches a reference answer.  It is intentionally
-# lightweight so it can be called from unit tests or a larger evaluation
-# pipeline.
-import os
-from typing import Dict, Any
+def evaluate_with_llm(*_args: object, **_kwargs: object) -> dict[str, object]:
+    """Reject unconfigured LLM judging.
 
-try:
-    # The OpenAI Python SDK is optional; the function will raise a clear
-    # error if it is not installed.
-    import openai
-except Exception as exc:  # pragma: no cover
-    openai = None  # type: ignore
-
-import requests
-import json
-
-def evaluate_with_llm(
-    model_answer: str,
-    reference_answer: str,
-    *,
-    model: str = "gpt-4o-mini",
-    temperature: float = 0.0,
-    context: str | None = None,
-    api_key: str | None = None,
-) -> Dict[str, Any]:
-    """Use an LLM to judge the similarity of two answers.
-
-    Parameters
-    ----------
-    model_answer:
-        The answer produced by the model.
-    reference_answer:
-        The ground‑truth answer.
-    model:
-        The model name.  Defaults to ``gpt-4o-mini``.
-    temperature:
-        Controls randomness; 0.0 gives deterministic output.
-    context:
-        Optional context that may help the LLM judge the answer.
-    api_key:
-        Optional OpenAI API key.  If omitted, the function will look for the
-        ``OPENAI_API_KEY`` environment variable.
-
-    Returns
-    -------
-    dict
-        The parsed JSON response from the LLM containing ``score`` and
-        ``explanation``.
+    Canonical judge calls must be versioned, cached, costed, and routed through
+    :class:`src.generation.GenerationClient`. The old direct SDK helper bypassed
+    all of those controls, so it remains unavailable until the Phase 1 judge
+    validation pipeline is implemented.
     """
-    # First API call with reasoning
-    response = requests.post(
-        url="https://openrouter.ai/api/v1/chat/completions",
-        headers={
-            "Authorization": "Bearer " + (os.getenv("OPENROUTER_API_KEY")),
-            "Content-Type": "application/json",
-        },
-        data=json.dumps({
-            "model": "openrouter/free",
-            "messages": [
-                {
-                "role": "user",
-                "content": _build_llm_prompt(model_answer, reference_answer, context)
-                }
-            ],
-            "reasoning": {"enabled": True}
-        })
+    raise RuntimeError(
+        "LLM answer judging is not configured. Use deterministic scoring or "
+        "the validated GenerationClient-based judge pipeline."
     )
-
-    # Extract the assistant message with reasoning_details
-    response = response.json()
-    response = response['choices'][0]['message']['content']
-    try:
-        result = json.loads(response)
-    except Exception as exc:  # pragma: no cover
-        raise ValueError(
-            f"LLM returned non‑JSON output: {response!r}. Error: {exc}"
-        )
-    if "score" not in result or "explanation" not in result:
-        raise ValueError(
-            f"LLM output missing required keys: {result!r}."
-        )
-    return result

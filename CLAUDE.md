@@ -189,13 +189,16 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
 ### Phase 0 — Setup (week 1)
 - [x] Initialize repo, venv, pinned `requirements.txt`, `.env` template.
       *(Done 2026-07-08.)*
-- [x] `src/generation.py`: provider-agnostic client (OpenAI, Anthropic, Google,
+- [ ] `src/generation.py`: provider-agnostic client (OpenAI, Anthropic, Google,
       OpenRouter, Together, DeepSeek) with retry/backoff and the **response
-      cache** (ground rule 8). *(Done 2026-07-08; adapters not yet exercised
-      against live APIs — the smoke test does that.)*
-- [x] `src/costs.py`: cost estimator + logger. Every batch is estimated in code
-      before launch (ground rule 2). *(Done 2026-07-08; prices filled from the
-      capability matrix.)*
+  cache** (ground rule 8). *(Initial scaffold completed 2026-07-08. Reopened
+  by the 2026-07-21 audit: provider thinking settings were recorded but not
+  applied, and cache/provenance semantics require Milestones A2-A7 in
+  `plan.md`.)*
+- [ ] `src/costs.py`: cost estimator + logger. Every batch is estimated in code
+  before launch (ground rule 2). *(Initial scaffold completed 2026-07-08.
+  Reopened by the 2026-07-21 audit: local cache hits were charged again,
+  provider cached tokens were omitted, and the hard budget was not enforced.)*
 - [x] **Capability matrix** for all candidate models (Section 4): prefill support,
       thinking-disable support, batch API, raw-vs-summarized reasoning, prices.
       Workhorse and panel are chosen from this matrix.
@@ -206,21 +209,25 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       (see Section 1). Verify/refute the positioning in Section 1 — especially
       Arcuschin et al. 2025, Tutek et al. 2025, and anything Feb–Jul 2026 on
       open-ended CoT faithfulness. Update Section 1 with findings.
-- [x] Smoke test: 5 problems through `deepseek-v4-flash` end-to-end; verify JSONL
+- [ ] Smoke test: 5 problems through `deepseek-v4-flash` end-to-end; verify JSONL
       output schema. Doubles as the live capability probe run (prefix-completion
       works; non-thinking mode emits zero reasoning; see the matrix's
-      open-questions section for the full probe list). Needs API keys in `.env`.
+  open-questions section for the full probe list). Needs API keys in `.env`.
+  *(The 2026-07-13 run is invalid as a capability probe: it did not exercise
+  prefill and raw receipts show nonzero reasoning tokens despite the recorded
+  disabled setting. Rerun only after Milestone A3.)*
 - **Checkpoint:** researcher reviews output schema, cost estimator, capability
   matrix, and updated positioning.
 
 ### Phase 1 — Task set (weeks 1–2)
-- [x] Build `data/tasks/`: 4 task types × 50 problems.
+- [ ] Build `data/tasks/`: 4 task types × 50 problems.
       - **Math word problems:** sample from GSM8K (or similar), stratified by
         difficulty, then **surface-perturbed** (change numbers/entity names, preserve
         solution structure) so every problem is surface-novel — GSM8K is heavily
         memorized by 2026 models, and contamination deflates corruption sensitivity
         for math specifically, masquerading as a task-type effect. Record the
-        perturbation seed and original ID.
+        perturbation seed and original ID. *(The initial 2026-07 task set was
+        invalidated by the 2026-07-21 audit and must be rebuilt under Milestone B.)*
       - **Logic puzzles:** multi-step deductive puzzles with unique answers.
       - **Multi-step factual:** questions requiring 2+ hops, with ground truth.
       - **Ethical dilemmas:** short scenarios. "Correct answer" is contested, so the
@@ -232,10 +239,12 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       (factual), a unique solution (logic), or a **forced stance — yes/no** (ethics,
       e.g., "Should X do Y?"). This makes answer-change detection tractable and
       uniform.
-- [x] Each problem gets: id, type, source, ground truth (where applicable), license,
+- [ ] Each problem gets: id, type, source, ground truth (where applicable), license,
       answer format, and a **`binary_ok` flag**. Ensure **≥20 problems per task type**
       admit a binary (yes/no) formulation — this is the Direction 2 probing subset
-      and must be designed now, not retrofitted in week 8.
+      and must be designed now, not retrofitted in week 8. *(Reopened: initial
+      records lacked valid binary labels, provenance, licenses, and factual
+      context.)*
 - [ ] Record **per-model baseline accuracy per task type** (from Phase 3 baseline
       generations) — used as a covariate in Phase 5, since task-type comparisons are
       confounded by difficulty, contamination, and answer format.
@@ -473,3 +482,9 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-08 | **Workhorse = `deepseek-v4-flash` (non-thinking mode)**; fallback Gemini 2.5 Flash. Pending smoke-test confirmation (beta prefix-completion works; non-thinking mode emits zero reasoning). Pin this model id — legacy `deepseek-chat`/`deepseek-reasoner` names sunset 2026-07-24. |
 | 2026-07-08 | Phase 3 forced-answer mechanism: **strict instruction-only is the primary mechanism on all models**; assistant prefill runs **additionally** where supported (DeepSeek API, local bridge model) as a robustness arm. Mechanism logged per call; analysis covariate. |
 | 2026-07-08 | **Literature refresh on hold** — launched only on the researcher's explicit trigger. |
+| 2026-07-21 | The project audit invalidates the existing smoke capability claims, generated task set, baseline summaries, and affected cost accounting as scientific artifacts. Preserve them for audit; Milestones A-C in `plan.md` must pass before Phase 0/1 are marked complete again. |
+| 2026-07-21 | Math task transformations may change wording, nonnumeric entity names, and reviewed compatible objects, but must preserve every number, unit, operation, comparison, and mathematical relationship until a structured solver can recompute changed quantities. |
+| 2026-07-21 | Multi-step factual tasks use HotpotQA with the full original gold-plus-distractor context, source order, supporting facts, `_id`, type, and level retained. This is contextual evidence retrieval and multi-hop synthesis, distinct from synthetic logic constraint solving. |
+| 2026-07-21 | Ethics uses only the ETHICS commonsense subset. Source labels are consensus annotations; report source-label agreement and answer stability, never objective ethics accuracy. |
+| 2026-07-21 | Direction 2 uses exactly 20 frozen probe tasks per type with balanced claim-verification labels (10 yes, 10 no), separately marked from general binary eligibility. |
+| 2026-07-21 | Preserve and explicitly invalidate existing generated task/result/cache/cost artifacts; regenerate canonical artifacts under new schema versions and run IDs. |

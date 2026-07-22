@@ -6,7 +6,7 @@ detection, outcome coding), so its edge cases are pinned down now.
 
 import pytest
 
-from src.evaluation import parse_final_answer
+from src.evaluation import evaluate_with_llm, parse_final_answer
 
 
 @pytest.mark.parametrize(
@@ -51,3 +51,8 @@ def test_parse_final_answer_extracts(text, expected):
 )
 def test_parse_final_answer_returns_none(text):
     assert parse_final_answer(text) is None
+
+
+def test_unvalidated_llm_judge_fails_closed():
+    with pytest.raises(RuntimeError, match="not configured"):
+        evaluate_with_llm("New York City", "NYC")

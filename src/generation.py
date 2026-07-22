@@ -50,6 +50,7 @@ import json
 import os
 import random
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Union
@@ -67,7 +68,10 @@ except Exception:  # pragma: no cover
 # --------------------------------------------------------------------------- #
 
 #: Default on-disk response-cache directory (relative to repo root).
-DEFAULT_CACHE_DIR = Path(__file__).resolve().parent.parent / "data" / "cache"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_CACHE_DIR = REPO_ROOT / "data" / "cache" / "v2"
+PROJECT_ENV_PATH = REPO_ROOT / ".env"
+CACHE_SCHEMA_VERSION = 2
 
 #: env-var name that holds each provider's key. Never print these VALUES.
 PROVIDER_ENV_VARS: Dict[str, str] = {
@@ -136,6 +140,7 @@ class GenerationRequest(BaseModel):
 
     provider: str
     model: str
+    provider_route: Optional[str] = None
     messages: List[Dict[str, Any]]
     temperature: float = 0.0
     max_tokens: int = 512
@@ -157,6 +162,7 @@ class GenerationRequest(BaseModel):
     # force_fresh bypasses the cache READ (still writes). NOT part of the cache
     # key — it is a control flag, not a request parameter.
     force_fresh: bool = False
+    prompt_template_version: str = "v1"
 
     model_config = {"extra": "forbid"}
 
@@ -173,8 +179,14 @@ class GenerationResult(BaseModel):
     timestamp: str
     cache_hit: bool = False
     cache_key: str
+    cache_schema_version: int = CACHE_SCHEMA_VERSION
+    request: Dict[str, Any]
     prefill_mechanism: Optional[str] = None
     system_fingerprint: Optional[str] = None
+    finish_reason: Optional[str] = None
+    cached_input_tokens: int = 0
+    reasoning_tokens: int = 0
+    applied_settings: Dict[str, Any] = Field(default_factory=dict)
     # Raw, JSON-serialisable provider response (ground rule 1: keep the receipts).
     raw_response: Optional[Dict[str, Any]] = None
 
@@ -221,14 +233,17 @@ def cache_key(request: GenerationRequest) -> str:
     parameter).
     """
     payload = {
+        "cache_schema_version": CACHE_SCHEMA_VERSION,
         "provider": request.provider,
         "model": request.model,
+        "provider_route": request.provider_route,
         "messages": request.messages,
         "temperature": request.temperature,
         "max_tokens": request.max_tokens,
         "seed": request.seed,
         "thinking_setting": request.thinking_setting,
         "replicate_index": request.replicate_index,
+        "prompt_template_version": request.prompt_template_version,
     }
     return hashlib.sha256(canonical_json(payload).encode("utf-8")).hexdigest()
 
@@ -330,7 +345,7 @@ class GenerationClient:
         self._sleep = sleep_fn
         self._log = logger or (lambda _msg: None)
         if load_env and load_dotenv is not None:
-            load_dotenv()
+            load_dotenv(PROJECT_ENV_PATH, override=False)
 
     # -- public API -------------------------------------------------------- #
 
@@ -362,8 +377,13 @@ class GenerationClient:
             timestamp=_now_iso(),
             cache_hit=False,
             cache_key=key,
+            request=request.model_dump(exclude={"force_fresh"}),
             prefill_mechanism=invoked.get("prefill_mechanism"),
             system_fingerprint=invoked.get("system_fingerprint"),
+            finish_reason=invoked.get("finish_reason"),
+            cached_input_tokens=invoked.get("cached_input_tokens", 0),
+            reasoning_tokens=invoked.get("reasoning_tokens", 0),
+            applied_settings=invoked.get("applied_settings", {}),
             raw_response=invoked.get("raw_response"),
         )
         self._write_cache(key, result)
@@ -382,19 +402,34 @@ class GenerationClient:
             data = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):  # pragma: no cover - corrupt cache
             return None
-        result = GenerationResult.model_validate(data)
+        try:
+            result = GenerationResult.model_validate(data)
+        except Exception:
+            quarantine = self.cache_dir / "quarantine"
+            quarantine.mkdir(parents=True, exist_ok=True)
+            path.replace(quarantine / f"{key}.{uuid.uuid4().hex}.invalid.json")
+            return None
+        if result.cache_schema_version != CACHE_SCHEMA_VERSION:
+            return None
+        if result.cache_key != key:
+            return None
         result.cache_hit = True  # mark provenance; stored copy has cache_hit=False
         return result
 
     def _write_cache(self, key: str, result: GenerationResult) -> None:
         # Store the canonical copy with cache_hit=False; reads flip it to True.
         stored = result.model_copy(update={"cache_hit": False})
-        tmp = self._cache_path(key).with_suffix(".json.tmp")
+        path = self._cache_path(key)
+        if path.exists():
+            history_dir = self.cache_dir / "history"
+            history_dir.mkdir(parents=True, exist_ok=True)
+            path.replace(history_dir / f"{key}.{uuid.uuid4().hex}.json")
+        tmp = self.cache_dir / f".{key}.{uuid.uuid4().hex}.tmp"
         tmp.write_text(
             json.dumps(stored.model_dump(), ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        tmp.replace(self._cache_path(key))  # atomic-ish on same filesystem
+        tmp.replace(path)
 
     # -- retry ------------------------------------------------------------- #
 
@@ -504,16 +539,57 @@ class GenerationClient:
         if request.seed is not None:
             kwargs["seed"] = request.seed
 
+        applied_settings: Dict[str, Any] = {}
+        extra_body: Dict[str, Any] = {}
+        if request.provider == "openai":
+            if request.thinking_setting == "disabled":
+                kwargs["reasoning_effort"] = "none"
+                applied_settings["reasoning_effort"] = "none"
+            elif isinstance(request.thinking_setting, dict):
+                effort = request.thinking_setting.get("reasoning_effort")
+                if effort is None:
+                    raise ValueError(
+                        "OpenAI thinking_setting must include reasoning_effort"
+                    )
+                kwargs["reasoning_effort"] = effort
+                applied_settings["reasoning_effort"] = effort
+        elif request.thinking_setting == "disabled":
+            raise ValueError(
+                f"{request.provider} requires a verified provider-specific dict "
+                "for disabled thinking; a string label is not sent"
+            )
+        elif isinstance(request.thinking_setting, dict):
+            extra_body.update(request.thinking_setting)
+            applied_settings.update(request.thinking_setting)
+
+        if request.provider == "openrouter":
+            if not request.provider_route:
+                raise ValueError("OpenRouter requests require a pinned provider_route")
+            extra_body["provider"] = {
+                "order": [request.provider_route],
+                "allow_fallbacks": False,
+            }
+            applied_settings["provider_route"] = request.provider_route
+
+        if extra_body:
+            kwargs["extra_body"] = extra_body
+
         resp = client.chat.completions.create(**kwargs)
         raw = _to_serializable(resp)
         text = (resp.choices[0].message.content or "") if resp.choices else ""
         usage = getattr(resp, "usage", None)
+        prompt_details = getattr(usage, "prompt_tokens_details", None)
+        completion_details = getattr(usage, "completion_tokens_details", None)
         return {
             "text": text,
             "input_tokens": getattr(usage, "prompt_tokens", None),
             "output_tokens": getattr(usage, "completion_tokens", None),
             "prefill_mechanism": mode,
             "system_fingerprint": getattr(resp, "system_fingerprint", None),
+            "finish_reason": getattr(resp.choices[0], "finish_reason", None) if resp.choices else None,
+            "cached_input_tokens": getattr(prompt_details, "cached_tokens", 0) or 0,
+            "reasoning_tokens": getattr(completion_details, "reasoning_tokens", 0) or 0,
+            "applied_settings": applied_settings,
             "raw_response": raw,
         }
 
@@ -559,6 +635,8 @@ class GenerationClient:
             kwargs["system"] = "\n\n".join(system_parts)
         if isinstance(request.thinking_setting, dict):
             kwargs["thinking"] = request.thinking_setting  # provider-specific dict
+        elif request.thinking_setting == "disabled":
+            kwargs["thinking"] = {"type": "disabled"}
 
         resp = client.messages.create(**kwargs)
         raw = _to_serializable(resp)
@@ -572,6 +650,11 @@ class GenerationClient:
             "output_tokens": getattr(usage, "output_tokens", None),
             "prefill_mechanism": mode,
             "system_fingerprint": None,  # Anthropic has no system_fingerprint field
+            "finish_reason": getattr(resp, "stop_reason", None),
+            "cached_input_tokens": (
+                getattr(usage, "cache_read_input_tokens", 0) or 0
+            ),
+            "applied_settings": {"thinking": kwargs.get("thinking")},
             "raw_response": raw,
         }
 
@@ -635,5 +718,10 @@ class GenerationClient:
             "output_tokens": getattr(usage, "candidates_token_count", None),
             "prefill_mechanism": mode,
             "system_fingerprint": getattr(resp, "response_id", None),
+            "finish_reason": None,
+            "cached_input_tokens": getattr(usage, "cached_content_token_count", 0) or 0,
+            "applied_settings": {
+                "thinking_config": str(config_kwargs.get("thinking_config"))
+            },
             "raw_response": raw,
         }

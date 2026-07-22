@@ -2,7 +2,7 @@
   "run_id": "baseline_glm_5_2_openrouter_v1",
   "provider": "openrouter",
   "model": "z-ai/glm-5.2",
-  "generated_at": "2026-07-21T13:22:19.500594+00:00",
+  "generated_at": "2026-07-21T13:52:02.995600+00:00",
   "results_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.jsonl",
   "config_copy_path": "/Users/daniel/Documents/coding/nontrivial/data/results/baseline_glm_5_2_openrouter_v1.baseline_generations.config.yaml",
   "summary_rows": [
