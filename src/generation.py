@@ -119,6 +119,23 @@ PROVIDER_PREFILL_SUPPORT: Dict[str, bool] = {
 #: 529 = Anthropic "overloaded").
 RETRYABLE_STATUS = {408, 409, 425, 429, 500, 502, 503, 504, 529}
 
+#: Per-provider total request deadline in seconds (A3/E4). Reasoning-capable
+#: endpoints get a longer budget. These are operational timeouts, not prices.
+PROVIDER_TIMEOUTS_S: Dict[str, float] = {
+    "openai": 120.0,
+    "anthropic": 120.0,
+    "google": 120.0,
+    "openrouter": 180.0,  # routing + upstream variance
+    "together": 120.0,
+    "deepseek": 180.0,
+}
+DEFAULT_TIMEOUT_S = 120.0
+
+#: Prefix for provider idempotency keys. The key is STABLE across retries of the
+#: same logical request (== its cache key), so a retry after an ambiguous
+#: acceptance is de-duplicated by the provider instead of double-charged (E4).
+IDEMPOTENCY_PREFIX = "cotf"
+
 #: Prefill-mechanism labels recorded in the result.
 PREFILL_NATIVE = "native_prefill"
 PREFILL_INSTRUCTION = "instruction_only"
@@ -187,6 +204,11 @@ class GenerationResult(BaseModel):
     cached_input_tokens: int = 0
     reasoning_tokens: int = 0
     applied_settings: Dict[str, Any] = Field(default_factory=dict)
+    # A3/E4: the stable idempotency key sent to the provider, and the id of every
+    # physical attempt made (>1 means retries happened). Persisted so an
+    # ambiguous acceptance can be reconciled rather than blindly resubmitted.
+    idempotency_key: Optional[str] = None
+    attempts: List[str] = Field(default_factory=list)
     # Raw, JSON-serialisable provider response (ground rule 1: keep the receipts).
     raw_response: Optional[Dict[str, Any]] = None
 
@@ -269,6 +291,30 @@ def _to_serializable(obj: Any) -> Any:
         return json.loads(json.dumps(obj, default=lambda o: getattr(o, "__dict__", str(o))))
     except Exception:  # pragma: no cover - defensive
         return str(obj)
+
+
+def idempotency_key(request: GenerationRequest) -> str:
+    """Stable provider idempotency key for a logical request (== its cache key)."""
+    return f"{IDEMPOTENCY_PREFIX}-{cache_key(request)}"
+
+
+def _retry_after_seconds(exc: Exception) -> Optional[float]:
+    """Parse a ``Retry-After`` header (seconds) off a provider exception, if any."""
+    resp = getattr(exc, "response", None)
+    headers = getattr(resp, "headers", None)
+    if not headers:
+        return None
+    try:
+        value = headers.get("retry-after") or headers.get("Retry-After")
+    except AttributeError:  # pragma: no cover - non-mapping headers
+        return None
+    if value is None:
+        return None
+    try:
+        secs = float(value)
+        return secs if secs >= 0 else None
+    except (TypeError, ValueError):
+        return None  # HTTP-date form not handled; fall back to backoff
 
 
 def _extract_status(exc: Exception) -> Optional[int]:
@@ -372,7 +418,8 @@ class GenerationClient:
                 return cached
 
         start = time.perf_counter()
-        invoked = self._with_retry(lambda: self._invoke_provider(request), request)
+        attempts: List[str] = []
+        invoked = self._with_retry(lambda: self._invoke_provider(request), request, attempts)
         latency = time.perf_counter() - start
 
         result = GenerationResult(
@@ -392,6 +439,8 @@ class GenerationClient:
             cached_input_tokens=invoked.get("cached_input_tokens", 0),
             reasoning_tokens=invoked.get("reasoning_tokens", 0),
             applied_settings=invoked.get("applied_settings", {}),
+            idempotency_key=idempotency_key(request),
+            attempts=attempts,
             raw_response=invoked.get("raw_response"),
         )
         self._write_cache(key, result)
@@ -457,21 +506,36 @@ class GenerationClient:
 
     # -- retry ------------------------------------------------------------- #
 
-    def _with_retry(self, fn: Callable[[], Dict[str, Any]], request: GenerationRequest) -> Dict[str, Any]:
+    def _with_retry(
+        self,
+        fn: Callable[[], Dict[str, Any]],
+        request: GenerationRequest,
+        attempts: Optional[List[str]] = None,
+    ) -> Dict[str, Any]:
         attempt = 0
         while True:
+            # Record the physical attempt before it runs, so a crash mid-call
+            # still leaves evidence that this attempt was made (E4 reconciliation).
+            attempt_id = uuid.uuid4().hex
+            if attempts is not None:
+                attempts.append(attempt_id)
             try:
                 return fn()
             except Exception as exc:  # noqa: BLE001 - we re-raise non-retryable
                 if attempt >= self.max_retries or not _is_retryable(exc):
                     raise
-                delay = min(self.base_delay * (2 ** attempt), self.max_delay)
-                delay += random.uniform(0, self.base_delay)  # full jitter add-on
+                # Honor a provider Retry-After header when present; else backoff.
+                retry_after = _retry_after_seconds(exc)
+                if retry_after is not None:
+                    delay = min(retry_after, self.max_delay)
+                else:
+                    delay = min(self.base_delay * (2 ** attempt), self.max_delay)
+                    delay += random.uniform(0, self.base_delay)  # full jitter add-on
                 status = _extract_status(exc)
                 self._log(
                     f"retry {attempt + 1}/{self.max_retries} after {delay:.2f}s "
                     f"({request.provider}/{request.model}, status={status}, "
-                    f"{type(exc).__name__})"
+                    f"{type(exc).__name__}, retry_after={retry_after})"
                 )
                 self._sleep(delay)
                 attempt += 1
@@ -598,6 +662,11 @@ class GenerationClient:
         if extra_body:
             kwargs["extra_body"] = extra_body
 
+        # A3/E4: per-provider deadline + stable idempotency key (so a retry after
+        # an ambiguous acceptance is de-duplicated, not double-charged).
+        kwargs["timeout"] = PROVIDER_TIMEOUTS_S.get(request.provider, DEFAULT_TIMEOUT_S)
+        kwargs["extra_headers"] = {"Idempotency-Key": idempotency_key(request)}
+
         resp = client.chat.completions.create(**kwargs)
         raw = _to_serializable(resp)
         text = (resp.choices[0].message.content or "") if resp.choices else ""
@@ -661,6 +730,9 @@ class GenerationClient:
             kwargs["thinking"] = request.thinking_setting  # provider-specific dict
         elif request.thinking_setting == "disabled":
             kwargs["thinking"] = {"type": "disabled"}
+
+        kwargs["timeout"] = PROVIDER_TIMEOUTS_S.get("anthropic", DEFAULT_TIMEOUT_S)
+        kwargs["extra_headers"] = {"Idempotency-Key": idempotency_key(request)}
 
         resp = client.messages.create(**kwargs)
         raw = _to_serializable(resp)

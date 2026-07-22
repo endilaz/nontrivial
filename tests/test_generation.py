@@ -345,6 +345,77 @@ def test_non_retryable_error_raises_immediately(tmp_path, monkeypatch):
     assert attempts["n"] == 1  # a 400 is not retried
 
 
+class FakeRateLimitWithRetryAfter(Exception):
+    status_code = 429
+
+    def __init__(self):
+        super().__init__("rate limited")
+        self.response = SimpleNamespace(headers={"retry-after": "7"})
+
+
+def test_idempotency_key_is_stable_and_derived_from_cache_key():
+    from src.generation import idempotency_key
+
+    req = make_request()
+    assert idempotency_key(req) == f"cotf-{cache_key(req)}"
+    assert idempotency_key(req) == idempotency_key(make_request())  # stable
+
+
+def test_openai_adapter_forwards_timeout_and_idempotency_header(monkeypatch, tmp_path):
+    from src.generation import idempotency_key
+
+    captured = _install_fake_openai(monkeypatch)
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    client = GenerationClient(cache_dir=tmp_path, load_env=False)
+    req = make_request()
+
+    client._invoke_openai_compatible(req)
+
+    assert captured["timeout"] == 120.0
+    assert captured["extra_headers"]["Idempotency-Key"] == idempotency_key(req)
+
+
+def test_retry_after_header_is_honored_over_backoff(tmp_path, monkeypatch):
+    sleeps = []
+    client = GenerationClient(
+        cache_dir=tmp_path, load_env=False, max_retries=3, base_delay=0.01,
+        sleep_fn=lambda s: sleeps.append(s),
+    )
+    attempts = {"n": 0}
+
+    def flaky(request):
+        attempts["n"] += 1
+        if attempts["n"] == 1:
+            raise FakeRateLimitWithRetryAfter()
+        return stub_invocation()
+
+    monkeypatch.setattr(client, "_invoke_provider", flaky)
+    client.generate(make_request())
+    assert sleeps == [7.0]  # used Retry-After, not exponential backoff
+
+
+def test_attempts_and_idempotency_recorded_on_result(tmp_path, monkeypatch):
+    from src.generation import idempotency_key
+
+    client = GenerationClient(
+        cache_dir=tmp_path, load_env=False, max_retries=3, base_delay=0.01,
+        sleep_fn=lambda s: None,
+    )
+    attempts = {"n": 0}
+
+    def flaky(request):
+        attempts["n"] += 1
+        if attempts["n"] == 1:
+            raise FakeRateLimit("rate limited")
+        return stub_invocation()
+
+    monkeypatch.setattr(client, "_invoke_provider", flaky)
+    req = make_request()
+    result = client.generate(req)
+    assert len(result.attempts) == 2  # one failed, one succeeded
+    assert result.idempotency_key == idempotency_key(req)
+
+
 def test_retry_gives_up_after_max_retries(tmp_path, monkeypatch):
     client = GenerationClient(
         cache_dir=tmp_path,
