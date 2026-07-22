@@ -1,0 +1,122 @@
+# Task selection configuration (Milestone B1) — DRAFT for researcher approval.
+#
+# This file freezes every selection decision BEFORE sampling. The task builder
+# (src/task_set.py) reads this file and may not choose thresholds from observed
+# candidate quality or model outputs. Any change after approval creates a new
+# config revision and a new task-set manifest hash.
+#
+status: approved # researcher reviewed candidates + config, 2026-07-22
+approved_by: researcher
+approved_at: 2026-07-22
+revision: 1
+created: 2026-07-21
+
+rng:
+  root_seed: 20260721
+  rng_version: "python-random.Random (Mersenne Twister), Python 3.13"
+  # Derived seeds are root_seed + stream_offset, one stream per task family, so
+  # per-family sampling is independent of the other families' rejection counts.
+  stream_offsets:
+    math: 1000
+    logic: 2000
+    factual: 3000
+    ethics: 4000
+
+quotas:
+  per_task_type: 50
+  binary_probe_subset:
+    per_task_type: 20
+    yes_labels: 10
+    no_labels: 10
+
+sources:
+  math:
+    dataset: GSM8K
+    revision: "main-2021 (openai/grade-school-math), local copy data/tasks/MATH_gsm8k/train.jsonl"
+    sha256: "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465"
+    split: train
+    license: "MIT (dataset), https://github.com/openai/grade-school-math — verify in B6"
+  logic:
+    dataset: BIG-Bench logic_grid_puzzle
+    revision: "BIG-Bench main, local copy data/tasks/LOGIC_BIG-Bench-logic_grid_puzzle/task.json"
+    sha256: "afeb101f71f637851a82418501ad48bb9d2b5762f348453f9adf035aef8f4dd5"
+    split: train # single example pool; no canonical split
+    license: "Apache-2.0 (BIG-Bench) — verify in B6"
+  factual:
+    dataset: HotpotQA (distractor setting)
+    revision: "hotpot_train_v1.1, local copy data/tasks/REASONING_hotpot-master/hotpot_train_v1.1.json"
+    sha256: "e95caea7dee1f1a6fb94257694d8a196dc4c1babe1229e052155999bdf175d38"
+    split: train
+    license: "CC BY-SA 4.0 (data); Apache-2.0 (code) — verify in B6"
+  ethics:
+    dataset: ETHICS commonsense morality
+    revision: "hendrycks/ethics master, local copy data/tasks/ETHICS_ethics-master/commonsense/cm_train.csv"
+    sha256: "286cb4098a66b71819493f964cf2afe62cdbb6c6b41983b9c0b8fc484650c752"
+    split: train
+    license: "MIT (ETHICS) — verify in B6"
+
+math:
+  difficulty_proxy: solution_step_count # count of <<...>> calculator steps in reference solution
+  difficulty_bins: [2, 3, 4, 5] # step-count bins; stratified ~evenly across bins
+  transformations:
+    allowed_kinds: [name, object, wording]
+    numbers_frozen: true # zero numeric changes until a structured solver exists (decision 2026-07-21)
+    object_substitutions: compatible_only # e.g. apples->pears; reviewed list in builder
+  binary_claims:
+    # True claims state the computed value; false claims use a nearby value from
+    # a documented arithmetic error (e.g. off-by-one, wrong operand order).
+    false_claim_max_relative_deviation: 0.25
+    allowed_error_models: [off_by_one, operand_swap, missed_step]
+
+logic:
+  target_rule: exactly_one_target_score_equal_1
+  max_input_words: 600 # median ~234; reject outliers
+  unique_solution_check: deterministic_constraint_solver # solver version recorded per record
+
+factual:
+  min_supporting_facts: 2
+  min_supporting_titles: 2
+  type_mix:
+    # Preserve a recorded bridge/comparison mix; source permits ~132/32 in local pool.
+    comparison_min: 10
+    comparison_max: 15
+  max_prompt_tokens: 3000 # frozen threshold; reject+replace, never truncate context
+  tokenizer_revision: "whitespace-wordcount-proxy-v1 (offline); recorded per record"
+  reject_if:
+    - answer_in_question
+    - time_sensitive_current
+    - malformed_grammar # flagged during automated checks; final call is human review
+    - answer_type_mismatch
+
+ethics:
+  subset: commonsense_only # cm_train.csv; exclude deontology, AITA-length, other folders
+  max_scenario_words: 60 # concise examples only
+  label_mapping_version: "ethics-cm-v1: raw label 1 -> ground_truth 'no' (unacceptable), 0 -> 'yes' (acceptable); VERIFY against dataset docs in B5 before build"
+  balance:
+    # 50 tasks balanced across raw labels 0/1 (25 each, +/-1).
+    max_label_imbalance: 2
+
+replacement_policy:
+  # Deterministic replacement: rejected candidates are replaced by the next
+  # candidate in the seeded stream order; replacements are logged with reason.
+  order: seeded_stream
+  duplicate_policy: reject_exact_source_id_duplicates
+
+rejection_reason_codes:
+  - duplicate_source_id
+  - missing_required_field
+  - target_rule_violation
+  - non_unique_solution
+  - length_outlier
+  - context_over_token_cap
+  - insufficient_supporting_facts
+  - answer_in_question
+  - time_sensitive
+  - unsupported_answer
+  - ambiguous_or_malformed
+  - quota_filled
+
+review:
+  candidates_file: data/tasks/review/candidates.jsonl
+  decisions_file: data/tasks/review/review_decisions.jsonl # immutable, keyed by task id
+  canonical_merge: sort_by_task_id_and_record_decisions_file_sha256
