@@ -1,0 +1,9 @@
+{
+  "probe_id": "openai_no_reasoning_zero",
+  "status": "pass",
+  "reasoning_tokens": 0,
+  "prefill_mechanism": null,
+  "receipt_sha256": "39fe16fd2ce1c9a826ba9ee27fed0ca0b053da1c5e7d4694379ad7cb7f38d49d",
+  "actual_usd": 3.3e-05,
+  "run_dir": "data/results/probe_openai_no_reasoning_zero"
+}

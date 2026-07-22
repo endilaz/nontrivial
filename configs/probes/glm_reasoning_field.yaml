@@ -1,0 +1,19 @@
+# A3 live capability probe #4: GLM-5.2 on the pinned OpenRouter route returns the
+# raw reasoning field when thinking is enabled. Route pinned to DeepInfra
+# (researcher decision 2026-07-22, cheapest verified route $0.93/$3.00);
+# provider fallback is disabled by the adapter for reproducibility. GLM's
+# thinking toggle is {"thinking": {"type": "enabled"}} (matrix §2.5).
+probe_id: glm_5_2_reasoning_field
+provider: openrouter
+model: z-ai/glm-5.2
+capability: raw_reasoning_field
+assertion: reasoning_field_present
+provider_route: DeepInfra
+thinking_setting:
+  thinking:
+    type: enabled
+max_tokens: 128
+temperature: 0.0
+messages:
+  - role: user
+    content: "What is 17 + 25? Reason briefly, then give the final number."

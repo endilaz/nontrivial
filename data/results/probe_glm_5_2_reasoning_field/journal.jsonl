@@ -1,0 +1,5 @@
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"glm_5_2_reasoning_field\"}", "state": "planned", "ts": "2026-07-22T04:05:27.352548+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"glm_5_2_reasoning_field\"}", "state": "submitted", "ts": "2026-07-22T04:05:27.352836+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"glm_5_2_reasoning_field\"}", "state": "received", "ts": "2026-07-22T04:05:33.342710+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"glm_5_2_reasoning_field\"}", "state": "persisted", "ts": "2026-07-22T04:05:33.345223+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"glm_5_2_reasoning_field\"}", "state": "accounted", "ts": "2026-07-22T04:05:33.347405+00:00"}

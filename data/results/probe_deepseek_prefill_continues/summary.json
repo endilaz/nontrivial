@@ -1,0 +1,9 @@
+{
+  "probe_id": "deepseek_prefill_continues",
+  "status": "pass",
+  "reasoning_tokens": 0,
+  "prefill_mechanism": "native_prefill",
+  "receipt_sha256": "ae4e4afbf860c5386d8c7ca78e7fc41aea3f5f99d06206b204203523825c79fe",
+  "actual_usd": 4.2000000000000004e-06,
+  "run_dir": "data/results/probe_deepseek_prefill_continues"
+}

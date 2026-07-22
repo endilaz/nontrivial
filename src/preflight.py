@@ -36,26 +36,34 @@ class ContextWindow:
         return self.status == "verified" and self.total_tokens is not None
 
 
-#: Keyed by the exact model id used in requests. All entries start UNVERIFIED so
-#: preflight fails closed until the researcher records a verified window (with a
-#: source) from docs/capability_matrix.md — mirroring the UNVERIFIED price policy.
+#: Keyed by the exact model id used in requests. Verified windows are transcribed
+#: (with a source) from docs/capability_matrix.md, which cites the official model
+#: pages. Models whose total window the matrix does not pin — or flags as
+#: conflicting — stay UNVERIFIED so preflight fails closed for them (mirrors the
+#: UNVERIFIED price policy). ``total_tokens`` is the TOTAL context (input+output).
+_MATRIX_SRC = "docs/capability_matrix.md (2026-07-08); official provider model pages"
+
+
+def _verified(total: int) -> ContextWindow:
+    return ContextWindow(total_tokens=total, status="verified", last_verified="2026-07-08", source=_MATRIX_SRC)
+
+
 CONTEXT_WINDOWS: Dict[str, ContextWindow] = {
-    model: ContextWindow(total_tokens=None)
-    for model in (
-        "claude-opus-4-8",
-        "claude-sonnet-4-6",
-        "claude-sonnet-5",
-        "claude-haiku-4-5",
-        "claude-fable-5",
-        "gpt-5.4",
-        "gpt-5.4-mini",
-        "gemini-3-flash-preview",
-        "gemini-2.5-flash",
-        "deepseek-v4-flash",
-        "deepseek-v4-pro",
-        "z-ai/glm-5.2",
-        "deepseek-r1-distill-qwen-7b",
-    )
+    # Verified from the capability matrix (stated as total "context").
+    "gpt-5.4": _verified(1_050_000),
+    "gpt-5.4-mini": _verified(400_000),
+    "deepseek-v4-flash": _verified(1_000_000),
+    "claude-sonnet-4-6": _verified(1_000_000),
+    "claude-haiku-4-5": _verified(200_000),
+    # UNVERIFIED / conflicting in the matrix → fail closed until pinned.
+    "claude-opus-4-8": ContextWindow(total_tokens=None),
+    "claude-sonnet-5": ContextWindow(total_tokens=None),
+    "claude-fable-5": ContextWindow(total_tokens=None),
+    "gemini-3-flash-preview": ContextWindow(total_tokens=None),
+    "gemini-2.5-flash": ContextWindow(total_tokens=None),
+    "deepseek-v4-pro": ContextWindow(total_tokens=None),
+    "z-ai/glm-5.2": ContextWindow(total_tokens=None),  # 128K (Z.ai) vs 32K (OR) conflict
+    "deepseek-r1-distill-qwen-7b": ContextWindow(total_tokens=None),  # local
 }
 
 

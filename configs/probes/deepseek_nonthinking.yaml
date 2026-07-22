@@ -1,0 +1,19 @@
+# A3 live capability probe #1: DeepSeek non-thinking mode emits zero reasoning
+# tokens. Resolves matrix open-Q #7 — the non-thinking control for
+# deepseek-v4-flash is the `thinking` object (verified from the DeepSeek
+# reasoning-model API guide, 2026-07-22): {"type": "disabled"}. The adapter
+# forwards this dict via extra_body, so the request body carries
+# thinking: {type: disabled}.
+probe_id: deepseek_nonthinking_zero_reasoning
+provider: deepseek
+model: deepseek-v4-flash
+capability: thinking_disabled
+assertion: reasoning_tokens_zero
+thinking_setting:
+  thinking:
+    type: disabled
+max_tokens: 32
+temperature: 0.0
+messages:
+  - role: user
+    content: "What is 40 + 2? Reply with just the number."

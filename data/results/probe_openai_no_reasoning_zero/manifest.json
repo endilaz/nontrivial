@@ -1,0 +1,25 @@
+{
+  "run_id": "probe_openai_no_reasoning_zero",
+  "experiment_kind": "capability_probe",
+  "created_at": "2026-07-22T04:05:17.265321+00:00",
+  "code_revision": "0e14f29-dirty",
+  "task_set_path": "(none \u2014 capability probe)",
+  "task_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "selected_task_ids": [
+    "openai_no_reasoning_zero"
+  ],
+  "selection_args": {
+    "probe": "openai_no_reasoning_zero",
+    "assertion": "reasoning_tokens_zero"
+  },
+  "config_sha256": "0dfcab4d4bdd1a0d2b816e37b54daf858544cec6f78cdaf89bfaacbedb33d590",
+  "prompt_template_version": "probe-v1",
+  "provider_route": null,
+  "requested_settings": {
+    "thinking_setting": "disabled",
+    "temperature": 0.0
+  },
+  "price_revision": "prices-2026-07-08",
+  "cache_schema_version": 2,
+  "manifest_schema_version": 1
+}

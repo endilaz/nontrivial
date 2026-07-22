@@ -1,0 +1,29 @@
+{
+  "run_id": "probe_deepseek_nonthinking_zero_reasoning",
+  "experiment_kind": "capability_probe",
+  "created_at": "2026-07-22T04:05:25.090427+00:00",
+  "code_revision": "0e14f29-dirty",
+  "task_set_path": "(none \u2014 capability probe)",
+  "task_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "selected_task_ids": [
+    "deepseek_nonthinking_zero_reasoning"
+  ],
+  "selection_args": {
+    "probe": "deepseek_nonthinking_zero_reasoning",
+    "assertion": "reasoning_tokens_zero"
+  },
+  "config_sha256": "f77d4d35cd68d5a966370622c6a222863b391cb7c731c36b03868b444de0b6a5",
+  "prompt_template_version": "probe-v1",
+  "provider_route": null,
+  "requested_settings": {
+    "thinking_setting": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "temperature": 0.0
+  },
+  "price_revision": "prices-2026-07-08",
+  "cache_schema_version": 2,
+  "manifest_schema_version": 1
+}

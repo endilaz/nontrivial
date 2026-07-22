@@ -1,0 +1,5 @@
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"deepseek_nonthinking_zero_reasoning\"}", "state": "planned", "ts": "2026-07-22T04:05:25.140892+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"deepseek_nonthinking_zero_reasoning\"}", "state": "submitted", "ts": "2026-07-22T04:05:25.141128+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"deepseek_nonthinking_zero_reasoning\"}", "state": "received", "ts": "2026-07-22T04:05:27.292931+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"deepseek_nonthinking_zero_reasoning\"}", "state": "persisted", "ts": "2026-07-22T04:05:27.294370+00:00"}
+{"key": "{\"condition_id\":\"probe\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"deepseek_nonthinking_zero_reasoning\"}", "state": "accounted", "ts": "2026-07-22T04:05:27.296203+00:00"}

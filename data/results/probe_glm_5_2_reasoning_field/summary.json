@@ -1,0 +1,9 @@
+{
+  "probe_id": "glm_5_2_reasoning_field",
+  "status": "pass",
+  "reasoning_tokens": 87,
+  "prefill_mechanism": null,
+  "receipt_sha256": "c75ce63eb169714ba8ad3927efcef56c56ab07abf892ea0ffc7eaa57dd7a40b4",
+  "actual_usd": 0.00040329,
+  "run_dir": "data/results/probe_glm_5_2_reasoning_field"
+}

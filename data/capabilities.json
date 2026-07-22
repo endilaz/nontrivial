@@ -1,0 +1,50 @@
+{
+  "schema": "capability_probe",
+  "schema_version": 1,
+  "probes": [
+    {
+      "probe_id": "openai_no_reasoning_zero",
+      "provider": "openai",
+      "model": "gpt-5.4-mini",
+      "capability": "thinking_disabled",
+      "status": "pass",
+      "verified_on": "2026-07-21",
+      "expires_on": "2026-08-20",
+      "receipt_sha256": "39fe16fd2ce1c9a826ba9ee27fed0ca0b053da1c5e7d4694379ad7cb7f38d49d",
+      "notes": "assertion=reasoning_tokens_zero; reasoning_tokens=0; mechanism=None"
+    },
+    {
+      "probe_id": "deepseek_prefill_continues",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "capability": "native_prefill",
+      "status": "pass",
+      "verified_on": "2026-07-21",
+      "expires_on": "2026-08-20",
+      "receipt_sha256": "ae4e4afbf860c5386d8c7ca78e7fc41aea3f5f99d06206b204203523825c79fe",
+      "notes": "assertion=prefill_continues; reasoning_tokens=0; mechanism=native_prefill"
+    },
+    {
+      "probe_id": "deepseek_nonthinking_zero_reasoning",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "capability": "thinking_disabled",
+      "status": "pass",
+      "verified_on": "2026-07-21",
+      "expires_on": "2026-08-20",
+      "receipt_sha256": "9d6a38c3189694de04bd8a6646b6a185b868833144a6384f9ec12058f2320c67",
+      "notes": "assertion=reasoning_tokens_zero; reasoning_tokens=0; mechanism=None"
+    },
+    {
+      "probe_id": "glm_5_2_reasoning_field",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.2",
+      "capability": "raw_reasoning_field",
+      "status": "pass",
+      "verified_on": "2026-07-21",
+      "expires_on": "2026-08-20",
+      "receipt_sha256": "c75ce63eb169714ba8ad3927efcef56c56ab07abf892ea0ffc7eaa57dd7a40b4",
+      "notes": "assertion=reasoning_field_present; reasoning_tokens=87; mechanism=None"
+    }
+  ]
+}

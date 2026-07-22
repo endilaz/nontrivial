@@ -1,0 +1,9 @@
+{
+  "probe_id": "deepseek_nonthinking_zero_reasoning",
+  "status": "pass",
+  "reasoning_tokens": 0,
+  "prefill_mechanism": null,
+  "receipt_sha256": "9d6a38c3189694de04bd8a6646b6a185b868833144a6384f9ec12058f2320c67",
+  "actual_usd": 2.8000000000000003e-06,
+  "run_dir": "data/results/probe_deepseek_nonthinking_zero_reasoning"
+}

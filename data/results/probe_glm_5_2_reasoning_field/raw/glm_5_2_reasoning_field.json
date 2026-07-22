@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784693128-RJFgLyDCmpPkI7czdSY9",
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "1.  Identify the core question: 17 + 25.\n2.  Perform the addition:\n    *   7 + 5 = 12 (write down 2, carry over 1)\n    *   1 + 2 + 1 (carry) = 4\n    *   Result: 42.\n3.  Formulate the brief reasoning: Add the ones place (7 + 5 = 12), carry the 1 to the tens place, then add the tens place (1 + 2 + 1 = 4), resulting in 42.\n4.  State the final",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "1.  Identify the core question: 17 + 25.\n2.  Perform the addition:\n    *   7 + 5 = 12 (write down 2, carry over 1)\n    *   1 + 2 + 1 (carry) = 4\n    *   Result: 42.\n3.  Formulate the brief reasoning: Add the ones place (7 + 5 = 12), carry the 1 to the tens place, then add the tens place (1 + 2 + 1 = 4), resulting in 42.\n4.  State the final",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "length"
+    }
+  ],
+  "created": 1784693128,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 29,
+    "total_tokens": 157,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 87,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00041097,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00041097,
+      "upstream_inference_prompt_cost": 2.697e-05,
+      "upstream_inference_completions_cost": 0.000384
+    }
+  }
+}

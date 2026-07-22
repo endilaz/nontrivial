@@ -93,7 +93,9 @@ def _has_reasoning_content(raw: Dict[str, Any]) -> bool:
         blob = json.dumps(raw)
     except (TypeError, ValueError):
         return False
-    return "reasoning_content" in blob
+    # DeepSeek/GLM-direct expose "reasoning_content"; OpenRouter surfaces
+    # "reasoning". Either counts as a raw reasoning field being present.
+    return '"reasoning_content"' in blob or '"reasoning"' in blob
 
 
 def run_probe(

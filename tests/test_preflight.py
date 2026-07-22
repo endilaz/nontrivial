@@ -50,14 +50,22 @@ def test_preflight_defaults_reserve_to_max_tokens():
 
 
 def test_unverified_or_unknown_model_fails_closed():
-    # deepseek-v4-flash is present but UNVERIFIED in the production table.
+    # deepseek-v4-pro is present but UNVERIFIED in the production table.
     with pytest.raises(UnknownContextWindowError):
-        preflight_request(_req(provider="deepseek", model="deepseek-v4-flash"))
+        preflight_request(_req(provider="deepseek", model="deepseek-v4-pro"))
     # A model absent from the table also fails closed.
     with pytest.raises(UnknownContextWindowError):
         preflight_request(_req(model="totally-unknown"), windows=_WINDOWS)
 
 
-def test_production_windows_start_unverified():
-    # Guard the honesty discipline: no invented windows ship enabled.
-    assert all(not w.is_verified for w in CONTEXT_WINDOWS.values())
+def test_verified_windows_carry_a_source_and_unknowns_fail_closed():
+    # Honesty discipline: verified windows must cite a source; conflicting/unknown
+    # models stay UNVERIFIED so preflight fails closed for them.
+    for w in CONTEXT_WINDOWS.values():
+        if w.is_verified:
+            assert w.source and w.total_tokens
+    for model in ("z-ai/glm-5.2", "claude-opus-4-8", "deepseek-v4-pro"):
+        assert not CONTEXT_WINDOWS[model].is_verified
+    # A verified model (workhorse) preflights against a real 1M window.
+    result = preflight_request(_req(provider="deepseek", model="deepseek-v4-flash"))
+    assert result.context_window == 1_000_000
