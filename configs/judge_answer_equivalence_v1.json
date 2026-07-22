@@ -6,6 +6,7 @@
   "provider_route": null,
   "temperature": 0.0,
   "max_tokens": 512,
+  "thinking_setting": { "thinking": { "type": "disabled" } },
   "confidence_threshold": 0.5,
   "enabled": false,
   "prompt_template": "You are grading whether two short answers to the same question are equivalent.\n\nRules:\n- Equivalent means they express the same final answer, allowing for aliases, abbreviations, name-order or formatting differences, missing honorifics/titles, and equivalent numeric forms (e.g. \"0.75\" vs \"3/4\" vs \"75%\").\n- Different entities, different numbers, or different yes/no stances are NOT equivalent.\n- Extra correct detail alongside the same core answer is still equivalent; extra detail that changes the referent is not.\n- Judge ONLY the final answers given, not any reasoning.\n\nAnswer A: {answer_a}\nAnswer B: {answer_b}\n\nReply with exactly one JSON object, no other text:\n{\"equivalent\": true or false, \"confidence\": number between 0 and 1, \"rationale\": one short sentence}",

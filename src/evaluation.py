@@ -564,6 +564,7 @@ class JudgeConfig(BaseModel):
     provider_route: Optional[str] = None
     temperature: float = 0.0
     max_tokens: int = Field(default=512, ge=1)
+    thinking_setting: Any = "disabled"  # recorded + forwarded like any generation
     confidence_threshold: float = Field(default=0.5, ge=0, le=1)
     enabled: bool = False
     provenance: dict[str, Any] = Field(default_factory=dict)
@@ -652,6 +653,7 @@ def judge_equivalence(
         messages=[{"role": "user", "content": prompt}],
         temperature=config.temperature,
         max_tokens=config.max_tokens,
+        thinking_setting=config.thinking_setting,
         prompt_template_version=f"judge-{config.judge_id}-rubric-{config.rubric_version}",
     )
     result = client.generate(request)
