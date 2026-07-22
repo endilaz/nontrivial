@@ -10,4 +10,4 @@ Phase 0 engineering modules:
 See CLAUDE.md for the full project spec.
 """
 
-from .task_set import build_task_set
+from .task_set import build_candidates
