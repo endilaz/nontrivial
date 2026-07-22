@@ -1,0 +1,24 @@
+{
+  "schema": "judge_validation_set",
+  "schema_version": 1,
+  "name": "judge_validation_v1",
+  "created_on": "2026-07-22",
+  "source_responses": "data/results/baseline_deepseek_v4_flash_v2_full/responses.jsonl",
+  "seed": 20260722,
+  "n_pairs": 53,
+  "strata_counts": {
+    "ethics:clearly_wrong": 8,
+    "ethics:exact_match": 4,
+    "factual:ambiguous": 14,
+    "factual:exact_match": 3,
+    "logic:clearly_wrong": 2,
+    "logic:exact_match": 10,
+    "math:clearly_wrong": 2,
+    "math:exact_match": 10
+  },
+  "holdout_fraction": 0.4,
+  "n_holdout": 27,
+  "validation_set_sha256": "3d52603c40606ca3beacf7267c6f7f5d24affa3fece698d66b789bbff23b1af6",
+  "frozen": true,
+  "notes": "Frozen before any judge prompt tuning (plan.md \u00a7C3). If tuning occurs, use only pairs with holdout=false; evaluate on holdout=true."
+}

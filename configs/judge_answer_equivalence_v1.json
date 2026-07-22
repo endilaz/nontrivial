@@ -1,0 +1,28 @@
+{
+  "judge_id": "answer-equivalence",
+  "rubric_version": "1.0.0",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "provider_route": null,
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "confidence_threshold": 0.5,
+  "enabled": false,
+  "prompt_template": "You are grading whether two short answers to the same question are equivalent.\n\nRules:\n- Equivalent means they express the same final answer, allowing for aliases, abbreviations, name-order or formatting differences, missing honorifics/titles, and equivalent numeric forms (e.g. \"0.75\" vs \"3/4\" vs \"75%\").\n- Different entities, different numbers, or different yes/no stances are NOT equivalent.\n- Extra correct detail alongside the same core answer is still equivalent; extra detail that changes the referent is not.\n- Judge ONLY the final answers given, not any reasoning.\n\nAnswer A: {answer_a}\nAnswer B: {answer_b}\n\nReply with exactly one JSON object, no other text:\n{\"equivalent\": true or false, \"confidence\": number between 0 and 1, \"rationale\": one short sentence}",
+  "reply_schema": {
+    "type": "object",
+    "properties": {
+      "equivalent": { "type": "boolean" },
+      "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+      "rationale": { "type": "string", "minLength": 1, "maxLength": 500 }
+    },
+    "required": ["equivalent", "confidence", "rationale"],
+    "additionalProperties": false
+  },
+  "provenance": {
+    "status": "pending_validation",
+    "validation_set": "data/validation/judge_validation_v1.jsonl",
+    "validation_set_sha256": "3d52603c40606ca3beacf7267c6f7f5d24affa3fece698d66b789bbff23b1af6",
+    "note": "Enable only after the researcher labels the frozen validation set, the measured accuracy threshold and tie policy are approved, and this status is set to 'approved' (plan.md C1/C3)."
+  }
+}
