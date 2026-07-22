@@ -121,6 +121,42 @@ def test_cache_miss_then_hit_roundtrip(tmp_path, monkeypatch):
     assert calls["n"] == 1  # provider NOT called again
 
 
+def test_v1_cache_record_cannot_satisfy_v2_request(tmp_path, monkeypatch):
+    # A5/A7: a stale v1-schema cache entry must NOT be served to a v2 request.
+    import json
+
+    from src.generation import cache_key
+
+    client = GenerationClient(cache_dir=tmp_path, load_env=False, sleep_fn=lambda s: None)
+    req = make_request()
+    key = cache_key(req)
+    # Hand-write a v1 cache file at the right filename but with the old schema.
+    stale = {
+        "text": "STALE v1 answer",
+        "provider": req.provider,
+        "model": req.model,
+        "timestamp": "2026-07-13T00:00:00+00:00",
+        "cache_hit": False,
+        "cache_key": key,
+        "cache_schema_version": 1,  # <-- old schema
+        "request": {},
+    }
+    (tmp_path / f"{key}.json").write_text(json.dumps(stale), encoding="utf-8")
+
+    calls = {"n": 0}
+
+    def fake_invoke(request):
+        calls["n"] += 1
+        return stub_invocation(text="fresh v2 answer")
+
+    monkeypatch.setattr(client, "_invoke_provider", fake_invoke)
+
+    result = client.generate(req)
+    assert result.cache_hit is False  # v1 entry ignored
+    assert result.text == "fresh v2 answer"
+    assert calls["n"] == 1
+
+
 def test_force_fresh_bypasses_read_but_still_writes(tmp_path, monkeypatch):
     client = GenerationClient(cache_dir=tmp_path, load_env=False, sleep_fn=lambda s: None)
     calls = {"n": 0}
