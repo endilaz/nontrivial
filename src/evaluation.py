@@ -112,6 +112,10 @@ class EvaluationResult:
 
 _INT_WITH_COMMAS_RE = re.compile(r"^[+-]?\d{1,3}(?:,\d{3})+$")
 _SIGNED_NUMBER_RE = re.compile(r"^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$")
+
+#: Leading currency symbols stripped before numeric parsing (presentation,
+#: not content). Exactly one symbol is stripped; "$$5" is not a number.
+_CURRENCY_SYMBOLS = frozenset("$€£¥₹")
 _FRACTION_RE = re.compile(r"^([+-]?\d+)\s*/\s*(\d+)$")
 _MIXED_NUMBER_RE = re.compile(r"^([+-]?\d+)\s+(\d+)\s*/\s*(\d+)$")
 _LATEX_FRAC_RE = re.compile(r"^\\d?frac\{([+-]?\d+)\}\{(\d+)\}$")
@@ -161,16 +165,25 @@ def _decimal_from_mantissa(text: str) -> Decimal:
 def parse_numeric(text: Optional[str]) -> Optional[NumericParse]:
     """Canonicalize a numeric answer, or return None if not plainly numeric.
 
-    Handles commas (``56,551``), signs, decimals, simple fractions (``3/4``),
-    mixed numbers (``1 1/2``), ``\\frac{a}{b}``, percents (``75%`` ->
-    ``0.75``), and simple trailing units (``42 apples``). Exponent notation
-    is intentionally rejected as out-of-scope for these tasks.
+    Handles a single leading currency symbol (``$660``, ``€9,080`` — stripped
+    before parsing; researcher decision 2026-07-22 after the full baseline
+    showed GSM8K-style answers habitually carry ``$``), commas (``56,551``),
+    signs, decimals, simple fractions (``3/4``), mixed numbers (``1 1/2``),
+    ``\\frac{a}{b}``, percents (``75%`` -> ``0.75``), and simple trailing
+    units (``42 apples``). Exponent notation is intentionally rejected as
+    out-of-scope for these tasks.
     """
     if text is None:
         return None
     candidate = " ".join(text.strip().split())
     if not candidate:
         return None
+
+    # A single leading currency symbol is presentation, not content.
+    if candidate[0] in _CURRENCY_SYMBOLS:
+        stripped = candidate[1:].strip()
+        if stripped and stripped[0] not in _CURRENCY_SYMBOLS:
+            candidate = stripped
 
     # Whole-string parse first so percents and fractions win over unit peel
     # ("75 percent" is a percent, not 75 with unit "percent").

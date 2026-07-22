@@ -61,6 +61,10 @@ from src.generation import GenerationResult
         ("\\frac{3}{4}", "0.75"),
         ("75%", "0.75"),
         ("75 percent", "0.75"),
+        ("$660", "660"),
+        ("$9,080", "9080"),
+        ("€1.50", "1.5"),
+        ("$-3", "-3"),
     ],
 )
 def test_parse_numeric_forms(text, value):
@@ -88,10 +92,21 @@ def test_parse_numeric_simple_units():
         "3/0",  # zero denominator
         "twelve",
         "1/2/3",
+        "$$5",  # more than one currency symbol
+        "$",  # symbol only
+        "5$",  # trailing symbol is not stripped
     ],
 )
 def test_parse_numeric_rejects_non_numbers(text):
     assert parse_numeric(text) is None
+
+
+def test_numeric_equivalent_currency_prefixed_answers_match():
+    # The full baseline (2026-07-22) showed GSM8K-style answers habitually
+    # carry '$'; ground truths are bare numbers. This must be equivalent.
+    assert numeric_equivalent("$660", "660").decision == "equivalent"
+    assert numeric_equivalent("$9,080", "9080").decision == "equivalent"
+    assert numeric_equivalent("$245.00", "245").decision == "equivalent"
 
 
 def test_numeric_equivalent_exact_and_commas():
