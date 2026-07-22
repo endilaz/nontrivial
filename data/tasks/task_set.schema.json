@@ -1,0 +1,935 @@
+{
+  "$defs": {
+    "EthicsMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "label_mapping_version": {
+          "title": "Label Mapping Version",
+          "type": "string"
+        },
+        "raw_label": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Raw Label",
+          "type": "integer"
+        },
+        "raw_text": {
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "source_file": {
+          "title": "Source File",
+          "type": "string"
+        },
+        "source_row": {
+          "minimum": 0,
+          "title": "Source Row",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "raw_text",
+        "raw_label",
+        "source_file",
+        "source_row",
+        "label_mapping_version"
+      ],
+      "title": "EthicsMetadata",
+      "type": "object"
+    },
+    "EthicsTask": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_format": {
+          "const": "yes_no",
+          "default": "yes_no",
+          "title": "Answer Format",
+          "type": "string"
+        },
+        "binary_claim_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Claim Source"
+        },
+        "binary_formulation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Formulation"
+        },
+        "binary_ground_truth": {
+          "anyOf": [
+            {
+              "enum": [
+                "yes",
+                "no"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Ground Truth"
+        },
+        "binary_ok": {
+          "title": "Binary Ok",
+          "type": "boolean"
+        },
+        "direction2_probe": {
+          "default": false,
+          "title": "Direction2 Probe",
+          "type": "boolean"
+        },
+        "ethics": {
+          "$ref": "#/$defs/EthicsMetadata"
+        },
+        "ground_truth": {
+          "minLength": 1,
+          "title": "Ground Truth",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^(math|logic|factual|ethics)-\\d{3}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "problem": {
+          "minLength": 1,
+          "title": "Problem",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "reviewer_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer Notes"
+        },
+        "schema": {
+          "const": "task_record",
+          "default": "task_record",
+          "title": "Schema",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "scoring_policy": {
+          "const": "source_label_agreement",
+          "default": "source_label_agreement",
+          "title": "Scoring Policy",
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_license": {
+          "minLength": 1,
+          "title": "Source License",
+          "type": "string"
+        },
+        "source_split": {
+          "enum": [
+            "train",
+            "validation",
+            "test"
+          ],
+          "title": "Source Split",
+          "type": "string"
+        },
+        "task_type": {
+          "const": "ethics",
+          "default": "ethics",
+          "title": "Task Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "problem",
+        "source",
+        "source_id",
+        "source_split",
+        "source_license",
+        "ground_truth",
+        "binary_ok",
+        "ethics"
+      ],
+      "title": "EthicsTask",
+      "type": "object"
+    },
+    "FactualContextEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "sentences": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sentences",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "sentences"
+      ],
+      "title": "FactualContextEntry",
+      "type": "object"
+    },
+    "FactualMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Answer Aliases",
+          "type": "array"
+        },
+        "context": {
+          "items": {
+            "$ref": "#/$defs/FactualContextEntry"
+          },
+          "title": "Context",
+          "type": "array"
+        },
+        "context_token_count": {
+          "minimum": 0,
+          "title": "Context Token Count",
+          "type": "integer"
+        },
+        "hotpot_level": {
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ],
+          "title": "Hotpot Level",
+          "type": "string"
+        },
+        "hotpot_type": {
+          "enum": [
+            "bridge",
+            "comparison"
+          ],
+          "title": "Hotpot Type",
+          "type": "string"
+        },
+        "supporting_facts": {
+          "items": {
+            "$ref": "#/$defs/SupportingFact"
+          },
+          "minItems": 2,
+          "title": "Supporting Facts",
+          "type": "array"
+        },
+        "tokenizer_revision": {
+          "title": "Tokenizer Revision",
+          "type": "string"
+        }
+      },
+      "required": [
+        "context",
+        "supporting_facts",
+        "hotpot_type",
+        "hotpot_level",
+        "tokenizer_revision",
+        "context_token_count"
+      ],
+      "title": "FactualMetadata",
+      "type": "object"
+    },
+    "FactualTask": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_format": {
+          "const": "short_text",
+          "default": "short_text",
+          "title": "Answer Format",
+          "type": "string"
+        },
+        "binary_claim_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Claim Source"
+        },
+        "binary_formulation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Formulation"
+        },
+        "binary_ground_truth": {
+          "anyOf": [
+            {
+              "enum": [
+                "yes",
+                "no"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Ground Truth"
+        },
+        "binary_ok": {
+          "title": "Binary Ok",
+          "type": "boolean"
+        },
+        "direction2_probe": {
+          "default": false,
+          "title": "Direction2 Probe",
+          "type": "boolean"
+        },
+        "factual": {
+          "$ref": "#/$defs/FactualMetadata"
+        },
+        "ground_truth": {
+          "minLength": 1,
+          "title": "Ground Truth",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^(math|logic|factual|ethics)-\\d{3}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "problem": {
+          "minLength": 1,
+          "title": "Problem",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "reviewer_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer Notes"
+        },
+        "schema": {
+          "const": "task_record",
+          "default": "task_record",
+          "title": "Schema",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "scoring_policy": {
+          "const": "normalized_text",
+          "default": "normalized_text",
+          "title": "Scoring Policy",
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_license": {
+          "minLength": 1,
+          "title": "Source License",
+          "type": "string"
+        },
+        "source_split": {
+          "enum": [
+            "train",
+            "validation",
+            "test"
+          ],
+          "title": "Source Split",
+          "type": "string"
+        },
+        "task_type": {
+          "const": "factual",
+          "default": "factual",
+          "title": "Task Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "problem",
+        "source",
+        "source_id",
+        "source_split",
+        "source_license",
+        "ground_truth",
+        "binary_ok",
+        "factual"
+      ],
+      "title": "FactualTask",
+      "type": "object"
+    },
+    "LogicMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "input_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "solver_name": {
+          "title": "Solver Name",
+          "type": "string"
+        },
+        "solver_version": {
+          "title": "Solver Version",
+          "type": "string"
+        },
+        "source_example_index": {
+          "title": "Source Example Index",
+          "type": "integer"
+        },
+        "unique_solution_proof": {
+          "title": "Unique Solution Proof",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_example_index",
+        "input_sha256",
+        "solver_name",
+        "solver_version",
+        "unique_solution_proof"
+      ],
+      "title": "LogicMetadata",
+      "type": "object"
+    },
+    "LogicTask": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_format": {
+          "const": "short_text",
+          "default": "short_text",
+          "title": "Answer Format",
+          "type": "string"
+        },
+        "binary_claim_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Claim Source"
+        },
+        "binary_formulation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Formulation"
+        },
+        "binary_ground_truth": {
+          "anyOf": [
+            {
+              "enum": [
+                "yes",
+                "no"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Ground Truth"
+        },
+        "binary_ok": {
+          "title": "Binary Ok",
+          "type": "boolean"
+        },
+        "direction2_probe": {
+          "default": false,
+          "title": "Direction2 Probe",
+          "type": "boolean"
+        },
+        "ground_truth": {
+          "minLength": 1,
+          "title": "Ground Truth",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^(math|logic|factual|ethics)-\\d{3}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "logic": {
+          "$ref": "#/$defs/LogicMetadata"
+        },
+        "problem": {
+          "minLength": 1,
+          "title": "Problem",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "reviewer_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer Notes"
+        },
+        "schema": {
+          "const": "task_record",
+          "default": "task_record",
+          "title": "Schema",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "scoring_policy": {
+          "const": "normalized_text",
+          "default": "normalized_text",
+          "title": "Scoring Policy",
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_license": {
+          "minLength": 1,
+          "title": "Source License",
+          "type": "string"
+        },
+        "source_split": {
+          "enum": [
+            "train",
+            "validation",
+            "test"
+          ],
+          "title": "Source Split",
+          "type": "string"
+        },
+        "task_type": {
+          "const": "logic",
+          "default": "logic",
+          "title": "Task Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "problem",
+        "source",
+        "source_id",
+        "source_split",
+        "source_license",
+        "ground_truth",
+        "binary_ok",
+        "logic"
+      ],
+      "title": "LogicTask",
+      "type": "object"
+    },
+    "MathMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "difficulty_bin": {
+          "minimum": 0,
+          "title": "Difficulty Bin",
+          "type": "integer"
+        },
+        "difficulty_proxy": {
+          "const": "solution_step_count",
+          "title": "Difficulty Proxy",
+          "type": "string"
+        },
+        "original_answer": {
+          "title": "Original Answer",
+          "type": "string"
+        },
+        "original_problem": {
+          "title": "Original Problem",
+          "type": "string"
+        },
+        "source_row": {
+          "title": "Source Row",
+          "type": "integer"
+        },
+        "transformation_seed": {
+          "title": "Transformation Seed",
+          "type": "integer"
+        },
+        "transformations": {
+          "items": {
+            "$ref": "#/$defs/MathTransformation"
+          },
+          "title": "Transformations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "original_problem",
+        "original_answer",
+        "source_row",
+        "transformations",
+        "transformation_seed",
+        "difficulty_proxy",
+        "difficulty_bin"
+      ],
+      "title": "MathMetadata",
+      "type": "object"
+    },
+    "MathTask": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_format": {
+          "const": "number",
+          "default": "number",
+          "title": "Answer Format",
+          "type": "string"
+        },
+        "binary_claim_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Claim Source"
+        },
+        "binary_formulation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Formulation"
+        },
+        "binary_ground_truth": {
+          "anyOf": [
+            {
+              "enum": [
+                "yes",
+                "no"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Binary Ground Truth"
+        },
+        "binary_ok": {
+          "title": "Binary Ok",
+          "type": "boolean"
+        },
+        "direction2_probe": {
+          "default": false,
+          "title": "Direction2 Probe",
+          "type": "boolean"
+        },
+        "ground_truth": {
+          "minLength": 1,
+          "title": "Ground Truth",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^(math|logic|factual|ethics)-\\d{3}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "math": {
+          "$ref": "#/$defs/MathMetadata"
+        },
+        "problem": {
+          "minLength": 1,
+          "title": "Problem",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "reviewer_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer Notes"
+        },
+        "schema": {
+          "const": "task_record",
+          "default": "task_record",
+          "title": "Schema",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "scoring_policy": {
+          "const": "numeric",
+          "default": "numeric",
+          "title": "Scoring Policy",
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_license": {
+          "minLength": 1,
+          "title": "Source License",
+          "type": "string"
+        },
+        "source_split": {
+          "enum": [
+            "train",
+            "validation",
+            "test"
+          ],
+          "title": "Source Split",
+          "type": "string"
+        },
+        "task_type": {
+          "const": "math",
+          "default": "math",
+          "title": "Task Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "problem",
+        "source",
+        "source_id",
+        "source_split",
+        "source_license",
+        "ground_truth",
+        "binary_ok",
+        "math"
+      ],
+      "title": "MathTask",
+      "type": "object"
+    },
+    "MathTransformation": {
+      "additionalProperties": false,
+      "description": "One reviewed surface substitution applied to a math problem.",
+      "properties": {
+        "kind": {
+          "enum": [
+            "name",
+            "object",
+            "wording"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "original": {
+          "title": "Original",
+          "type": "string"
+        },
+        "replacement": {
+          "title": "Replacement",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "original",
+        "replacement"
+      ],
+      "title": "MathTransformation",
+      "type": "object"
+    },
+    "SupportingFact": {
+      "additionalProperties": false,
+      "properties": {
+        "sentence_index": {
+          "minimum": 0,
+          "title": "Sentence Index",
+          "type": "integer"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "sentence_index"
+      ],
+      "title": "SupportingFact",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Adapter used to parse/validate one JSONL line into the union.",
+  "properties": {
+    "record": {
+      "discriminator": {
+        "mapping": {
+          "ethics": "#/$defs/EthicsTask",
+          "factual": "#/$defs/FactualTask",
+          "logic": "#/$defs/LogicTask",
+          "math": "#/$defs/MathTask"
+        },
+        "propertyName": "task_type"
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/MathTask"
+        },
+        {
+          "$ref": "#/$defs/LogicTask"
+        },
+        {
+          "$ref": "#/$defs/FactualTask"
+        },
+        {
+          "$ref": "#/$defs/EthicsTask"
+        }
+      ],
+      "title": "Record"
+    }
+  },
+  "required": [
+    "record"
+  ],
+  "title": "TaskSetEnvelope",
+  "type": "object"
+}
