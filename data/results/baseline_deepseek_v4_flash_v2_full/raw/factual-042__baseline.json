@@ -1,0 +1,35 @@
+{
+  "id": "d93c97d7-4ab5-4bc1-9e23-604dc0ca57c3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Robert Glenister played Ash \"Three Socks\" Morgan in the BBC series \"Hustle\". The source \"Close to the Enemy\" lists Robert Glenister as a cast member, and the source \"Robert Glenister\" confirms his role as Ash Morgan in \"Hustle\".\n\nFinal answer: Robert Glenister",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719298,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 1320,
+    "total_tokens": 1383,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1320
+  }
+}

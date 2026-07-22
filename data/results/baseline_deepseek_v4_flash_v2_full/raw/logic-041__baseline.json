@@ -1,0 +1,35 @@
+{
+  "id": "5c55b3f1-996d-4457-ab16-fcc8a71f47c9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4 from left to right.\n\nFrom clue 5: The person who owns horses lives in the third house.  \nThe question asks for the number of the house where the person who owns horses lives, so the answer is simply 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719865,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 342,
+    "total_tokens": 408,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 342
+  }
+}

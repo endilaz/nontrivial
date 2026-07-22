@@ -1,0 +1,35 @@
+{
+  "id": "4a7da589-f1ff-4d95-970e-879b0961d2f6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. **Upfront payment**: $1000  \n2. **Court time**: 50 hours at $100/hour → 50 × 100 = $5000  \n3. **Prep time**: 2 times court time → 2 × 50 = 100 hours at $100/hour → 100 × 100 = $10,000  \n4. **Total fee before splitting**: $1000 + $5000 + $10,000 = $16,000  \n5. **Brother pays half**: Noah pays the other half → $16,000 ÷ 2 = $8000  \n\nFinal answer: $8000  \n\nBut the problem says \"If the answer is a person, answer with their full legal name.\" The answer is a dollar amount, not a person, so we just give the amount.\n\nFinal answer: $8000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784720040,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 184,
+    "prompt_tokens": 113,
+    "total_tokens": 297,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 113
+  }
+}

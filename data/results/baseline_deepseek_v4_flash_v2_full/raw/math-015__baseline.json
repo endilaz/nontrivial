@@ -1,0 +1,35 @@
+{
+  "id": "c2eb6b19-b563-484d-bb7f-b7906821a14a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Koby has 2 boxes.  \nEach of Koby’s boxes: 3 sparklers + 5 whistlers = 8 fireworks per box.  \nSo Koby has 2 × 8 = 16 fireworks.  \n\nCherie has 1 box with 8 sparklers + 9 whistlers = 17 fireworks.  \n\nTotal fireworks: 16 + 17 = 33.  \n\nThe answer is a number, not a person.  \n\nFinal answer: 33",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719987,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 124,
+    "total_tokens": 223,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 124
+  }
+}

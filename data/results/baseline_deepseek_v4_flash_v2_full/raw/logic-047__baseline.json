@@ -1,0 +1,35 @@
+{
+  "id": "37ea4fd0-334f-4b03-8fdb-eb853a08c61a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3.  \n\nFrom clues:  \n- House 2: spaghetti (1), daffodils (4).  \n- House 3: carnations (5), mangos (6).  \n- House 1: SUV (8).  \n\nFrom clue 7: grapes not in house 2, so grapes must be in house 1 (since house 3 has mangos).  \nThen house 2 gets kiwis (only fruit left).  \n\nFrom clue 2: sedan not in house 3.  \nFrom clue 3: pizza not in house 3.  \nHouse 3 already has spaghetti? No — spaghetti is house 2, so house 3 lunch is either pizza or grilled cheese. But pizza cannot be house 3, so house 3 has grilled cheese.  \nThen house 1 gets pizza.  \n\nCars: house 1 has SUV. Sedan not in house 3, so sedan must be in house 1 or 2.  \nHouse 2 already has daffodils, spaghetti, kiwis — no car assigned yet.  \nHouse 3 gets truck (only car left if sedan is not there).  \nSo sedan must be in house 2.  \n\nThus, sedan owner lives in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719929,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 276,
+    "prompt_tokens": 347,
+    "total_tokens": 623,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 347
+  }
+}

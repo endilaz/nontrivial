@@ -1,0 +1,35 @@
+{
+  "id": "c81f7f6a-a8c5-4285-ad84-7b2fe1f74735",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Luis drives 80 miles in 2 hours, so his speed is 80 miles / 2 hours = 40 miles per hour.  \n15 minutes is 15/60 = 0.25 hours.  \nDistance = speed × time = 40 miles per hour × 0.25 hours = 10 miles.  \nThe answer is a distance, not a person.\n\nFinal answer: 10 miles",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784717862,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 69,
+    "total_tokens": 153,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 69
+  }
+}

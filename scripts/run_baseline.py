@@ -546,6 +546,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--task-id", dest="task_ids", action="append", default=None)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--force-fresh", action="store_true")
+    parser.add_argument("--run-id-suffix", default="",
+                        help="Suffix appended to the config run_id (a distinct selection "
+                             "needs a distinct run directory, e.g. '_dry' / '_full').")
     parser.add_argument("--yes", action="store_true",
                         help="Confirm the estimate non-interactively (still reserved + logged).")
     return parser.parse_args(argv)
@@ -564,6 +567,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         dry_run=args.dry_run,
         stress_task_id=args.stress_task_id,
         force_fresh=args.force_fresh,
+        run_id_suffix=args.run_id_suffix,
         confirmed=args.yes,
         interactive=not args.yes,
     )

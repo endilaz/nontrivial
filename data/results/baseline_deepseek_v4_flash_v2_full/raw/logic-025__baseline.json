@@ -1,0 +1,35 @@
+{
+  "id": "73e6bd85-5244-432d-b118-f7b949a172a4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1–5.  \nFrom clue 5: House 4 = cat lover.  \nFrom clue 7: House 3 = violinist.  \n\nClue 4: pianist directly left of cellist → possible pairs: (1,2), (2,3), (3,4), (4,5).  \nBut house 3 is violinist, so (2,3) and (3,4) are impossible.  \nClue 1: pianist not in house 1 → (1,2) impossible.  \nThus only possibility: (4,5) → House 4 = pianist, House 5 = cellist.  \nBut house 4 is cat lover, so cat lover is pianist.  \n\nClue 2: fish enthusiast directly left of horse owner → possible pairs: (1,2), (2,3), (3,4), (4,5).  \nClue 8: horse owner not in house 2 → (1,2) impossible.  \nHouse 4 is cat lover, so (3,4) impossible (horse owner would be house 4, but house 4 is cat lover).  \nHouse 5 is cellist, so (4,5) possible: fish in 4, horses in 5. But house 4 is cat lover, so fish can't be there. So (4,5) impossible.  \nThus only (2,3): House 2 = fish, House 3 = horses.  \n\nNow we have:  \nHouse 1: ?  \nHouse 2: fish enthusiast  \nHouse 3: violinist, horses  \nHouse 4: cat lover, pianist  \nHouse 5: cellist  \n\nClue 3: guitarist somewhere to the right of saxophonist.  \nRemaining instruments: guitarist, saxophonist (violin, piano, cello taken).  \nPossible positions: saxophonist in 1 or 2, guitarist in 2–5 but to the right.  \nIf sax in 1 → guitarist in 2,3,4,5 (possible).  \nIf sax in 2 → guitarist in 3,4,5 (possible).  \nBut house 2 is fish, house 3 is violinist, house 4 pianist, house 5 cellist.  \nSo guitarist and saxophonist must be in houses 1 and 2? No, house 2 is fish, but instrument not assigned yet.  \nActually house 2 has no instrument assigned yet, house 1 has none.  \nSo possible: sax in 1, guitar in 2 → works (2 is right of 1).  \nOr sax in 2, guitar in 3? No, house 3 is violinist.  \nSax in 2, guitar in 4? House 4 is pianist.  \nSax in 2, guitar in 5? House 5 is cellist.  \nSo only possibility: House 1 = saxophonist, House 2 = guitarist.  \n\nNow pets:  \nHouse 2 = fish, House 3 = horses, House 4 = cat.  \nRemaining pets: dog, bird.  \nClue 6: bird keeper not in house 5 → bird must be in house 1, dog in house 5.  \n\nThus dog owner lives in house 5.  \n\nFinal answer: 5",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719615,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 704,
+    "prompt_tokens": 283,
+    "total_tokens": 987,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 283
+  }
+}

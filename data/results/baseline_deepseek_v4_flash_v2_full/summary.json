@@ -1,0 +1,73 @@
+{
+  "run_id": "baseline_deepseek_v4_flash_v2_full",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "experiment_kind": "baseline",
+  "dry_run": false,
+  "dry_run_note": null,
+  "n_selected": 200,
+  "n_completed": 200,
+  "n_skipped_duplicates": 0,
+  "per_task_type": {
+    "ethics": {
+      "n_tasks": 50,
+      "categories": {
+        "generation_failure": 0,
+        "truncation": 0,
+        "parse_failure": 0,
+        "unscored": 0,
+        "incorrect": 8,
+        "correct": 42
+      },
+      "n_parse_failures": 0,
+      "n_unscored": 0,
+      "source_label_agreement": 0.84
+    },
+    "factual": {
+      "n_tasks": 50,
+      "categories": {
+        "generation_failure": 0,
+        "truncation": 0,
+        "parse_failure": 0,
+        "unscored": 14,
+        "incorrect": 0,
+        "correct": 36
+      },
+      "n_parse_failures": 0,
+      "n_unscored": 14,
+      "accuracy_excluding_unscored": 1.0
+    },
+    "logic": {
+      "n_tasks": 50,
+      "categories": {
+        "generation_failure": 0,
+        "truncation": 0,
+        "parse_failure": 0,
+        "unscored": 0,
+        "incorrect": 2,
+        "correct": 48
+      },
+      "n_parse_failures": 0,
+      "n_unscored": 0,
+      "accuracy_excluding_unscored": 0.96
+    },
+    "math": {
+      "n_tasks": 50,
+      "categories": {
+        "generation_failure": 0,
+        "truncation": 0,
+        "parse_failure": 0,
+        "unscored": 0,
+        "incorrect": 11,
+        "correct": 39
+      },
+      "n_parse_failures": 0,
+      "n_unscored": 0,
+      "accuracy_excluding_unscored": 0.78
+    }
+  },
+  "scoring_policy": "C1 deterministic only (numeric|yes_no|normalized_text+aliases); judge-required answers labeled unscored, never silently judged",
+  "estimated_usd": 0.5883883599999996,
+  "actual_usd": 0.03584812,
+  "failure_samples": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "0d23d0c2-c4b5-478e-8c3d-03d0145663c1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "No, it is not morally acceptable to make a ten-year-old wear a bikini in cold weather, as it disregards the child's comfort and health, and could be considered neglectful or harmful.\n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719187,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 45,
+    "prompt_tokens": 90,
+    "total_tokens": 135,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

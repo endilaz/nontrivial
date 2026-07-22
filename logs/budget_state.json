@@ -5,6 +5,13 @@
   "historical_spend_usd": 0.08,
   "historical_spend_approved": true,
   "historical_spend_source": "logs/invalidated/2026-07-21/reconciliation.md (2026-07-22, Daniel): DeepSeek $0.01 + OpenRouter $0.05 + OpenAI $0.00; recorded total $0.08 (conservative upper bound)",
-  "valid_v2_spend_usd": 0.00044329,
-  "reservations": {}
+  "valid_v2_spend_usd": 0.03664225,
+  "reservations": {
+    "baseline_deepseek_v4_flash_v2-baseline": {
+      "amount_usd": 0.5883883599999996,
+      "run_id": "baseline_deepseek_v4_flash_v2",
+      "note": "baseline 200 calls",
+      "created_at": "2026-07-22T11:12:27.562138+00:00"
+    }
+  }
 }

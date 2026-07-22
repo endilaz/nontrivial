@@ -1,0 +1,35 @@
+{
+  "id": "ab7b76be-aede-469d-afbd-66c9188bb050",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the initial number of lions be \\( x \\).  \nEach month, the net change is:  \n+5 (born) – 1 (die) = +4 lions per month.  \n\nOver 12 months, the total increase is:  \n\\( 4 \\times 12 = 48 \\) lions.  \n\nAfter 1 year:  \n\\( x + 48 = 148 \\)  \n\\( x = 148 - 48 \\)  \n\\( x = 100 \\).  \n\nFinal answer: 100",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719974,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 110,
+    "total_tokens": 214,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 110
+  }
+}

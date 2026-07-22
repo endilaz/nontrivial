@@ -1,0 +1,35 @@
+{
+  "id": "a2670ba1-4b1c-40cd-88f1-4316cbcb8bdf",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. **Cost of ant food**  \n   - 400 ants × 2 ounces each = 800 ounces of food needed.  \n   - 800 ounces × $0.1 per ounce = $80 total cost.\n\n2. **Nikola’s earnings**  \n   - He charges $5 per job plus $0.01 per leaf.  \n   - He raked 6,000 leaves total.  \n   - Earnings from leaves: 6,000 × $0.01 = $60.  \n   - Total earnings = $5 per job × number of jobs + $60 from leaves.\n\n3. **Set up equation**  \n   Let \\( j \\) = number of jobs.  \n   \\[\n   5j + 60 = 80\n   \\]  \n   \\[\n   5j = 20\n   \\]  \n   \\[\n   j = 4\n   \\]\n\nNikola completed 4 jobs.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784720011,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 209,
+    "prompt_tokens": 152,
+    "total_tokens": 361,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 152
+  }
+}

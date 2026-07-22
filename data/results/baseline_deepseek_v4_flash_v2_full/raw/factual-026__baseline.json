@@ -1,0 +1,35 @@
+{
+  "id": "a0683c30-535c-4bc2-8991-f522b8747d0c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The form of music played by Die Rhöner Säuwäntzt is skiffle-blues, as stated in the source. According to the [Skiffle] source, skiffle originated in the United States in the first half of the 20th century before becoming popular in the UK in the 1950s.\n\nFinal answer: United States",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719278,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 1581,
+    "total_tokens": 1655,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1581
+  }
+}

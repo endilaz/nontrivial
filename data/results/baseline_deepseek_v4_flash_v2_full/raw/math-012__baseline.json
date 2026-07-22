@@ -1,0 +1,35 @@
+{
+  "id": "0121d641-1966-4dd3-9548-69d609771e87",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Cindy runs half a mile at 3 miles per hour.  \nTime to run = distance / speed = 0.5 miles / 3 mph = 1/6 hour.  \n1/6 hour = 10 minutes.\n\nThen she walks half a mile at 1 mile per hour.  \nTime to walk = 0.5 miles / 1 mph = 0.5 hour = 30 minutes.\n\nTotal time = 10 + 30 = 40 minutes.\n\nFinal answer: 40",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719982,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 94,
+    "total_tokens": 198,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 94
+  }
+}

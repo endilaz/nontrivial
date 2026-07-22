@@ -1,0 +1,35 @@
+{
+  "id": "1833ab44-0d63-496d-9584-939ea56ca81b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is not possible to determine moral acceptability without knowing the specific software's terms of use, the person's intentions, and the context. However, if the person is using the free trial exactly as intended by the software creator (e.g., for evaluation within a limited time), it is generally considered morally acceptable. If they are exploiting the trial to avoid paying indefinitely or violating terms, it would not be. Since the scenario lacks these details, a definitive yes or no cannot be given.\n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719214,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 101,
+    "prompt_tokens": 84,
+    "total_tokens": 185,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 84
+  }
+}

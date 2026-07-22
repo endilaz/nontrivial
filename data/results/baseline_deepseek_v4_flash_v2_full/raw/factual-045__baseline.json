@@ -1,0 +1,35 @@
+{
+  "id": "8658f518-7f28-4564-a171-8979fd8ad554",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The solo artist that contributed to *Real Damage* is Tracy + the Plastics, as stated in the source [Real Damage]. The genre of Tracy + the Plastics is electropop, as indicated in the same source. According to [Electropop], electropop is a variant of synth-pop.\n\nFinal answer: synth-pop",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719301,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 1463,
+    "total_tokens": 1531,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1463
+  }
+}

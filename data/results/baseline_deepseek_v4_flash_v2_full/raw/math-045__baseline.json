@@ -1,0 +1,35 @@
+{
+  "id": "03077039-d37e-4db5-b712-e5e340547d60",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Sol sells 10 bars on day 1.  \nEach day after, she sells 4 more than the previous day.  \nShe sells for 6 days.  \n\nDay 1: 10  \nDay 2: 14  \nDay 3: 18  \nDay 4: 22  \nDay 5: 26  \nDay 6: 30  \n\nTotal bars = 10 + 14 + 18 + 22 + 26 + 30  \n= (10+30) + (14+26) + (18+22) = 40 + 40 + 40 = 120 bars.  \n\nEach bar costs $0.10, so total earnings = 120 × 0.10 = $12.00.  \n\nFinal answer: 12.00",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784720044,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 163,
+    "prompt_tokens": 112,
+    "total_tokens": 275,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 112
+  }
+}

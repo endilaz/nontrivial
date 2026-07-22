@@ -1,0 +1,35 @@
+{
+  "id": "56873ccb-060c-4146-aa07-82923d35893f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the total time of the 16 three-minute songs:  \n16 × 3 = 48 minutes.  \n\nAn hour is 60 minutes, so she needs 60 − 48 = 12 more minutes.  \n\nEach four-minute song adds 4 minutes, so she needs 12 ÷ 4 = 3 songs.  \n\nThe answer is a number, not a person.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719996,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 105,
+    "total_tokens": 191,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 105
+  }
+}

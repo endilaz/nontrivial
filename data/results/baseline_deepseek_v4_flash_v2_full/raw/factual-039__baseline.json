@@ -1,0 +1,35 @@
+{
+  "id": "0d8d0aee-a81e-4540-8428-32bf7aeadcf5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks who performed the lead single on the album \"Friends in Low Places, No Fences\" that reached #1 on Billboard. From the source [Friends in Low Places], the song \"Friends in Low Places\" was performed by Garth Brooks and was the lead single from his album \"No Fences\". The source [No Fences] confirms this album is by Garth Brooks. Therefore, the performer is Garth Brooks.\n\nFinal answer: Garth Brooks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719293,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 2141,
+    "total_tokens": 2236,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2141
+  }
+}

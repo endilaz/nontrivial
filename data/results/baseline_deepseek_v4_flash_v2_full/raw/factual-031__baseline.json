@@ -1,0 +1,35 @@
+{
+  "id": "208fe6fe-c5d7-4e0b-812f-828c7a09824f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, the singer who sang a duet with her ex-husband in the same year he released \"The Battle\" is Tammy Wynette. The source for \"The Battle\" states it was released in 1976 and that the single \"Golden Ring,\" a duet with his estranged ex-wife Tammy Wynette, became a #1 hit that same year. Tammy Wynette was born in May of 1942.\n\nFinal answer: Tammy Wynette",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719284,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 102,
+    "prompt_tokens": 1700,
+    "total_tokens": 1802,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1700
+  }
+}

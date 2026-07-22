@@ -1,0 +1,35 @@
+{
+  "id": "8bba164d-8fb7-4b1b-8e1e-e2918e6c0e49",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "\"Human Error\" is the season finale of the third season of \"House,\" and according to the source [House (TV series)], the show originally ran on the Fox network.\n\nFinal answer: Fox",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719279,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 40,
+    "prompt_tokens": 1768,
+    "total_tokens": 1808,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1768
+  }
+}

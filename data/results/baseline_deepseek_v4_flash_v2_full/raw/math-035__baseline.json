@@ -1,0 +1,35 @@
+{
+  "id": "ceeffbdf-a8a0-4860-9d99-4845d676c1fe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Fiona completed 36 questions in the first hour.  \nShirley completed twice as many: 36 × 2 = 72 questions.  \nKiana completed half of the sum of Fiona and Shirley: (36 + 72) / 2 = 108 / 2 = 54 questions.  \n\nIn the first hour, total = 36 + 72 + 54 = 162 questions.  \nIn the second hour, each did the same number as in the first hour, so another 162 questions.  \nTotal over 2 hours = 162 + 162 = 324 questions.  \n\nFinal answer: 324",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784720026,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 130,
+    "prompt_tokens": 116,
+    "total_tokens": 246,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 116
+  }
+}

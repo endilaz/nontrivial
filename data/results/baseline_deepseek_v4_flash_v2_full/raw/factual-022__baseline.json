@@ -1,0 +1,35 @@
+{
+  "id": "5b49bb97-d14a-4233-a26f-552cb6217f66",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Manhattan West is a development in New York City, as stated in the source [Manhattan West]. The Singer Building was also located in New York City, as confirmed by [Singer Building] and [Singer Building (disambiguation)]. Therefore, both are projects in New York.\n\nFinal answer: Yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719273,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 1519,
+    "total_tokens": 1581,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1519
+  }
+}

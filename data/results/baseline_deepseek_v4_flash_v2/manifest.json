@@ -1,0 +1,43 @@
+{
+  "run_id": "baseline_deepseek_v4_flash_v2",
+  "experiment_kind": "baseline",
+  "created_at": "2026-07-22T10:57:41.475462+00:00",
+  "code_revision": "unknown",
+  "task_set_path": "data/tasks/task_set.jsonl",
+  "task_set_sha256": "3923ecf16ce2396fa8b8d46bab7895d61e5b20b11e746a34fa290aaa9810e5c0",
+  "selected_task_ids": [
+    "math-001",
+    "math-002",
+    "logic-001",
+    "factual-001",
+    "ethics-001"
+  ],
+  "selection_args": {
+    "mode": "dry_run",
+    "composition": {
+      "math": 2,
+      "logic": 1,
+      "factual": 1,
+      "ethics": 1
+    },
+    "stress_task_id": null,
+    "note": "intentional 2/1/1/1 pilot composition; never estimate task-type performance from it"
+  },
+  "config_sha256": "c146ef897deba09a7241039139661e3bd9a458abd47022d32dbf01dcf8ad3360",
+  "prompt_template_version": "baseline-v2",
+  "provider_route": null,
+  "requested_settings": {
+    "thinking_setting": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "temperature": 0.0,
+    "max_tokens": 10240,
+    "seed": 0,
+    "prefill_mechanism": null
+  },
+  "price_revision": "prices-2026-07-08",
+  "cache_schema_version": 2,
+  "manifest_schema_version": 1
+}

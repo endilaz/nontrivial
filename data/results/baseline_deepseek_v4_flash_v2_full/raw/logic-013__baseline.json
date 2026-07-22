@@ -1,0 +1,35 @@
+{
+  "id": "0eed59e5-1101-4057-82d7-44d25892999b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 6: Basketball player lives in house 1.  \nFrom clue 3: Bird keeper lives in house 1.  \nSo house 1: basketball player, bird keeper.\n\nFrom clue 5: Basketball player lives directly left of the person who had stew.  \nSince basketball player is house 1, stew must be in house 2.\n\nFrom clue 2: Fried rice is somewhere left of stew.  \nStew is house 2, so fried rice must be house 1.  \nThus house 1: fried rice; house 2: stew; house 3: pizza.\n\nFrom clue 1: Swimmer does not live in house 2.  \nPossible houses for swimmer: 1 or 3.  \nBut house 1 already has basketball player, so house 1's sport is basketball.  \nThus swimmer cannot be house 1. So swimmer must be house 3.\n\nCheck remaining clues for consistency:  \nClue 4: Fish enthusiast is somewhere to the right of carnations arrangement.  \nClue 7: Carnations arrangement is somewhere to the right of daffodils.  \nWe have pets: house 1 bird keeper, so fish and dog in houses 2 and 3.  \nFlowers: daffodils, carnations, lilies in some order.\n\nFrom clue 4: fish > carnations (house number).  \nFrom clue 7: carnations > daffodils.  \nSo order: daffodils < carnations < fish.  \nThus daffodils = house 1, carnations = house 2, fish = house 3.  \nThen house 3 has fish enthusiast, which matches fish > carnations (3 > 2).  \nHouse 2 has carnations, house 1 daffodils, house 3 lilies.  \nPets: house 1 bird, house 2 dog (since fish is house 3), house 3 fish.  \nSports: house 1 basketball, house 2 golfer (only left), house 3 swimmer.\n\nAll consistent.\n\nSwimmer lives in house 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719473,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 464,
+    "prompt_tokens": 335,
+    "total_tokens": 799,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 335
+  }
+}

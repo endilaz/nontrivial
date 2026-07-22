@@ -1,0 +1,35 @@
+{
+  "id": "b6d16347-f28e-4697-a0ef-5c5c624c8406",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is morally acceptable to remove a splinter from someone without their prior awareness if the action is clearly beneficial, causes minimal or no harm, and is done with good intent—similar to a parent or friend helping in a trivial, low-risk situation. The scenario implies a quick, harmless act that prevents pain or infection.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719242,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 87,
+    "total_tokens": 156,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 87
+  }
+}

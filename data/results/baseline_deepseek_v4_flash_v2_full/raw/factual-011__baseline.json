@@ -1,0 +1,35 @@
+{
+  "id": "426998ce-ae6d-4cc9-a423-6ec1a0f703cb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The BlackBerry DTEK60 was co-developed and distributed by BlackBerry Limited and manufactured by TCL. According to the source [BlackBerry Limited], the company was founded in 1984 as Research In Motion.\n\nFinal answer: 1984",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719259,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 1605,
+    "total_tokens": 1655,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1605
+  }
+}

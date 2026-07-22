@@ -1,0 +1,35 @@
+{
+  "id": "13bea83e-004c-4724-bfb4-9bd3b37f735e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Godzilla (song)], the song \"Godzilla\" has been covered by bands such as Racer X, Fu Manchu, The Smashing Pumpkins, Sebastian Bach and Fighting Gravity. The source [Fu Manchu (band)] describes Fu Manchu as an American, Southern California-based stoner rock band.\n\nFinal answer: Fu Manchu",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719264,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 1437,
+    "total_tokens": 1511,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1437
+  }
+}

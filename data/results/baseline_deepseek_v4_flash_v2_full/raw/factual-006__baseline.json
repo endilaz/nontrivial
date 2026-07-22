@@ -1,0 +1,35 @@
+{
+  "id": "06d83f29-fc8b-4000-93bf-3e0d9d1b6189",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the movie where Edwin Brown plays a man who executed at least 400 people, including William Joyce and John Amery.  \n\nFrom the sources, the man who executed at least 400 people including William Joyce and John Amery is **Albert Pierrepoint** (source: [Albert Pierrepoint]).  \nThe actor **Edwin Brown** played Albert Pierrepoint in the film **\"10 Rillington Place\"** (source: [Edwin Brown (actor)]).  \n\nFinal answer: 10 Rillington Place",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719253,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 108,
+    "prompt_tokens": 1312,
+    "total_tokens": 1420,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1312
+  }
+}

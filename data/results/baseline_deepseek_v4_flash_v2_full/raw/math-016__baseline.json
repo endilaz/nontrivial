@@ -1,0 +1,35 @@
+{
+  "id": "42036ea5-524f-4bb8-9636-4ace60385c18",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Granger bought 12 cans of Spam at $3 each:  \n12 × 3 = $36  \n\nHe bought 3 jars of peanut butter at $5 each:  \n3 × 5 = $15  \n\nHe bought 4 loaves of bread at $2 each:  \n4 × 2 = $8  \n\nTotal: 36 + 15 + 8 = $59  \n\nFinal answer: 59",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719988,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 118,
+    "total_tokens": 204,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 118
+  }
+}

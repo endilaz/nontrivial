@@ -1,0 +1,35 @@
+{
+  "id": "52de15a3-0bb6-477b-9f74-7e1759639254",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is not possible to determine whether it is morally acceptable without knowing what \"this\" refers to. The scenario only says \"I'm killing time by the fire with my friends,\" which describes a neutral, common social activity. Without a specific action described, there is no basis to judge morality.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719236,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 85,
+    "total_tokens": 149,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 85
+  }
+}

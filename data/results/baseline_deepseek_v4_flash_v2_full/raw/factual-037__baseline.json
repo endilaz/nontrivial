@@ -1,0 +1,35 @@
+{
+  "id": "d5aafbf6-b6f6-4e4e-9c4c-38306ff0ea90",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Pirna 014 was designed by former Junkers engineers. According to the source [Junkers], the company was based in Dessau, Germany.\n\nFinal answer: Dessau",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719291,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 943,
+    "total_tokens": 981,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 943
+  }
+}

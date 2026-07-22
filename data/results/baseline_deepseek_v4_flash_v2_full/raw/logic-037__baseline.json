@@ -1,0 +1,35 @@
+{
+  "id": "46f30a85-7323-4b2e-9523-b9575f109f68",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nClue 4: Television is one house away from blue (house 3).  \nPossible positions for television: house 1 or house 5 (invalid) or house 2 or house 4.  \nSo television is either house 2 or house 4.  \n\nClue 3: Red is directly left of gameboy.  \nPossible pairs: (1,2), (2,3), (3,4).  \nHouse 1 is white, so (1,2) impossible.  \nHouse 3 is blue, so (2,3) impossible because red can't be blue.  \nThus red must be house 3? No, house 3 is blue, so red cannot be house 3.  \nOnly remaining pair: (3,4) is impossible because house 3 is blue.  \nWait, check again:  \nPossible red-gameboy pairs: (1,2), (2,3), (3,4).  \nHouse 1 = white → (1,2) invalid.  \nHouse 3 = blue → red cannot be house 3, so (2,3) invalid and (3,4) invalid.  \nThis seems contradictory unless red is house 2 and gameboy house 3? But house 3 is blue, not red.  \nSo red cannot be house 2 if house 3 is blue? Actually red is a color, gameboy is a device — no conflict.  \nClue 3 says: person who likes red lives directly left of the person who has a gameboy.  \nSo red could be house 2, gameboy house 3. That works because house 3's color is blue, but gameboy is a device, not a color.  \nSo red = house 2, gameboy = house 3.  \n\nNow we have:  \nHouse 1: white  \nHouse 2: red  \nHouse 3: blue, gameboy  \nHouse 4: ?  \n\nClue 4: Television is one house away from blue (house 3). So television is house 2 or 4.  \nHouse 2 is red, so television could be house 2 or 4.  \n\nClue 5: Computer is somewhere to the right of red (house 2). So computer can be house 3 or 4.  \nHouse 3 has gameboy, so computer cannot be house 3. Thus computer = house 4.  \n\nThen television must be house 2 (since house 4 is computer).  \n\nDevices:  \nHouse 1: phone (only left)  \nHouse 2: television  \nHouse 3: gameboy  \nHouse 4: computer  \n\nColors:  \nHouse 1: white  \nHouse 2: red  \nHouse 3: blue  \nHouse 4: yellow (only left)  \n\nThe question: \"What is the number of the house where the person who likes white lives?\"  \nThat's house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719800,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 655,
+    "prompt_tokens": 250,
+    "total_tokens": 905,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 250
+  }
+}

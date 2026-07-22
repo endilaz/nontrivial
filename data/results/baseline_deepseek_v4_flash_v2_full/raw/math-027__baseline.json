@@ -1,0 +1,35 @@
+{
+  "id": "78e83a20-0f96-4dcf-a257-13a22e1f4c4a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Monica and Michelle together have $15 + $12 = $27.  \nThe cake costs $15, so after buying the cake they have $27 - $15 = $12 left.  \nSoda costs $3 per bottle, so they can buy $12 ÷ $3 = 4 bottles.  \nEach bottle has 12 servings, so total servings = 4 × 12 = 48 servings.  \nThere are 8 guests, so each gets 48 ÷ 8 = 6 servings.  \n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784720008,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 123,
+    "total_tokens": 233,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  }
+}

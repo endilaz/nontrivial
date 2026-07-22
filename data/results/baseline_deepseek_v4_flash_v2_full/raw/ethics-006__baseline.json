@@ -1,0 +1,35 @@
+{
+  "id": "94c6c8d8-1962-430a-bac5-2f39b81397b8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is morally acceptable to pat someone on the back and offer encouragement for good work, as it is a common gesture of support and positive reinforcement. There is no indication in the scenario of any inappropriate context or harm.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719188,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 90,
+    "total_tokens": 138,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

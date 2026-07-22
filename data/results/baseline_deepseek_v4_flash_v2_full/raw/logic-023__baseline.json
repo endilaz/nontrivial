@@ -1,0 +1,35 @@
+{
+  "id": "de8625ad-02fc-4902-be42-d974a6553fe4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: Basketball player directly left of cricketer.  \nPossible positions: (Basketball, Cricketer) = (1,2) or (2,3).\n\nFrom clue 1: Grilled cheese is somewhere left of basketball player.  \nIf basketball is in 1, no one left of them — impossible.  \nSo basketball must be in 2, cricketer in 3.\n\nFrom clue 3: Basketball player (house 2) and pizza eater are next to each other.  \nSo pizza is either house 1 or house 3. But house 3 is cricketer, so pizza could be house 1 or 3.  \nWe’ll check later.\n\nFrom clue 5: Grilled cheese directly left of bird keeper.  \nPossible pairs: (1,2) or (2,3).  \nBut house 2 is basketball player, so if grilled cheese is in 2, bird keeper in 3.  \nIf grilled cheese in 1, bird keeper in 2.  \nWe also have clue 1: Grilled cheese left of basketball player (house 2).  \nIf grilled cheese in 2, that’s not left of house 2. So grilled cheese cannot be in 2.  \nThus grilled cheese must be in house 1, bird keeper in house 2.\n\nSo far:  \nHouse 1: Grilled cheese  \nHouse 2: Basketball player, Bird keeper  \nHouse 3: Cricketer\n\nFrom clue 6: Cat lover left of pizza eater.  \nPossible pizza positions: house 1? No, house 1 has grilled cheese. So pizza must be house 3 (since house 2 is basketball, could be pizza? But house 2 has bird keeper, not yet assigned food).  \nIf pizza in house 2, cat lover left of house 2 means cat lover in house 1. That’s possible.  \nIf pizza in house 3, cat lover left of house 3 means cat lover in house 1 or 2.  \nWe need to check clue 3: Basketball (house 2) next to pizza. If pizza in house 2, that’s same house, not “next to”. So pizza cannot be house 2.  \nThus pizza must be house 3.  \nSo house 3: Pizza, Cricketer.\n\nFrom clue 6: Cat lover left of pizza (house 3) → cat lover in house 1 or 2.  \nHouse 2 has bird keeper, so cat lover could be house 1 or 2? But each pet is different. House 2 already has bird, so cat lover must be house 1.  \nThus house 1: Cat lover, Grilled cheese.  \nHouse 2: Bird keeper, Basketball player.  \nHouse 3: Cricketer, Pizza.\n\nRemaining pet: Dog owner must be house 3.\n\nNow clue 4: Radio not in house 1.  \nClue 7: Television directly left of phone.  \nPossible pairs: (1,2) or (2,3).  \nIf TV in 1, phone in 2. If TV in 2, phone in 3.\n\nDevices left: TV, phone, radio.  \nIf TV in 1, phone in 2 → radio in 3. That satisfies radio not in house 1.  \nIf TV in 2, phone in 3 → radio in 1. But radio cannot be in house 1 (clue 4). So only possible: TV in 1, phone in 2, radio in 3.\n\nNow sports: We have basketball in 2, cricketer in 3, so swimmer must be in house 1.\n\nThus swimmer lives in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719583,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 807,
+    "prompt_tokens": 322,
+    "total_tokens": 1129,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 322
+  }
+}

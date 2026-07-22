@@ -1,0 +1,35 @@
+{
+  "id": "37bf4fbd-7fea-4543-9e5e-2d7659f58ce7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nEach person has one of each pair:  \n\n- Drink: tea / root beer  \n- Instrument: cello / guitar  \n- Pet: horses / cats  \n- Book: mystery / history  \n\nLet’s denote the person in House 1 as A and House 2 as B.\n\nFrom clue 1: cellist is left of mystery reader.  \nSo cellist cannot be in House 2 if mystery reader is in House 1.  \nPossible:  \n- Cellist in House 1, mystery reader in House 2.\n\nFrom clue 2: history buff is left of cat lover.  \nSo history buff in House 1, cat lover in House 2.\n\nFrom clue 3: root beer lover and guitarist live next to each other.  \nSince there are only two houses, that means one is in House 1 and the other in House 2.\n\nNow assign:  \nHouse 1: cellist, history buff.  \nHouse 2: mystery reader, cat lover.\n\nNow for drink and instrument:  \nRoot beer lover and guitarist are in different houses.  \nIf House 1 has root beer, then House 2 has guitarist.  \nIf House 1 has guitarist, then House 2 has root beer.\n\nWe also have tea drinker opposite root beer, and cellist opposite guitarist.  \nHouse 1 already has cellist, so House 1 cannot have guitarist.  \nThus House 1 must have root beer, and House 2 must have guitarist.  \nThen House 1 drink = root beer, House 2 drink = tea.\n\nNow fill:  \nHouse 1: root beer, cello, history, and the remaining pet is horses (since cat is in House 2).  \nHouse 2: tea, guitar, mystery, cats.\n\nSo horses are in House 1.\n\nFinal answer: 1\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719759,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 403,
+    "prompt_tokens": 237,
+    "total_tokens": 640,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 237
+  }
+}

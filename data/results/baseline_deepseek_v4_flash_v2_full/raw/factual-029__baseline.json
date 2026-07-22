@@ -1,0 +1,35 @@
+{
+  "id": "9aa8b17c-f98c-4f45-8089-182e31e881d9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Park Dietz consulted on the case of Richard Kuklinski, who was a contract killer associated with the DeCavalcante crime family.  \n\nFinal answer: Park Dietz",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719281,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 1237,
+    "total_tokens": 1274,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1237
+  }
+}

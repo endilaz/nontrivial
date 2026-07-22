@@ -1,0 +1,35 @@
+{
+  "id": "d480858e-e7d8-4b9c-b8f3-4de7635f1df1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clues 1 and 2:  \n- Dog owner is directly left of fantasy book enthusiast.  \n- Truck driver is directly left of fantasy book enthusiast.  \nThat means dog owner and truck driver must be the same person (since only one person can be directly left of the fantasy book enthusiast).  \nSo the person in house X (left) is dog owner and truck driver, and house X+1 is fantasy book enthusiast.\n\nFrom clue 3: Truck driver lives somewhere to the right of SUV owner.  \nSo SUV owner is left of truck driver.\n\nPossible positions:  \nIf truck driver is in house 2, then fantasy is in house 3, and SUV must be in house 1.  \nIf truck driver is in house 1, then fantasy would be in house 2, but then SUV would have to be left of house 1 — impossible.  \nSo truck driver must be in house 2, fantasy in house 3, SUV in house 1.\n\nFrom clue 4: Mystery reader directly left of history buff.  \nPossible pairs: (1,2) or (2,3).  \nHouse 3 is fantasy, so history buff cannot be in house 3 if fantasy is there. So (2,3) is impossible.  \nThus mystery in house 1, history in house 2.\n\nFrom clue 5: Fish enthusiast somewhere to the right of dog owner.  \nDog owner is in house 2 (truck driver). So fish must be in house 3.  \nThen cat lover is in house 1.\n\nSo house 1: SUV owner, mystery reader, cat lover.  \nHouse 2: truck driver, dog owner, history buff.  \nHouse 3: minivan driver (only car left), fantasy enthusiast, fish enthusiast.\n\nSUV owner lives in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719462,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 395,
+    "prompt_tokens": 273,
+    "total_tokens": 668,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 273
+  }
+}
