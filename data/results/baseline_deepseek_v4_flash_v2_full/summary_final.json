@@ -45,10 +45,9 @@
     "factual": {
       "categories": {
         "correct": 47,
-        "incorrect": 2,
-        "unscored": 1
+        "incorrect": 3
       },
-      "accuracy": 0.9591836734693877
+      "accuracy": 0.94
     },
     "logic": {
       "categories": {
@@ -68,6 +67,7 @@
   "notes": [
     "factual-041/044 tombstoned by amendment amend-factual-041-044-2026-07-22; amended view replaces them with factual-051 (correct) and factual-052 (unscored->judged incorrect: 'Am Rong' vs 'filmmaker').",
     "factual-023 kept in the canonical set (researcher confirmed correct gold 2026-07-22); model answered 'No' vs gold 'yes' -> incorrect.",
-    "factual-042: model answered the actor where gold is the show -> judged incorrect."
+    "factual-042: model answered the actor where gold is the show -> judged incorrect.",
+    "factual-052 judged incorrect (append-only resolution 2026-07-22): 'Am Rong' vs 'filmmaker'."
   ]
 }

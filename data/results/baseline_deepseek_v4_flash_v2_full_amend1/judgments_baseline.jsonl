@@ -1,0 +1,1 @@
+{"task_id": "factual-052", "condition_id": "baseline", "judged_decision": "not_equivalent", "judge_method": "llm_judge", "judge_reason": "judge decision above confidence threshold", "judge_confidence": 1.0, "resolved_category": "incorrect", "judged_on": "2026-07-22", "judge_id": "answer-equivalence", "rubric_version": "1.0.0"}
