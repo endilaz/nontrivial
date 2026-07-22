@@ -240,8 +240,11 @@ def numeric_equivalent(
     """Numeric comparison with canonicalized values and optional tolerance.
 
     A tolerance is a task-approved absolute tolerance (plan.md §C1); it must
-    be supplied explicitly per task/run, never defaulted. Units must match
-    when both sides carry one; a unit on only one side is a mismatch.
+    be supplied explicitly per task/run, never defaulted. Unit policy
+    (researcher decision, 2026-07-22): units never make an answer incorrect.
+    A unit on only one side is ignored (ground truths in this task set are
+    bare numbers; models habitually attach units). Conflicting units on BOTH
+    sides are genuinely ambiguous and come back ``unscored``, not incorrect.
     """
     if tolerance is not None and tolerance < 0:
         raise ValueError("tolerance must be non-negative")
@@ -257,17 +260,20 @@ def numeric_equivalent(
             normalized_ground_truth=truth.canonical,
             reason="prediction is not a parseable number",
         )
-    if pred.unit != truth.unit:
+    if pred.unit and truth.unit and pred.unit != truth.unit:
         return EvaluationResult(
-            decision="not_equivalent",
+            decision="unscored",
             method="numeric_exact",
-            normalized_prediction=f"{pred.canonical} {pred.unit or ''}".strip(),
-            normalized_ground_truth=f"{truth.canonical} {truth.unit or ''}".strip(),
-            reason=f"unit mismatch: {pred.unit!r} vs {truth.unit!r}",
+            normalized_prediction=f"{pred.canonical} {pred.unit}",
+            normalized_ground_truth=f"{truth.canonical} {truth.unit}",
+            reason=f"conflicting units ({pred.unit!r} vs {truth.unit!r}); needs review",
         )
     diff = abs(pred.value - truth.value)
     ok = diff <= tolerance if tolerance is not None else pred.value == truth.value
     method = "numeric_tolerance" if tolerance is not None else "numeric_exact"
+    unit_note = ""
+    if pred.unit != truth.unit:
+        unit_note = f"; one-sided unit {pred.unit or truth.unit!r} ignored"
     return EvaluationResult(
         decision="equivalent" if ok else "not_equivalent",
         method=method,
@@ -276,6 +282,7 @@ def numeric_equivalent(
         reason=(
             f"|{pred.canonical} - {truth.canonical}| = {diff.normalize():f}"
             + (f" vs tolerance {tolerance:f}" if tolerance is not None else "")
+            + unit_note
         ),
     )
 

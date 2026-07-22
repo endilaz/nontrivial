@@ -107,13 +107,19 @@ def test_numeric_equivalent_fraction_matches_decimal():
     assert result.decision == "equivalent"
 
 
-def test_numeric_equivalent_units_must_agree():
+def test_numeric_equivalent_unit_policy():
+    # A unit on only one side is ignored (researcher decision 2026-07-22:
+    # units never make an answer incorrect).
+    assert numeric_equivalent("42 apples", "42").decision == "equivalent"
+    assert numeric_equivalent("10 miles", "10").decision == "equivalent"
+    assert numeric_equivalent("42", "42 apples").decision == "equivalent"
     assert numeric_equivalent("42 apples", "42 apples").decision == "equivalent"
-    mismatch = numeric_equivalent("42 apples", "42 oranges")
-    assert mismatch.decision == "not_equivalent"
-    assert "unit mismatch" in mismatch.reason
-    one_sided = numeric_equivalent("42 apples", "42")
-    assert one_sided.decision == "not_equivalent"
+    # Wrong value with a one-sided unit is still incorrect.
+    assert numeric_equivalent("41 miles", "42").decision == "not_equivalent"
+    # Conflicting units on BOTH sides are ambiguous -> unscored, not incorrect.
+    conflict = numeric_equivalent("42 apples", "42 oranges")
+    assert conflict.decision == "unscored"
+    assert "conflicting units" in conflict.reason
 
 
 def test_numeric_equivalent_tolerance_is_explicit():
