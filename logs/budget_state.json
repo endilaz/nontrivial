@@ -1,0 +1,10 @@
+{
+  "schema": "budget_state",
+  "schema_version": 1,
+  "budget_usd": 450.0,
+  "historical_spend_usd": null,
+  "historical_spend_approved": false,
+  "historical_spend_source": "PENDING: fill from provider-dashboard reconciliation (logs/invalidated/2026-07-21/reconciliation.md), then call budget_state.approve_historical_spend()",
+  "valid_v2_spend_usd": 0.0,
+  "reservations": {}
+}

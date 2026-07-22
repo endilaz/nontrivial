@@ -1,9 +1,212 @@
 # CoT Faithfulness Project Implementation Plan
 
-**Status:** implementation specification after the 2026-07-21 project audit
+**Status:** implementation specification plus partial-implementation handoff as
+of 2026-07-21
 **Authority:** `CLAUDE.md` contains the scientific design and decisions log. This
 document translates that design into implementation tasks. If the two conflict,
 stop and ask the researcher rather than silently choosing one.
+
+## 0. New-session handoff
+
+Read this section, then `CLAUDE.md`, then the milestone being implemented. Do
+not infer completion from old generated files or from older checkmarks in git
+history.
+
+### 0.1 Repository and validation state
+
+- Repository root: `/Users/daniel/Documents/coding/nontrivial`
+- Current committed revision before this handoff edit: `a95d502`
+	(`gpt 5.6 sol fixing a few things, updated plan.md`). It is also the current
+	`main`/`origin/main` revision.
+- The worktree was clean immediately before this handoff edit. Afterward,
+	`plan.md` is expected to be the only new modification unless the user or
+	another process changes files.
+- A project-local Python 3.13.5 environment exists at `.venv/` and is gitignored.
+	The direct pinned dependencies from `requirements.txt` are installed there.
+- A1 is now complete: `requirements.lock.txt` holds the full transitive lock with
+	a Python/OS/arch provenance header, `.python-version` pins `3.13.5`,
+	`pytest.ini` registers and excludes the `live_api` marker (`--strict-markers`
+	on), and `docs/environment.md` documents recreation. Clean recreation was
+	verified on 2026-07-21 (fresh venv from the lock → identical `pip freeze`, 72
+	tests pass offline).
+- Latest complete offline validation (2026-07-21, after A1/A2/A5 + A4 budget
+	state): all offline tests green, no network calls.
+
+	```text
+	104 passed in ~0.8s
+	Pylance/project diagnostics: no errors in src/, scripts/, or tests/
+	```
+
+Run the same safe validation with:
+
+```bash
+cd /Users/daniel/Documents/coding/nontrivial
+env -u OPENAI_API_KEY \
+		-u ANTHROPIC_API_KEY \
+		-u GEMINI_API_KEY \
+		-u OPENROUTER_API_KEY \
+		-u TOGETHER_API_KEY \
+		-u DEEPSEEK_API_KEY \
+		.venv/bin/python -m pytest -q
+```
+
+All default tests must remain offline. Do not add tests that use `.env` or make
+network requests.
+
+### 0.2 Scientific artifact status
+
+The following committed artifacts are invalid development history and must not
+be analyzed as research results:
+
+- `data/tasks/task_set.jsonl`
+- Existing `data/results/baseline_*` and `data/results/smoke_test*`
+- Existing JSON receipts directly under `data/cache/`
+- Existing `logs/cost_log.csv` totals
+
+Reasons include invalid math labels, invalid ethics semantics, missing factual
+context/provenance, invalid binary tasks, unenforced thinking settings,
+untracked judge calls, and duplicate cache-hit accounting. `CLAUDE.md` now
+records the audit decisions and reopens the affected Phase 0/1 checkboxes.
+
+Preserve these files for audit. Do not delete them and do not silently repair
+them in place. Downloaded source datasets under `data/tasks/` are inputs and must
+not be invalidated or moved.
+
+**A2 has now been executed (2026-07-21).** `scripts/invalidate_artifacts.py`
+(backed by `src/invalidation.py`) moved all 58 invalid artifacts into
+`data/tasks/invalidated/2026-07-21/`, `data/results/invalidated/2026-07-21/`,
+`data/cache/invalidated/2026-07-21/`, and `logs/invalidated/2026-07-21/`,
+recording SHA-256 hashes and reasons in
+`data/invalidation/manifest_2026-07-21.json`. The canonical locations are now
+clear (a missing `task_set.jsonl`/ledger makes gated runners fail closed, which
+is intended). The operation is idempotent; re-running is a no-op that re-verifies.
+Source datasets (`MATH_gsm8k/`, `LOGIC_*`, `REASONING_hotpot-master/`,
+`ETHICS_*`) were left untouched. Note: `data/cache/` is gitignored, so the
+preserved cache receipts live on disk locally but are recorded by hash in the
+committed manifest. Historical cost reconciliation against provider dashboards
+remains an open researcher action (`logs/invalidated/2026-07-21/reconciliation.md`).
+
+### 0.3 Code already implemented at `a95d502`
+
+The following fixes are committed and covered by offline tests:
+
+**Authority and environment**
+
+- `CLAUDE.md` reopens generation, cost, smoke, task-set, and metadata work
+	invalidated by the audit.
+- The July 21 decisions for math, contextual HotpotQA, ETHICS commonsense,
+	balanced probing tasks, and artifact preservation are in the decisions log.
+- `.venv/` is usable locally, but A1 still needs a transitive lock and documented
+	recreation/version policy.
+
+**Deterministic evaluation**
+
+- `scripts/baseline_accuracy.py` uses normalized exact matching for short text.
+	It no longer calls an LLM while claiming deterministic scoring.
+- `src/evaluation.py::evaluate_with_llm` intentionally raises `RuntimeError`.
+	This is fail-closed behavior, not a missing quick fix. Do not reconnect it
+	directly to an SDK. A future judge must use `GenerationClient`, a versioned
+	config/rubric, cache, cost estimate/log, saved receipts, and researcher
+	validation as specified in C1/C3.
+
+**Generation request semantics and cache v2 scaffold**
+
+- `RunConfig` and `GenerationRequest` include `provider_route` and
+	`prompt_template_version`.
+- `CACHE_SCHEMA_VERSION = 2`; the default valid cache path is
+	`data/cache/v2/`. No canonical v2 API responses have been generated yet.
+- The cache key includes schema version, route, prompt-template version,
+	messages, model, sampling, thinking setting, and replicate index.
+- Cached results store the normalized request, applied settings, finish reason,
+	provider cached-input tokens, reasoning tokens, fingerprint, and raw receipt.
+- Invalid cache records are quarantined. A force-fresh replacement archives the
+	previous receipt under cache history rather than destroying it.
+- `.env` loading is explicitly rooted at the project `.env` path.
+- OpenAI `thinking_setting: disabled` maps to
+	`reasoning_effort: none`; provider-specific dictionaries are forwarded and
+	tested.
+- OpenRouter requires a pinned `provider_route`, disables fallback, and forwards
+	the provider-specific thinking body. Missing routes fail before a call.
+- DeepSeek with the old string-only `thinking_setting: disabled` now fails
+	closed because the exact V4 API control remains unverified. This is
+	intentional. Do not weaken it to make the current config run.
+- Anthropic string `disabled` maps to `thinking: {type: disabled}`. Gemini's
+	zero-budget handling remains in the adapter.
+- Adapter-boundary tests inspect outbound OpenAI/OpenRouter kwargs without using
+	network access.
+
+**Cost/accounting safeguards implemented so far**
+
+- `incremental_cost_for_result` returns zero for a local disk-cache hit.
+- Runners do not append cost rows for local cache hits.
+- Provider-side cached input tokens use the configured discounted rate and are
+	passed to the ledger.
+- `estimate_batch` raises `BudgetExceededError` when projected spend plus the
+	current ledger exceeds `$450`, even if the caller is otherwise confirmed.
+- `scripts/smoke_test.py` now performs a batch estimate before generation.
+- Baseline/smoke records now retain cache key, provider timestamp, fingerprint,
+	finish reason, prefill mechanism, applied settings, cached-input tokens, and
+	reasoning tokens.
+
+### 0.4 Partial fixes that are not complete
+
+Do not mark these milestones complete yet:
+
+| Area | Implemented | Still required |
+|---|---|---|
+| A1 environment | **Complete.** Transitive lock, `.python-version`, `live_api` marker (excluded by default, `--strict-markers`), `docs/environment.md`, verified clean recreation (72 tests offline) | — |
+| A2 invalidation | **Code + operation complete.** `src/invalidation.py` + `scripts/invalidate_artifacts.py` moved 58 artifacts (task set, 14 baseline/summary results, 2 smoke, 40 v1 cache receipts, ledger) into `invalidated/2026-07-21/`; SHA-256 manifest at `data/invalidation/manifest_2026-07-21.json`; idempotent + 7 temp-dir tests; source datasets untouched | Researcher fills provider-dashboard totals in `logs/invalidated/2026-07-21/reconciliation.md` (feeds A4 `budget_state.json`) |
+| A3 generation | Settings/route/cache metadata scaffold and mocked tests | Verify exact DeepSeek V4 control; live capability probes; OpenRouter route decision; timeout/rate/idempotency/token preflight; capability expiration |
+| A4 costs | Cache-hit zero cost, provider cached tokens, simple hard-budget check; **NEW:** `src/budget_state.py` — locked `budget_state.json`, atomic reserve/release/reconcile, **fail-closed until researcher-approved historical spend**, unknown-schema fail-closed; committed seed is unapproved; 11 tests | Researcher records dashboard historical spend (then `approve_historical_spend()`); wire reservation into `estimate_batch`/runners; price validity dimensions (`valid_from`/`until`/route/region/lane); prompt-cache policy |
+| A5 manifests | **Foundation complete.** `src/run_manifest.py`: immutable `RunManifest` (all §A5 fields, relative paths), no-overwrite `create`, exclusive `O_EXCL` lease, append+`fsync` responses, `(task_id,condition_id,mechanism,replicate_index)` key with idempotent-duplicate vs. reconciliation-conflict, trailing-line-only recovery, exact-match `resume`, 5-state journal, pure `write_summary`; 14 tests | Wire `smoke_test.py`/`baseline_accuracy.py` onto it when runners are next rebuilt (Milestone C); batch lane is A6 |
+| A6 batch jobs | Plan only | Full batch state machine and idempotent reconciliation |
+| A7 schemas/security | Cache schema v2 only | Version all artifact types; migration policy; receipt allowlist/redaction/permissions/retention |
+| B task set | Decisions and specification only | Entire benchmark rebuild and review; current task set remains invalid |
+| C1 evaluation | Deterministic exact scoring and judge disabled | Alias policy, structured evaluation result, configured judge pipeline and validation set |
+| C2-C4 | Nothing canonical | Valid dry run/baselines, judge validation, and researcher-approved replication |
+
+### 0.5 Important intentional blockers
+
+- Do not run `scripts/smoke_test.py` or `scripts/baseline_accuracy.py` against
+	paid APIs yet.
+- `configs/baseline_deepseek_v4_flash.yaml` still uses an unverified string
+	disabled setting and should fail closed in the adapter.
+- `configs/baseline_glm_5_2_openrouter.yaml` has no approved pinned upstream
+	route and should fail route validation.
+- Existing baseline configs and result files describe invalid development runs.
+- Existing `logs/cost_log.csv` is inflated and omits prior judge spend. It is
+	not a trustworthy remaining-budget source until A2/A4 reconciliation.
+- The literature refresh remains on hold and must not be launched implicitly.
+- The closed-frontier model remains undecided.
+- Do not begin Milestone D until A-C have passed their acceptance gates and the
+	researcher has approved the Phase 1 checkpoint.
+
+### 0.6 Recommended next-session sequence
+
+Start with the smallest offline, reversible slice and validate after each edit:
+
+1. Re-run the 69-test offline suite and inspect `git status` because another
+	 process may have changed the shared workspace.
+2. Finish A1 with a reproducible lock/version record and prove clean recreation.
+3. Implement A2 as an idempotent invalidation command with temporary-directory
+	 tests. Preserve source datasets and historical receipts.
+4. Implement A5's manifest/append/resume foundation before making more runner
+	 changes; otherwise new outputs will continue using overwrite semantics.
+5. Finish offline portions of A3/A4/A7: semantic cache verification, relative
+	 paths, budget state/reservation tests, exact price dimensions, request
+	 preflight, and schema fixtures.
+6. Do not perform live capability probes until their exact configs, estimates,
+	 assertions, and output directories are reviewable. Ask for approval before
+	 any estimate above `$5`; never rely on the invalid historical ledger alone.
+7. Rebuild Milestone B from source data only after A2/A5/A7 are ready, so task
+	 artifacts are schema-versioned, immutable, and reviewable from creation.
+8. Complete C1 offline deterministic evaluation and validation-set tooling.
+	 C2 live baselines and C4 replication remain gated by valid tasks, capability
+	 probes, cost reconciliation, and researcher checkpoints.
+
+When a task requires an unresolved scientific choice, record the exact decision
+gate from Sections 15, 17, and 19 and stop that slice. Continue independent
+offline work rather than inventing the answer.
 
 ## 1. Fixed decisions and current holds
 
