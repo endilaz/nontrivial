@@ -1,0 +1,49 @@
+# Task-set amendment 2026-07-22: replace two defective HotpotQA tasks.
+#
+# Trigger (documented before any change): during blind C3 judge-validation
+# labeling the researcher flagged factual-041 and factual-044 as defective
+# source questions (researcher_notes in data/validation/judge_validation_v1.jsonl):
+#
+# - factual-041 (source 5adf44985542993a75d2646d): question asks for a GENUS of
+#   one-species moth in the seventh-largest country; the gold answer "Crambidae"
+#   is the FAMILY one hop up, and a distractor genus (Nepita) also satisfies the
+#   question as written. Irreparably ambiguous -> rejected.
+# - factual-044 (source 5ab9672655429970cfb8eabd): "Which industry do Richard
+#   Hawley and Chicago's Catherine belong to?" has gold "rock band", which is
+#   neither an industry nor true of Hawley (a solo musician). Gold-question
+#   mismatch inherited from HotpotQA -> rejected.
+#
+# Mechanism (per configs/task_selection.yaml replacement_policy): the 48
+# surviving factual tasks are preserved VERBATIM (no stream rebuild). The two
+# replacements are drawn deterministically from the SAME frozen seeded stream
+# (seed 20260721+3000), scanning from immediately after the canonical 50's
+# stream cut, applying the frozen rejection rules, requiring hotpot_type
+# 'comparison' for one of them (to keep the canonical 40 bridge / 10
+# comparison mix), and requiring binary_ok (to keep the 20-probe quota).
+# factual-041 (bridge, non-probe) and factual-044 (comparison, non-probe) are
+# tombstoned as rejected review decisions. Selection on results is mitigated
+# by: defect found during blind labeling (not model performance),
+# deterministic replacement from the frozen stream, and this recorded
+# rationale.
+#
+# status is researcher-approved before application (CLAUDE.md ground rule 3).
+
+status: approved
+approved_by: researcher
+approved_at: 2026-07-22
+amendment_id: amend-factual-041-044-2026-07-22
+reason_code: ambiguous_or_malformed
+
+exclude_source_ids:
+  - 5adf44985542993a75d2646d  # factual-041: ambiguous genus/family question
+  - 5ab9672655429970cfb8eabd  # factual-044: gold-question mismatch ("rock band")
+
+tombstone_task_ids:
+  - factual-041
+  - factual-044
+
+notes: >
+  Replacements are drawn from the same seeded factual stream after exclusion,
+  reviewed through the B7 form, and merged with new ids factual-051/052.
+  The manifest records supersedes_task_set_sha256 chaining to the
+  2026-07-22 canonical hash 3923ecf1…

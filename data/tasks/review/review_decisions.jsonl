@@ -198,3 +198,5 @@
 {"task_id": "math-048", "decision": "approved", "reviewer": "researcher", "reviewed_at": "2026-07-22T00:00:00+00:00", "notes": "bulk approval after researcher candidate review 2026-07-22"}
 {"task_id": "math-049", "decision": "approved", "reviewer": "researcher", "reviewed_at": "2026-07-22T00:00:00+00:00", "notes": "bulk approval after researcher candidate review 2026-07-22"}
 {"task_id": "math-050", "decision": "approved", "reviewer": "researcher", "reviewed_at": "2026-07-22T00:00:00+00:00", "notes": "bulk approval after researcher candidate review 2026-07-22"}
+{"task_id": "factual-051", "decision": "approved", "reviewer": "researcher", "reviewed_at": "2026-07-22T13:43:29.557757+00:00", "notes": "amendment amend-factual-041-044-2026-07-22 replacement; reviewed via review_form_amendment.csv"}
+{"task_id": "factual-052", "decision": "approved", "reviewer": "researcher", "reviewed_at": "2026-07-22T13:43:29.557757+00:00", "notes": "amendment amend-factual-041-044-2026-07-22 replacement; reviewed via review_form_amendment.csv"}
