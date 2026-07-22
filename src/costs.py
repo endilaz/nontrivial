@@ -62,6 +62,13 @@ class ModelPrice:
     ``input_per_mtok`` / ``output_per_mtok`` / ``cached_input_per_mtok`` are
     ``None`` when unverified. ``status`` is ``"verified"`` or an ``"UNVERIFIED"``
     note. Estimating an UNVERIFIED model raises ``UnverifiedPriceError``.
+
+    Validity dimensions (A4/E7): a price is only comparable within its
+    ``valid_from``..``valid_until`` window, for a given ``route``/``region`` and
+    execution ``lane`` (sync vs. batch). ``valid_until`` defaults to ``None``
+    ("no expiry recorded"); :func:`assert_price_fresh` can require a bounded
+    window for canonical runs. ``price_record`` embeds an immutable snapshot in
+    the run manifest so a run's prices are auditable after the table changes.
     """
 
     input_per_mtok: Optional[float]
@@ -70,6 +77,14 @@ class ModelPrice:
     status: str = "UNVERIFIED — fill from capability matrix"
     last_verified: Optional[str] = None
     source: Optional[str] = None
+    # -- validity dimensions (defaults keep existing entries backward-compatible)
+    currency: str = "USD"
+    valid_from: Optional[str] = None  # ISO date; defaults to last_verified in records
+    valid_until: Optional[str] = None  # ISO date; None = no expiry recorded
+    region: str = "global"
+    lane: str = "sync"  # sync | batch
+    context_tier: Optional[str] = None
+    cache_write_per_mtok: Optional[float] = None
 
     @property
     def is_verified(self) -> bool:
@@ -78,6 +93,10 @@ class ModelPrice:
             and self.input_per_mtok is not None
             and self.output_per_mtok is not None
         )
+
+    @property
+    def effective_valid_from(self) -> Optional[str]:
+        return self.valid_from or self.last_verified
 
 
 _ANTHROPIC_SOURCE = (
@@ -292,6 +311,67 @@ def cost_for_usage(
         + output_tokens / 1_000_000 * price.output_per_mtok  # type: ignore[operator]
     )
     return cost
+
+
+class StalePriceError(RuntimeError):
+    """A price is used outside its validity window, or a route/lane mismatches."""
+
+
+def assert_price_fresh(
+    price: ModelPrice,
+    as_of: str,
+    *,
+    require_bounded: bool = False,
+    route: Optional[str] = None,
+    lane: Optional[str] = None,
+) -> None:
+    """Refuse a stale or mismatched price (A4/E7).
+
+    ``as_of`` is an ISO date. Raises :class:`StalePriceError` when ``as_of`` is
+    before ``effective_valid_from`` or after ``valid_until``; when
+    ``require_bounded`` and no ``valid_until`` is recorded (canonical runs must
+    pin an expiry); or when a supplied ``route``/``lane`` does not match.
+    """
+    eff_from = price.effective_valid_from
+    if eff_from is not None and as_of < eff_from:
+        raise StalePriceError(f"price not valid until {eff_from} (as_of {as_of})")
+    if price.valid_until is not None and as_of > price.valid_until:
+        raise StalePriceError(
+            f"price expired on {price.valid_until} (as_of {as_of}); re-verify"
+        )
+    if require_bounded and price.valid_until is None:
+        raise StalePriceError(
+            "canonical run requires a bounded price (valid_until unset); "
+            "record a re-verify date before use"
+        )
+    if lane is not None and lane != price.lane:
+        raise StalePriceError(f"price lane {price.lane!r} != requested {lane!r}")
+    if route is not None and price.region not in (route, "global"):
+        raise StalePriceError(f"price region {price.region!r} != requested {route!r}")
+
+
+def price_record(model: str, prices: Optional[Dict[str, ModelPrice]] = None) -> Dict[str, Any]:
+    """Return an immutable snapshot of a model's price for a run manifest (A4)."""
+    table = prices if prices is not None else PRICES
+    price = table.get(model)
+    if price is None:
+        raise UnverifiedPriceError(f"No price-table entry for model {model!r}.")
+    return {
+        "model": model,
+        "currency": price.currency,
+        "input_per_mtok": price.input_per_mtok,
+        "output_per_mtok": price.output_per_mtok,
+        "cached_input_per_mtok": price.cached_input_per_mtok,
+        "cache_write_per_mtok": price.cache_write_per_mtok,
+        "region": price.region,
+        "lane": price.lane,
+        "context_tier": price.context_tier,
+        "valid_from": price.effective_valid_from,
+        "valid_until": price.valid_until,
+        "status": price.status,
+        "last_verified": price.last_verified,
+        "source": price.source,
+    }
 
 
 def incremental_cost_for_result(model: str, result: Any) -> float:

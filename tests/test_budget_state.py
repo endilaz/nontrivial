@@ -119,10 +119,13 @@ def test_unknown_schema_version_fails_closed(tmp_path):
         load_state(path)
 
 
-def test_committed_budget_state_is_fail_closed():
-    # The repo's committed budget_state.json must start unapproved so no paid
-    # call can run until the researcher records the reconciled historical spend.
+def test_committed_budget_state_is_approved_with_provenance():
+    # The researcher recorded the reconciled historical spend (2026-07-22), so
+    # the committed state is now approved. It must cite its provenance and leave
+    # a sane remaining budget (below the full $450, above zero).
     committed = json.loads(DEFAULT_STATE_PATH.read_text(encoding="utf-8"))
-    assert committed["historical_spend_approved"] is False
-    assert committed["historical_spend_usd"] is None
-    assert BudgetState.from_dict(committed).remaining() == 0.0
+    assert committed["historical_spend_approved"] is True
+    assert isinstance(committed["historical_spend_usd"], (int, float))
+    assert committed["historical_spend_source"]  # non-empty provenance
+    remaining = BudgetState.from_dict(committed).remaining()
+    assert 0.0 < remaining <= 450.0
