@@ -1,0 +1,10 @@
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-051\"}", "state": "planned", "ts": "2026-07-22T13:46:25.899029+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-051\"}", "state": "submitted", "ts": "2026-07-22T13:46:25.899331+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-051\"}", "state": "received", "ts": "2026-07-22T13:46:27.671356+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-051\"}", "state": "persisted", "ts": "2026-07-22T13:46:27.674690+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-051\"}", "state": "accounted", "ts": "2026-07-22T13:46:27.674907+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-052\"}", "state": "planned", "ts": "2026-07-22T13:46:27.675175+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-052\"}", "state": "submitted", "ts": "2026-07-22T13:46:27.675389+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-052\"}", "state": "received", "ts": "2026-07-22T13:46:28.802897+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-052\"}", "state": "persisted", "ts": "2026-07-22T13:46:28.807412+00:00"}
+{"key": "{\"condition_id\":\"baseline\",\"mechanism\":null,\"replicate_index\":0,\"task_id\":\"factual-052\"}", "state": "accounted", "ts": "2026-07-22T13:46:28.807703+00:00"}

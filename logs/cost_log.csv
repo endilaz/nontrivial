@@ -203,3 +203,5 @@ timestamp,run_id,model,provider,input_tokens,output_tokens,cached_tokens,cost_us
 2026-07-22T11:34:12.416367+00:00,baseline_deepseek_v4_flash_v2_full,deepseek-v4-flash,deepseek,112,220,0,0.000077,0.036552
 2026-07-22T11:34:13.858827+00:00,baseline_deepseek_v4_flash_v2_full,deepseek-v4-flash,deepseek,93,140,0,0.000052,0.036604
 2026-07-22T11:34:15.454984+00:00,baseline_deepseek_v4_flash_v2_full,deepseek-v4-flash,deepseek,117,105,0,0.000046,0.036650
+2026-07-22T13:46:27.674045+00:00,baseline_deepseek_v4_flash_v2_full_amend1,deepseek-v4-flash,deepseek,2024,37,0,0.000294,0.036944
+2026-07-22T13:46:28.806721+00:00,baseline_deepseek_v4_flash_v2_full_amend1,deepseek-v4-flash,deepseek,1084,61,0,0.000169,0.037113
