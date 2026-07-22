@@ -30,10 +30,10 @@ history.
 	verified on 2026-07-21 (fresh venv from the lock → identical `pip freeze`, 72
 	tests pass offline).
 - Latest complete offline validation (2026-07-21, after A1/A2/A5 + A4 budget
-	state): all offline tests green, no network calls.
+	state + A3/A7 offline slices): all offline tests green, no network calls.
 
 	```text
-	104 passed in ~0.8s
+	127 passed in ~0.9s
 	Pylance/project diagnostics: no errors in src/, scripts/, or tests/
 	```
 
@@ -156,11 +156,11 @@ Do not mark these milestones complete yet:
 |---|---|---|
 | A1 environment | **Complete.** Transitive lock, `.python-version`, `live_api` marker (excluded by default, `--strict-markers`), `docs/environment.md`, verified clean recreation (72 tests offline) | — |
 | A2 invalidation | **Code + operation complete.** `src/invalidation.py` + `scripts/invalidate_artifacts.py` moved 58 artifacts (task set, 14 baseline/summary results, 2 smoke, 40 v1 cache receipts, ledger) into `invalidated/2026-07-21/`; SHA-256 manifest at `data/invalidation/manifest_2026-07-21.json`; idempotent + 7 temp-dir tests; source datasets untouched | Researcher fills provider-dashboard totals in `logs/invalidated/2026-07-21/reconciliation.md` (feeds A4 `budget_state.json`) |
-| A3 generation | Settings/route/cache metadata scaffold and mocked tests | Verify exact DeepSeek V4 control; live capability probes; OpenRouter route decision; timeout/rate/idempotency/token preflight; capability expiration |
+| A3 generation | Settings/route/cache metadata scaffold and mocked tests; **offline portions complete:** `src/preflight.py` (rendered-token vs. pinned context-window check with output reservation, fail-closed on UNVERIFIED windows, E6), `src/capabilities.py` (probe `pass`/`fail`/`inconclusive` + receipt hash + expiration, `require_valid` fails closed), and a v1→v2 cache-gating test; 12 new tests | **Live/gated only:** verify exact DeepSeek V4 control; run the four live capability probes (fill `capabilities` + `preflight` windows from receipts); OpenRouter route decision; timeout/`Retry-After`/idempotency-key wiring into the live adapters |
+| A7 schemas/security | Cache schema v2 only; **offline complete:** `src/schemas.py` central registry + fail-closed `assert_supported`/`check_payload` + `migrate_file` (new file, records source hash, never mutates source), cross-checked against module constants; semantic cache-envelope re-hash verified against filename on read (tampered → quarantined) in `src/generation.py`; `src/receipts.py` allowlist + secret redaction + `0o600` writes; `docs/receipt_policy.md` (retention + release deny-by-default); 14 new tests | Stamp `schema`/`schema_version` into task/judgment/analysis artifacts as they are built (B/C/G); privacy review before any receipt release |
 | A4 costs | Cache-hit zero cost, provider cached tokens, simple hard-budget check; **NEW:** `src/budget_state.py` — locked `budget_state.json`, atomic reserve/release/reconcile, **fail-closed until researcher-approved historical spend**, unknown-schema fail-closed; committed seed is unapproved; 11 tests | Researcher records dashboard historical spend (then `approve_historical_spend()`); wire reservation into `estimate_batch`/runners; price validity dimensions (`valid_from`/`until`/route/region/lane); prompt-cache policy |
 | A5 manifests | **Foundation complete.** `src/run_manifest.py`: immutable `RunManifest` (all §A5 fields, relative paths), no-overwrite `create`, exclusive `O_EXCL` lease, append+`fsync` responses, `(task_id,condition_id,mechanism,replicate_index)` key with idempotent-duplicate vs. reconciliation-conflict, trailing-line-only recovery, exact-match `resume`, 5-state journal, pure `write_summary`; 14 tests | Wire `smoke_test.py`/`baseline_accuracy.py` onto it when runners are next rebuilt (Milestone C); batch lane is A6 |
 | A6 batch jobs | Plan only | Full batch state machine and idempotent reconciliation |
-| A7 schemas/security | Cache schema v2 only | Version all artifact types; migration policy; receipt allowlist/redaction/permissions/retention |
 | B task set | Decisions and specification only | Entire benchmark rebuild and review; current task set remains invalid |
 | C1 evaluation | Deterministic exact scoring and judge disabled | Alias policy, structured evaluation result, configured judge pipeline and validation set |
 | C2-C4 | Nothing canonical | Valid dry run/baselines, judge validation, and researcher-approved replication |

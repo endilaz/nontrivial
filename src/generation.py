@@ -224,15 +224,17 @@ def canonical_json(payload: Dict[str, Any]) -> str:
     )
 
 
-def cache_key(request: GenerationRequest) -> str:
-    """SHA-256 over the canonical serialisation of the cache-relevant fields.
+def semantic_request_envelope(request: GenerationRequest) -> Dict[str, Any]:
+    """The canonical semantic request that identifies a cache entry (A7).
 
-    The key deliberately includes the FULL messages (system + user + any
-    assistant prefill), sampling params, thinking setting, and replicate_index.
+    This is the envelope the cache key hashes: the FULL messages (system + user +
+    any assistant prefill), provider/model/route, sampling params, thinking
+    setting, replicate index, prompt-template version, and cache schema version.
     It deliberately EXCLUDES ``force_fresh`` (a control flag, not a request
-    parameter).
+    parameter). A cache entry stores enough to reconstruct this envelope, and the
+    reader re-hashes it to confirm the filename before use.
     """
-    payload = {
+    return {
         "cache_schema_version": CACHE_SCHEMA_VERSION,
         "provider": request.provider,
         "model": request.model,
@@ -245,7 +247,13 @@ def cache_key(request: GenerationRequest) -> str:
         "replicate_index": request.replicate_index,
         "prompt_template_version": request.prompt_template_version,
     }
-    return hashlib.sha256(canonical_json(payload).encode("utf-8")).hexdigest()
+
+
+def cache_key(request: GenerationRequest) -> str:
+    """SHA-256 over the canonical serialisation of the semantic request envelope."""
+    return hashlib.sha256(
+        canonical_json(semantic_request_envelope(request)).encode("utf-8")
+    ).hexdigest()
 
 
 def _to_serializable(obj: Any) -> Any:
@@ -413,8 +421,24 @@ class GenerationClient:
             return None
         if result.cache_key != key:
             return None
+        # A7: re-hash the stored semantic request envelope and confirm it matches
+        # the filename before serving. Catches a tampered/mismatched envelope
+        # (right filename, wrong request) that the cache_key field alone misses.
+        if not self._envelope_matches_filename(result, key):
+            quarantine = self.cache_dir / "quarantine"
+            quarantine.mkdir(parents=True, exist_ok=True)
+            path.replace(quarantine / f"{key}.{uuid.uuid4().hex}.envelope.json")
+            return None
         result.cache_hit = True  # mark provenance; stored copy has cache_hit=False
         return result
+
+    @staticmethod
+    def _envelope_matches_filename(result: GenerationResult, key: str) -> bool:
+        try:
+            rebuilt = GenerationRequest(**result.request)
+        except Exception:
+            return False
+        return cache_key(rebuilt) == key
 
     def _write_cache(self, key: str, result: GenerationResult) -> None:
         # Store the canonical copy with cache_hit=False; reads flip it to True.
