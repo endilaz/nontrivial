@@ -1,8 +1,10 @@
 # CoT Faithfulness Research — Phase 0 dependencies (pinned; ground rule 4).
 #
-# Direct dependencies only, pinned to the exact versions installed and tested in
-# .venv on 2026-07-08 (Python 3.13.6, Windows). Transitive dependencies are
-# resolved by pip; run `pip freeze` for the full locked set if you need one.
+# Direct dependencies only. The full resolved (transitive) set is locked in
+# requirements.lock.txt, captured 2026-07-21 from the project-local .venv on
+# Python 3.13.5, macOS (Darwin 15.7.3), arm64. Regenerate the lock whenever these
+# pins change: `.venv/bin/python -m pip freeze > requirements.lock.txt` (then
+# restore the metadata header). See docs/environment.md for recreation steps.
 #
 # Deliberately NOT included yet (arrive in later phases): pandas, numpy, torch,
 # transformers, transformer-lens, scikit-learn, matplotlib. Add them in Phase 5/6.
