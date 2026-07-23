@@ -1,0 +1,35 @@
+{
+  "id": "c278403e-8643-40ac-81b5-d61e965a09e1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Koby has 2 boxes, each with 3 sparklers and 5 whistlers.  \nSo Koby’s sparklers: \\(2 \\times 3 = 6\\)  \nKoby’s whistlers: \\(2 \\times 5 = 10\\)  \nTotal for Koby: \\(6 + 10 = 16\\)  \n\nCherie has 1 box with 8 sparklers and 9 whistlers.  \nTotal for Cherie: \\(8 + 9 = 17\\)  \n\nTogether: \\(16 + 17 = 33\\) fireworks.  \n\nThe question asks for a person if the answer is a person, but the answer is a number, so no person is named.  \n\nFinal answer: 33",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797606,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 151,
+    "prompt_tokens": 125,
+    "total_tokens": 276,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 125
+  }
+}

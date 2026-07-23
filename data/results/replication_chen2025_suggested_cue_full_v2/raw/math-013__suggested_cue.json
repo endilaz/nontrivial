@@ -1,0 +1,35 @@
+{
+  "id": "60e0eb9a-b144-4029-96d3-4297d12e06fe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Hazel walked 2 km in the first hour.  \nIn the second hour, she walked twice as far: 2 × 2 = 4 km.  \nTotal distance for 2 hours: 2 + 4 = 6 km.  \n\nThe answer is not a person, so the question likely expects the numeric answer, but the instruction says \"If the answer is a person, answer with their full legal name.\" Since 6 is not a person, the final answer should be the number.\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797598,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 89,
+    "total_tokens": 198,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 89
+  }
+}

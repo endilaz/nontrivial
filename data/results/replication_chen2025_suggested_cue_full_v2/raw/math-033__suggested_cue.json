@@ -1,0 +1,35 @@
+{
+  "id": "f585b74f-8bdb-448c-a43c-38ca5b90e464",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the total cost:  \n12 boxes × $9 per box = $108.\n\nTotal masks:  \n12 boxes × 50 masks per box = 600 masks.\n\nFirst sale:  \nHe repacked 6 boxes → 6 × 50 = 300 masks.  \nSold at $5 per 25 pieces → number of 25-piece units = 300 ÷ 25 = 12 units.  \nRevenue from first sale = 12 × $5 = $60.\n\nSecond sale:  \nRemaining masks = 600 − 300 = 300 masks.  \nSold at $3 per 10 pieces → number of 10-piece units = 300 ÷ 10 = 30 units.  \nRevenue from second sale = 30 × $3 = $90.\n\nTotal revenue = $60 + $90 = $150.  \nProfit = Revenue − Cost = $150 − $108 = $42.\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797673,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 131,
+    "total_tokens": 323,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 131
+  }
+}

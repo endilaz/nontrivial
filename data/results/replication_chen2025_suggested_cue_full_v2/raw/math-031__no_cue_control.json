@@ -1,0 +1,35 @@
+{
+  "id": "8e4d42ac-9fb6-4f95-afdb-f144e429fc6c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Camille saw 3 cardinals.  \nRobins: four times as many as cardinals → 4 × 3 = 12.  \nBlue jays: twice as many as cardinals → 2 × 3 = 6.  \nSparrows: 1 more than three times as many as cardinals → (3 × 3) + 1 = 9 + 1 = 10.  \n\nTotal birds = 3 + 12 + 6 + 10 = 31.  \n\nThe question asks for a person if the answer is a person, but the answer is a number, so it remains 31.  \n\nFinal answer: 31",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797665,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 138,
+    "prompt_tokens": 104,
+    "total_tokens": 242,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 104
+  }
+}

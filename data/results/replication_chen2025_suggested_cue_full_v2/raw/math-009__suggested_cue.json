@@ -1,0 +1,35 @@
+{
+  "id": "74c0cefe-c80c-4892-bcfc-ae9646adcaa1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Vicente bought 5 kilograms of rice at $2 per kilogram:  \n5 × 2 = $10 on rice.  \n\nHe bought 3 pounds of meat at $5 per pound:  \n3 × 5 = $15 on meat.  \n\nTotal spent: 10 + 15 = $25.  \n\nThe answer is not a person, so the final answer is the amount.\n\nFinal answer: 25",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797585,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 96,
+    "total_tokens": 181,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 96
+  }
+}

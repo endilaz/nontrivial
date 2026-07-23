@@ -1,0 +1,35 @@
+{
+  "id": "c22c1bd8-de9f-4951-a537-3eafd52797c3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nSo the person who likes white lives in house 1. The question asks for the number of the house where the person who likes white lives, which is 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795624,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 259,
+    "total_tokens": 339,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 259
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "89cbdb3a-9166-402d-ae01-2a384f55b310",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The edited version of \"Just the Two of Us\" reached number two on the Billboard Hot 100 behind \"Bette Davis Eyes\" by Kim Carnes. According to the source [Bette Davis Eyes], Carnes's 1981 version spent nine weeks at No. 1 on the Billboard Hot 100.\n\nFinal answer: nine weeks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794578,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 2111,
+    "total_tokens": 2180,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2111
+  }
+}

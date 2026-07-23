@@ -1,0 +1,35 @@
+{
+  "id": "5d9b200e-8066-42b0-916f-8de5f1d72a24",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clue 5:  \nHouse 2 = fantasy book enthusiast.  \n\nFrom clue 2: history book buff lives directly left of the person who likes white.  \nPossible pairs: (1,2) or (2,3).  \nBut house 2 is fantasy, so history cannot be in house 2.  \nThus history = house 1, white = house 2.  \n\nFrom clue 3: There is one house between history book buff and pianist.  \nHistory is house 1, so pianist must be house 3.  \n\nFrom clue 4: percussionist lives somewhere to the right of history book buff.  \nHistory is house 1, so percussionist can be house 2 or 3.  \nBut house 3 is pianist, so percussionist must be house 2.  \n\nFrom clue 1: percussionist lives somewhere to the left of the person who likes red.  \nPercussionist is house 2, so red must be house 3.  \n\nThus red is in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797206,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 235,
+    "prompt_tokens": 267,
+    "total_tokens": 502,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 11
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1ff277e7-a2a3-48f0-bf08-265b5c7f8d97",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nLet’s denote attributes:  \nSports: golfer (G), cricketer (C)  \nBooks: romance (R), history (H)  \nColors: yellow (Y), blue (B)  \nDrinks: milk (M), coffee (Cf)  \nInstruments: violinist (V), cellist (Cl)\n\n**Clue 1:** Cellist lives somewhere to the left of the golfer.  \nSince only two houses, this means House 1 = cellist, House 2 = golfer.\n\n**Clue 2:** Milk drinker does not live in first house → Milk is in House 2, so coffee in House 1.\n\n**Clue 3:** Person who likes yellow lives directly left of the romance book lover.  \nDirectly left means House 1 = yellow, House 2 = romance book lover.  \nThus House 1: yellow, House 2: romance.  \nThen House 1 must have history book, House 2 must have blue color (since yellow is taken).\n\nNow fill:  \nHouse 1: cellist, coffee, yellow, history, and the remaining sport is cricketer (since golfer is House 2).  \nHouse 2: golfer, milk, romance, blue, and remaining instrument is violinist.\n\nSo violinist lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797477,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 300,
+    "prompt_tokens": 251,
+    "total_tokens": 551,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 123
+  }
+}

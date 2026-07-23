@@ -1,0 +1,35 @@
+{
+  "id": "9d7eb5d9-3e0f-449b-b04f-1bf935e888ea",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Minnie has 16 three-minute songs, so that is \\(16 \\times 3 = 48\\) minutes.  \nShe wants the total to be 60 minutes.  \nThe remaining time is \\(60 - 48 = 12\\) minutes.  \nEach four-minute song adds 4 minutes, so she needs \\(12 \\div 4 = 3\\) songs.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797622,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 114,
+    "total_tokens": 196,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 114
+  }
+}

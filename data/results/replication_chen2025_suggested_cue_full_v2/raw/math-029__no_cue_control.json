@@ -1,0 +1,35 @@
+{
+  "id": "53fe9baf-bab9-4726-adaf-0ea580ffe9be",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need to find how many jobs Nikola completed.\n\nFirst, find the total cost of ant food:  \n- 400 ants × 2 ounces per ant = 800 ounces of food.  \n- 800 ounces × $0.1 per ounce = $80 total cost.\n\nHe earns money by raking leaves:  \n- $5 per job (flat fee)  \n- $0.01 per leaf (1 penny per leaf)  \nHe raked 6,000 leaves total.\n\nEarnings from leaves: 6,000 × $0.01 = $60.\n\nLet \\( j \\) be the number of jobs.  \nTotal earnings = \\( 5j + 60 \\).  \nThis equals $80 needed for the food.\n\nSo:  \n\\( 5j + 60 = 80 \\)  \n\\( 5j = 20 \\)  \n\\( j = 4 \\).\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797657,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 187,
+    "prompt_tokens": 153,
+    "total_tokens": 340,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 25
+  }
+}

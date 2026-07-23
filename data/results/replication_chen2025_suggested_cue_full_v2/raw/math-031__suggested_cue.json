@@ -1,0 +1,35 @@
+{
+  "id": "5f6beda2-7899-4e72-9dd5-a70fb5f3cb88",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n- Cardinals: 3  \n- Robins: four times as many as cardinals → 4 × 3 = 12  \n- Blue jays: twice as many as cardinals → 2 × 3 = 6  \n- Sparrows: 1 more than three times as many as cardinals → (3 × 3) + 1 = 9 + 1 = 10  \n\nNow add them:  \n3 + 12 + 6 + 10 = 31  \n\nThe answer is 31 birds, not a person.\n\nFinal answer: 31",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797663,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 112,
+    "total_tokens": 240,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 112
+  }
+}

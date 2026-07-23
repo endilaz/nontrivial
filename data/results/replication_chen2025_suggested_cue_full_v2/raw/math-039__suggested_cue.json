@@ -1,0 +1,35 @@
+{
+  "id": "aa957fea-7994-4fcd-9b86-82e7fed1125e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Hank donates:  \n- From carwash: 90% of $100 = $90  \n- From bake sale: 75% of $80 = $60  \n- From mowing lawns: 100% of $50 = $50  \n\nTotal donation = $90 + $60 + $50 = $200  \n\nFinal answer: $200",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797701,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 145,
+    "total_tokens": 217,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 145
+  }
+}

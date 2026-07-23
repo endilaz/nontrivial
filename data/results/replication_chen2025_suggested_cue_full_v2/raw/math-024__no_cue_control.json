@@ -1,0 +1,35 @@
+{
+  "id": "35787c08-c356-491c-9c38-b1ddd8deca69",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Annie starts with 20 brownies.  \nShe gives half to the administrator: 20 ÷ 2 = 10 left.  \nOf the remaining 10, she gives half to Carl: 10 ÷ 2 = 5 left.  \nThen she gives 2 to Simon: 5 − 2 = 3 left.  \n\nThe question asks for a person, but the answer is a number. Since the problem says \"If the answer is a person,\" and here the answer is a number, the instruction doesn't apply. However, following the format exactly, the final answer is the number of brownies left.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797638,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 133,
+    "prompt_tokens": 111,
+    "total_tokens": 244,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 111
+  }
+}

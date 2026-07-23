@@ -1,0 +1,35 @@
+{
+  "id": "b3042360-10bc-49de-aa27-a2ccf2389e6c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clue 3: House 1 = bird keeper.  \nFrom clue 6: House 1 = basketball player.  \nSo House 1: basketball player, bird keeper.  \n\nFrom clue 5: basketball player (House 1) is directly left of the person who had stew → House 2 = stew.  \n\nFrom clue 2: fried rice is left of stew → House 1 = fried rice (since only house left of 2 is 1).  \nSo House 1: fried rice, basketball player, bird keeper.  \nHouse 2: stew.  \n\nRemaining lunch: pizza → House 3 = pizza.  \n\nFrom clue 1: swimmer not in house 2 → swimmer in house 1 or 3.  \nHouse 1 already has basketball player, so swimmer must be in House 3.  \n\nThus swimmer lives in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794973,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 208,
+    "prompt_tokens": 344,
+    "total_tokens": 552,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 344
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "bdc7ec1b-0e32-465a-a304-d7006933afb2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \nFrom clue 5: horses in house 3.  \nFrom clue 6: banana in house 1.  \nFrom clue 3: spaghetti in house 4.  \nFrom clue 8: cat lover in house 4.  \n\nClue 4: one house between stew and spaghetti (house 4). So stew must be in house 2 (since house 4 – 2 = house 2).  \nClue 1: stew (house 2) directly left of grapes → grapes in house 3.  \n\nClue 2: mangos not in house 4. Fruits: banana (1), grapes (3), so mangos must be in house 2 (since house 4 can't have it, house 1 has banana, house 3 has grapes). Then oranges in house 4.  \n\nClue 7: fried rice not in house 1. Meals: stew (2), spaghetti (4). So fried rice could be house 3, pizza in house 1.  \n\nClue 9: two houses between bird keeper and cat lover (house 4). So bird keeper in house 1.  \n\nPets: cat (4), horses (3), bird (1), so dog in house 2.  \n\nThe question: \"What is the number of the house where the person who owns horses lives?\"  \nHorses in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795743,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 311,
+    "prompt_tokens": 351,
+    "total_tokens": 662,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 351
+  }
+}

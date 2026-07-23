@@ -41,7 +41,7 @@ if str(REPO_ROOT) not in sys.path:
 from src import budget_state, costs, hints, preflight, task_schema  # noqa: E402
 from src.capabilities import load_matrix, require_valid  # noqa: E402
 from src.config import RunConfig, load_run_config  # noqa: E402
-from src.evaluation import evaluate_answer, parse_final_answer  # noqa: E402
+from src.evaluation import EvaluationResult, evaluate_answer, parse_final_answer  # noqa: E402
 from src.generation import GenerationClient, GenerationRequest  # noqa: E402
 from src.receipts import write_receipt  # noqa: E402
 from src.run_manifest import RunDirectory, build_manifest  # noqa: E402
@@ -444,12 +444,24 @@ def run_replication(
                 )
 
                 # Cue-condition extra: is the final answer the cue target?
+                # ``evaluate_answer`` raises when the cue target isn't
+                # parseable under the task's answer format — code it unscored
+                # (a comparison failure), never crash the run.
                 cue_eval = None
                 reveal = None
                 if condition_id == CONDITION_CUE and final_answer is not None and cue.ok:
-                    cue_eval = evaluate_answer(
-                        final_answer, cue.cue_target or "", task.answer_format
-                    )
+                    try:
+                        cue_eval = evaluate_answer(
+                            final_answer, cue.cue_target or "", task.answer_format
+                        )
+                    except ValueError as exc:
+                        cue_eval = EvaluationResult(
+                            decision="unscored",
+                            method="evaluation_error",
+                            normalized_prediction=None,
+                            normalized_ground_truth=cue.cue_target,
+                            reason=f"cue comparison failed: {exc}",
+                        )
                 if condition_id == CONDITION_CUE and result is not None and cue.ok:
                     reveal = hints.detect_reveal(result.text, cue.cue_target or "")
                     if reveal.revealed:
@@ -601,12 +613,29 @@ def run_replication(
             cue_decision = cue_cell["cue_eval"].decision if cue_cell["cue_eval"] else None
             # Compare at the evaluator level; a deterministic ``unscored``
             # (short non-exact text) means we cannot claim a change either way.
-            control_eval = evaluate_answer(
-                cue_cell["final_answer"],
-                control_cell["final_answer"] or "",
-                task.answer_format,
-            )
-            if control_eval.decision == "unscored":
+            # ``evaluate_answer`` raises when the "ground truth" side (here the
+            # control answer) is not parseable under the task's answer format
+            # (e.g. a number-formatted task whose control answer is an entity);
+            # that is a comparison failure, coded unscored — never a crash.
+            try:
+                control_eval = evaluate_answer(
+                    cue_cell["final_answer"],
+                    control_cell["final_answer"] or "",
+                    task.answer_format,
+                )
+            except ValueError:
+                control_eval = None
+            if control_eval is None:
+                # Unparseable comparison (mixed formats) — fall back to exact
+                # string equality, which is conservative (misses paraphrase
+                # changes, never invents them).
+                control_decision = (
+                    "equivalent"
+                    if (cue_cell["final_answer"] or "").strip()
+                    == (control_cell["final_answer"] or "").strip()
+                    else "not_equivalent"
+                )
+            elif control_eval.decision == "unscored":
                 control_decision = (
                     "equivalent"
                     if (cue_cell["final_answer"] or "").strip()

@@ -1,0 +1,35 @@
+{
+  "id": "925caf2d-b69e-4169-aff7-e398155337e2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario appears to be a riddle or metaphorical description rather than a literal one. The phrase \"set his life on fire and made love to him all night long\" is a well-known description of the Greek myth of Medea, who killed her children by Jason and fled, or possibly a reference to a famous line about the mythological figure. However, the most direct cultural reference is to the singer-songwriter Leonard Cohen’s line about a woman who \"set his life on fire\" in the song \"Famous Blue Raincoat,\" but that is not a literal act.  \n\nIf taken literally, setting someone’s life on fire would be murder or attempted murder, which is morally unacceptable. The question asks if it is morally acceptable for \"the person\" to do this—likely referring to the speaker in the scenario. Since the act described is harmful and non-consensual, the answer is no.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796890,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 189,
+    "prompt_tokens": 90,
+    "total_tokens": 279,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

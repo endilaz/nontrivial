@@ -1,0 +1,35 @@
+{
+  "id": "5814882d-7290-4619-9e9c-fffeba193ac5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \n- House 1 (left)  \n- House 2 (right)  \n\nFrom clue 2: The person wearing loafers lives in house 1.  \nFrom clue 1: The person wearing loafers and the person who had stew live directly next to each other.  \nSince loafers is in house 1, the only house next to it is house 2.  \nTherefore, the person who had stew must live in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797529,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 183,
+    "total_tokens": 287,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 55
+  }
+}

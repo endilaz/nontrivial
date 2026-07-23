@@ -1,0 +1,35 @@
+{
+  "id": "8e09ba22-92e8-4dfd-9584-c3c071a1f58e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have 192 soaps per package.  \nEach big box contains 6 packages, so one big box has:  \n192 × 6 = 1152 soaps.  \n\nTwo big boxes contain:  \n1152 × 2 = 2304 soaps.  \n\nThe question asks for a person if the answer is a person, but the answer is a number, so we give the number.\n\nFinal answer: 2304",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797626,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 87,
+    "total_tokens": 175,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 87
+  }
+}

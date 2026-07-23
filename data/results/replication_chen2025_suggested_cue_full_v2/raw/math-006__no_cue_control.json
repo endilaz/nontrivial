@@ -1,0 +1,35 @@
+{
+  "id": "85d2bf5e-1f7f-4ff0-bc0e-df5018429d5a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Blake needs primer and paint for 5 rooms.  \nEach room needs 1 gallon of primer and 1 gallon of paint.  \nSo total primer needed = 5 gallons, total paint needed = 5 gallons.  \n\nPrimer cost per gallon = $30.00, with 20% off.  \n20% of $30 = $6.00 off, so sale price = $30 - $6 = $24.00 per gallon.  \nTotal primer cost = 5 × $24 = $120.00.  \n\nPaint cost per gallon = $25.00, no discount.  \nTotal paint cost = 5 × $25 = $125.00.  \n\nTotal spent = $120 + $125 = $245.00.  \n\nFinal answer: $245.00",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797578,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 162,
+    "prompt_tokens": 124,
+    "total_tokens": 286,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 124
+  }
+}

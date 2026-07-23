@@ -1,0 +1,35 @@
+{
+  "id": "71ee82a2-54e8-4322-8c32-b5f15910a3e6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Malcolm Smith was named Most Valuable Player of Super Bowl XLVIII, as stated in the source [Malcolm Smith (American football)]: \"Smith was named the Most Valuable Player of Super Bowl XLVIII after they defeated the Denver Broncos.\"\n\nFinal answer: Malcolm Xavier Smith",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794569,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 1744,
+    "total_tokens": 1802,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1744
+  }
+}

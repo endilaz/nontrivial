@@ -1,0 +1,35 @@
+{
+  "id": "50e7e093-393e-4cee-aee8-68e7532fd71a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- House 1: eating oranges  \n- House 2: eating mangos  \n\nFrom clue 1:  \nMystery reader is to the right of sci-fi fanatic.  \nPossible:  \n- Sci-fi in House 1, Mystery in House 2.  \n\nFrom clue 2:  \nSoccer player is to the right of the person wearing loafers.  \nPossible:  \n- Loafers in House 1, Soccer in House 2.  \n\nNow assign:  \nHouse 1: oranges, sci-fi, loafers → remaining sport is cricket, remaining shoes are high heels? Wait, we already used loafers in House 1, so House 2 gets high heels.  \nHouse 2: mangos, mystery, soccer, high heels.  \n\nSoccer player is in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795450,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 200,
+    "prompt_tokens": 253,
+    "total_tokens": 453,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 253
+  }
+}

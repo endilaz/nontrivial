@@ -1,0 +1,35 @@
+{
+  "id": "050d8262-ff46-430d-8b7b-7ceb2ef01761",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 9: House 1 ate spaghetti.  \nFrom clue 1: House 2 eats mangos.  \nThus House 3 must eat oranges (since fruits are mangos, grapes, oranges).  \n\nFrom clue 2: The person with a computer lives directly left of the person eating oranges.  \nOranges are in house 3, so computer is in house 2.  \n\nFrom clue 3: Stew is not in house 2.  \nFrom clue 7: Soccer player lives directly left of the person who had stew.  \nPossible stew positions: house 1 or house 3.  \nIf stew were in house 1, soccer would be left of house 1 → impossible.  \nSo stew must be in house 3. Then soccer is in house 2.  \n\nNow foods: House 1 spaghetti, House 2 mangos, House 3 stew.  \nFruits: House 1 must be grapes (since mangos in 2, oranges in 3).  \n\nFrom clue 4: Golfer lives somewhere left of the person with a phone.  \nFrom clue 5: History buff not in house 2.  \nFrom clue 6: Romance lover not in house 3.  \nFrom clue 8: Romance lover not in house 2.  \nThus romance lover must be in house 1.  \n\nSo house 1: romance, house 2: not history (clue 5) and not romance → fantasy, house 3: history.  \n\nSports: We have soccer in house 2.  \nGolfer left of phone.  \nPossible positions:  \n- If golfer in house 1, phone could be in 2 or 3.  \n- If golfer in house 2, phone must be in 3.  \nBut house 2 is soccer, so golfer cannot be in house 2.  \nThus golfer in house 1, phone in house 2 or 3.  \n\nDevices: Computer in house 2.  \nRemaining: gameboy and phone.  \nIf phone in house 2, then computer and phone same house → impossible.  \nSo phone must be in house 3.  \n\nThus phone is in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797252,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 483,
+    "prompt_tokens": 378,
+    "total_tokens": 861,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 122
+  }
+}

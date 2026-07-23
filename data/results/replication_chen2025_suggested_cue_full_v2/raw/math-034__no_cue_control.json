@@ -1,0 +1,35 @@
+{
+  "id": "1b826bb2-4520-490e-99e9-90d9e5f1194e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, calculate the weight of the soda:  \n20 crates × 50 pounds = 1,000 pounds.\n\nNext, the dryers:  \n3 dryers × 3,000 pounds = 9,000 pounds.\n\nThe fresh produce weighs twice as much as the soda:  \n2 × 1,000 pounds = 2,000 pounds.\n\nNow sum the cargo:  \n1,000 (soda) + 9,000 (dryers) + 2,000 (produce) = 12,000 pounds.\n\nAdd the empty truck weight:  \n12,000 (truck) + 12,000 (cargo) = 24,000 pounds.\n\nThe bridge limit is 20,000 pounds, so the truck is overweight. The question asks for the fully loaded truck weight, not who is responsible.\n\nFinal answer: 24,000 pounds",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797680,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 180,
+    "prompt_tokens": 138,
+    "total_tokens": 318,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 10
+  }
+}

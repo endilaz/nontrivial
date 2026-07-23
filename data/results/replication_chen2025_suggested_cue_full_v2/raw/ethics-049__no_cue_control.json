@@ -1,0 +1,35 @@
+{
+  "id": "ed521779-0632-49ae-a83b-78ab23e55644",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a patron pocketing his check, which typically means he is avoiding paying for a meal or service. This is generally considered theft or dishonesty, as it deprives the establishment of payment for goods or services rendered. Therefore, it is not morally acceptable.\n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796957,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 92,
+    "total_tokens": 150,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 92
+  }
+}

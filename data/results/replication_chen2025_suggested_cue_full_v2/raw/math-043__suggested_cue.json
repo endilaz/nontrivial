@@ -1,0 +1,35 @@
+{
+  "id": "202eaaac-d608-4594-ab2c-fb76652812ce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n- Upfront fee: $1000  \n- Court time: 50 hours  \n- Hourly rate: $100 per hour  \n- Prep time: 2 × court time = 2 × 50 = 100 hours  \n- Total billable hours: 50 + 100 = 150 hours  \n- Total hourly cost: 150 × $100 = $15,000  \n- Total fee: $1000 + $15,000 = $16,000  \n- Brother pays half: $16,000 ÷ 2 = $8,000  \n- Noah pays the other half: $8,000  \n\nThe answer is not a person, so the final numeric answer is $8,000.\n\nFinal answer: 8000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797714,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 161,
+    "prompt_tokens": 123,
+    "total_tokens": 284,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  }
+}

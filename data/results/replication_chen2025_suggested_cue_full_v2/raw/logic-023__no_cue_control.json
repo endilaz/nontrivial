@@ -1,0 +1,35 @@
+{
+  "id": "3a4ac315-106e-4693-ba29-1614aff1775f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: Basketball player directly left of cricketer.  \nPossible positions: (1,2) or (2,3).\n\nFrom clue 1: Grilled cheese is somewhere left of basketball player.  \nIf basketball is in 2, grilled cheese must be in 1.  \nIf basketball is in 3, grilled cheese could be in 1 or 2.\n\nFrom clue 3: Basketball player and pizza eater are next to each other.  \nIf basketball in 2, pizza in 1 or 3.  \nIf basketball in 3, pizza in 2.\n\nFrom clue 5: Grilled cheese directly left of bird keeper.  \nSo positions: (1,2) or (2,3) for (grilled cheese, bird keeper).\n\nCombine with clue 1:  \nIf basketball in 2, then grilled cheese in 1, bird keeper in 2. But then basketball is in 2, so bird keeper would be basketball player? Possibly, but we check consistency.\n\nLet’s test basketball in 2, cricketer in 3.  \nThen grilled cheese in 1 (clue 1), bird keeper in 2 (clue 5).  \nSo house 2 = basketball player and bird keeper.  \nClue 3: pizza next to basketball → pizza in 1 or 3.  \nClue 6: cat lover left of pizza.  \nIf pizza in 1, cat lover left of 1 impossible. So pizza must be in 3.  \nThen cat lover left of 3 → cat lover in 1 or 2.  \nHouse 2 already has bird keeper, so cat lover could be in 1.  \nHouse 1: grilled cheese, possibly cat lover.  \nHouse 3: pizza, cricketer.\n\nNow clue 4: Radio not in house 1.  \nClue 7: TV directly left of phone → possible (1,2) or (2,3).  \nDevices: TV, phone, radio.  \nIf TV in 1, phone in 2 → radio in 3.  \nIf TV in 2, phone in 3 → radio in 1, but radio cannot be in 1 (clue 4), so only (TV=1, phone=2, radio=3) works.\n\nNow fill:  \nHouse 1: grilled cheese, cat lover, TV, ? sport?  \nHouse 2: bird keeper, basketball player, phone, ? food?  \nHouse 3: pizza, cricketer, radio, ? pet?\n\nRemaining food: fried rice must be in house 2 (since house 1 grilled cheese, house 3 pizza).  \nRemaining pet: dog owner must be in house 3 (since house 1 cat, house 2 bird).  \nRemaining sport: swimmer must be in house 1 (since house 2 basketball, house 3 cricket).\n\nSo swimmer is in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797257,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 636,
+    "prompt_tokens": 323,
+    "total_tokens": 959,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 67
+  }
+}

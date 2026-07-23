@@ -1,0 +1,35 @@
+{
+  "id": "34d13a77-c29d-4a2b-9ccb-9022b0420d1d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Throne of Glass is a young adult high fantasy novel series by American author Sarah J. Maas, as stated in the source titled \"Throne of Glass\" and confirmed by the source \"Sarah J. Maas\".\n\nFinal answer: Sarah Janet Maas",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796969,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 1214,
+    "total_tokens": 1266,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 62
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "653d768f-f0b4-4dae-b6c5-7e49fd55e461",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: basketball player directly left of cricketer.  \nPossible pairs: (1,2) or (2,3).\n\nFrom clue 1: grilled cheese left of basketball player.  \nIf basketball is in 2, grilled cheese in 1.  \nIf basketball in 3, grilled cheese could be in 1 or 2.  \nBut clue 5: grilled cheese directly left of bird keeper.  \nSo if basketball in 2 (house 2), then grilled cheese in 1, bird keeper in 2. That puts bird keeper and basketball player in same house? No, each person has one pet and one sport, so they can be same person. That’s fine.  \nIf basketball in 3, then grilled cheese could be in 2, bird keeper in 3. That would put bird keeper and basketball player together again. Both possible.\n\nClue 3: basketball player and pizza eater are next to each other.  \nCase A: basketball in 2 → pizza in 1 or 3.  \nCase B: basketball in 3 → pizza in 2.\n\nClue 6: cat lover left of pizza eater.  \nClue 4: radio not in house 1.  \nClue 7: TV directly left of phone → possible pairs (1,2) or (2,3).\n\nLet’s test Case A: basketball in 2, cricketer in 3.  \nFrom clue 1: grilled cheese left of basketball → grilled cheese in 1.  \nClue 5: grilled cheese directly left of bird keeper → bird keeper in 2. So house 2 has basketball and bird keeper.  \nClue 3: basketball (house 2) next to pizza → pizza in 1 or 3.  \nIf pizza in 1, then cat lover left of pizza (clue 6) → impossible because house 1 is leftmost. So pizza must be in 3.  \nThen cat lover left of pizza → cat lover in 1 or 2. House 2 already has bird keeper, so cat lover could be in 1.  \nNow devices: TV left of phone. Possible (1,2) or (2,3).  \nRadio not in 1.  \nHouse 1: grilled cheese, possibly cat lover, device?  \nHouse 2: basketball, bird keeper.  \nHouse 3: cricketer, pizza.  \n\nIf TV-phone is (1,2): house 1 TV, house 2 phone → house 3 gets radio (ok, not in 1).  \nIf TV-phone is (2,3): house 2 TV, house 3 phone → house 1 gets radio, but radio cannot be in house 1 → invalid.  \nSo only (1,2) works: house 1 TV, house 2 phone, house 3 radio.  \n\nNow pets: house 2 bird keeper, house 1 cat lover (from earlier), so house 3 gets dog owner.  \nFood: house 1 grilled cheese, house 3 pizza, so house 2 gets fried rice.  \nSports: house 2 basketball, house 3 cricketer, so house 1 gets swimmer.  \n\nThus swimmer in house 1. But the question asks for number of house where swimmer lives. That would be 1, not 2.  \n\nCheck Case B: basketball in 3, cricketer would be in 4? No, only 3 houses, so basketball cannot be in 3 because cricketer must be to the right. So only Case A works.  \n\nSwimmer is in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795154,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 778,
+    "prompt_tokens": 331,
+    "total_tokens": 1109,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 331
+  }
+}

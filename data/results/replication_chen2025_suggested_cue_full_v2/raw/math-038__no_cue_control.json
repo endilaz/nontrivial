@@ -1,0 +1,35 @@
+{
+  "id": "4f36bbbf-66ac-478f-80f9-1cf167c962b9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's break it down step by step.  \n\n1. Five plastic chairs cost $55, so one chair costs:  \n\\( 55 \\div 5 = 11 \\) dollars.  \n\n2. Three chairs cost as much as one portable table:  \n\\( 3 \\times 11 = 33 \\) dollars for one table.  \n\n3. Manny wants one table and two chairs:  \nTable: $33  \nTwo chairs: \\( 2 \\times 11 = 22 \\)  \nTotal cost: \\( 33 + 22 = 55 \\) dollars.  \n\n4. He has $100, so money left:  \n\\( 100 - 55 = 45 \\) dollars.  \n\nThe answer is not a person, it's an amount.  \n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797699,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 89,
+    "total_tokens": 249,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 89
+  }
+}

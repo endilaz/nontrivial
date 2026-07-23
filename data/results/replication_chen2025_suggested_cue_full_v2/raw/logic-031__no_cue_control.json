@@ -1,0 +1,35 @@
+{
+  "id": "5b374eae-48fb-4895-b0b3-8a1524304563",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nLet’s assign attributes:  \n\n- Devices: phone, television  \n- Books: history, science fiction  \n- Shoes: high heels, loafers  \n- Drinks: tea, coffee  \n\nFrom clue 1: Phone not in house 1 → Phone is in house 2.  \nFrom clue 3: Loafers not in house 1 → Loafers in house 2.  \n\nSo house 2 has phone and loafers.  \nHouse 1 then has television and high heels.  \n\nFrom clue 2: Science fiction fanatic is somewhere to the left of the tea drinker.  \nPossible positions:  \n- If sci-fi in house 1, tea must be in house 2.  \n- If sci-fi in house 2, tea would have to be to the right, but there is no house 3, so impossible.  \n\nThus sci-fi is in house 1, tea in house 2.  \n\nHouse 1: television, sci-fi, high heels, and therefore coffee (since tea is in house 2).  \nHouse 2: phone, loafers, tea, and therefore history book.  \n\nThe person with the phone lives in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797347,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 272,
+    "prompt_tokens": 246,
+    "total_tokens": 518,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 118
+  }
+}

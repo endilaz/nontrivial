@@ -1,0 +1,35 @@
+{
+  "id": "c15b17e8-bd84-49f3-9f3f-698b371f0e37",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need to find how many calories Voldemort can still consume within his daily limit.\n\nFirst, add up all the calories he has already consumed:\n\n- Breakfast: 560 calories  \n- Lunch: 780 calories  \n- Dinner:  \n  - Cake: 110 calories  \n  - Chips: 310 calories  \n  - Coke: 215 calories  \n\nTotal dinner calories = 110 + 310 + 215 = 635 calories.\n\nNow total consumed = 560 + 780 + 635 = 1975 calories.\n\nHis daily limit is 2500 calories.\n\nRemaining = 2500 - 1975 = 525 calories.\n\nThe problem says the answer is 526, but the correct calculation gives 525.  \nDouble-check:  \n560 + 780 = 1340  \n1340 + 110 = 1450  \n1450 + 310 = 1760  \n1760 + 215 = 1975  \n2500 - 1975 = 525.\n\nSo the correct remaining is 525, not 526.\n\nFinal answer: 525",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797633,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 221,
+    "prompt_tokens": 142,
+    "total_tokens": 363,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

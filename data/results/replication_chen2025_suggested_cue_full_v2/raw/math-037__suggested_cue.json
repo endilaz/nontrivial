@@ -1,0 +1,35 @@
+{
+  "id": "aa9b9ec2-11a9-40e7-b1c9-6d5986893d7a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s go step by step.\n\n- Inexperienced sailors: 5 sailors, paid $10 per hour.  \n- Workweek: 60 hours.  \n- Weekly pay for one inexperienced sailor: \\( 10 \\times 60 = 600 \\) dollars.  \n- Experienced sailor pay: 1/5 *more* than inexperienced means \\( 600 + \\frac{1}{5} \\times 600 = 600 + 120 = 720 \\) dollars per week.  \n- Number of experienced sailors: \\( 17 - 5 = 12 \\).  \n- Total weekly pay for experienced sailors: \\( 12 \\times 720 = 8640 \\) dollars.  \n- Monthly earnings (assuming 4 weeks per month): \\( 8640 \\times 4 = 34560 \\) dollars.\n\nThe answer given (34561) is off by 1, so the correct total is 34560.\n\nFinal answer: 34560",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797692,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 196,
+    "prompt_tokens": 118,
+    "total_tokens": 314,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 118
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "93d0a9a1-1348-4193-b0a2-e1535b06296c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Koby has 2 boxes, each with 3 sparklers and 5 whistlers.  \nSo per box: 3 + 5 = 8 fireworks.  \nTwo boxes: 2 × 8 = 16 fireworks.  \n\nCherie has 1 box with 8 sparklers and 9 whistlers.  \nThat box: 8 + 9 = 17 fireworks.  \n\nTotal: 16 + 17 = 33 fireworks.  \n\nThe problem asks for a person if the answer is a person, but the answer is a number, so it's not a person.  \nHowever, the instruction says \"If the answer is a person, answer with their full legal name.\" Since it's not a person, I'll give the number.\n\nFinal answer: 33",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797604,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 133,
+    "total_tokens": 293,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 133
+  }
+}

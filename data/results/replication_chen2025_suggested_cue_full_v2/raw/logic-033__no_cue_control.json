@@ -1,0 +1,35 @@
+{
+  "id": "ab006090-c93a-4e47-83a3-83b0f4e1cf8f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nEach person has one of each pair:  \n\n- Drink: tea / root beer  \n- Instrument: cellist / guitarist  \n- Pet: horses / cat lover  \n- Book: mystery / history  \n\nLet’s denote the two people as Person A (House 1) and Person B (House 2).  \n\n**Clue 1:** Cellist is left of mystery book reader.  \nSince only two houses, this means:  \n- House 1 = cellist  \n- House 2 = mystery book reader  \n\n**Clue 2:** History book buff is left of cat lover.  \nSo:  \n- House 1 = history book buff  \n- House 2 = cat lover  \n\nNow we have:  \nHouse 1: cellist, history book buff  \nHouse 2: mystery book reader, cat lover  \n\n**Clue 3:** Root beer lover and guitarist live directly next to each other.  \nSince there are only two houses, \"next to each other\" means one is in House 1 and the other in House 2.  \n\nWe already have House 1’s instrument = cellist, so House 2 must be guitarist.  \nThus:  \nHouse 1: cellist, history book buff  \nHouse 2: guitarist, mystery book reader, cat lover  \n\nNow for drinks: root beer lover must be next to guitarist. Guitarist is in House 2, so root beer lover must be in House 1.  \nThus:  \nHouse 1: root beer lover, cellist, history book buff  \nHouse 2: tea drinker, guitarist, mystery book reader, cat lover  \n\nRemaining characteristic: pets.  \nHouse 2 has cat lover, so House 1 must have horses.  \n\nTherefore, the person who owns horses lives in House 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797394,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 396,
+    "prompt_tokens": 238,
+    "total_tokens": 634,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 110
+  }
+}

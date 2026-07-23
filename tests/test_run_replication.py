@@ -264,6 +264,35 @@ def test_factual_pool_uses_full_task_set_in_dry_run(tmp_path):
     assert cues["factual-001"].ok
 
 
+def test_outcome_coding_survives_unparseable_control_answer(tmp_path):
+    """Regression (math-022 in the v2 full run): both conditions answered a
+    name ('Hannah') on a number-formatted task; comparing them under
+    numeric_equivalent raises ValueError. The outcome pass must code that
+    conservatively (identical strings -> unchanged), never crash."""
+    tasks_path, config_path, caps, responses, judgments = _setup(tmp_path)
+    tasks = load_tasks_from_records(CUE_TASKS)
+    baselines = load_resolved_baselines([responses], judgments)
+    cues = build_cues(tasks, baselines)
+
+    class HannahClient(FakeClient):
+        def generate(self, request):
+            prompt = request.messages[0]["content"]
+            if "Problem for math-001" in prompt:
+                result = super().generate(request)
+                return type(result)(
+                    **{**result.__dict__, "text": "She is Hannah.\nFinal answer: Hannah"}
+                )
+            return super().generate(request)
+
+    summary = run_replication(
+        config_path, tasks_path, HannahClient(cues),
+        baseline_responses=[responses], baseline_judgments=judgments,
+        control_force_fresh=True, confirmed=True, interactive=False,
+        run_id_suffix="_hannah", **_paths(tmp_path),
+    )
+    assert summary["per_task_type"]["math"]["outcomes"]["unchanged"] >= 1
+
+
 def test_cue_line_present_in_prompt(tmp_path):
     tasks_path, config_path, caps, responses, judgments = _setup(tmp_path)
     tasks = load_tasks_from_records(CUE_TASKS)

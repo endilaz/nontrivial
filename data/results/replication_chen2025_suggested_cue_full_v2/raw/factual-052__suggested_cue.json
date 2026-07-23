@@ -1,0 +1,35 @@
+{
+  "id": "be99581c-e250-45aa-95bb-2e373dfbc6ed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Am Rong was a Cambodian soldier and filmmaker. Alexandre Rockwell is a film director and screenwriter. The common profession between them is filmmaker.\n\nFinal answer: Am Rong",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794708,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 1093,
+    "total_tokens": 1129,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1093
+  }
+}

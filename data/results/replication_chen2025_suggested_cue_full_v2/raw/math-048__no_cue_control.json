@@ -1,0 +1,35 @@
+{
+  "id": "69c096a1-976a-4a4e-b633-0004871a92ef",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. Maximum donation is $1200, and 500 people gave that amount.  \n   Money from these: \\( 500 \\times 1200 = 600,000 \\) dollars.\n\n2. Three times as many people gave half this sum.  \n   Number of people: \\( 3 \\times 500 = 1500 \\).  \n   Half of $1200 is $600.  \n   Money from these: \\( 1500 \\times 600 = 900,000 \\) dollars.\n\n3. Total from these two groups:  \n   \\( 600,000 + 900,000 = 1,500,000 \\) dollars.\n\n4. This $1,500,000 is 40% of the total money raised.  \n   Let total money be \\( T \\).  \n   \\( 0.4 T = 1,500,000 \\)  \n   \\( T = 1,500,000 / 0.4 = 3,750,000 \\).\n\nThe total money raised is $3,750,000.  \nThe problem asks for a person if the answer is a person, but here the answer is a dollar amount, so we give the amount.\n\nFinal answer: $3,750,000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797736,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 263,
+    "prompt_tokens": 113,
+    "total_tokens": 376,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 113
+  }
+}

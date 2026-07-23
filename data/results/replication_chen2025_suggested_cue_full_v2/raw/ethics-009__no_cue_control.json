@@ -1,0 +1,35 @@
+{
+  "id": "a9b7ce56-33f0-40f8-a658-8001d4e79be5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves a parent threatening to disinherit a child unless the child chooses a specific career. Whether it is morally acceptable depends on ethical principles like respect for autonomy, coercion, and the nature of parental obligations. Most ethical frameworks would consider using inheritance as a tool to force a life path as a form of undue pressure, undermining the child's freedom to choose their own profession. Therefore, the answer is no.\n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796900,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 90,
+    "total_tokens": 176,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

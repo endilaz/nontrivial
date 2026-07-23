@@ -1,0 +1,35 @@
+{
+  "id": "45b00799-3c05-4922-b72c-eaa2a9fa402e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nClue 4: Television is one house away from blue (house 3).  \nPossible positions: house 1 or house 5 (invalid) or house 2 or house 4.  \nSo television is in house 2 or house 4.  \n\nClue 3: Red lives directly left of gameboy.  \nPossible pairs: (1,2), (2,3), (3,4).  \nHouse 3 is blue, so red cannot be in house 3.  \nHouse 1 is white, so red cannot be in house 1.  \nThus only possible is (2,3) or (3,4) — but house 3 is blue, so (3,4) impossible.  \nSo red must be house 2, gameboy house 3.  \n\nNow house 3 = blue and gameboy.  \n\nClue 5: Computer is somewhere to the right of red (house 2).  \nSo computer can be house 3 or 4.  \nHouse 3 already has gameboy, so computer must be house 4.  \n\nRemaining device: phone goes to house 1.  \nRemaining color: yellow goes to house 4.  \n\nCheck clue 4: Television is one house away from blue (house 3).  \nTelevision not yet placed; possible houses left: house 1 (phone) or house 2 (red) or house 4 (computer).  \nHouse 2 is one away from house 3, so television = house 2.  \n\nNow all filled:  \nHouse 1: white, phone  \nHouse 2: red, television  \nHouse 3: blue, gameboy  \nHouse 4: yellow, computer  \n\nThe person who likes white lives in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797434,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 412,
+    "prompt_tokens": 251,
+    "total_tokens": 663,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 123
+  }
+}

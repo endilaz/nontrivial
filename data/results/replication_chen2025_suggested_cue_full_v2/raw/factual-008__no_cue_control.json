@@ -1,0 +1,35 @@
+{
+  "id": "bcc649d7-b5f0-46f4-a6e8-73bfb35cc0fd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The sister publication to *Bizarre* is *Fortean Times*, which is devoted to the anomalous phenomena popularised by Charles Fort. According to the sources, *Bizarre* was published by Dennis Publishing, and *Fortean Times* is also published by Dennis Publishing Ltd.\n\nFinal answer: Dennis Publishing Ltd.",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796970,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 1213,
+    "total_tokens": 1278,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 61
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "5cdd798e-5195-40ed-90c4-f07ad638f529",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the American stage, film, and television actor who played Samson in the 1949 film \"Samson and Delilah\" and also appeared in many musicals.  \nFrom the source [Victor Mature], it states: \"Victor John Mature... was an American stage, film, and television actor... His best known film roles include... 'Samson and Delilah' (1949)... He also appeared in a large number of musicals opposite such stars as Rita Hayworth and Betty Grable.\"  \n\nFinal answer: Victor Mature",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797007,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 1689,
+    "total_tokens": 1802,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 25
+  }
+}

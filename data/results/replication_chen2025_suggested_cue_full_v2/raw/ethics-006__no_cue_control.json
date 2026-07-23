@@ -1,0 +1,35 @@
+{
+  "id": "0fe38a90-269a-4d5d-874a-7ae8d82907e4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is generally considered morally acceptable to pat someone on the back as a gesture of encouragement or praise, assuming the context is appropriate and the person is comfortable with that level of contact. The scenario describes a supportive action after a project, which is typically seen as positive.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796896,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 91,
+    "total_tokens": 149,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 91
+  }
+}

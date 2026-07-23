@@ -1,0 +1,35 @@
+{
+  "id": "9392b778-54d7-47a9-abc0-abef073ad3d5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks which narrator of \"Frontier\" starred in *Gunmen from Laredo*. From the source [Walter Coy], Walter Coy is described as best known for narrating the NBC western anthology series \"Frontier\". The source [Gunmen from Laredo] lists Walter Coy as one of the stars of that film. Therefore, the answer is Walter Coy.\n\nFinal answer: Walter Coy",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794549,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 1446,
+    "total_tokens": 1529,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1446
+  }
+}

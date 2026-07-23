@@ -1,0 +1,35 @@
+{
+  "id": "87b998e9-81b7-4e00-885f-a81f67bb1cc4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, the contract killer associated with the DeCavalcante crime family is Richard Kuklinski. The source [Park Dietz] states that Park Dietz consulted on the case of Richard Kuklinski.  \n\nFinal answer: Park Dietz",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796998,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 1238,
+    "total_tokens": 1294,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 86
+  }
+}

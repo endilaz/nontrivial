@@ -1,0 +1,35 @@
+{
+  "id": "cb533af4-78cc-466b-bb58-9d16c35c3810",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clue 3: House 1 = bird keeper.  \nFrom clue 6: House 1 = basketball player.  \nSo House 1: basketball player, bird keeper.  \n\nFrom clue 5: basketball player lives directly left of the person who had stew.  \nSince basketball player is in house 1, stew must be in house 2.  \n\nFrom clue 2: fried rice is somewhere left of stew.  \nStew is house 2, so fried rice must be house 1.  \nThus house 3 has pizza.  \n\nFrom clue 1: swimmer is not in house 2.  \nPossible houses for swimmer: 1 or 3.  \nBut house 1 is basketball player, so swimmer cannot be house 1 (each person plays one sport).  \nThus swimmer must be house 3.  \n\nWe don’t need all clues to finish, but let’s verify consistency:  \nHouse 1: basketball, bird, fried rice.  \nHouse 2: stew, and not swimmer (okay).  \nHouse 3: swimmer, pizza.  \n\nClue 4: fish enthusiast is somewhere right of carnations.  \nClue 7: carnations is somewhere right of daffodils.  \nWe haven’t assigned flowers or pets fully, but swimmer is already house 3.  \n\nFinal answer: 3  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797180,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 310,
+    "prompt_tokens": 336,
+    "total_tokens": 646,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 80
+  }
+}

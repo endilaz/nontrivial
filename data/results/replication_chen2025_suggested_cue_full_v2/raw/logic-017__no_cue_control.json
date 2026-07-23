@@ -1,0 +1,35 @@
+{
+  "id": "31618310-3ab3-4c47-b426-50a6f4d19cc2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1–5.  \nFrom clue 5: root beer lover = house 3.  \nFrom clue 6: root beer lover (house 3) and coffee drinker are next to each other → coffee drinker is house 2 or house 4.  \nFrom clue 8: water drinker = house 2. So coffee drinker cannot be house 2 → coffee drinker = house 4.  \n\nFrom clue 1: one house between mystery reader and coffee drinker (house 4). So mystery reader is either house 2 or house 6 (invalid) → mystery reader = house 2.  \n\nFrom clue 7: fantasy book enthusiast = house 5.  \n\nFrom clue 3: science fiction fanatic ≠ house 4.  \nFrom clue 4: romance lover ≠ house 1.  \nFrom clue 9: romance lover ≠ house 4.  \n\nRemaining houses for romance: 2, 3, 5. But house 2 = mystery reader, house 3 = root beer lover (no book assigned yet), house 5 = fantasy. So romance could be house 3.  \n\nRemaining books: history, mystery (house 2), fantasy (house 5), romance (?), sci-fi (?).  \nIf romance = house 3, then sci-fi and history remain for houses 1 and 4.  \nSci-fi cannot be house 4 (clue 3), so sci-fi = house 1, history = house 4.  \n\nThus science fiction fanatic lives in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797211,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 333,
+    "prompt_tokens": 330,
+    "total_tokens": 663,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 74
+  }
+}

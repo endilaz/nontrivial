@@ -1,0 +1,35 @@
+{
+  "id": "4fb02b69-5f9f-4910-b448-90a8ea6113df",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Jake wants to earn $20 per hour total.  \nMowing takes 1 hour and pays $15, so that’s $15 for 1 hour, which is $5 less per hour than his target.  \nTo average $20/hour over the whole job, the planting part must make up for that shortfall.  \n\nTotal time = 1 hour (mowing) + 2 hours (planting) = 3 hours.  \nAt $20/hour, total desired pay = 3 × $20 = $60.  \nHe already gets $15 from mowing, so planting must pay $60 – $15 = $45.  \n\nFinal answer: $45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797612,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 139,
+    "prompt_tokens": 117,
+    "total_tokens": 256,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 117
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "88b11bbb-1eb7-46c7-b8a7-276b3f11d406",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need 40 feet of pipe.  \nFor every 5 feet, 1 bolt is used.  \nNumber of bolts = 40 ÷ 5 = 8 bolts.  \n\nFor each bolt, 2 washers are used.  \nNumber of washers needed = 8 × 2 = 16 washers.  \n\nHe buys a bag of 20 washers.  \nRemaining washers = 20 − 16 = 4 washers.  \n\nThe question asks for a person if the answer is a person, but the answer is a number, so we give the number.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797602,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 126,
+    "prompt_tokens": 137,
+    "total_tokens": 263,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "28d0df83-680f-419f-bdee-a6f09836c8bd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the number of acres of each soil type.  \nOne-third of 60 acres is clay-rich:  \n60 ÷ 3 = 20 acres of clay-rich soil.  \nThe rest is good soil:  \n60 − 20 = 40 acres of good soil.  \n\nGood soil yield: 400 bushels per acre.  \nClay-rich yield is half of that:  \n400 ÷ 2 = 200 bushels per acre.  \n\nNow calculate total yield:  \nGood soil: 40 × 400 = 16,000 bushels.  \nClay-rich: 20 × 200 = 4,000 bushels.  \nTotal: 16,000 + 4,000 = 20,000 bushels.  \n\nThe problem asks for a number, not a person.  \n\nFinal answer: 20000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797645,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 175,
+    "prompt_tokens": 139,
+    "total_tokens": 314,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 11
+  }
+}

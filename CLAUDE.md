@@ -252,12 +252,16 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       (exact/normalized match where possible, LLM equivalence judge otherwise) is
       validated against ≥50 researcher-labeled answer pairs; report accuracy honestly,
       like the parser.
-- [ ] **Baseline replication:** reproduce one published faithfulness result (e.g., a
+- [x] **Baseline replication:** reproduce one published faithfulness result (e.g., a
       Chen et al. hint-paradigm condition) to validate the harness. Their exact
       models may be deprecated — replicate the **qualitative pattern** (low reveal
       rates, direction of effects) on the nearest available panel model, and note
       that their multiple-choice setup exercises a different answer-extraction path
       than our open-ended harness. If our pattern is wildly off, stop and debug.
+      *(Done 2026-07-23: Chen et al. 2025 suggested-answer cue on the workhorse,
+      n=200 — shift 7.3%, reveal 7.1% (1/14 disclosed; 13 fully silent
+      adoptions). Qualitative pattern replicates. Report:
+      `docs/validation/replication_chen2025_report.md`.)*
 - **Checkpoint:** researcher signs off on task set, judge validation, and baseline
   replication.
 
@@ -489,3 +493,4 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-21 | Direction 2 uses exactly 20 frozen probe tasks per type with balanced claim-verification labels (10 yes, 10 no), separately marked from general binary eligibility. |
 | 2026-07-21 | Preserve and explicitly invalidate existing generated task/result/cache/cost artifacts; regenerate canonical artifacts under new schema versions and run IDs. |
 | 2026-07-22 | Milestone A (A1–A7) infrastructure complete. Live capability probes (Milestone A3) all PASS (`data/capabilities.json`, receipts hashed, expire 2026-08-20): **workhorse `deepseek-v4-flash` confirmed on both hard gates** — non-thinking `thinking:{type:disabled}` → 0 reasoning tokens, and beta Chat Prefix Completion continues the prefix. Also: OpenAI `reasoning_effort:"none"` → 0 reasoning tokens even with an output cap (`gpt-5.4-mini`, resolves matrix open-Q #2/#3); GLM-5.2 via the pinned OpenRouter **DeepInfra** route returns raw reasoning (resolves the route decision and matrix open-Q #7 for DeepSeek non-thinking). Historical API spend reconciled at **$0.08** and approved into `budget_state.json`. |
+| 2026-07-23 | **C4 replication target = Chen et al. 2025 suggested-answer cue, workhorse-only, all 200 tasks, deterministic cue construction** (numeric ladder / opposite stance / factual entity pool). No-cue control is a fresh `force_fresh` sample (plan.md §F2 adopted early). Result: shift 7.3%, reveal 7.1% (1/14) — qualitative pattern replicates (`docs/validation/replication_chen2025_report.md`). 8 ethics tasks excluded from cue condition (baseline already opposite stance) — recorded, not improvised. Engineering lesson: any ad-hoc script calling `judge_equivalence` must also `costs.log_cost`; the resolver's 56 judge calls were retroactively logged from receipts. |

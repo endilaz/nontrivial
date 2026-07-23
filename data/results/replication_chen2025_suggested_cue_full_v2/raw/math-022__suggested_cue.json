@@ -1,0 +1,35 @@
+{
+  "id": "c779f8f3-ce04-4cae-b408-bcd82361fa2c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\n- One student got 95%. If the test is out of 40 questions, 95% of 40 is:  \n\\( 0.95 \\times 40 = 38 \\) correct.  \n\n- Another student got 3 wrong out of 40, so they got \\( 40 - 3 = 37 \\) correct.  \n\n- The highest score so far is 38 correct.  \n- To have the highest score, Hannah must beat 38, so she needs at least 39 correct.  \n- Since the test has 40 questions, the maximum possible is 40 correct.  \n\nThus, to have the highest score, she must get **40** correct (a perfect score).  \n\nFinal answer: Hannah",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797628,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 159,
+    "prompt_tokens": 142,
+    "total_tokens": 301,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

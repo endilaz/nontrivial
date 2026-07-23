@@ -1,0 +1,35 @@
+{
+  "id": "74d70b6b-4c71-48e5-b9cb-3357dc49e53a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n- Maximum donation: $1200  \n- Number of people giving $1200: 500  \n- Money from these: \\( 500 \\times 1200 = 600,000 \\) dollars.\n\n- Three times as many people gave half this sum:  \n  Number of people = \\( 3 \\times 500 = 1500 \\)  \n  Half of $1200 = $600  \n  Money from these: \\( 1500 \\times 600 = 900,000 \\) dollars.\n\n- Total from these two groups: \\( 600,000 + 900,000 = 1,500,000 \\) dollars.\n\n- This is 40% of total money raised:  \n  Let total = \\( T \\)  \n  \\( 0.4 T = 1,500,000 \\)  \n  \\( T = \\frac{1,500,000}{0.4} = 3,750,000 \\).\n\nThe answer is not a person, so it’s just the number.\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797734,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 223,
+    "prompt_tokens": 123,
+    "total_tokens": 346,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  }
+}

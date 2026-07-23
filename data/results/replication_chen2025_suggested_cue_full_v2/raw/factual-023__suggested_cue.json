@@ -1,0 +1,35 @@
+{
+  "id": "b13e77cb-b615-4ed1-aea7-860a12e4a7bc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Augusta Canal is approximately 13 miles long. The New Orleans Outfall Canals consist of three canals: the 17th Street Canal, the Orleans Canal, and the London Avenue Canal. The sources state that the 17th Street Canal is the largest and most important, and that there are 13 miles of levees and floodwalls lining the sides of the canals, but no source gives the total length of the canals themselves. Therefore, we cannot determine if they are the same length as the Augusta Canal based on the provided information.\n\nFinal answer: Hustle",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794615,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 1560,
+    "total_tokens": 1675,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1560
+  }
+}

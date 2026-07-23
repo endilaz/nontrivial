@@ -1,0 +1,35 @@
+{
+  "id": "a4f23de0-72e3-4117-b9d9-41e6450fe22d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1–5.  \nLet’s list known fixed positions first:  \n\n- House 1: eating mangos (clue 7).  \n- House 3: bird keeper (clue 11).  \n- House 4: eating oranges (clue 12).  \n- House 5: cat lover (clue 1).  \n\nFrom clue 10: cat lover (house 5) is somewhere to the right of grilled cheese eater → grilled cheese is in house 1–4, but not 5.  \n\nFrom clue 9: stew eater is directly left of dog owner → possible pairs: (1,2), (2,3), (3,4), (4,5).  \n\nFrom clue 4: apples eater is somewhere to the right of dog owner.  \n\nFrom clue 6: pizza eater and apples eater are next to each other.  \n\nFrom clue 5: fish enthusiast and spaghetti eater are next to each other.  \n\nFrom clue 2: apples not in house 3.  \nFrom clue 3: horses not in house 1.  \n\nLet’s try to place dog owner.  \nIf dog owner is house 2 → stew in house 1. Then apples must be right of house 2 → possible houses 3,4,5 but not 3 (clue 2), so 4 or 5. But house 4 has oranges, so apples would be house 5. Then pizza next to apples → pizza in house 4. But house 4 has oranges, that’s fine (fruit ≠ lunch). So far:  \nHouse1: mangos, stew  \nHouse2: dog owner  \nHouse3: bird keeper  \nHouse4: oranges, pizza  \nHouse5: cat lover, apples  \n\nCheck clue 8: grilled cheese right of grapes. Grilled cheese not placed yet. Possible houses left for grilled cheese: house 2,3,4? But house 4 has pizza, so no. House 3? Possibly. House 2? Possibly. But clue 10 says cat lover (house5) right of grilled cheese → that’s fine if grilled cheese in 1–4.  \n\nNow clue 5: fish and spaghetti next to each other. Remaining pets: fish, horses (cat in 5, bird in 3, dog in 2). So fish could be house 1 or 4. Remaining lunches: spaghetti, fried rice, grilled cheese (stew in 1, pizza in 4).  \n\nIf fish in house 1 → spaghetti must be in house 2 (next to). But house 2 has dog owner, lunch unknown yet. That could work: house2 lunch = spaghetti. Then remaining lunch for house3 = fried rice or grilled cheese. But clue 8: grilled cheese right of grapes. Grapes not placed yet. Fruits: house1 mangos, house4 oranges, house5 apples → grapes and kiwis left for houses 2 and 3.  \n\nIf grapes in house2, then grilled cheese must be right of house2 → house3 or 4 or 5. House4 has pizza, house5 has apples, so only house3 left for grilled cheese. That works: house3 = grilled cheese, house2 = grapes. Then house3 lunch = grilled cheese, fruit = kiwis (only left). Check clue 10: cat lover (5) right of grilled cheese (3) → yes.  \n\nNow check clue 3: horses not in house1. Remaining pets: house1 fish, house2 dog, house3 bird, house4 ?, house5 cat → house4 must be horses. That’s fine (not house1).  \n\nAll clues satisfied. Kiwis are in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797560,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 791,
+    "prompt_tokens": 411,
+    "total_tokens": 1202,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 27
+  }
+}

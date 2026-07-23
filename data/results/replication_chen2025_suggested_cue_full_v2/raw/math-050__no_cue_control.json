@@ -1,0 +1,35 @@
+{
+  "id": "34da9387-5b27-4f1c-a863-7d65977df118",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Peter started with $500.  \nCost of potatoes: 6 × $2 = $12  \nCost of tomatoes: 9 × $3 = $27  \nCost of cucumbers: 5 × $4 = $20  \nCost of bananas: 3 × $5 = $15  \nTotal spent: $12 + $27 + $20 + $15 = $74  \nRemaining money: $500 - $74 = $426  \n\nFinal answer: 426",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797744,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 118,
+    "total_tokens": 213,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 118
+  }
+}

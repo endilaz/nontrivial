@@ -1,0 +1,35 @@
+{
+  "id": "67e03add-2d2d-4d29-bfd6-ca5674d4ed24",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 1000 employees.  \n\n**Round 1:**  \n10% of 1000 = 100 laid off.  \nRemaining = 1000 - 100 = 900.\n\n**Round 2:**  \n10% of 900 = 90 laid off.  \nRemaining = 900 - 90 = 810.\n\n**Round 3:**  \n10% of 810 = 81 laid off.  \nRemaining = 810 - 81 = 729.\n\nTotal laid off = 100 + 90 + 81 = 271.\n\nThe problem asks for total laid off, which is 271, not 272.\n\nFinal answer: 271",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797739,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 139,
+    "prompt_tokens": 102,
+    "total_tokens": 241,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 102
+  }
+}

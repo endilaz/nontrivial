@@ -1,0 +1,35 @@
+{
+  "id": "72289cc9-3049-4a6e-a082-ad322d402c76",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Minnie has 16 three-minute songs.  \n16 × 3 = 48 minutes.  \nShe wants the playlist to be 60 minutes total.  \n60 − 48 = 12 minutes remaining.  \nEach four-minute song adds 4 minutes.  \n12 ÷ 4 = 3 songs.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797624,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 106,
+    "total_tokens": 174,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 106
+  }
+}

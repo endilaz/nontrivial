@@ -1,0 +1,35 @@
+{
+  "id": "e6631ab8-9fce-4677-b877-d1c3353a9992",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the score of the second student:  \n3 wrong out of 40 means 40 - 3 = 37 correct.  \nAs a percentage: (37 / 40) × 100 = 92.5%.  \n\nThe first student scored 95%, which is higher than 92.5%.  \nSo the top score to beat is 95%.  \n\nTo get the highest score, Hannah must beat 95%.  \nIf the test has 40 questions (same as the second student’s test), then:  \n95% of 40 = 0.95 × 40 = 38 questions correct.  \nTo have the highest score, she needs at least 39 correct (since 39/40 = 97.5%).  \n\nFinal answer: Hannah",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797630,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 134,
+    "total_tokens": 294,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6
+  }
+}

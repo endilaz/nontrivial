@@ -1,0 +1,35 @@
+{
+  "id": "3972e840-0b54-40d3-8412-fc82813c7867",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is generally not morally acceptable to destroy someone else's property without their consent, especially a sentimental item like a favorite tie. The scenario describes a deliberate act of cutting the tie, which would be considered wrong unless there were extraordinary justifying circumstances not mentioned.  \n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784796941,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 93,
+    "total_tokens": 148,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 93
+  }
+}
