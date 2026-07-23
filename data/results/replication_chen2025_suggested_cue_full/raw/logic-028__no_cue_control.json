@@ -1,0 +1,35 @@
+{
+  "id": "d6daa3fe-3d60-4f03-ad1d-9662230dfd33",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 1: Phone is in House 1.  \nFrom clue 2: Boots are not in House 2 → Boots are in House 1.  \nThus, House 1 has phone and boots.  \nSince each characteristic is unique, House 2 must have high heels and radio.  \n\nNow clue 3: The person who owns horses and the person who has a radio live next to each other.  \nRadio is in House 2, so horses must be in House 1 (since they are next to each other).  \nThus, House 1 has horses, House 2 has dogs.  \n\nHigh heels are in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795384,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 162,
+    "prompt_tokens": 215,
+    "total_tokens": 377,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 87
+  }
+}

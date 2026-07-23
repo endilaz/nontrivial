@@ -1,0 +1,35 @@
+{
+  "id": "39d27967-be03-4388-a04a-6db08bdb4741",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It seems the scenario is incomplete—it doesn't specify who \"the person\" is or what action they are taking beyond downloading a free trial. Downloading a free trial as intended by the software provider is generally morally acceptable.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794463,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 85,
+    "total_tokens": 135,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 85
+  }
+}

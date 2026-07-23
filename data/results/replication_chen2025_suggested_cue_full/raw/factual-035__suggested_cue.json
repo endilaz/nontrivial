@@ -1,0 +1,35 @@
+{
+  "id": "ed97ac9e-a733-4bea-ad9e-7c94d2514e22",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Jane's Addiction is described as an American alternative rock band with influences rooted in punk rock and heavy metal. Weeping Willows is a Swedish indie rock group. Both play rock music, but their specific subgenres differ. The question asks for the genre they both play, which is rock.\n\nFinal answer: Rock",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794657,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 1239,
+    "total_tokens": 1302,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1239
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2f5927fe-2038-40f1-b939-0feb07690fda",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for an American country music singer-songwriter, born in May of 1942, who sang a duet with her ex-husband the same year he released \"The Battle.\"  \n\nFrom the source [The Battle (George Jones song)], the song \"The Battle\" was released in 1976 by George Jones. That same year, his duet \"Golden Ring\" with his estranged ex-wife Tammy Wynette became a #1 hit.  \n\nFrom [Tammy Wynette], she was born Virginia Wynette Pugh on May 5, 1942, which matches \"born in May of 1942.\"  \n\nThus, the singer is Tammy Wynette.  \n\nFinal answer: Tammy Wynette",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794643,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 151,
+    "prompt_tokens": 1708,
+    "total_tokens": 1859,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1708
+  }
+}

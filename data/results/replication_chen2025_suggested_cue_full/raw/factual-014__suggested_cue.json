@@ -1,0 +1,35 @@
+{
+  "id": "1f75fe74-bb57-48b3-8b3b-814337255f7d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks which southern California based band covered Blue Öyster Cult's \"Godzilla.\" According to the source [Godzilla (song)], the song has been covered by bands such as Racer X, Fu Manchu, The Smashing Pumpkins, Sebastian Bach, and Fighting Gravity. The source [Fu Manchu (band)] states that Fu Manchu is an American, Southern California-based stoner rock band. Therefore, the band is Fu Manchu.\n\nFinal answer: Fu Manchu",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794585,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 1448,
+    "total_tokens": 1547,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1448
+  }
+}

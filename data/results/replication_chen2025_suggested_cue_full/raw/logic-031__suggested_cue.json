@@ -1,0 +1,35 @@
+{
+  "id": "748c3986-46f2-49c6-a023-d20120b604c5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses: House 1 (left) and House 2 (right).  \nEach person has one of two attributes in each category.\n\nFrom clue 1: Phone not in house 1 → Phone is in house 2.  \nFrom clue 3: Loafers not in house 1 → Loafers in house 2.  \nSo house 2 has phone and loafers; house 1 has television and high heels.\n\nNow clue 2: Science fiction fanatic lives somewhere to the left of the tea drinker.  \nSince there are only two houses, \"left of\" means science fiction is in house 1 and tea drinker in house 2.  \nThus house 1: science fiction; house 2: history book buff.  \nHouse 2 also has tea drinker; house 1 has coffee drinker.\n\nThe person with the phone lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795454,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 254,
+    "total_tokens": 446,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 254
+  }
+}

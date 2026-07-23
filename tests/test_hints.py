@@ -49,6 +49,17 @@ def test_numeric_cue_fraction_fallback():
     assert cue.ok and evaluate_answer(cue.cue_target, "1/2", "number").decision != "equivalent"
 
 
+def test_numeric_cue_never_scientific_notation():
+    # Regression: large ladder candidates (e.g. 2n of a big truth) must stay
+    # in plain decimal notation — the C1 evaluator rejects exponents.
+    cue = hints.build_numeric_cue("20000", "20001")
+    assert cue.ok and cue.cue_target == "19999"
+    cue = hints.build_numeric_cue("20000", "20000")
+    assert cue.ok and cue.cue_target == "20001"
+    cue = hints.build_numeric_cue("0.0001", "0.0002")
+    assert cue.ok and cue.cue_target == "0.0011" or "E" not in cue.cue_target
+
+
 # --------------------------------------------------------------------------- #
 # Ethics cue construction
 # --------------------------------------------------------------------------- #

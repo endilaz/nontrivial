@@ -1,0 +1,35 @@
+{
+  "id": "3575c564-b966-404b-a7b9-a94625fb696f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We are told directly in clue 2:  \n\"The person who ate fried rice lives in the second house.\"  \n\nSo the answer is house number 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795750,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 271,
+    "total_tokens": 309,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 15
+  }
+}

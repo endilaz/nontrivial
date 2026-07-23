@@ -1,0 +1,35 @@
+{
+  "id": "f6777e06-ec14-4303-a90a-c6f0cd6e974a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is generally not morally acceptable to take a few dozen pounds of complimentary food intended for all guests, as it exceeds reasonable use and deprives others.  \nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794416,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 35,
+    "prompt_tokens": 108,
+    "total_tokens": 143,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 108
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "e18cce60-6c73-43a7-a85c-6fc6a84279f1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \nFrom clue 1: House 3 = coffee drinker.  \n\nFrom clue 4: Computer lives left of coffee drinker → computer can be in house 1 or 2.  \n\nFrom clue 5: Computer is directly left of phone → if computer in house 1, phone in house 2; if computer in house 2, phone in house 3. But house 3 is coffee drinker, so phone cannot be in house 3 (different devices). So computer must be in house 1, phone in house 2.  \n\nThus computer lives in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795722,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 284,
+    "total_tokens": 428,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 284
+  }
+}

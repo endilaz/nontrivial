@@ -1,0 +1,35 @@
+{
+  "id": "0a123734-8fd2-4de3-a2ab-c31331d576ef",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 1: Dog owner is directly left of fantasy book enthusiast.  \nPossible pairs: (1,2) or (2,3).\n\nFrom clue 2: Truck driver is directly left of fantasy book enthusiast.  \nSo both dog owner and truck driver are directly left of the same person (fantasy book enthusiast). That means dog owner and truck driver must be the same person.  \nSo the person in the left house of that pair has both dog and truck.\n\nFrom clue 3: Truck driver lives somewhere to the right of SUV owner.  \nSo SUV owner is left of truck driver.\n\nFrom clue 4: Mystery reader directly left of history buff.  \nPossible pairs: (1,2) or (2,3).\n\nFrom clue 5: Fish enthusiast is somewhere to the right of dog owner.\n\nNow test possibilities.\n\nIf fantasy book enthusiast is in house 3, then dog owner/truck driver is in house 2.  \nThen SUV owner must be left of house 2 → house 1.  \nNow dog owner in house 2, fish enthusiast must be to the right → house 3.  \nRemaining pet: cat lover in house 1.  \nBooks: fantasy in house 3. Mystery and history must be (1,2) or (2,3). But house 3 is fantasy, so (1,2) must be mystery and history.  \nHouse 1: mystery, house 2: history works.  \nCheck:  \nHouse 1: SUV, cat, mystery  \nHouse 2: truck, dog, history  \nHouse 3: ?, fish, fantasy  \nRemaining car: minivan for house 3.  \nAll clues satisfied.\n\nSo SUV owner is in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794952,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 378,
+    "prompt_tokens": 274,
+    "total_tokens": 652,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 18
+  }
+}

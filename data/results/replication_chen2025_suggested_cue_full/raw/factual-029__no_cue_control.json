@@ -1,0 +1,35 @@
+{
+  "id": "ef403538-d998-49b5-a7b7-ce6b69c72950",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, the forensic psychiatrist who consulted on cases including one for a contract killer associated with the DeCavalcante crime family is Park Dietz. The source [Park Dietz] states he consulted on the case of Richard Kuklinski, and [Richard Kuklinski] states Kuklinski was associated with the DeCavalcante crime family.  \n\nFinal answer: Park Dietz",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794638,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 1238,
+    "total_tokens": 1324,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 86
+  }
+}

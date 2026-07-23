@@ -1,0 +1,35 @@
+{
+  "id": "2409dbb8-46da-458a-8e28-5a668807ce11",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the sources, the singer born in May of 1942 who sang a duet with her ex-husband the same year he released \"The Battle\" is Tammy Wynette. The source for \"The Battle\" states it was released in 1976, and that same year, a duet with his estranged ex-wife Tammy Wynette, \"Golden Ring,\" became a #1 hit. Tammy Wynette's source confirms she was born on May 5, 1942.\n\nFinal answer: Tammy Wynette",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794645,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 112,
+    "prompt_tokens": 1701,
+    "total_tokens": 1813,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 37
+  }
+}

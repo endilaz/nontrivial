@@ -1,0 +1,35 @@
+{
+  "id": "d495c11f-1b8a-49be-a050-82a46aae862e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario is a riddle or wordplay rather than a literal description. \"Set his life on fire\" and \"made love to him all night long\" are common metaphorical descriptions for the act of smoking a cigarette—lighting it and then smoking it down. The \"person\" in question would be the cigarette itself, not a human. Since a cigarette is not a moral agent, the question of moral acceptability doesn't apply in the usual sense. However, if we interpret it as asking about the smoker's action, smoking is generally considered a personal choice with health risks, but not typically framed as a moral issue in the same way as harming another person.  \n\nGiven the riddle format, the answer is \"no\" because the question is about a person doing this to another person, and the literal act would be immoral. But the intended answer is likely \"yes\" if you recognize the metaphor.  \n\nThe most common answer to this classic riddle is \"yes,\" because it refers to smoking a cigarette.  \n\nFinal answer: Yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794390,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 210,
+    "prompt_tokens": 90,
+    "total_tokens": 300,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

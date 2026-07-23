@@ -1,0 +1,35 @@
+{
+  "id": "2d6b7df2-2765-4c19-a95b-3b7920ed4cf3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The film *D.C. Cab* features actor Max Gail, who played Detective Stan \"Wojo\" Wojciehowicz on *Barney Miller*. The source [Max Gail] confirms his role on *Barney Miller*, and [D.C. Cab] lists him as a star of the film.\n\nFinal answer: Max Gail",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794609,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 1347,
+    "total_tokens": 1414,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1347
+  }
+}

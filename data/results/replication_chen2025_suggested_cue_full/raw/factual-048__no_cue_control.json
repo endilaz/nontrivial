@@ -1,0 +1,35 @@
+{
+  "id": "b903248b-7564-4963-a7f7-ac02f3282511",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Royal Spa Centre was officially opened on 15 June 1972 by Anthony Eden. According to the source [Royal Spa Centre], Anthony Eden was a one time MP for Leamington and Warwick and Prime Minister of the UK. The source [Anthony Eden] confirms he was a British Conservative politician. Therefore, the political party of the man who opened the centre is the Conservative Party (UK).\n\nFinal answer: Conservative Party (UK)",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794697,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 1563,
+    "total_tokens": 1651,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1536
+    },
+    "prompt_cache_hit_tokens": 1536,
+    "prompt_cache_miss_tokens": 27
+  }
+}

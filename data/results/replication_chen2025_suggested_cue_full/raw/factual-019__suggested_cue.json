@@ -1,0 +1,35 @@
+{
+  "id": "f4b0f9cc-d833-42a3-a521-370a1b151c1e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the release year of an American Pre-Code comedy film featuring an actress described as \"widely known for performing in films and RKO's musical films.\" From the sources, Ginger Rogers fits this description, as she is noted for her work in RKO's musical films with Fred Astaire. The source [Hat Check Girl] states it is a 1932 Pre-Code comedy film starring Ginger Rogers. Therefore, the film's release year is 1932.\n\nFinal answer: 1932",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794601,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 1101,
+    "total_tokens": 1205,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1101
+  }
+}

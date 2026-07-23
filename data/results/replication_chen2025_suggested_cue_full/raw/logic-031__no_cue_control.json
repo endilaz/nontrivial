@@ -1,0 +1,35 @@
+{
+  "id": "9245cfa2-e4c2-46a2-b6d6-e8e8c7154517",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 1: The person with a phone does **not** live in house 1 → phone is in house 2.  \n\nFrom clue 3: The person wearing loafers does **not** live in house 1 → loafers are in house 2.  \n\nFrom clue 2: The science fiction fanatic lives somewhere to the left of the tea drinker.  \nSince there are only two houses, \"to the left\" means science fiction is in house 1 and tea drinker is in house 2.  \n\nNow we know:  \nHouse 1: science fiction, and by elimination has the history book, high heels (since loafers are in house 2), and either coffee or tea. But tea is in house 2, so house 1 has coffee.  \nHouse 2: phone, loafers, tea, and science fiction? No—science fiction is in house 1, so house 2 has history book.  \n\nThus the person with the phone lives in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795457,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 236,
+    "prompt_tokens": 246,
+    "total_tokens": 482,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 118
+  }
+}

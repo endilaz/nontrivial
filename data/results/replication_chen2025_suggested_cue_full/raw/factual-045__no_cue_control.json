@@ -1,0 +1,35 @@
+{
+  "id": "7439b59e-618c-498d-b88b-ff1bd7630607",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks about the solo artist that contributed to \"Real Damage.\" From the sources, \"Real Damage\" is a Split EP by American indie rock band Gossip and Electropop solo artist Tracy + the Plastics. The solo artist is Tracy + the Plastics, who is described as an electropop solo artist. The source [Electropop] defines electropop as a variant of synth-pop.  \n\nFinal answer: Synth-pop",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794687,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 1464,
+    "total_tokens": 1555,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 56
+  }
+}

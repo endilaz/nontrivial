@@ -1,0 +1,35 @@
+{
+  "id": "ffd9f89d-8c51-40e5-9ada-0448a6135619",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4 from left to right.\n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nClue 4: Television is one house away from blue (house 3).  \nPossible positions: house 1 or house 5 (invalid) or house 3 ± 1 = house 2 or house 4.  \nSo television is in house 2 or house 4.\n\nClue 3: Red lives directly left of gameboy.  \nPossible pairs: (1,2), (2,3), (3,4).  \nBut house 1 is white, so (1,2) impossible.  \nHouse 3 is blue, so (2,3) impossible because red would be in house 2, gameboy in house 3, but house 3 is blue, not red.  \nThus only (3,4) possible? But house 3 is blue, so red cannot be in house 3.  \nWait, check: (3,4) would put red in house 3, but house 3 is blue — contradiction.  \nSo maybe (2,3) is possible if red is in house 2 and gameboy in house 3, but house 3 is blue, so the person in house 3 likes blue, but that doesn't forbid them from having gameboy. Colors and devices are independent. So (2,3) is possible: house 2 = red, house 3 = gameboy.  \nCheck (3,4): house 3 = red, but house 3 is blue — impossible.  \nSo only (2,3) works: house 2 = red, house 3 = gameboy.\n\nNow we have:  \nHouse 1: white  \nHouse 2: red  \nHouse 3: blue, gameboy  \nHouse 4: ?  \n\nClue 4: Television is one house away from blue (house 3). So television in house 2 or 4.  \nHouse 2 is red, so television could be there, or house 4.  \n\nClue 5: Computer is somewhere to the right of red. Red is house 2, so computer must be in house 3 or 4.  \nHouse 3 has gameboy, so computer cannot be there. Thus computer must be in house 4.  \n\nSo house 4 = computer.  \nThen television must be in house 2 (since house 4 is taken).  \nRemaining device: phone goes to house 1.  \n\nFinal assignments:  \nHouse 1: white, phone  \nHouse 2: red, television  \nHouse 3: blue, gameboy  \nHouse 4: ?, computer  \n\nThe only color left is yellow for house 4.  \n\nThe question: \"What is the number of the house where the person who likes white lives?\"  \nWhite is in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795625,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 621,
+    "prompt_tokens": 251,
+    "total_tokens": 872,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 251
+  }
+}

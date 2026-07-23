@@ -1,0 +1,35 @@
+{
+  "id": "2586e6e9-4b41-4a58-b02f-b2e8675124ad",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the release year of an American Pre-Code comedy film featuring Ginger Rogers, who is described as an American actress, dancer, and singer known for RKO musical films. From the sources, Ginger Rogers appears in *Hat Check Girl* (1932) and *International House* (1933). However, *International House* is a Paramount film, not an RKO musical, while *Hat Check Girl* is a Fox film. The description \"widely known for performing in films and RKO's musical films\" points to her work with RKO, but the specific film in question must be a Pre-Code comedy featuring her. Among the listed sources, *Hat Check Girl* (1932) is a Pre-Code comedy starring Ginger Rogers, and it was released in 1932.\n\nFinal answer: 1932",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794603,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 172,
+    "prompt_tokens": 1092,
+    "total_tokens": 1264,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1024
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 68
+  }
+}

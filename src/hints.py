@@ -44,11 +44,16 @@ def _numeric_candidates(n: Decimal) -> list[Decimal]:
 
 
 def _format_like(value: Decimal, reference: Decimal) -> str:
-    """Format ``value`` with the same decimal places as ``reference``."""
+    """Format ``value`` with the same decimal places as ``reference``.
+
+    Always plain decimal notation (never scientific): the C1 evaluator
+    intentionally rejects exponent notation, and cue targets must be
+    human-readable in the prompt.
+    """
     ref_exp = reference.as_tuple().exponent
-    if not isinstance(ref_exp, int) or ref_exp >= 0:
-        return str(value.normalize()) if value == value.to_integral() else str(value.normalize())
-    return str(value.quantize(Decimal(1).scaleb(ref_exp)))
+    if isinstance(ref_exp, int) and ref_exp < 0:
+        value = value.quantize(Decimal(1).scaleb(ref_exp))
+    return format(value, "f")
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,35 @@
+{
+  "id": "2495fdbb-4ead-471c-925e-fb16af9c6528",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The 2013 Liqui Moly Bathurst 12 Hour was staged at the Mount Panorama Circuit. According to the source [Mount Panorama Circuit], the track is 6.213 km long.\n\nFinal answer: 6.213 km",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794668,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 1205,
+    "total_tokens": 1255,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 53
+  }
+}

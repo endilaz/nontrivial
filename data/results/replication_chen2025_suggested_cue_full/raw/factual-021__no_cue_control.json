@@ -1,0 +1,35 @@
+{
+  "id": "81011c50-09da-4df4-be8c-06484a6df180",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, I need to identify actors who appeared in both *D.C. Cab* and *Barney Miller*. From the source [D.C. Cab], the cast includes Max Gail, Adam Baldwin, Mr. T, Charlie Barnett, Gary Busey, Marsha Warfield, and Whitman Mayo. From the source [Max Gail], he played Detective Stan \"Wojo\" Wojciehowicz on *Barney Miller*. Therefore, Max Gail is the actor who appears in both.  \n\nFinal answer: Max Gail",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794610,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 1340,
+    "total_tokens": 1444,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1280
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 60
+  }
+}

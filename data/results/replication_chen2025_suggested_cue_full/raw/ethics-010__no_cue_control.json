@@ -1,0 +1,35 @@
+{
+  "id": "77787c2a-fcdb-4b8f-a353-16ab1e938fc7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is generally not morally acceptable to take a few dozen pounds of complimentary food from a hotel, as \"complimentary\" typically implies reasonable personal consumption on-site or in the room, not hoarding large quantities intended for all guests. Such an action would be taking more than one's fair share and could deprive others.  \n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794417,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 101,
+    "total_tokens": 169,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 101
+  }
+}
