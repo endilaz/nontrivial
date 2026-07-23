@@ -27,7 +27,11 @@ MANIFEST = REPO_ROOT / "data" / "tasks" / "task_set_manifest.json"
 def main(argv: list[str]) -> int:
     command = argv[1] if len(argv) > 1 else "build"
     if command == "build":
-        records = build_candidates(config_path=DEFAULT_CONFIG_PATH, output_path=CANDIDATES)
+        records = build_candidates(
+            config_path=DEFAULT_CONFIG_PATH,
+            output_path=CANDIDATES,
+            require_math_transformation=True,
+        )
         count = export_review_form(CANDIDATES, FORM)
         print(f"wrote {len(records)} candidates -> {CANDIDATES}")
         print(f"wrote review form ({count} rows) -> {FORM}")

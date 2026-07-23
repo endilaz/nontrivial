@@ -147,7 +147,9 @@ def _probe_flags(count: int, probe_quota: int) -> List[bool]:
 # B2: math (GSM8K, surface perturbation only — numbers frozen)
 # --------------------------------------------------------------------------- #
 
-#: Reviewed compatible-object substitutions (plan.md §B2).
+#: Reviewed compatible-object substitutions (plan.md §B2; expanded 2026-07-23,
+#: amendment task_amendment_math_perturbation_2026-07-23.yaml, to cover the 8
+#: canonical math tasks with no person name).
 OBJECT_SUBSTITUTIONS: Dict[str, str] = {
     "apples": "pears",
     "cookies": "brownies",
@@ -157,13 +159,31 @@ OBJECT_SUBSTITUTIONS: Dict[str, str] = {
     "stickers": "stamps",
     "cupcakes": "muffins",
     "oranges": "plums",
+    # 2026-07-23 expansion (nameless tasks + place-name entities). Each swap
+    # was audited against its source problem so the replaced term does not
+    # reappear in a conflicting form later in the text.
+    "A new factory": "A new plant",
+    "soaps": "bars of soap",
+    "peaches": "nectarines",
+    "shoes": "boots",
+    "potatoes": "carrots",
+    "Londolozi": "KwaZulu",
+    "Myrtle": "Laguna",
+    "sailors": "deckhands",
+    "scholarships": "grants",
+    "employees": "workers",
 }
 
+#: Reviewed person-name substitutions. Expanded 2026-07-23 (amendment
+#: task_amendment_math_perturbation_2026-07-23.yaml) to cover every person name
+#: appearing in the 50 canonical math tasks; replacements were chosen to
+#: collide with no source name, no object-dictionary key/value, and no other
+#: replacement.
 NAME_SUBSTITUTIONS: Dict[str, str] = {
     "Natalia": "Mina",
     "Weng": "Rina",
     "Betty": "Nora",
-    "James": "Owen",
+    "James": "Rufus",
     "Mary": "Leah",
     "John": "Noah",
     "Sarah": "Talia",
@@ -172,6 +192,45 @@ NAME_SUBSTITUTIONS: Dict[str, str] = {
     "Mark": "Gabe",
     "Anna": "Iris",
     "Sam": "Theo",
+    # 2026-07-23 expansion:
+    "Luis": "Mateo",
+    "Kenny": "Derek",
+    "Blake": "Wesley",
+    "Deane": "Keller",
+    "Vicente": "Rodrigo",
+    "Cindy": "Paula",
+    "Hazel": "Autumn",
+    "Edward": "Marcus",
+    "Koby": "Felix",
+    "Cherie": "Bianca",
+    "Granger": "Puckett",
+    "Jake": "Evan",
+    "Jack": "Cole",
+    "Minnie": "Pearl",
+    "Hannah": "Sierra",
+    "Voldemort": "Zoltan",
+    "Annie": "Clara",
+    "Carl": "Hugo",
+    "Simon": "Ansel",
+    "Jorge": "Diego",
+    "Monica": "Veronica",
+    "Michelle": "Denise",
+    "Nikola": "Stefan",
+    "Camille": "Juliette",
+    "Owen": "Ellis",
+    "Donna": "Rhonda",
+    "Fiona": "Greta",
+    "Shirley": "Maude",
+    "Kiana": "Alana",
+    "Cadence": "Harper",
+    "Manny": "Ramon",
+    "Hank": "Gus",
+    "Sandy": "Robin",
+    "Jeremy": "Calvin",
+    "Sol": "Ines",
+    "Maddie": "Josie",
+    "Tim": "Ned",
+    "Peter": "Victor",
 }
 
 _GSM8K_FINAL_RE = re.compile(r"####\s*(.+?)\s*$")
@@ -256,7 +315,12 @@ def _false_math_claim(true_value: str, error_model: str) -> Tuple[str, str]:
     return wrong_str, derivation
 
 
-def build_math_tasks(config: SelectionConfig, rejections: RejectionLog) -> List[MathTask]:
+def build_math_tasks(
+    config: SelectionConfig,
+    rejections: RejectionLog,
+    *,
+    require_transformation: bool = False,
+) -> List[MathTask]:
     family_cfg = config.family("math")
     source_path = RAW_DATA_ROOT / "MATH_gsm8k" / "train.jsonl"
     source_rows = [
@@ -312,6 +376,15 @@ def build_math_tasks(config: SelectionConfig, rejections: RejectionLog) -> List[
         # Invariant (decision 2026-07-21): numbers frozen.
         if _numbers_in_text(perturbed) != _numbers_in_text(str(row["question"])):
             raise AssertionError(f"numeric drift in perturbation for {source_id}")
+        # Invariant (decision 2026-07-23): every math task must differ from the
+        # source text — GSM8K is heavily memorized, and an unperturbed task
+        # defeats the contamination control (B2). Fail closed if the
+        # substitution dictionaries cannot perturb this task.
+        if require_transformation and not transformations:
+            raise AssertionError(
+                f"no surface transformation applied for {source_id}; "
+                "extend NAME_SUBSTITUTIONS/OBJECT_SUBSTITUTIONS to cover it"
+            )
 
         seen_rows.add(row_index)
         bin_counts[difficulty_bin] += 1
@@ -828,13 +901,23 @@ def build_ethics_tasks(config: SelectionConfig, rejections: RejectionLog) -> Lis
 def build_candidates(
     config_path: Path | str = DEFAULT_CONFIG_PATH,
     output_path: Path | str | None = None,
+    *,
+    require_math_transformation: bool = False,
 ) -> List[TaskRecord]:
-    """Build the full candidate set deterministically and write the review file."""
+    """Build the full candidate set deterministically and write the review file.
+
+    ``require_math_transformation`` enforces the 2026-07-23 invariant that every
+    math task carries at least one surface transformation (contamination
+    control). Canonical builds must set it; it defaults off only so pre-amendment
+    fixtures and historical regeneration tests keep working.
+    """
     config = load_selection_config(config_path)
     rejections = RejectionLog()
 
     records: List[TaskRecord] = []
-    records.extend(build_math_tasks(config, rejections))
+    records.extend(
+        build_math_tasks(config, rejections, require_transformation=require_math_transformation)
+    )
     records.extend(build_logic_tasks(config, rejections))
     records.extend(build_factual_tasks(config, rejections))
     records.extend(build_ethics_tasks(config, rejections))

@@ -1,0 +1,47 @@
+# Task-set amendment 2026-07-23: re-perturb all 50 math tasks (contamination fix).
+#
+# Trigger (documented before any change): the 2026-07-22 canonical math slice
+# left 41/50 tasks with EMPTY transformation logs, i.e. verbatim GSM8K text.
+# GSM8K is heavily memorized by 2026 models; Part I Phase 1 requires every math
+# problem to be surface-novel so contamination cannot deflate math corruption
+# sensitivity and masquerade as a task-type effect. The cause was dictionary
+# coverage: NAME_SUBSTITUTIONS/OBJECT_SUBSTITUTIONS covered only a handful of
+# the names/objects that actually occur in the selected 50.
+#
+# Mechanism (researcher decisions 2026-07-23):
+# - Scope: dictionaries expanded only (no generic name detector, no
+#   sentence-level rewrites). Numbers stay frozen (decision 2026-07-21) and the
+#   numeric-drift assertion is unchanged.
+# - Strength: at least one swap per task; build_math_tasks fails closed when a
+#   selected task cannot be perturbed (require_transformation=True, enforced by
+#   scripts/build_task_set.py for all future canonical builds).
+# - All 50 math tasks are re-perturbed in place (same ids, same source rows,
+#   same seeds, same difficulty bins, same probe flags and binary ground
+#   truths). Only the perturbed problem text, transformation log, and the
+#   derived binary_formulation strings change. Ground truths are unchanged —
+#   transformations never touch quantities.
+# - Non-math tasks are preserved VERBATIM (verified byte-identical against the
+#   committed candidates.jsonl in tests).
+# - The manifest records supersedes_task_set_sha256 chaining to the 2026-07-22
+#   canonical hash f80b1f83… and the reason for re-perturbation.
+#
+# Downstream invalidation: every result conditioned on the old math prompts is
+# superseded for math rows only (baseline_deepseek_v4_flash_v2_full(+_amend1),
+# replication_chen2025_*). Non-math rows remain valid. Math baseline and the
+# math rows of the C4 replication must be re-run after this amendment merges.
+#
+# status is researcher-approved before application (ground rule 3).
+
+status: pending_researcher_approval
+amendment_id: amend-math-perturbation-2026-07-23
+reason_code: contamination_control_gap
+
+reperturb_task_ids: all-math  # all 50 math-* tasks; ids and sources unchanged
+
+notes: >
+  Replacement dictionary entries were reviewed one-by-one against the 50
+  selected problems: replacements collide with no source name, no other
+  replacement, and no object-dictionary key/value (enforced by
+  tests/test_task_set.py::test_substitution_dictionaries_have_no_collisions).
+  Object swaps for the 8 nameless tasks were audited so the replaced term does
+  not reappear in a conflicting form later in the text.

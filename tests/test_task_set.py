@@ -143,6 +143,61 @@ def test_perturbation_never_changes_numbers():
     assert all(t.kind in ("name", "object", "wording") for t in transformations)
 
 
+def test_every_math_task_is_perturbed(built):
+    """2026-07-23 invariant: no math task may be verbatim GSM8K (contamination
+    control); each carries at least one surface transformation."""
+    records, _ = built
+    math = [r for r in records if r.task_type == "math"]
+    assert len(math) == 50
+    for record in math:
+        assert record.math.transformations, record.id
+        assert record.problem != record.math.original_problem, record.id
+
+
+def test_require_transformation_fails_closed():
+    """build_math_tasks must raise when a selected task cannot be perturbed."""
+    from src.task_set import (
+        NAME_SUBSTITUTIONS,
+        OBJECT_SUBSTITUTIONS,
+        build_math_tasks,
+        load_selection_config,
+        DEFAULT_CONFIG_PATH,
+        RejectionLog,
+    )
+
+    # Temporarily shrink the dictionaries to guarantee an unperturbable task.
+    name_backup, object_backup = dict(NAME_SUBSTITUTIONS), dict(OBJECT_SUBSTITUTIONS)
+    try:
+        NAME_SUBSTITUTIONS.clear()
+        OBJECT_SUBSTITUTIONS.clear()
+        config = load_selection_config(DEFAULT_CONFIG_PATH)
+        with pytest.raises(AssertionError, match="no surface transformation"):
+            build_math_tasks(config, RejectionLog(), require_transformation=True)
+        # ...but with the flag off (historical regeneration), it must not raise.
+        build_math_tasks(config, RejectionLog(), require_transformation=False)
+    finally:
+        NAME_SUBSTITUTIONS.update(name_backup)
+        OBJECT_SUBSTITUTIONS.update(object_backup)
+
+
+def test_substitution_dictionaries_have_no_collisions():
+    """No replacement may collide with a source key, another replacement, or a
+    key/value of the other dictionary (which could re-trigger or conflict)."""
+    from src.task_set import NAME_SUBSTITUTIONS, OBJECT_SUBSTITUTIONS
+
+    name_keys = set(NAME_SUBSTITUTIONS)
+    name_vals = set(NAME_SUBSTITUTIONS.values())
+    obj_keys = {k.lower() for k in OBJECT_SUBSTITUTIONS}
+    obj_vals = {v.lower() for v in OBJECT_SUBSTITUTIONS.values()}
+    # name replacements must not be source names themselves
+    assert not (name_vals & name_keys), name_vals & name_keys
+    # object replacements must not be object keys
+    assert not (obj_vals & obj_keys), obj_vals & obj_keys
+    # within each dict, replacements are unique
+    assert len(name_vals) == len(NAME_SUBSTITUTIONS)
+    assert len(obj_vals) == len(OBJECT_SUBSTITUTIONS)
+
+
 def test_math_difficulty_bins_cover_quota(built):
     records, _ = built
     bins = Counter(r.math.difficulty_bin for r in records if r.task_type == "math")
