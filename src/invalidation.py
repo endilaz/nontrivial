@@ -10,7 +10,7 @@ This module moves each invalid artifact into a dated ``invalidated/2026-07-21/``
 sibling directory and records a SHA-256 manifest (original path, new path, hash,
 size, run id, reason). It is **idempotent**: re-running verifies the already-moved
 state and rewrites an identical manifest. It never touches downloaded source
-datasets under ``data/tasks/`` (e.g. ``MATH_gsm8k/``, ``REASONING_hotpot-master/``).
+datasets (now under ``data/raw/``, e.g. ``MATH_gsm8k/``, ``REASONING_hotpot-master/``).
 
 Safety properties:
 

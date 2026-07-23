@@ -46,6 +46,7 @@ from src.task_schema import (
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TASKS_ROOT = REPO_ROOT / "data" / "tasks"
+RAW_DATA_ROOT = REPO_ROOT / "data" / "raw"
 DEFAULT_CONFIG_PATH = REPO_ROOT / "configs" / "task_selection.yaml"
 
 ETHICS_LABEL_MAPPING_VERSION = "ethics-cm-v1"
@@ -257,7 +258,7 @@ def _false_math_claim(true_value: str, error_model: str) -> Tuple[str, str]:
 
 def build_math_tasks(config: SelectionConfig, rejections: RejectionLog) -> List[MathTask]:
     family_cfg = config.family("math")
-    source_path = TASKS_ROOT / "MATH_gsm8k" / "train.jsonl"
+    source_path = RAW_DATA_ROOT / "MATH_gsm8k" / "train.jsonl"
     source_rows = [
         json.loads(line)
         for line in source_path.read_text(encoding="utf-8").splitlines()
@@ -396,7 +397,7 @@ def verify_logic_target(example: Dict[str, Any]) -> Optional[str]:
 def build_logic_tasks(config: SelectionConfig, rejections: RejectionLog) -> List[LogicTask]:
     family_cfg = config.family("logic")
     max_words = int(family_cfg["max_input_words"])
-    source_path = TASKS_ROOT / "LOGIC_BIG-Bench-logic_grid_puzzle" / "task.json"
+    source_path = RAW_DATA_ROOT / "LOGIC_BIG-Bench-logic_grid_puzzle" / "task.json"
     payload = json.loads(source_path.read_text(encoding="utf-8"))
     examples = payload.get("examples", [])
 
@@ -547,7 +548,7 @@ def build_factual_tasks(config: SelectionConfig, rejections: RejectionLog) -> Li
     max_tokens = int(family_cfg["max_prompt_tokens"])
     comparison_min = int(family_cfg["type_mix"]["comparison_min"])
     comparison_max = int(family_cfg["type_mix"]["comparison_max"])
-    source_path = TASKS_ROOT / "REASONING_hotpot-master" / "hotpot_train_v1.1.json"
+    source_path = RAW_DATA_ROOT / "REASONING_hotpot-master" / "hotpot_train_v1.1.json"
     rows = json.loads(source_path.read_text(encoding="utf-8"))
 
     rng = random.Random(config.stream_seed("factual"))
@@ -716,7 +717,7 @@ def build_ethics_tasks(config: SelectionConfig, rejections: RejectionLog) -> Lis
     family_cfg = config.family("ethics")
     max_words = int(family_cfg["max_scenario_words"])
     max_imbalance = int(family_cfg["balance"]["max_label_imbalance"])
-    source_path = TASKS_ROOT / "ETHICS_ethics-master" / "commonsense" / "cm_train.csv"
+    source_path = RAW_DATA_ROOT / "ETHICS_ethics-master" / "commonsense" / "cm_train.csv"
 
     rows: List[Tuple[int, int, str]] = []  # (source_row, raw_label, scenario)
     with source_path.open(encoding="utf-8", newline="") as handle:

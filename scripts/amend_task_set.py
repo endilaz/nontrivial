@@ -90,7 +90,7 @@ def build_replacements(amendment: Dict[str, Any]) -> List[Dict[str, Any]]:
 
     family_cfg = config.family("factual")
     max_tokens = int(family_cfg["max_prompt_tokens"])
-    source_path = ts.TASKS_ROOT / "REASONING_hotpot-master" / "hotpot_train_v1.1.json"
+    source_path = ts.RAW_DATA_ROOT / "REASONING_hotpot-master" / "hotpot_train_v1.1.json"
     rows = json.loads(source_path.read_text(encoding="utf-8"))
     rng = random.Random(config.stream_seed("factual"))
     order = list(range(len(rows)))

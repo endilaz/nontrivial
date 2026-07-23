@@ -39,10 +39,9 @@ def _make_repo(root):
     (root / "logs" / "cost_log.csv").write_text("timestamp,run_id\n", encoding="utf-8")
 
     # Things that must be PRESERVED (source datasets + keep files).
-    (root / "data" / "tasks" / "MATH_gsm8k").mkdir()
-    (root / "data" / "tasks" / "MATH_gsm8k" / "train.jsonl").write_text("gsm8k\n", encoding="utf-8")
+    (root / "data" / "raw" / "MATH_gsm8k").mkdir(parents=True)
+    (root / "data" / "raw" / "MATH_gsm8k" / "train.jsonl").write_text("gsm8k\n", encoding="utf-8")
     (root / "data" / "results" / ".gitkeep").write_text("", encoding="utf-8")
-    (root / "data" / "raw").mkdir()
     (root / "data" / "raw" / ".gitkeep").write_text("", encoding="utf-8")
 
 
@@ -112,7 +111,7 @@ def test_source_datasets_and_keepfiles_are_preserved(tmp_path):
     execute(tmp_path)
 
     # Downloaded source dataset untouched.
-    ds = tmp_path / "data" / "tasks" / "MATH_gsm8k" / "train.jsonl"
+    ds = tmp_path / "data" / "raw" / "MATH_gsm8k" / "train.jsonl"
     assert ds.is_file()
     assert ds.read_text(encoding="utf-8") == "gsm8k\n"
     # .gitkeep files are not baseline_/smoke_ and must remain.

@@ -29,28 +29,31 @@ quotas:
     yes_labels: 10
     no_labels: 10
 
+# Amendment 2026-07-23: source datasets moved data/tasks/ -> data/raw/
+# (repository reorganization). File contents and sha256 hashes unchanged;
+# only the local-copy path strings below were updated.
 sources:
   math:
     dataset: GSM8K
-    revision: "main-2021 (openai/grade-school-math), local copy data/tasks/MATH_gsm8k/train.jsonl"
+    revision: "main-2021 (openai/grade-school-math), local copy data/raw/MATH_gsm8k/train.jsonl"
     sha256: "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465"
     split: train
     license: "MIT (dataset), https://github.com/openai/grade-school-math — verify in B6"
   logic:
     dataset: BIG-Bench logic_grid_puzzle
-    revision: "BIG-Bench main, local copy data/tasks/LOGIC_BIG-Bench-logic_grid_puzzle/task.json"
+    revision: "BIG-Bench main, local copy data/raw/LOGIC_BIG-Bench-logic_grid_puzzle/task.json"
     sha256: "afeb101f71f637851a82418501ad48bb9d2b5762f348453f9adf035aef8f4dd5"
     split: train # single example pool; no canonical split
     license: "Apache-2.0 (BIG-Bench) — verify in B6"
   factual:
     dataset: HotpotQA (distractor setting)
-    revision: "hotpot_train_v1.1, local copy data/tasks/REASONING_hotpot-master/hotpot_train_v1.1.json"
+    revision: "hotpot_train_v1.1, local copy data/raw/REASONING_hotpot-master/hotpot_train_v1.1.json"
     sha256: "e95caea7dee1f1a6fb94257694d8a196dc4c1babe1229e052155999bdf175d38"
     split: train
     license: "CC BY-SA 4.0 (data); Apache-2.0 (code) — verify in B6"
   ethics:
     dataset: ETHICS commonsense morality
-    revision: "hendrycks/ethics master, local copy data/tasks/ETHICS_ethics-master/commonsense/cm_train.csv"
+    revision: "hendrycks/ethics master, local copy data/raw/ETHICS_ethics-master/commonsense/cm_train.csv"
     sha256: "286cb4098a66b71819493f964cf2afe62cdbb6c6b41983b9c0b8fc484650c752"
     split: train
     license: "MIT (ETHICS) — verify in B6"

@@ -63,11 +63,10 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `data/tasks/task_set_manifest.json` | SHA-256 hashes of task set, candidates, decisions, config. |
 | `data/tasks/review/` | Human review forms and immutable adjudication decisions (B7). |
 | `data/tasks/invalidated/2026-07-21/` | Preserved invalid first-pass task set (A2). |
-| `data/tasks/MATH_gsm8k/` | Raw GSM8K source (`train.jsonl`, `test.jsonl`). Input only — never modified. |
-| `data/tasks/LOGIC_BIG-Bench-logic_grid_puzzle/` | Raw BIG-Bench logic-grid-puzzle source. |
-| `data/tasks/REASONING_hotpot-master/` | Raw HotpotQA source (distractor setting). |
-| `data/tasks/ETHICS_ethics-master/` | Raw ETHICS source (commonsense subset used). |
-| `data/raw/` | Additional raw source data. |
+| `data/raw/MATH_gsm8k/` | Raw GSM8K source (`train.jsonl`, `test.jsonl`). Input only — never modified. |
+| `data/raw/LOGIC_BIG-Bench-logic_grid_puzzle/` | Raw BIG-Bench logic-grid-puzzle source. |
+| `data/raw/REASONING_hotpot-master/` | Raw HotpotQA source (distractor setting). |
+| `data/raw/ETHICS_ethics-master/` | Raw ETHICS source (commonsense subset used). |
 | `data/results/<run_id>/` | Append-only run directories: `config.yaml`, `manifest.json`, `responses.jsonl`, `summary.json` (A5). |
 | `data/results/judge_runs/` | Judge experiment outputs (C1/C3). |
 | `data/results/judge_validation_v1/` | 53-pair frozen judge validation results (C3). |
@@ -193,6 +192,13 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   replicates.** See `docs/validation/replication_chen2025_report.md`.
 - **Pending researcher checkpoint:** review C4 report + 14 shifter transcripts
   (`scripts/list_shifters.py`) before Phase 1 sign-off.
+- **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
+  `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
+  candidate regeneration verified after the move. `configs/task_selection.yaml`
+  revision strings amended (paths only; file hashes unchanged) — note this
+  changes the config hash relative to `data/tasks/task_set_manifest.json`, which
+  records the pre-move config hash. Regenerating the manifest would rewrite a
+  frozen artifact, so the pre-move hash is kept and documented here.
 - **Known open issue:** math surface perturbations are sparse — 41/50 math tasks
   have empty transformation logs (substitution dictionaries cover too few
   names/objects). Policy decision needed before expanding (see Part II §B2 and the
@@ -729,6 +735,10 @@ history.
 	merged into `README.md`; both originals are now thin pointers. The
 	[Repository structure](#repository-structure) section documents every file
 	and folder.
+- Reorganization (2026-07-23): raw source datasets moved from `data/tasks/` to
+	`data/raw/`. Source path constants live in `src/task_set.py` (`RAW_DATA_ROOT`);
+	`configs/task_selection.yaml` revision strings were amended accordingly
+	(content hashes unchanged).
 - A project-local Python 3.13.5 environment exists at `.venv/` and is gitignored.
 	The direct pinned dependencies from `requirements.txt` are installed there.
 - A1 is now complete: `requirements.lock.txt` holds the full transitive lock with
@@ -767,8 +777,8 @@ untracked judge calls, and duplicate cache-hit accounting. Part I §9
 records the audit decisions and reopens the affected Phase 0/1 checkboxes.
 
 Preserve these files for audit. Do not delete them and do not silently repair
-them in place. Downloaded source datasets under `data/tasks/` are inputs and must
-not be invalidated or moved.
+them in place. Downloaded source datasets (under `data/raw/` since 2026-07-23,
+previously `data/tasks/`) are inputs and must not be invalidated or modified.
 
 **A2 has now been executed (2026-07-21).** `scripts/invalidate_artifacts.py`
 (backed by `src/invalidation.py`) moved all 58 invalid artifacts into
@@ -779,7 +789,8 @@ recording SHA-256 hashes and reasons in
 clear (a missing `task_set.jsonl`/ledger makes gated runners fail closed, which
 is intended). The operation is idempotent; re-running is a no-op that re-verifies.
 Source datasets (`MATH_gsm8k/`, `LOGIC_*`, `REASONING_hotpot-master/`,
-`ETHICS_*`) were left untouched. Note: `data/cache/` is gitignored, so the
+`ETHICS_*` — then under `data/tasks/`, moved to `data/raw/` on 2026-07-23) were
+left untouched. Note: `data/cache/` is gitignored, so the
 preserved cache receipts live on disk locally but are recorded by hash in the
 committed manifest. Historical cost reconciliation against provider dashboards
 remains an open researcher action (`logs/invalidated/2026-07-21/reconciliation.md`).
