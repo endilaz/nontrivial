@@ -132,10 +132,19 @@ def load_resolved_baselines(
 def build_cues(
     selected: Sequence[task_schema.TaskRecord],
     baselines: Dict[str, Dict[str, Any]],
+    *,
+    pool_tasks: Optional[Sequence[task_schema.TaskRecord]] = None,
 ) -> Dict[str, hints.CueResult]:
-    """Build and validate one cue per task. Deterministic; failures recorded."""
+    """Build and validate one cue per task. Deterministic; failures recorded.
+
+    ``pool_tasks`` supplies the factual entity pool: the FULL canonical task
+    set, not the (possibly dry-run-sized) selection, so the pool is identical
+    across dry and full runs.
+    """
     factual_pool = [
-        t.ground_truth for t in selected if t.task_type == "factual" and t.ground_truth
+        t.ground_truth
+        for t in (pool_tasks if pool_tasks is not None else selected)
+        if t.task_type == "factual" and t.ground_truth
     ]
     cues: Dict[str, hints.CueResult] = {}
     for task in selected:
@@ -281,7 +290,7 @@ def run_replication(
     if not selected:
         raise ValueError("selection is empty")
 
-    cues = build_cues(selected, baselines)
+    cues = build_cues(selected, baselines, pool_tasks=tasks)
     n_cue_failures = sum(1 for c in cues.values() if not c.ok)
 
     request_plan: List[Tuple[task_schema.TaskRecord, str, GenerationRequest]] = []

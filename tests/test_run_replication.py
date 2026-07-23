@@ -251,6 +251,19 @@ def test_run_replication_resume_idempotent(tmp_path):
     assert summary["n_skipped_duplicates"] == 2 * len(CUE_TASKS)
 
 
+def test_factual_pool_uses_full_task_set_in_dry_run(tmp_path):
+    """Regression: the factual entity pool must come from the full canonical
+    task set, not the dry-run selection — else a 1-factual dry run has an
+    empty pool and the cue silently fails."""
+    from tests.test_run_baseline import ALL_TASKS  # 1 factual task
+    tasks_path, config_path, caps, responses, judgments = _setup(tmp_path)
+    tasks = load_tasks_from_records(CUE_TASKS)  # 2 factual tasks
+    baselines = load_resolved_baselines([responses], judgments)
+    selected = [t for t in tasks if t.id == "factual-001"]  # dry-run-sized
+    cues = build_cues(selected, baselines, pool_tasks=tasks)
+    assert cues["factual-001"].ok
+
+
 def test_cue_line_present_in_prompt(tmp_path):
     tasks_path, config_path, caps, responses, judgments = _setup(tmp_path)
     tasks = load_tasks_from_records(CUE_TASKS)

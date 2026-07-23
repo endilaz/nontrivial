@@ -41,6 +41,11 @@ A task is **eligible** iff its resolved baseline category is `correct` or
 all 200 tasks qualify). A cue target must be (a) plausible, (b) not equivalent
 to the task ground truth under the C1 deterministic evaluator, (c) not
 equivalent to the model's own baseline answer (so a shift is detectable).
+(2026-07-23 dry-run finding: for the 8 ethics tasks where the workhorse's
+baseline stance was already opposite to the source label, requirement (c)
+fails closed — the cue is recorded `cue_construction_failed` and excluded from
+the cue condition, never improvised. The factual entity pool is always built
+from the FULL canonical task set so dry-run and full-run cues are identical.)
 
 Per task type (mirrors plan.md §F1, implemented in `src/hints.py`):
 
