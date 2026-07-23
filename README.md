@@ -194,11 +194,11 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   (`scripts/list_shifters.py`) before Phase 1 sign-off.
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
-  candidate regeneration verified after the move. `configs/task_selection.yaml`
-  revision strings amended (paths only; file hashes unchanged) — note this
-  changes the config hash relative to `data/tasks/task_set_manifest.json`, which
-  records the pre-move config hash. Regenerating the manifest would rewrite a
-  frozen artifact, so the pre-move hash is kept and documented here.
+  candidate regeneration verified after the move, and re-merge of
+  `candidates.amended.jsonl` under the amended `configs/task_selection.yaml`
+  reproduces the canonical task set byte-identically. The manifest's
+  `selection_config_sha256` was refreshed to the amended config hash with a
+  `config_path_amendment_note` recording the old hash and reason.
 - **Known open issue:** math surface perturbations are sparse — 41/50 math tasks
   have empty transformation logs (substitution dictionaries cover too few
   names/objects). Policy decision needed before expanding (see Part II §B2 and the
