@@ -102,6 +102,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `src/task_review.py` | Review forms, immutable decisions, acceptance gate (B7). |
 | `src/dataset_licenses.py` | Verified dataset licenses (B6). |
 | `src/evaluation.py` | Deterministic scoring + provenance-gated LLM judge (C1). `evaluate_with_llm` raises by design. |
+| `src/parsing.py` | CoT step-boundary parser (D1): numbered/paragraph/line/sentence strategies, exact source spans, fail-closed validation, caller-supplied LLM fallback only. |
 | `src/hints.py` | Hint-paradigm cue construction (C4/F). |
 | `src/analysis/` | Canonical metrics/stats/figures (Milestone G). Notebooks may call, never contain, canonical calculations. |
 | `src/probing/` | Direction 2 activation extraction and probes (Milestone H, conditional). |
@@ -139,6 +140,7 @@ tests run offline with API keys unset; `live_api` marker is excluded by default.
 | `docs/receipt_policy.md` | Receipt retention + release deny-by-default policy (A7). |
 | `docs/CoT_Faithfulness_Benchmark_Notes.md` | Research notes. |
 | `docs/replication_c4.md` | C4 replication design notes. |
+| `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (draft, pending researcher approval). |
 | `docs/validation/` | Validation reports: judge rubric (`judge_answer-equivalence_rubric_1.0.{md,json}`), `replication_chen2025_report.md`. |
 | `logs/cost_log.csv` | Append-only API-spend ledger (corrected; historical spend $0.08 approved 2026-07-22). |
 | `logs/budget_state.json` | Locked budget reservation state (A4). |
@@ -939,8 +941,12 @@ Start with the smallest offline, reversible slice and validate after each edit:
 7. ~~Rebuild Milestone B from source data~~ (done 2026-07-22)
 8. ~~Complete C1 offline deterministic evaluation and validation-set tooling.~~
 	 ~~C2 live baselines~~ and ~~C4 replication~~ (all done 2026-07-22/23).
-	 **Next: researcher Phase 1 checkpoint (review C4 report + shifter
-	 transcripts), then Milestone D (parser).**
+	 ~~Phase 1 checkpoint~~ (signed off 2026-07-23). **Milestone D in
+	 progress:** D1 parser implemented (`src/parsing.py` v1.0.0, 30 tests,
+	 all 250 on-disk baseline CoTs parse cleanly); D2 annotation guide
+	 drafted (`docs/parser_annotation_guide.md`, pending researcher
+	 approval). **Next: researcher approves the D2 guide, then D3
+	 (32-CoT sample + hand labeling + F1 validation).**
 
 When a task requires an unresolved scientific choice, record the exact decision
 gate from Sections 15, 17, and 19 and stop that slice. Continue independent
