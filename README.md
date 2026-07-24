@@ -79,7 +79,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `data/cache/invalidated/2026-07-21/` | Preserved v1 cache receipts (gitignored; recorded by hash). |
 | `data/capabilities.json` | Live capability probe records (pass/fail/inconclusive + receipt hash + expiration 2026-08-20). |
 | `data/invalidation/manifest_2026-07-21.json` | SHA-256 invalidation manifest for all 58 moved artifacts (A2). |
-| `data/validation/` | Validation data artifacts, incl. D3 frozen sample `parser_sample_v1.jsonl` + annotation file `parser_annotations_v1.jsonl`. |
+| `data/validation/` | Validation data artifacts, incl. D3 frozen sample `parser_sample_v1.jsonl`, annotation file `parser_annotations_v1.jsonl`, and labeling worksheet `parser_labeling_worksheet_v1.txt`. |
 
 ### `src/` — library code
 
@@ -126,6 +126,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `scripts/run_replication.py` | C4 published-result replication runner. |
 | `scripts/list_shifters.py` | Inspect cue-shifted tasks/transcripts from replication runs (C4 helper). |
 | `scripts/build_parser_validation_sample.py` | Build the frozen 32-CoT D3 parser-validation sample + annotation template (D3). |
+| `scripts/label_parser_boundaries.py` | D3 labeling aid: candidate-segment worksheet + decisions→char-offset apply (no hand offset counting). |
 
 ### `tests/` — offline test suite
 

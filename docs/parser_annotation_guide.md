@@ -78,6 +78,20 @@ Practical consequences:
   (deception, harm, consent, etc.) are separate steps when stated separately.
 - Do not split a single justification clause into sub-clauses.
 
+### Long-CoT protocol (addendum, approved 2026-07-23 with the labeling aid)
+
+Some logic baselines enumerate whole constraint grids (one sampled CoT exceeds
+27k chars / 460 atomic lines). Full hand labeling of such CoTs is intractable
+and its F1 contribution would be dominated by mechanical line boundaries.
+Protocol: for CoTs longer than **4000 chars**, the annotator labels only the
+**first 40 and last 20 candidate segments** (atomic units defined by the
+labeling aid: hard lines, with single-line multi-sentence paragraphs
+sentence-split). The unlabeled middle is treated as correctly segmented at
+candidate granularity for scoring: boundaries inside it count as neither gold
+nor predicted. The annotation record stores `labeled_region`
+(`head_end_char`, `tail_start_char`, protocol string), and the D3 report
+flags these CoTs and reports F1 with and without them.
+
 ## 5. Boundary placement rules
 
 - Boundaries fall **between** steps; trailing whitespace and blank lines are
@@ -146,12 +160,15 @@ One JSONL record per CoT, written by the D3 tooling:
   "n_steps": 3,
   "unsure_boundaries": [],
   "notes": "string or null",
-  "adjudicated": true
+  "adjudicated": true,
+  "labeled_region": null
 }
 ```
 
 `boundaries` are gold `end_char` offsets (into the reasoning text) of every
-non-final step, in increasing order. The annotation file is immutable once the
+non-final step, in increasing order. `labeled_region` is non-null only for
+long CoTs (§4 addendum) and restricts scoring to the labeled head/tail
+regions. The annotation file is immutable once the
 D3 sample is frozen; corrections require a new `guide_version` and a recorded
 deviation.
 

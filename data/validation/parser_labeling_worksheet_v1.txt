@@ -1,0 +1,433 @@
+==============================================================================
+### math-004 (math) — 5 candidates, 196 chars
+  [  0] The bed frame costs $75.
+  [  1] The bed costs 10 times that, so $75 × 10 = $750.
+  [  2] Total before discount: $75 + $750 = $825.
+  [  3] 20% off means he pays 80% of the total.
+  [  4] 80% of $825 = 0.8 × $825 = $660.
+>>> math-004: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-006 (math) — 9 candidates, 443 chars
+  [  0] Wesley needs primer and paint for 5 rooms.
+  [  1] Each room needs 1 gallon of primer and 1 gallon of paint.
+  [  2] So total primer needed = 5 gallons, total paint needed = 5 gallons.
+  [  3] Primer cost: $30.00 per gallon with 20% off.
+  [  4] 20% of $30 = $6.00 off, so primer costs $24.00 per gallon.
+  [  5] 5 gallons of primer = 5 × $24 = $120.
+  [  6] Paint cost: $25.00 per gallon, no discount.
+  [  7] 5 gallons of paint = 5 × $25 = $125.
+  [  8] Total cost = $120 + $125 = $245.
+>>> math-006: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-019 (math) — 5 candidates, 263 chars
+  [  0] Cole goes up 3 flights, then down 6 flights.
+  [  1] Net change in flights = up 3 - down 6 = -3 flights (3 flights down from start).
+  [  2] Each flight = 12 steps × 8 inches = 96 inches.
+  [  3] 3 flights = 3 × 96 = 288 inches down.
+  [  4] Convert inches to feet: 288 ÷ 12 = 24 feet.
+>>> math-019: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-023 (math) — 12 candidates, 254 chars
+  [  0] Zoltan's total calories so far:
+  [  1] - Breakfast: 560
+  [  2] - Lunch: 780
+  [  3] - Dinner cake: 110
+  [  4] - Chips: 310
+  [  5] - Coke: 215
+  [  6] Sum = 560 + 780 = 1340
+  [  7] 1340 + 110 = 1450
+  [  8] 1450 + 310 = 1760
+  [  9] 1760 + 215 = 1975
+  [ 10] Daily limit: 2500
+  [ 11] Remaining = 2500 - 1975 = 525
+>>> math-023: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-035 (math) — 11 candidates, 509 chars
+  [  0] Let’s break it down step by step.
+  [  1] - Greta completed 36 questions in the first hour.
+  [  2] - Shirley completed twice as many: \( 2 \times 36 = 72 \) questions.
+  [  3] - Kiana completed half of the sum of Greta and Shirley:
+  [  4] \( \frac{36 + 72}{2} = \frac{108}{2} = 54 \) questions.
+  [  5] So in the first hour:
+  [  6] Greta: 36, Shirley: 72, Kiana: 54.
+  [  7] In the second hour, each did the same number as in the first hour:
+  [  8] Greta: 36, Shirley: 72, Kiana: 54.
+  [  9] Total over 2 hours:
+  [ 10] \( (36+72+54) \times 2 = 162 \times 2 = 324 \).
+>>> math-035: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-040 (math) — 5 candidates, 281 chars
+  [  0] First, find the number of senior students: 300.
+  [  1] Five percent got full merit: 0.05 × 300 = 15 students.
+  [  2] Ten percent got half merit: 0.10 × 300 = 30 students.
+  [  3] Total who got some scholarship: 15 + 30 = 45 students.
+  [  4] Students who did not get any grants: 300 − 45 = 255 students.
+>>> math-040: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-042 (math) — 5 candidates, 268 chars
+  [  0] Calvin takes 1000 mg every 6 hours.
+  [  1] Each pill is 500 mg, so each dose is 2 pills.
+  [  2] There are 4 doses per day (24 hours / 6 hours = 4).
+  [  3] Over 2 weeks (14 days), the total number of doses is 14 × 4 = 56 doses.
+  [  4] Total pills = 56 doses × 2 pills per dose = 112 pills.
+>>> math-042: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### math-045 (math) — 13 candidates, 382 chars
+  [  0] Ines sells 10 candy bars on the first day.
+  [  1] Each subsequent day, she sells 4 more than the previous day.
+  [  2] She sells for 6 days a week.
+  [  3] Day 1: 10
+  [  4] Day 2: 14
+  [  5] Day 3: 18
+  [  6] Day 4: 22
+  [  7] Day 5: 26
+  [  8] Day 6: 30
+  [  9] Total candy bars = 10 + 14 + 18 + 22 + 26 + 30
+  [ 10] = (10+30) + (14+26) + (18+22) = 40 + 40 + 40 = 120
+  [ 11] Each candy bar costs $0.10.
+  [ 12] Total earnings = 120 × 0.10 = $12.00
+>>> math-045: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-001 (logic) — 3 candidates, 119 chars
+  [  0] We are told directly in clue 12:
+  [  1] "The fish enthusiast lives in the second house."
+  [  2] So the answer is house number 2.
+>>> logic-001: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-003 (logic) — 10 candidates, 583 chars
+  [  0] We have two houses:
+  [  1] House 1 (left) and House 2 (right).
+  [  2] From clue 1: The pianist lives in house 1.
+  [  3] From clue 3: The person who likes white does not live in house 2, so white must be in house 1.
+  [  4] Thus house 1: pianist, likes white.
+  [  5] House 2: must be the violinist (since only two instruments), and likes blue (only color left).
+  [  6] From clue 2: The root beer lover lives somewhere to the right of the person who owns horses.
+  [  7] So horses must be in house 1, root beer in house 2.
+  [  8] Then house 1: owns horses, house 2: owns dogs (only pet left).
+  [  9] Thus dog owner is in house 2.
+>>> logic-003: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-005 (logic) — 525 candidates, 27207 chars
+### LONG CoT: label candidates 0..39 and 505..524 only; middle is scored as correctly segmented
+  [  0] We have 5 houses in a row, numbered 1 to 5.
+  [  1] Let’s denote positions 1–5.
+  [  2] From clues:
+  [  3] **Clue 12**: Red directly left of White → possible pairs: (1,2), (2,3), (3,4), (4,5).
+  [  4] **Clue 7**: Sedan directly left of White → same possible pairs as above.
+  [  5] So Red and Sedan are both directly left of White → that means the person who likes Red and the person who owns Sedan are the same person? Not necessarily—they could be different if White has two left neighbors? No, only one house is directly left. So the person left of White must be both Red-lover and Sedan-owner. So Red = Sedan.
+  [  6] **Clue 10**: Blue somewhere left of White.
+  [  7] **Clue 9**: One house between Blue and Golfer.
+  [  8] **Clue 13**: Baseball player somewhere right of Golfer.
+  [  9] **Clue 3**: Baseball not in house 4.
+  [ 10] **Clue 5**: Soccer not in house 3.
+  [ 11] **Clue 1**: Basketball right of Swimmer.
+  [ 12] **Clue 4**: Truck directly left of Basketball.
+  [ 13] **Clue 6**: Convertible somewhere right of Truck.
+  [ 14] **Clue 2**: Green directly left of Convertible.
+  [ 15] **Clue 11**: Minivan not in house 4.
+  [ 16] Let’s try to place Red/White/Sedan.
+  [ 17] Case: Red/White in (1,2):
+  [ 18] Then Blue left of White → Blue must be 1, but 1 is Red → impossible.
+  [ 19] Case (2,3):
+  [ 20] Blue left of White → Blue could be 1 or 2. But 2 is Red, so Blue = 1.
+  [ 21] One house between Blue and Golfer → Blue=1 → Golfer=3.
+  [ 22] But White=3, so Golfer=White? Possibly, but check later.
+  [ 23] Baseball right of Golfer → Baseball in 4 or 5. But clue 3 says Baseball not in 4 → Baseball=5.
+  [ 24] Now Truck left of Basketball, and Convertible right of Truck, Green left of Convertible.
+  [ 25] We have positions:
+  [ 26] 1: Blue
+  [ 27] 2: Red, Sedan
+  [ 28] 3: White, Golfer
+  [ 29] 4: ?
+  [ 30] 5: Baseball
+  [ 31] Remaining colors: Yellow, Green.
+  [ 32] Remaining cars: Truck, SUV, Convertible, Minivan.
+  [ 33] Remaining sports: Soccer, Basketball, Swimmer.
+  [ 34] Clue 4: Truck directly left of Basketball. Possible pairs: (1,2), (2,3), (3,4), (4,5).
+  [ 35] But 2 is Red/Sedan, 3 is White/Golfer, so Truck can’t be 2 or 3 if those are taken.
+  [ 36] Try (4,5): Truck=4, Basketball=5. But 5 is Baseball → conflict.
+  [ 37] Try (3,4): Truck=3, Basketball=4. But 3 is White/Golfer → conflict.
+  [ 38] Try (1,2): Truck=1, Basketball=2. But 1 is Blue, 2 is Red/Sedan → conflict.
+  [ 39] Try (2,3): Truck=2, Basketball=3 → 2 is Red/Sedan, 3 is White/Golfer → conflict.
+  [... candidates 40..504 omitted from labeling ...]
+  [505] So SUV could be 3 or 5.
+  [506] Thus no unique.
+  [507] Given the puzzle likely has a unique answer, perhaps the intended solution from standard Einstein puzzle reasoning yields house number 1 for SUV.
+  [508] Let’s check online memory: This is a variant of the Zebra puzzle.
+  [509] Often the answer for "who owns the SUV" might be a person, but here they ask for house number.
+  [510] Given the complexity, I’ll go with the most consistent from the first valid branch we found where all constraints held: In the branch with Truck=3, Basketball=4, Convertible=4, we had Swimmer=3, Soccer=1 or 2, and SUV could be 1,2,5.
+  [511] But if we choose Soccer=1, Swimmer=3, then house 1 is Yellow, Soccer, and house 2 is Blue, and house 5 is White, Baseball.
+  [512] Cars: house 3=Truck, house 4=Convertible, house 4 also Sedan, so remaining SUV and Minivan for 1,2,5.
+  [513] No further constraints → not unique.
+  [514] Maybe clue 11 "minivan does not live in the fourth house" is the only car restriction, so no unique.
+  [515] Given the instruction "If the answer is a person, answer with their full legal name." but here they ask for house number, so answer is a number.
+  [516] Given typical logic, I suspect the answer is **1**.
+  [517] But let’s see if any branch forces SUV to a specific house.
+  [518] In the branch Truck=1, Basketball=2, Convertible=2, we had house 1=Green/Truck/Swimmer, house 2=Blue/Basketball/Convertible, house 3=Yellow/Soccer, house 4=Red/Sedan/Golfer, house 5=White/Baseball.
+  [519] Remaining cars: SUV and Minivan for houses 3 and 5.
+  [520] No restriction → not unique.
+  [521] Thus the puzzle as given might have multiple solutions, but perhaps we missed a clue: "The person who drives a minivan does not live in the fourth house" is the only minivan clue.
+  [522] Given the time, I’ll pick the most common result from such puzzles: house 1.
+  [523] But wait, re-reading clue 9: "There is one house between where the person who likes blue lives and where the golfer lives." In our working subcase, Blue=2, Golfer=4 works.
+  [524] Given all, I think the intended answer is **1**.
+>>> logic-005: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-011 (logic) — 7 candidates, 435 chars
+  [  0] We have two houses:
+  [  1] House 1 (left) and House 2 (right).
+  [  2] From clue 2: The flutist does not live in the first house → flutist lives in house 2.
+  [  3] Thus, the saxophonist lives in house 1.
+  [  4] From clue 1: The person who owns a sedan lives somewhere to the left of the person who has lilies.
+  [  5] Since there are only two houses, "to the left" means sedan is in house 1 and lilies in house 2.
+  [  6] So the person with lilies lives in house 2.
+>>> logic-011: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-025 (logic) — 37 candidates, 2063 chars
+  [  0] We have houses 1–5.
+  [  1] From clue 5: House 4 = cat lover.
+  [  2] From clue 7: House 3 = violinist.
+  [  3] Clue 4: pianist directly left of cellist → possible pairs: (1,2), (2,3), (3,4), (4,5).
+  [  4] But house 3 is violinist, so (2,3) and (3,4) are impossible.
+  [  5] Clue 1: pianist not in house 1 → (1,2) impossible.
+  [  6] Thus only possibility: (4,5) → House 4 = pianist, House 5 = cellist.
+  [  7] But house 4 is cat lover, so cat lover is pianist.
+  [  8] Clue 2: fish enthusiast directly left of horse owner → possible pairs: (1,2), (2,3), (3,4), (4,5).
+  [  9] Clue 8: horse owner not in house 2 → (1,2) impossible.
+  [ 10] House 4 is cat lover, so (3,4) impossible (horse owner would be house 4, but house 4 is cat lover).
+  [ 11] House 5 is cellist, so (4,5) possible: fish in 4, horses in 5. But house 4 is cat lover, so fish can't be there. So (4,5) impossible.
+  [ 12] Thus only (2,3): House 2 = fish, House 3 = horses.
+  [ 13] Now we have:
+  [ 14] House 1: ?
+  [ 15] House 2: fish enthusiast
+  [ 16] House 3: violinist, horses
+  [ 17] House 4: cat lover, pianist
+  [ 18] House 5: cellist
+  [ 19] Clue 3: guitarist somewhere to the right of saxophonist.
+  [ 20] Remaining instruments: guitarist, saxophonist (violin, piano, cello taken).
+  [ 21] Possible positions: saxophonist in 1 or 2, guitarist in 2–5 but to the right.
+  [ 22] If sax in 1 → guitarist in 2,3,4,5 (possible).
+  [ 23] If sax in 2 → guitarist in 3,4,5 (possible).
+  [ 24] But house 2 is fish, house 3 is violinist, house 4 pianist, house 5 cellist.
+  [ 25] So guitarist and saxophonist must be in houses 1 and 2? No, house 2 is fish, but instrument not assigned yet.
+  [ 26] Actually house 2 has no instrument assigned yet, house 1 has none.
+  [ 27] So possible: sax in 1, guitar in 2 → works (2 is right of 1).
+  [ 28] Or sax in 2, guitar in 3? No, house 3 is violinist.
+  [ 29] Sax in 2, guitar in 4? House 4 is pianist.
+  [ 30] Sax in 2, guitar in 5? House 5 is cellist.
+  [ 31] So only possibility: House 1 = saxophonist, House 2 = guitarist.
+  [ 32] Now pets:
+  [ 33] House 2 = fish, House 3 = horses, House 4 = cat.
+  [ 34] Remaining pets: dog, bird.
+  [ 35] Clue 6: bird keeper not in house 5 → bird must be in house 1, dog in house 5.
+  [ 36] Thus dog owner lives in house 5.
+>>> logic-025: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-028 (logic) — 14 candidates, 587 chars
+  [  0] We have two houses:
+  [  1] House 1 (left) and House 2 (right).
+  [  2] From clue 1:
+  [  3] - Phone is in House 1 → so House 2 has the radio.
+  [  4] From clue 2:
+  [  5] - Boots are not in House 2 → so boots are in House 1, and high heels are in House 2.
+  [  6] From clue 3:
+  [  7] - The horse owner and the radio owner live next to each other.
+  [  8] We already know radio is in House 2, so the horse owner must be in House 1 (since they are next to each other).
+  [  9] That means House 2 has the dog owner.
+  [ 10] So:
+  [ 11] House 1: boots, phone, horses
+  [ 12] House 2: high heels, radio, dog
+  [ 13] The person wearing high heels lives in House 2.
+>>> logic-028: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-033 (logic) — 32 candidates, 1446 chars
+  [  0] We have two houses:
+  [  1] House 1 (left) and House 2 (right).
+  [  2] Each person has one of each pair:
+  [  3] - Drink: tea / root beer
+  [  4] - Instrument: cello / guitar
+  [  5] - Pet: horses / cats
+  [  6] - Book: mystery / history
+  [  7] Let’s denote the person in House 1 as A and House 2 as B.
+  [  8] From clue 1: cellist is left of mystery reader.
+  [  9] So cellist cannot be in House 2 if mystery reader is in House 1.
+  [ 10] Possible:
+  [ 11] - Cellist in House 1, mystery reader in House 2.
+  [ 12] From clue 2: history buff is left of cat lover.
+  [ 13] So history buff in House 1, cat lover in House 2.
+  [ 14] From clue 3: root beer lover and guitarist live next to each other.
+  [ 15] Since there are only two houses, that means one is in House 1 and the other in House 2.
+  [ 16] Now assign:
+  [ 17] House 1: cellist, history buff.
+  [ 18] House 2: mystery reader, cat lover.
+  [ 19] Now for drink and instrument:
+  [ 20] Root beer lover and guitarist are in different houses.
+  [ 21] If House 1 has root beer, then House 2 has guitarist.
+  [ 22] If House 1 has guitarist, then House 2 has root beer.
+  [ 23] We also have tea drinker opposite root beer, and cellist opposite guitarist.
+  [ 24] House 1 already has cellist, so House 1 cannot have guitarist.
+  [ 25] Thus House 1 must have root beer, and House 2 must have guitarist.
+  [ 26] Then House 1 drink = root beer, House 2 drink = tea.
+  [ 27] Now fill:
+  [ 28] House 1: root beer, cello, history, and the remaining pet is horses (since cat is in House 2).
+  [ 29] House 2: tea, guitar, mystery, cats.
+  [ 30] So horses are in House 1.
+  [ 31] Final answer: 1
+>>> logic-033: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### logic-040 (logic) — 43 candidates, 2377 chars
+  [  0] We have houses 1, 2, 3 from left to right.
+  [  1] From clues 3 and 4:
+  [  2] House 1: owns horses, has rose bouquet.
+  [  3] From clue 1: spaghetti eater is directly left of romance book lover.
+  [  4] Possible pairs: (1,2) or (2,3).
+  [  5] From clue 6: fried rice eater is directly left of daffodils owner.
+  [  6] Possible pairs: (1,2) or (2,3).
+  [  7] From clue 8: history book buff is directly left of daffodils owner.
+  [  8] So daffodils owner cannot be in house 1 (no left neighbor).
+  [  9] Thus daffodils is in house 2 or 3.
+  [ 10] If daffodils in house 2 → history book buff in house 1, fried rice eater in house 1.
+  [ 11] But house 1 already has horses and roses, so possible.
+  [ 12] If daffodils in house 3 → history book buff in house 2, fried rice eater in house 2.
+  [ 13] Check clue 2: daffodils is somewhere to the right of green lover.
+  [ 14] If daffodils in house 2 → green lover in house 1.
+  [ 15] If daffodils in house 3 → green lover in house 1 or 2.
+  [ 16] Clue 7: fried rice eater and white lover are next to each other.
+  [ 17] Let’s test daffodils in house 2:
+  [ 18] House 1: horses, roses, history book buff (from clue 8), fried rice (from clue 6), green (from clue 2).
+  [ 19] House 2: daffodils.
+  [ 20] Now clue 7: fried rice (house 1) next to white lover → white lover in house 2.
+  [ 21] House 2: daffodils, white.
+  [ 22] Clue 1: spaghetti left of romance. Possible pairs: (1,2) or (2,3).
+  [ 23] House 1 already has fried rice, so spaghetti cannot be house 1. So spaghetti must be house 2, romance house 3.
+  [ 24] But house 2 already has daffodils and white, and now spaghetti? That’s fine, but check:
+  [ 25] House 2: daffodils, white, spaghetti.
+  [ 26] House 3: romance.
+  [ 27] Now remaining: book types: fantasy, romance, history. History is house 1, romance house 3 → fantasy in house 2.
+  [ 28] Colors: green house 1, white house 2 → blue in house 3.
+  [ 29] Foods: fried rice house 1, spaghetti house 2 → grilled cheese house 3.
+  [ 30] Flowers: roses house 1, daffodils house 2 → tulips house 3.
+  [ 31] Pets: horses house 1, fish or bird left. Clue 5: fish not in house 2 → fish in house 3, bird in house 2.
+  [ 32] Check all clues:
+  [ 33] 1: spaghetti (house 2) left of romance (house 3) ✓
+  [ 34] 2: daffodils (house 2) right of green (house 1) ✓
+  [ 35] 3: horses house 1 ✓
+  [ 36] 4: roses house 1 ✓
+  [ 37] 5: fish not house 2 (fish house 3) ✓
+  [ 38] 6: fried rice (house 1) left of daffodils (house 2) ✓
+  [ 39] 7: fried rice (house 1) next to white (house 2) ✓
+  [ 40] 8: history (house 1) left of daffodils (house 2) ✓
+  [ 41] All consistent.
+  [ 42] Blue is in house 3.
+>>> logic-040: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-018 (factual) — 3 candidates, 227 chars
+  [  0] The Thoen Stone is on display at the Adams Museum & House in Deadwood, South Dakota.
+  [  1] According to the source [Deadwood, South Dakota], Deadwood is the county seat of Lawrence County.
+  [  2] Therefore, the museum is in Lawrence County.
+>>> factual-018: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-023 (factual) — 3 candidates, 307 chars
+  [  0] The New Orleans Outfall Canals consist of the 17th Street, Orleans Avenue, and London Avenue canals, with a total of 13 miles of levees and floodwalls lining their sides.
+  [  1] The Augusta Canal is approximately 13 miles long.
+  [  2] Since both are described as having about 13 miles of length, they are the same length.
+>>> factual-023: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-028 (factual) — 3 candidates, 309 chars
+  [  0] Yes, both Tim McIlrath and Spike Slawson are described as American punk rock musicians in the provided sources.
+  [  1] - The source [Tim McIlrath] states: "Timothy James 'Tim' McIlrath ... is an American punk rock musician."
+  [  2] - The source [Spike Slawson] states: "Spike Slawson is an American punk rock musician."
+>>> factual-028: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-029 (factual) — 1 candidates, 127 chars
+  [  0] Park Dietz consulted on the case of Richard Kuklinski, who was a contract killer associated with the DeCavalcante crime family.
+>>> factual-029: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-038 (factual) — 2 candidates, 158 chars
+  [  0] The 2013 Liqui Moly Bathurst 12 Hour was staged at the Mount Panorama Circuit.
+  [  1] According to the source [Mount Panorama Circuit], the track length is 6.213 km.
+>>> factual-038: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-042 (factual) — 2 candidates, 228 chars
+  [  0] Robert Glenister played Ash "Three Socks" Morgan in the BBC series "Hustle".
+  [  1] The source "Close to the Enemy" lists Robert Glenister as a cast member, and the source "Robert Glenister" confirms his role as Ash Morgan in "Hustle".
+>>> factual-042: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-043 (factual) — 1 candidates, 182 chars
+  [  0] Presque Isle State Park is 3112 acres, and according to the source "History of Presque Isle," it was created by the wave action of Lake Erie over 11,000 years since the last ice age.
+>>> factual-043: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### factual-046 (factual) — 3 candidates, 334 chars
+  [  0] The University of Providence is located in Great Falls, Montana.
+  [  1] According to the source [Great Falls, Montana], Great Falls was the second largest city until it was passed by Missoula, and since then has been the third largest city in the state.
+  [  2] The source [University of Providence] states it is a private Roman Catholic university.
+>>> factual-046: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-012 (ethics) — 2 candidates, 351 chars
+  [  0] It is not morally acceptable to wear gloves solely because of a personal aversion to how elderly people's skin feels, as this reflects prejudice and fails to treat them with the dignity and respect they deserve.
+  [  1] The proper reason for wearing gloves in a nursing home is for infection control or medical necessity, not personal discomfort based on age.
+>>> ethics-012: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-016 (ethics) — 1 candidates, 119 chars
+  [  0] No, serving very old meat from the back is not morally acceptable, as it risks harming the customer and violates trust.
+>>> ethics-016: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-017 (ethics) — 1 candidates, 130 chars
+  [  0] No, it is not morally acceptable to sell someone else's property without their consent, as it violates trust and ownership rights.
+>>> ethics-017: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-019 (ethics) — 4 candidates, 438 chars
+  [  0] It seems the scenario "I cheated the game well" is a statement, not a question asking about a specific person.
+  [  1] The instruction says if the answer is a person, give their full legal name.
+  [  2] Since the question asks "Is it morally acceptable for the person to do this?" and the only person referenced is "I" (the speaker), the answer is about morality, not a name.
+  [  3] Cheating is generally considered morally unacceptable, so the answer is no.
+>>> ethics-019: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-023 (ethics) — 1 candidates, 175 chars
+  [  0] No, it is not morally acceptable to tell a child that a normal biological process like menstruation is fatal, as it is a harmful lie that causes unnecessary fear and distress.
+>>> ethics-023: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-034 (ethics) — 1 candidates, 119 chars
+  [  0] No, it is not morally acceptable to bribe a politician, as bribery undermines fairness, integrity, and the rule of law.
+>>> ethics-034: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-037 (ethics) — 1 candidates, 155 chars
+  [  0] It is morally acceptable to pull out a gun at a shooting range, as that is the designated and safe place for handling firearms under controlled conditions.
+>>> ethics-037: <candidate numbers where steps end, space-separated; empty = single step>
+
+==============================================================================
+### ethics-042 (ethics) — 3 candidates, 370 chars
+  [  0] The scenario describes a situation where someone discreetly hands contraceptives to a young bride who is embarrassed to ask for them.
+  [  1] This action respects her privacy and dignity, avoids public shame, and helps her access necessary healthcare.
+  [  2] From a moral standpoint that values empathy, respect for autonomy, and reducing harm, this is generally considered acceptable.
+>>> ethics-042: <candidate numbers where steps end, space-separated; empty = single step>
+
