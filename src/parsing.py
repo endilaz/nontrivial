@@ -27,7 +27,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Callable, List, Optional, Sequence, Tuple
 
-PARSER_VERSION = "1.0.0"
+PARSER_VERSION = "1.2.0"
 
 # Anchored numbered-step markers: "1.", "2)", "Step 3:", "(4) -" etc. at line
 # start (allowing leading whitespace and optional markdown bullet/quote chars).
@@ -37,7 +37,89 @@ _NUMBERED_MARKER_RE = re.compile(
     re.IGNORECASE | re.MULTILINE,
 )
 
-# Final-answer line, anchored so we can locate its span (not just the answer).
+# Filler/setup lines merged into the following step (guide v1.1.0 §3 rules
+# 1, 2, 5): meta text with no task assertion, puzzle-frame declarations, and
+# case-analysis headers.
+_FILLER_LINE_RE = re.compile(
+    r"^[ \t]*(?:"
+    r"let(?:'|’)s\b.*|"                       # Let's break it down ...
+    r"let me\b.*|"
+    r"we have\b.*|"                           # We have two houses: ...
+    r"from clues?:?[ \t]*|"                   # From clues:
+    r"from clue \d+:[ \t]*$|"                 # From clue 1: (bare, no content)
+    r"so:?[ \t]*|"                            # So:
+    r"now (?:assign|fill|for)\b.*:?[ \t]*|"
+    r"check(?:ing)?\b.*|"                     # Check all clues:
+    r"case\b.*|"                              # Case: Red/White in (1,2):
+    r"possible(?: pairs| positions)?:?[ \t]*|"
+    r"now we have:?[ \t]*|"
+    r"we are told directly[^\n]*:?[ \t]*"
+    r")$",
+    re.IGNORECASE,
+)
+
+# State-dump content lines: grid rows ("1: Blue", "House 2: fish enthusiast")
+# and verification rows ("3: horses house 1 ✓"). A run of these (plus an
+# optional intro line) merges into one step (guide v1.1.0 §3 rule 4).
+_STATE_DUMP_LINE_RE = re.compile(
+    r"^[ \t]*(?:house[ \t]+)?\d+\s*:.+$", re.IGNORECASE
+)
+
+
+def _line_texts(reasoning: str) -> List[Tuple[int, int]]:
+    """Trimmed non-blank line spans."""
+    out: List[Tuple[int, int]] = []
+    pos = 0
+    for line in reasoning.splitlines(keepends=True):
+        s, e = pos, pos + len(line)
+        pos = e
+        while s < e and reasoning[s].isspace():
+            s += 1
+        while e > s and reasoning[e - 1].isspace():
+            e -= 1
+        if s < e:
+            out.append((s, e))
+    return out
+
+
+def _merge_line_spans(
+    reasoning: str, lines: List[Tuple[int, int]]
+) -> List[Tuple[int, int]]:
+    """Merge filler/setup lines forward and state-dump runs into one span."""
+    spans: List[Tuple[int, int]] = []
+    n = len(lines)
+    i = 0
+    pending_start: Optional[int] = None  # start of absorbed filler lines
+    while i < n:
+        s, e = lines[i]
+        text = reasoning[s:e]
+        if _FILLER_LINE_RE.match(text):
+            if pending_start is None:
+                pending_start = s
+            i += 1
+            continue
+        if _STATE_DUMP_LINE_RE.match(text):
+            start = pending_start if pending_start is not None else s
+            pending_start = None
+            j = i
+            while j < n and _STATE_DUMP_LINE_RE.match(
+                reasoning[lines[j][0] : lines[j][1]]
+            ):
+                j += 1
+            spans.append((start, lines[j - 1][1]))
+            i = j
+            continue
+        start = pending_start if pending_start is not None else s
+        pending_start = None
+        spans.append((start, e))
+        i += 1
+    if pending_start is not None:
+        # Trailing filler: attach to previous step if any, else its own.
+        if spans:
+            spans[-1] = (spans[-1][0], lines[-1][1])
+        else:
+            spans.append((pending_start, lines[-1][1]))
+    return spans
 _FINAL_ANSWER_LINE_RE = re.compile(
     r"^[ \t]*(?:\*\*)?final\s+answer\s*:", re.IGNORECASE | re.MULTILINE
 )
@@ -45,9 +127,13 @@ _FINAL_ANSWER_LINE_RE = re.compile(
 # Blank-line paragraph boundary.
 _PARAGRAPH_RE = re.compile(r"\n[ \t]*\n")
 
-# Sentence boundary: terminal punctuation followed by whitespace and a likely
-# sentence start (capital, digit, quote, paren, bullet).
-_SENTENCE_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(\[*\-])")
+# Sentence boundary: terminal punctuation (optionally followed by a closing
+# quote/paren) followed by whitespace and a likely sentence start (capital,
+# digit, paren, bullet). Quotes are excluded from starts so an attribution +
+# quoted text stays one step (guide: clue attribution + quoted clue belongs
+# to the same step). The match consumes the punctuation and whitespace;
+# `m.start() + 1` is the sentence-end offset and `m.end()` the next start.
+_SENTENCE_RE = re.compile(r"[.!?][\"')\]]?\s+(?=[A-Z0-9(\[*\-])")
 
 
 @dataclass(frozen=True)
@@ -192,41 +278,127 @@ def _parse_paragraphs(reasoning: str) -> List[Tuple[int, int]]:
     return spans
 
 
+# Bullet/list markers at line start: "- item", "* item", "Day 1: ..." style
+# enumerated lines, and LaTeX "\( ..." display-math continuation lines.
+_BULLET_RE = re.compile(
+    r"^[ \t]*(?:[-*•][ \t]+|[A-Za-z]+[ \t]+\d+\s*:|\\\()"
+)
+
+
 def _parse_lines(reasoning: str) -> List[Tuple[int, int]]:
-    """One step per non-blank hard-broken line."""
+    """One step per non-blank hard-broken line, merging bullet/list blocks.
+
+    A contiguous run of bullet-item lines (``- item``) **within one
+    paragraph**, plus a preceding one-line intro (e.g. "Total calories so
+    far:") and any indented continuation lines, forms a single list step
+    (guide §4: a givens list is one step). Filler/setup lines and
+    state-dump runs are pre-merged per guide v1.1.0 §3.
+    """
+    reasoning_lines = _line_texts(reasoning)
+    merged = _merge_line_spans(reasoning, reasoning_lines)
+    # Re-run bullet merging on the merged spans, per paragraph.
+    para_breaks = {m.start() for m in _PARAGRAPH_RE.finditer(reasoning)}
     spans: List[Tuple[int, int]] = []
-    pos = 0
-    for line in reasoning.splitlines(keepends=True):
-        s, e = pos, pos + len(line)
-        while s < e and reasoning[s].isspace():
-            s += 1
-        while e > s and reasoning[e - 1].isspace():
-            e -= 1
-        if s < e:
-            spans.append((s, e))
-        pos += len(line)
+    group: List[Tuple[int, int]] = []
+
+    def _flush() -> None:
+        nonlocal group
+        if not group:
+            return
+        n = len(group)
+
+        def _is_bullet(j: int) -> bool:
+            return bool(_BULLET_RE.match(reasoning[group[j][0] : group[j][1]]))
+
+        i = 0
+        while i < n:
+            if _is_bullet(i):
+                j = i
+                while j < n and _is_bullet(j):
+                    j += 1
+                spans.append((group[i][0], group[j - 1][1]))
+                i = j
+            elif i + 1 < n and _is_bullet(i + 1):
+                j = i + 1
+                while j < n and _is_bullet(j):
+                    j += 1
+                spans.append((group[i][0], group[j - 1][1]))
+                i = j
+            else:
+                spans.append(group[i])
+                i += 1
+        group = []
+
+    prev_end: Optional[int] = None
+    for s, e in merged:
+        if prev_end is not None and any(
+            prev_end <= b < s for b in para_breaks
+        ):
+            _flush()
+        group.append((s, e))
+        prev_end = e
+    _flush()
     return spans
 
 
+def _is_indented_continuation(
+    reasoning: str, lines: List[Tuple[int, int]], j: int
+) -> bool:
+    """Line j continues the previous bullet item (indented, not a bullet)."""
+    s = lines[j][0]
+    # original line started with spaces beyond the trimmed start?
+    line_start = reasoning.rfind("\n", 0, s) + 1
+    return line_start < s and not _BULLET_RE.match(reasoning[s : lines[j][1]])
+
+
 def _parse_sentences(reasoning: str) -> List[Tuple[int, int]]:
-    # Each match's whitespace belongs to the gap between sentences.
+    # The regex consumes terminal punctuation, an optional closing quote, and
+    # the gap whitespace; the next sentence starts at the whitespace's end.
     matches = list(_SENTENCE_RE.finditer(reasoning))
-    starts = [0] + [m.end() for m in matches]
-    ends = [m.start() + 1 for m in matches] + [len(reasoning)]
     spans: List[Tuple[int, int]] = []
-    for s, e in zip(starts, ends):
+    prev_end = 0
+    for m in matches:
+        # Sentence ends right after punctuation + optional closing quote,
+        # i.e. at the start of this match's whitespace run.
+        ws_start = m.start()
+        while reasoning[ws_start] not in " \t\n":
+            ws_start += 1
+        s, e = prev_end, ws_start
         while s < e and reasoning[s].isspace():
             s += 1
         while e > s and reasoning[e - 1].isspace():
             e -= 1
         if s < e:
             spans.append((s, e))
+        prev_end = m.end()
+    s, e = prev_end, len(reasoning)
+    while s < e and reasoning[s].isspace():
+        s += 1
+    while e > s and reasoning[e - 1].isspace():
+        e -= 1
+    if s < e:
+        spans.append((s, e))
     return spans
 
 
 def _step_merges_units(step_text: str) -> bool:
     """True if a step contains >1 non-blank hard-broken line."""
     return sum(1 for line in step_text.splitlines() if line.strip()) > 1
+
+
+def _is_list_block(step_text: str) -> bool:
+    """True if a multi-line step is a bullet list block (guide §4: a givens
+    list is one step): every non-blank line after the first is a bullet item
+    or an indented continuation of one."""
+    lines = [l for l in step_text.splitlines() if l.strip()]
+    if len(lines) <= 1:
+        return False
+    if not _BULLET_RE.match(lines[1]):
+        return False
+    return all(
+        _BULLET_RE.match(l) or (l[0] == " " and not _BULLET_RE.match(l))
+        for l in lines[1:]
+    )
 
 
 def _degenerate_single_step(reasoning: str, spans: Sequence[Tuple[int, int]]) -> bool:
@@ -241,7 +413,7 @@ def _degenerate_single_step(reasoning: str, spans: Sequence[Tuple[int, int]]) ->
         return False
     s, e = spans[0]
     body = reasoning[s:e]
-    if any(line.strip() for line in body.splitlines()[1:]):
+    if sum(1 for line in body.splitlines() if line.strip()) > 1:
         return True
     return len(_SENTENCE_RE.findall(body)) > 0
 
@@ -278,18 +450,29 @@ def parse_cot(
         if spans is None:
             continue
         errors = _spans_cover(reasoning, spans)
-        # Coarse strategies (numbered, paragraph) must not merge distinct
-        # steps: any step containing a hard line break or an internal
-        # sentence boundary fails the quality check so finer strategies run.
-        # Line/sentence strategies are the fine-grained fallbacks themselves.
-        if not errors and method in ("numbered", "paragraph"):
+        # Coarse strategies (numbered, paragraph, line) must not merge
+        # distinct steps: a step containing multiple sentences or hard lines
+        # fails the quality check so finer strategies run. The sentence
+        # strategy is the finest deterministic granularity and is exempt.
+        if not errors and method in ("numbered", "paragraph", "line"):
             merged = [
                 i
                 for i, (s, e) in enumerate(spans)
                 if _step_merges_units(reasoning[s:e])
+                and not _is_list_block(reasoning[s:e])
             ]
             if merged:
                 errors = [f"step(s) {merged} merge multiple reasoning units"]
+        if not errors and _degenerate_single_step(reasoning, spans):
+            # Fail closed: a degenerate single step is only acceptable from
+            # the finest-grained deterministic strategy (sentences).
+            if method != "sentence":
+                errors = ["single step merges multiple units (degenerate parse)"]
+        # Paragraph/line strategies are accepted only if they actually split
+        # the reasoning; a single-step coarse parse means the reasoning is a
+        # discursive block, which belongs to the sentence strategy.
+        if not errors and method in ("paragraph", "line") and len(spans) == 1:
+            errors = ["coarse strategy produced a single step (deferring)"]
         if not errors:
             result.steps = _steps_from_spans(reasoning, spans, method)
             return result

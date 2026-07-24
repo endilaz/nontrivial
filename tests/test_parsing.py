@@ -142,14 +142,13 @@ class TestFallbacks:
         assert [s.method for s in result.steps] == ["paragraph"] * 3
         assert result.steps[1].text == "Second idea. More."
 
-    def test_single_paragraph_stays_one_step(self) -> None:
-        # No hard line breaks: one paragraph with several sentences is a
-        # single-step CoT (sentence splitting is only a last-resort fallback).
+    def test_single_paragraph_sentence_split(self) -> None:
+        # Guide §3: each sentence is one assertion -> one step each.
         text = "First sentence. Second sentence! Third?\n\nFinal answer: y"
         result = parse_cot(text)
         _assert_spans_exact(result, result.reasoning_text)
-        assert len(result.steps) == 1
-        assert result.steps[0].method == "paragraph"
+        assert len(result.steps) == 3
+        assert all(s.method == "sentence" for s in result.steps)
 
     def test_one_sentence_whole_reasoning(self) -> None:
         text = "Only one sentence here.\n\nFinal answer: y"
@@ -294,18 +293,19 @@ class TestRealisticFormats:
         )
         result = parse_cot(text)
         _assert_spans_exact(result, result.reasoning_text)
-        # Clue attribution, quoted clue, and conclusion -> three line steps.
-        assert len(result.steps) == 3
-        assert all(s.method == "line" for s in result.steps)
+        # Clue attribution filler merges with the quoted clue (guide v1.1.0
+        # rule 1); quote + conclusion are separate sentence-steps.
+        assert len(result.steps) == 2
+        assert result.steps[0].text.startswith("We are told directly")
         text = (
             "Francis was born in 1587, and Elizabeth in 1596. Since 1587 is "
             "earlier, Francis was born first.\n\nFinal answer: Francis\n"
         )
         result = parse_cot(text)
         _assert_spans_exact(result, result.reasoning_text)
-        # One paragraph containing two sentences -> one step.
-        assert len(result.steps) == 1
-        assert result.steps[0].method == "paragraph"
+        # One paragraph containing two sentences -> two sentence-steps.
+        assert len(result.steps) == 2
+        assert all(s.method == "sentence" for s in result.steps)
 
     @pytest.mark.parametrize("task_run", ["amend2", "full"])
     def test_parses_real_baseline_cots(self, task_run: str) -> None:

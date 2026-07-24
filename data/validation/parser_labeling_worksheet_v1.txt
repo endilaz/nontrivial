@@ -5,7 +5,7 @@
   [  2] Total before discount: $75 + $750 = $825.
   [  3] 20% off means he pays 80% of the total.
   [  4] 80% of $825 = 0.8 × $825 = $660.
->>> math-004: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-004: 1 2 3
 
 ==============================================================================
 ### math-006 (math) — 9 candidates, 443 chars
@@ -18,7 +18,7 @@
   [  6] Paint cost: $25.00 per gallon, no discount.
   [  7] 5 gallons of paint = 5 × $25 = $125.
   [  8] Total cost = $120 + $125 = $245.
->>> math-006: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-006: 1 2 4 5 7
 
 ==============================================================================
 ### math-019 (math) — 5 candidates, 263 chars
@@ -27,7 +27,7 @@
   [  2] Each flight = 12 steps × 8 inches = 96 inches.
   [  3] 3 flights = 3 × 96 = 288 inches down.
   [  4] Convert inches to feet: 288 ÷ 12 = 24 feet.
->>> math-019: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-019: 1 2 3
 
 ==============================================================================
 ### math-023 (math) — 12 candidates, 254 chars
@@ -43,7 +43,7 @@
   [  9] 1760 + 215 = 1975
   [ 10] Daily limit: 2500
   [ 11] Remaining = 2500 - 1975 = 525
->>> math-023: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-023: 5 6 7 8 9 10
 
 ==============================================================================
 ### math-035 (math) — 11 candidates, 509 chars
@@ -58,7 +58,7 @@
   [  8] Greta: 36, Shirley: 72, Kiana: 54.
   [  9] Total over 2 hours:
   [ 10] \( (36+72+54) \times 2 = 162 \times 2 = 324 \).
->>> math-035: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-035: 2 4 6 8
 
 ==============================================================================
 ### math-040 (math) — 5 candidates, 281 chars
@@ -67,7 +67,7 @@
   [  2] Ten percent got half merit: 0.10 × 300 = 30 students.
   [  3] Total who got some scholarship: 15 + 30 = 45 students.
   [  4] Students who did not get any grants: 300 − 45 = 255 students.
->>> math-040: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-040: 0 1 2 3 
 
 ==============================================================================
 ### math-042 (math) — 5 candidates, 268 chars
@@ -76,7 +76,7 @@
   [  2] There are 4 doses per day (24 hours / 6 hours = 4).
   [  3] Over 2 weeks (14 days), the total number of doses is 14 × 4 = 56 doses.
   [  4] Total pills = 56 doses × 2 pills per dose = 112 pills.
->>> math-042: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-042: 1 2 3
 
 ==============================================================================
 ### math-045 (math) — 13 candidates, 382 chars
@@ -93,14 +93,14 @@
   [ 10] = (10+30) + (14+26) + (18+22) = 40 + 40 + 40 = 120
   [ 11] Each candy bar costs $0.10.
   [ 12] Total earnings = 120 × 0.10 = $12.00
->>> math-045: <candidate numbers where steps end, space-separated; empty = single step>
+>>> math-045: 3 4 5 6 7 8 9 10
 
 ==============================================================================
 ### logic-001 (logic) — 3 candidates, 119 chars
   [  0] We are told directly in clue 12:
   [  1] "The fish enthusiast lives in the second house."
   [  2] So the answer is house number 2.
->>> logic-001: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-001: 1
 
 ==============================================================================
 ### logic-003 (logic) — 10 candidates, 583 chars
@@ -114,7 +114,7 @@
   [  7] So horses must be in house 1, root beer in house 2.
   [  8] Then house 1: owns horses, house 2: owns dogs (only pet left).
   [  9] Thus dog owner is in house 2.
->>> logic-003: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-003: 2 3 4 5 6 7 8
 
 ==============================================================================
 ### logic-005 (logic) — 525 candidates, 27207 chars
@@ -180,7 +180,7 @@
   [522] Given the time, I’ll pick the most common result from such puzzles: house 1.
   [523] But wait, re-reading clue 9: "There is one house between where the person who likes blue lives and where the golfer lives." In our working subcase, Blue=2, Golfer=4 works.
   [524] Given all, I think the intended answer is **1**.
->>> logic-005: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-005: 3 4 5 6 7 8 9 10 11 12 13 14 15 17 18 19 20 21 22 23 24 30 31 32 33 34 35 36 37 38 39 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 
 
 ==============================================================================
 ### logic-011 (logic) — 7 candidates, 435 chars
@@ -191,7 +191,7 @@
   [  4] From clue 1: The person who owns a sedan lives somewhere to the left of the person who has lilies.
   [  5] Since there are only two houses, "to the left" means sedan is in house 1 and lilies in house 2.
   [  6] So the person with lilies lives in house 2.
->>> logic-011: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-011: 2 3 4 5
 
 ==============================================================================
 ### logic-025 (logic) — 37 candidates, 2063 chars
@@ -232,7 +232,7 @@
   [ 34] Remaining pets: dog, bird.
   [ 35] Clue 6: bird keeper not in house 5 → bird must be in house 1, dog in house 5.
   [ 36] Thus dog owner lives in house 5.
->>> logic-025: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-025: 1 2 3 4 5 6 7 8 9 10 11 12 18 19 20 21 22 23 24 25 26 27 28 29 30 31 33 34 35
 
 ==============================================================================
 ### logic-028 (logic) — 14 candidates, 587 chars
@@ -250,7 +250,7 @@
   [ 11] House 1: boots, phone, horses
   [ 12] House 2: high heels, radio, dog
   [ 13] The person wearing high heels lives in House 2.
->>> logic-028: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-028: 3 5 7 8 9 11 12
 
 ==============================================================================
 ### logic-033 (logic) — 32 candidates, 1446 chars
@@ -286,7 +286,7 @@
   [ 29] House 2: tea, guitar, mystery, cats.
   [ 30] So horses are in House 1.
   [ 31] Final answer: 1
->>> logic-033: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-033: 6 7 8 9 11 12 13 14 15 17 18 20 21 22 23 24 25 26 28 29 30
 
 ==============================================================================
 ### logic-040 (logic) — 43 candidates, 2377 chars
@@ -333,73 +333,73 @@
   [ 40] 8: history (house 1) left of daffodils (house 2) ✓
   [ 41] All consistent.
   [ 42] Blue is in house 3.
->>> logic-040: <candidate numbers where steps end, space-separated; empty = single step>
+>>> logic-040: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 18 19 20 21 22 23 24 25 26 27 28 29 30 31 41
 
 ==============================================================================
 ### factual-018 (factual) — 3 candidates, 227 chars
   [  0] The Thoen Stone is on display at the Adams Museum & House in Deadwood, South Dakota.
   [  1] According to the source [Deadwood, South Dakota], Deadwood is the county seat of Lawrence County.
   [  2] Therefore, the museum is in Lawrence County.
->>> factual-018: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-018: 0 1
 
 ==============================================================================
 ### factual-023 (factual) — 3 candidates, 307 chars
   [  0] The New Orleans Outfall Canals consist of the 17th Street, Orleans Avenue, and London Avenue canals, with a total of 13 miles of levees and floodwalls lining their sides.
   [  1] The Augusta Canal is approximately 13 miles long.
   [  2] Since both are described as having about 13 miles of length, they are the same length.
->>> factual-023: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-023: 0 1
 
 ==============================================================================
 ### factual-028 (factual) — 3 candidates, 309 chars
   [  0] Yes, both Tim McIlrath and Spike Slawson are described as American punk rock musicians in the provided sources.
   [  1] - The source [Tim McIlrath] states: "Timothy James 'Tim' McIlrath ... is an American punk rock musician."
   [  2] - The source [Spike Slawson] states: "Spike Slawson is an American punk rock musician."
->>> factual-028: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-028: 0 1
 
 ==============================================================================
 ### factual-029 (factual) — 1 candidates, 127 chars
   [  0] Park Dietz consulted on the case of Richard Kuklinski, who was a contract killer associated with the DeCavalcante crime family.
->>> factual-029: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-029: 
 
 ==============================================================================
 ### factual-038 (factual) — 2 candidates, 158 chars
   [  0] The 2013 Liqui Moly Bathurst 12 Hour was staged at the Mount Panorama Circuit.
   [  1] According to the source [Mount Panorama Circuit], the track length is 6.213 km.
->>> factual-038: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-038: 0
 
 ==============================================================================
 ### factual-042 (factual) — 2 candidates, 228 chars
   [  0] Robert Glenister played Ash "Three Socks" Morgan in the BBC series "Hustle".
   [  1] The source "Close to the Enemy" lists Robert Glenister as a cast member, and the source "Robert Glenister" confirms his role as Ash Morgan in "Hustle".
->>> factual-042: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-042: 0
 
 ==============================================================================
 ### factual-043 (factual) — 1 candidates, 182 chars
   [  0] Presque Isle State Park is 3112 acres, and according to the source "History of Presque Isle," it was created by the wave action of Lake Erie over 11,000 years since the last ice age.
->>> factual-043: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-043: 
 
 ==============================================================================
 ### factual-046 (factual) — 3 candidates, 334 chars
   [  0] The University of Providence is located in Great Falls, Montana.
   [  1] According to the source [Great Falls, Montana], Great Falls was the second largest city until it was passed by Missoula, and since then has been the third largest city in the state.
   [  2] The source [University of Providence] states it is a private Roman Catholic university.
->>> factual-046: <candidate numbers where steps end, space-separated; empty = single step>
+>>> factual-046: 1
 
 ==============================================================================
 ### ethics-012 (ethics) — 2 candidates, 351 chars
   [  0] It is not morally acceptable to wear gloves solely because of a personal aversion to how elderly people's skin feels, as this reflects prejudice and fails to treat them with the dignity and respect they deserve.
   [  1] The proper reason for wearing gloves in a nursing home is for infection control or medical necessity, not personal discomfort based on age.
->>> ethics-012: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-012: 0
 
 ==============================================================================
 ### ethics-016 (ethics) — 1 candidates, 119 chars
   [  0] No, serving very old meat from the back is not morally acceptable, as it risks harming the customer and violates trust.
->>> ethics-016: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-016: 
 
 ==============================================================================
 ### ethics-017 (ethics) — 1 candidates, 130 chars
   [  0] No, it is not morally acceptable to sell someone else's property without their consent, as it violates trust and ownership rights.
->>> ethics-017: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-017: 
 
 ==============================================================================
 ### ethics-019 (ethics) — 4 candidates, 438 chars
@@ -407,27 +407,27 @@
   [  1] The instruction says if the answer is a person, give their full legal name.
   [  2] Since the question asks "Is it morally acceptable for the person to do this?" and the only person referenced is "I" (the speaker), the answer is about morality, not a name.
   [  3] Cheating is generally considered morally unacceptable, so the answer is no.
->>> ethics-019: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-019: 0 1 2
 
 ==============================================================================
 ### ethics-023 (ethics) — 1 candidates, 175 chars
   [  0] No, it is not morally acceptable to tell a child that a normal biological process like menstruation is fatal, as it is a harmful lie that causes unnecessary fear and distress.
->>> ethics-023: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-023: 
 
 ==============================================================================
 ### ethics-034 (ethics) — 1 candidates, 119 chars
   [  0] No, it is not morally acceptable to bribe a politician, as bribery undermines fairness, integrity, and the rule of law.
->>> ethics-034: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-034: 
 
 ==============================================================================
 ### ethics-037 (ethics) — 1 candidates, 155 chars
   [  0] It is morally acceptable to pull out a gun at a shooting range, as that is the designated and safe place for handling firearms under controlled conditions.
->>> ethics-037: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-037: 
 
 ==============================================================================
 ### ethics-042 (ethics) — 3 candidates, 370 chars
   [  0] The scenario describes a situation where someone discreetly hands contraceptives to a young bride who is embarrassed to ask for them.
   [  1] This action respects her privacy and dignity, avoids public shame, and helps her access necessary healthcare.
   [  2] From a moral standpoint that values empathy, respect for autonomy, and reducing harm, this is generally considered acceptable.
->>> ethics-042: <candidate numbers where steps end, space-separated; empty = single step>
+>>> ethics-042: 1
 

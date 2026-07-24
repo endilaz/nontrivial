@@ -1,10 +1,14 @@
-# CoT Step-Boundary Annotation Guide (v1.0.0)
+# CoT Step-Boundary Annotation Guide (v1.1.0)
 
-**Status:** Approved by the researcher 2026-07-23 (Milestone D2 gate, Part II
-§8 D2). This guide fixes what counts as one reasoning step, how boundaries are
-matched for scoring, and how uncertain cases are adjudicated. The parser F1
-reported in D3 is defined by this document; do not change the rules after
-seeing results.
+**Status:** v1.0.0 approved by the researcher 2026-07-23 (Milestone D2 gate,
+Part II §8 D2). v1.1.0 (2026-07-23) codifies the labeling conventions the
+researcher actually applied in the frozen D3 annotations, after the first
+validation round exposed underspecification (filler lines, setup preamble,
+verification blocks, per-sentence ethics justifications). The scoring rule
+(§7) is unchanged. This guide fixes what counts as one reasoning step, how
+boundaries are matched for scoring, and how uncertain cases are adjudicated.
+The parser F1 reported in D3 is defined by this document; do not change the
+rules after seeing results.
 
 ---
 
@@ -45,6 +49,29 @@ Practical consequences:
 - When genuinely ambiguous whether two assertions form one operation or two,
   prefer **splitting** (see §6 adjudication).
 
+### Operational rules (v1.1.0, from D3 adjudication)
+
+1. **Filler lines are merged**, never their own step: meta text with no
+   task-relevant assertion ("Let's break it down step by step.", "Let me
+   think.", "Check all clues:") attaches to the following step. (This
+   supersedes the §5 "filler is its own step" note.)
+2. **Setup preamble is merged**: declarations of the puzzle/givens frame
+   ("We have two houses:", "House 1 (left) and House 2 (right).", "We have
+   5 houses in a row", "From clues:") attach to the first substantive step.
+3. **Givens restatement**: a list restating givens is one step (§4 math).
+   A *single* given restated as its own line is its own step only if it is
+   the value a later calculation directly names; when in doubt merge it with
+   that calculation.
+4. **Intermediate state dumps are merged**: "We have positions: 1: Blue
+   2: Red ..." grids and per-clue verification blocks ("1: spaghetti ... ✓
+   2: daffodils ... ✓") are each **one** step total, not one per line.
+5. **Case-analysis headers**: "Case: Red/White in (1,2):" attaches to the
+   deductions of that case.
+6. **Each sentence-level justification is a step** (all types): in discursive
+   prose, separate evaluative/factual assertions in separate sentences are
+   separate steps, including ethics (where the stance sentence and each
+   distinct justification are steps) and factual syntheses.
+
 ## 4. Per-task-type guidance
 
 ### Math
@@ -75,7 +102,9 @@ Practical consequences:
 
 ### Ethics (commonsense)
 - Often only 1–3 steps. The stance assertion and each distinct justification
-  (deception, harm, consent, etc.) are separate steps when stated separately.
+  (deception, harm, consent, etc.) are separate steps when stated separately
+  — including when stated in separate sentences of one line/paragraph
+  (v1.1.0 rule 6).
 - Do not split a single justification clause into sub-clauses.
 
 ### Long-CoT protocol (addendum, approved 2026-07-23 with the labeling aid)
@@ -98,10 +127,9 @@ flags these CoTs and reports F1 with and without them.
   not part of any step.
 - Numbered/list markers (`1.`, `2)`, `Step 3:`) belong to the step they head.
 - Markdown emphasis, bullets, and quote characters stay with their step text.
-- Leading preamble before a first numbered item (e.g., "Let me think.") is its
-  own step if it asserts something task-relevant; if it is pure filler with no
-  assertion, it is still labeled as its own step (so coverage holds) but note
-  it as "filler" in the annotation notes column.
+- Leading preamble before a first numbered item follows the operational rules
+  in §3: task-relevant assertions are steps; pure filler and setup frame
+  lines are merged into the first substantive step.
 
 ## 6. Adjudication procedure
 

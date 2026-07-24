@@ -102,7 +102,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `src/task_review.py` | Review forms, immutable decisions, acceptance gate (B7). |
 | `src/dataset_licenses.py` | Verified dataset licenses (B6). |
 | `src/evaluation.py` | Deterministic scoring + provenance-gated LLM judge (C1). `evaluate_with_llm` raises by design. |
-| `src/parsing.py` | CoT step-boundary parser (D1): numbered/paragraph/line/sentence strategies, exact source spans, fail-closed validation, caller-supplied LLM fallback only. |
+| `src/parsing.py` | CoT step-boundary parser v1.2.0 (D1): numbered/paragraph/line/sentence strategies, exact source spans, fail-closed validation, caller-supplied LLM fallback; D2 boundary F1 scorer. D3-validated at macro-F1 0.887 (accepted deviation). |
 | `src/hints.py` | Hint-paradigm cue construction (C4/F). |
 | `src/analysis/` | Canonical metrics/stats/figures (Milestone G). Notebooks may call, never contain, canonical calculations. |
 | `src/probing/` | Direction 2 activation extraction and probes (Milestone H, conditional). |
@@ -127,6 +127,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `scripts/list_shifters.py` | Inspect cue-shifted tasks/transcripts from replication runs (C4 helper). |
 | `scripts/build_parser_validation_sample.py` | Build the frozen 32-CoT D3 parser-validation sample + annotation template (D3). |
 | `scripts/label_parser_boundaries.py` | D3 labeling aid: candidate-segment worksheet + decisions→char-offset apply (no hand offset counting). |
+| `scripts/run_parser_validation.py` | D3 scorer: boundary F1 vs. researcher annotations; writes `docs/validation/parser_validation_report.md`. |
 
 ### `tests/` — offline test suite
 
@@ -142,7 +143,7 @@ tests run offline with API keys unset; `live_api` marker is excluded by default.
 | `docs/receipt_policy.md` | Receipt retention + release deny-by-default policy (A7). |
 | `docs/CoT_Faithfulness_Benchmark_Notes.md` | Research notes. |
 | `docs/replication_c4.md` | C4 replication design notes. |
-| `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (**approved 2026-07-23**). |
+| `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (v1.1.0, approved). |
 | `docs/validation/` | Validation reports: judge rubric (`judge_answer-equivalence_rubric_1.0.{md,json}`), `replication_chen2025_report.md`. |
 | `logs/cost_log.csv` | Append-only API-spend ledger (corrected; historical spend $0.08 approved 2026-07-22). |
 | `logs/budget_state.json` | Locked budget reservation state (A4). |
@@ -219,8 +220,18 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
 - **Phase 1 checkpoint SIGNED OFF (2026-07-23).** Researcher reviewed the C4
   report and 14 shifter transcripts and approved. Task set (canonical
   `2c59bafd…`), baselines, judge validation, and the C4 replication are all
-  accepted. **Next milestone: D (Phase 2 CoT parsing — D1 contracts, D2
-  boundary-scoring annotation guide, D3 32-CoT validation).**
+  accepted.
+- **Milestone D complete (2026-07-24).** D1 parser (`src/parsing.py` v1.2.0:
+  numbered/paragraph/line/sentence strategy chain, exact source spans,
+  fail-closed validation, caller-supplied LLM fallback only); D2 annotation
+  guide approved (v1.0.0) then amended (v1.1.0, validated labeling
+  conventions); D3 validation on the frozen 32-CoT researcher-labeled sample:
+  overall macro-F1 **0.8866** (math 0.80, logic 0.89, factual 0.96, ethics
+  0.90) — below the 0.90 gate, **accepted deviation** (decisions log
+  2026-07-24; all remaining disagreements are merge-convention differences on
+  coherent corruption units). Report: `docs/validation/parser_validation_report.md`.
+  **Next milestone: E (Phase 3 step corruption — E1 per-task corruption spec
+  approval, then E2–E5).**
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
   candidate regeneration verified after the move, and re-merge of
@@ -515,17 +526,27 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
   amend2 (shift 0%). Milestone D unblocked.)*
 
 ### Phase 2 — CoT parsing (weeks 2–3, highest technical risk)
-- [ ] `src/parsing.py`: split free-form CoT into discrete steps. Strategy:
+- [x] `src/parsing.py`: split free-form CoT into discrete steps. Strategy:
       1. Prompt models to number their steps explicitly (cheap, do this first).
       2. Fallback: sentence/paragraph segmentation + an LLM-based step splitter.
-- [ ] Validation: on **32 hand-labeled CoTs (8 per task type — researcher labels)**,
+      *(Done 2026-07-23/24: v1.2.0 — numbered/paragraph/line/sentence strategy
+      chain with exact source spans and fail-closed validation; LLM splitter is
+      caller-supplied only. Note: baselines were not numbered-prompted; the
+      parser handles natural unnumbered CoT.)*
+- [x] Validation: on **32 hand-labeled CoTs (8 per task type — researcher labels)**,
       parser must reach **boundary-level F1 ≥ 0.90**. A parser that aces numbered
       math steps can fail on discursive ethics prose, hence the stratification.
       Report the number honestly, per task type.
+      *(Done 2026-07-24: overall macro-F1 0.8866 — math 0.80, logic 0.89,
+      factual 0.96, ethics 0.90. Below the 0.90 gate; **accepted deviation**
+      (decisions log 2026-07-24): remaining disagreements are merge-convention
+      differences on coherent corruption units. Report:
+      `docs/validation/parser_validation_report.md`.)*
 - [ ] Record as a writeup limitation: prompting models to number their steps changes
       the CoT distribution being studied (may induce more structured reasoning than
       natural CoT).
-- **Checkpoint:** parser validation report.
+- **Checkpoint:** parser validation report. *(Reviewed and deviation accepted
+      2026-07-24.)*
 
 ### Phase 3 — Direction 1, Method A: step corruption (weeks 3–5)
 - [ ] `src/corruption.py` implementing the taxonomy:
@@ -745,6 +766,7 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-23 | **C4 replication target = Chen et al. 2025 suggested-answer cue, workhorse-only, all 200 tasks, deterministic cue construction** (numeric ladder / opposite stance / factual entity pool). No-cue control is a fresh `force_fresh` sample (Part II §F2 adopted early). Result: shift 7.3%, reveal 7.1% (1/14) — qualitative pattern replicates (`docs/validation/replication_chen2025_report.md`). 8 ethics tasks excluded from cue condition (baseline already opposite stance) — recorded, not improvised. Engineering lesson: any ad-hoc script calling `judge_equivalence` must also `costs.log_cost`; the resolver's 56 judge calls were retroactively logged from receipts. |
 | 2026-07-23 | **Math re-perturbation amendment approved and merged.** 41/50 math tasks were verbatim GSM8K (dictionary coverage gap). Dictionaries expanded only (researcher-chosen scope), ≥1 swap per task enforced fail-closed, object swaps for the 8 nameless tasks. Canonical hash `f80b1f83…` → `2c59bafd…`; ids/sources/truths/probe flags unchanged. Math baseline amend2 (49/50; math-022 failure is a pre-existing prompt-template quirk) and C4 math amend2 (shift 0%, matching pre-amendment math) re-run; non-math rows remain valid. |
 | 2026-07-23 | **Phase 1 checkpoint signed off.** C4 report + shifter transcripts reviewed; Milestone D (parser) approved to begin. |
+| 2026-07-24 | **D3 parser gate: deviation accepted at 0.887.** Parser v1.2.0 scored overall macro-F1 0.8866 (math 0.80, logic 0.89, factual 0.96, ethics 0.90) against the 32-CoT researcher-labeled sample — below the pre-registered 0.90 gate. Researcher accepted after reviewing the disagreement inventory: all remaining disagreements are merge-convention differences on *coherent* corruption units (filler/setup/givens lines, ±1 boundary on short CoTs), not mid-sentence cuts or fused operations; the same parser segments every condition so contrasts are unaffected; further tuning would overfit the 32-CoT validation set. Recorded as a limitation in `docs/validation/parser_validation_report.md`. Guide amended to v1.1.0 codifying validated labeling conventions. |
 
 ---
 
@@ -943,15 +965,13 @@ Start with the smallest offline, reversible slice and validate after each edit:
 7. ~~Rebuild Milestone B from source data~~ (done 2026-07-22)
 8. ~~Complete C1 offline deterministic evaluation and validation-set tooling.~~
 	 ~~C2 live baselines~~ and ~~C4 replication~~ (all done 2026-07-22/23).
-	 ~~Phase 1 checkpoint~~ (signed off 2026-07-23). **Milestone D in
-	 progress:** D1 parser implemented (`src/parsing.py` v1.0.0 + boundary
-	 F1 scorer, 41 tests, all 250 on-disk baseline CoTs parse cleanly);
-	 D2 annotation guide **approved 2026-07-23**; D3 frozen 32-CoT sample
-	 built (`data/validation/parser_sample_v1.jsonl`, seed 20260723, 8/type)
-	 with annotation template. **Next: researcher labels boundaries in
-	 `data/validation/parser_annotations_v1.jsonl` (guide
-	 `docs/parser_annotation_guide.md`), then the D3 F1 report
-	 (gate: overall macro-F1 >= 0.90, per-type reported).**
+	 ~~Phase 1 checkpoint~~ (signed off 2026-07-23). ~~Milestone D (parser)~~
+	 (done 2026-07-24: D1 parser v1.2.0, D2 guide v1.1.0, D3 validated at
+	 macro-F1 0.887 — accepted deviation from the 0.90 gate, decisions log
+	 2026-07-24). **Next: Milestone E (Phase 3 step corruption). E1 first:
+	 draft `docs/corruption_spec.md` (per-task-type valid/invalid
+	 transformations + implied answers) for researcher approval before any
+	 corruption code is written.**
 
 When a task requires an unresolved scientific choice, record the exact decision
 gate from Sections 15, 17, and 19 and stop that slice. Continue independent
