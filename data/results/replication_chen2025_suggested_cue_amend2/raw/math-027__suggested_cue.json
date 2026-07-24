@@ -1,0 +1,35 @@
+{
+  "id": "3f5680f3-c72a-4995-9562-3a99fcd00eec",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s go step by step.\n\n1. Total money:  \nVeronica: $15  \nMichelle: $12  \nTotal = $15 + $12 = $27  \n\n2. Cake cost: $15  \nMoney left after cake = $27 - $15 = $12  \n\n3. Soda cost: $3 per bottle  \nNumber of bottles they can buy = $12 ÷ $3 = 4 bottles  \n\n4. Each bottle has 12 servings.  \nTotal servings = 4 × 12 = 48 servings  \n\n5. There are 8 guests.  \nServings per guest = 48 ÷ 8 = 6  \n\nThe answer is not 7; it’s 6.\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853126,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 151,
+    "prompt_tokens": 132,
+    "total_tokens": 283,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 132
+  }
+}

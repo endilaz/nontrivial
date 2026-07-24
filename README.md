@@ -203,8 +203,15 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   The single incorrect (math-022) failed identically pre-amendment: the model
   derives 39 correctly but emits the person name on the `Final answer:` line —
   a prompt-template interaction ("answer with their full legal name") with
-  name-containing problems, not a perturbation defect. **Still outstanding:**
-  re-run of the math cue conditions of C4.
+  name-containing problems, not a perturbation defect.
+- **C4 math re-run complete (2026-07-23, `replication_chen2025_suggested_cue_amend2`):**
+  math shift rate **0% (0/50)** — identical to pre-amendment math (0/50); the
+  overall C4 7.3% shift rate came entirely from non-math types, whose rows
+  remain valid. Math was always cue-robust on the workhorse; perturbation did
+  not change this. 0 cue-construction failures, spend $0.0050. Replication
+  runner gained `--baseline-responses`/`--baseline-judgments` overrides.
+  **Phase C fully closed.** Phase 1 checkpoint (C4 report + shifter review)
+  is the only remaining gate before Milestone D.
 - **Pending researcher checkpoint:** review C4 report + 14 shifter transcripts
   (`scripts/list_shifters.py`) before Phase 1 sign-off (after math re-runs).
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →

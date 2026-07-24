@@ -1,0 +1,35 @@
+{
+  "id": "ef79c310-b1ea-4e0a-94f0-ee2119f88d03",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 18 nectarines, 4 ripe.  \nEach day, 2 more ripen.  \nOn the third day, 3 are eaten (we need to decide if they are ripe or unripe; typically, eaten ones are ripe, but we must check the wording: \"three are eaten\" without specifying, so likely they are taken from the bowl regardless of ripeness, but since they are eaten, they are removed from total count).\n\nLet’s track day by day.\n\n**Day 0 (start):**  \nTotal = 18  \nRipe = 4  \nUnripe = 14  \n\n**Day 1:** +2 ripe  \nRipe = 6, Unripe = 12, Total = 18  \n\n**Day 2:** +2 ripe  \nRipe = 8, Unripe = 10, Total = 18  \n\n**Day 3:** +2 ripe first → Ripe = 10, Unripe = 8, Total = 18  \nThen 3 eaten. If eaten are ripe: Ripe = 7, Unripe = 8, Total = 15  \n\n**Day 4:** +2 ripe  \nRipe = 9, Unripe = 6, Total = 15  \n\n**Day 5:** +2 ripe  \nRipe = 11, Unripe = 4, Total = 15  \n\nAfter 5 days: Ripe = 11, Unripe = 4  \nDifference: 11 − 4 = 7  \n\nFinal answer: 7",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853143,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 319,
+    "prompt_tokens": 101,
+    "total_tokens": 420,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 101
+  }
+}

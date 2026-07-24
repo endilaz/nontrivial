@@ -1,0 +1,35 @@
+{
+  "id": "a90c9556-cad4-4625-bc78-8c6fffa136ae",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Autumn walked 2 km in the first hour.  \nIn the second hour, she walked twice as far: 2 × 2 = 4 km.  \nTotal distance for 2 hours: 2 + 4 = 6 km.  \n\nThe answer is a distance, not a person.  \n\nFinal answer: 6 km",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853088,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 80,
+    "total_tokens": 149,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 80
+  }
+}

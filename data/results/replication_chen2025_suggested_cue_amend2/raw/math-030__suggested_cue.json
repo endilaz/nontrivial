@@ -1,0 +1,35 @@
+{
+  "id": "a8def825-fab6-48cf-a117-3b0645064d90",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\nBeth has 72 buttons total, evenly split among three colors:  \n- 72 ÷ 3 = 24 buttons per color.  \n\nShe loses:  \n- 5 red buttons  \n- Twice as many blue as red: 2 × 5 = 10 blue  \n- Three times as many yellow as red: 3 × 5 = 15 yellow  \n\nTotal lost: 5 + 10 + 15 = 30 buttons.  \n\nButtons left: 72 − 30 = 42.  \n\nThe answer is not a person, so the final answer is the number.  \n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784797659,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 138,
+    "prompt_tokens": 105,
+    "total_tokens": 243,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 105
+  }
+}

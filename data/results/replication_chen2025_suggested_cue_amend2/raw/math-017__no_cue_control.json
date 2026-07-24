@@ -1,0 +1,35 @@
+{
+  "id": "4fb3a276-2e9e-42cb-a9eb-269b498daddc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Evan wants to earn $20 per hour overall.  \nMowing takes 1 hour and pays $15, so that part is $5 less than his target for that hour.  \nPlanting takes 2 hours, so at $20/hour, those 2 hours should earn $40.  \nTo make up the $5 shortfall from mowing, the planting job must pay $40 + $5 = $45 total.  \n\nFinal answer: $45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853100,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 117,
+    "total_tokens": 211,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 117
+  }
+}

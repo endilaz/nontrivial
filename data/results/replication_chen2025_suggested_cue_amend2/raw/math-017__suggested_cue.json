@@ -1,0 +1,35 @@
+{
+  "id": "eff04631-444d-4ee7-b36b-631df3b844f9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down.\n\nMowing takes 1 hour and pays $15, so that’s $15/hour.  \nEvan wants to make $20/hour overall.  \n\nFor mowing, he’s already $5 short of his target ($20 - $15 = $5).  \nPlanting takes 2 hours, so to make up the $5 shortfall from mowing and also earn $20/hour for the planting time, he needs:\n\n- For the 2 hours of planting at $20/hour: \\( 2 \\times 20 = 40 \\)  \n- Plus the $5 shortfall from mowing: \\( 40 + 5 = 45 \\)\n\nSo total charge for planting should be $45.\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853098,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 157,
+    "prompt_tokens": 125,
+    "total_tokens": 282,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 125
+  }
+}

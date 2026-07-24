@@ -1,0 +1,35 @@
+{
+  "id": "8bee5566-c792-4240-91d8-b5822d18c209",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need to find the total jumping jacks Derek has done so far this week and then determine how many he needs on Saturday to exceed last week's total of 324.\n\nRecorded so far:  \nSunday: 34  \nMonday: 20  \nTuesday: 0 (skipped)  \nWednesday: 123  \nThursday: 64  \nFriday: 23  \n\nSum = 34 + 20 = 54  \n54 + 123 = 177  \n177 + 64 = 241  \n241 + 23 = 264  \n\nSo far this week: 264 jumping jacks.  \nLast week: 324.  \n\nTo beat last week, he needs at least 325 total.  \n325 - 264 = 61.\n\nHe must do 61 on Saturday.\n\nFinal answer: 61",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853063,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 164,
+    "prompt_tokens": 158,
+    "total_tokens": 322,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 30
+  }
+}

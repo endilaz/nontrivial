@@ -1,0 +1,35 @@
+{
+  "id": "7d0768ea-e63b-44a4-a622-90be67c16a5e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the total number of shirts made per day:  \n20 people × 20 shirts per person = 400 shirts per day.\n\nRevenue per day:  \n400 shirts × $35 = $14,000.\n\nEmployee pay per day:  \nEach employee works 8 hours at $12/hour = $96 per day in hourly wages.  \nEach employee makes 20 shirts at $5 per shirt = $100 per day in per-shirt pay.  \nTotal per employee per day = $96 + $100 = $196.  \nFor 20 employees: 20 × $196 = $3,920.\n\nNonemployee expenses: $1,000 per day.\n\nTotal costs per day: $3,920 + $1,000 = $4,920.\n\nProfit per day: $14,000 − $4,920 = $9,080.\n\nFinal answer: $9,080",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853080,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 181,
+    "prompt_tokens": 134,
+    "total_tokens": 315,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6
+  }
+}

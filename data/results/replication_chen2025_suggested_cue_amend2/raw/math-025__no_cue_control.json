@@ -1,0 +1,35 @@
+{
+  "id": "6950906e-91ec-49cf-955a-1af98b582e2d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First day: 1500 surfers.  \nSecond day: 1500 + 600 = 2100 surfers.  \nThird day: (2/5) × 1500 = 600 surfers.  \n\nTotal surfers over three days: 1500 + 2100 + 600 = 4200.  \nAverage = 4200 / 3 = 1400.  \n\nThe question asks for a person if the answer is a person, but the answer is a number, so no person is identified.\n\nFinal answer: 1400",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853121,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 125,
+    "total_tokens": 240,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 125
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "3c74f12f-9b79-4b82-aa43-6005c85a4333",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Mr. Keller buys 10 liters today at $1.4 per liter, so that costs 10 × 1.4 = $14.  \nOn Friday, the price drops by $0.4, so the new price is $1.4 - $0.4 = $1.0 per liter.  \nHe buys 25 liters on Friday, costing 25 × 1.0 = $25.  \nTotal spent = $14 + $25 = $39.  \n\nFinal answer: $39",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853075,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 118,
+    "total_tokens": 223,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 118
+  }
+}

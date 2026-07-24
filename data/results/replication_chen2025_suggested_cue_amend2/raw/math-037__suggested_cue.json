@@ -1,0 +1,35 @@
+{
+  "id": "474b5a41-2027-4800-a32d-afb4f7bbdc4c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s go step by step.\n\n- Inexperienced deckhands: 5 people, paid $10/hour, working 60 hours/week.  \n- Weekly pay for one inexperienced deckhand: \\( 10 \\times 60 = 600 \\) dollars.  \n- Experienced deckhands: \\( 17 - 5 = 12 \\) people.  \n- Each experienced deckhand is paid \\( \\frac{1}{5} \\) times more than inexperienced.  \n  \"1/5 times more\" means \\( 1 + \\frac{1}{5} = \\frac{6}{5} \\) times the inexperienced pay.  \n- So experienced hourly wage: \\( 10 \\times \\frac{6}{5} = 12 \\) dollars/hour.  \n- Weekly pay for one experienced deckhand: \\( 12 \\times 60 = 720 \\) dollars.  \n- Monthly earnings for one experienced deckhand (assuming 4 weeks per month): \\( 720 \\times 4 = 2880 \\) dollars.  \n- Total for 12 experienced deckhands: \\( 2880 \\times 12 = 34560 \\) dollars.\n\nThe answer is not a person, so the final numeric answer is:\n\nFinal answer: 34560",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853162,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 253,
+    "prompt_tokens": 123,
+    "total_tokens": 376,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  }
+}

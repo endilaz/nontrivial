@@ -1,0 +1,35 @@
+{
+  "id": "bc1b0068-44d6-4d52-8301-1348f286136e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, calculate the total cost of the drinks:\n\n- Three cappuccinos: 3 × $2 = $6  \n- Two iced teas: 2 × $3 = $6  \n- Two cafe lattes: 2 × $1.5 = $3  \n- Two espressos: 2 × $1 = $2  \n\nTotal cost = $6 + $6 + $3 + $2 = $17  \n\nShe pays with a $20 bill, so the change is $20 - $17 = $3.  \n\nThe answer is not a person, but the question asks for the change amount.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853176,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 135,
+    "prompt_tokens": 135,
+    "total_tokens": 270,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 135
+  }
+}

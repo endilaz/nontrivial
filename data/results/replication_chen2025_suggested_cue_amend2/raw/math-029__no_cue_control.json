@@ -1,0 +1,35 @@
+{
+  "id": "50e799a5-53cb-41ad-85bb-79b6c68819ea",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. **Total food needed**  \n   - 400 ants × 2 ounces each = 800 ounces of food.\n\n2. **Cost of food**  \n   - 800 ounces × $0.10 per ounce = $80.\n\n3. **How Stefan earns money**  \n   - He charges $5 per job plus $0.01 per leaf.  \n   - He raked 6,000 leaves total.\n\n4. **Earnings from leaves**  \n   - 6,000 leaves × $0.01 = $60 from leaves.\n\n5. **Total earnings needed** = $80.  \n   - Earnings from leaves = $60, so earnings from job start fees = $80 − $60 = $20.\n\n6. **Number of jobs**  \n   - Each job gives $5 start fee.  \n   - $20 ÷ $5 = 4 jobs.\n\n**Final answer: 4**  \n\nBut the problem says if the answer is a person, give full legal name. The answer is a number, not a person, so we just give the number.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853133,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 238,
+    "prompt_tokens": 152,
+    "total_tokens": 390,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 24
+  }
+}

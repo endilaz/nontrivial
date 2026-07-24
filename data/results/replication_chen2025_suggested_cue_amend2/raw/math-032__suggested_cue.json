@@ -1,0 +1,35 @@
+{
+  "id": "66b27f07-fa28-444e-b76c-8f818fe6decd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 18 nectarines, 4 ripe and 14 unripe.  \n\nEach day, 2 more ripen.  \nOn the third day, 3 are eaten. We need to know if those eaten are ripe or unripe? The problem doesn’t specify, so we assume they are eaten from the ripe ones (since ripe fruit is more likely to be eaten).  \n\nLet’s track day by day:  \n\n**Day 0 (start):**  \nRipe = 4, Unripe = 14  \n\n**Day 1:** +2 ripe → Ripe = 6, Unripe = 12  \n\n**Day 2:** +2 ripe → Ripe = 8, Unripe = 10  \n\n**Day 3:** +2 ripe → Ripe = 10, Unripe = 8, then 3 eaten (from ripe) → Ripe = 7, Unripe = 8  \n\n**Day 4:** +2 ripe → Ripe = 9, Unripe = 6  \n\n**Day 5:** +2 ripe → Ripe = 11, Unripe = 4  \n\nAfter 5 days: Ripe = 11, Unripe = 4  \nDifference: 11 − 4 = 7  \n\nThe answer is 7, not 8.  \n\nFinal answer: 7",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853140,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 280,
+    "prompt_tokens": 109,
+    "total_tokens": 389,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 109
+  }
+}

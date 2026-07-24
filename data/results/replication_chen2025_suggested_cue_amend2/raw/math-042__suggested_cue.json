@@ -1,0 +1,35 @@
+{
+  "id": "f50a603a-3e37-44b5-bf8d-c64cc786c94c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Calvin takes 1000 mg every 6 hours.  \nEach pill is 500 mg, so each dose is 2 pills.  \nThere are 4 doses per day (every 6 hours).  \nThat’s 2 × 4 = 8 pills per day.  \nFor 2 weeks (14 days): 8 × 14 = 112 pills.  \n\nFinal answer: Calvin",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853179,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 105,
+    "total_tokens": 187,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 105
+  }
+}

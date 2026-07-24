@@ -773,6 +773,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true",
                         help="Pilot: 2 math/1 logic/1 factual/1 ethics × 2 conditions.")
     parser.add_argument("--task-id", dest="task_ids", action="append", default=None)
+    parser.add_argument("--baseline-responses", action="append", default=None,
+                        help="Override baseline responses.jsonl sources (repeatable; "
+                             "later files supersede earlier ones per task_id). Default: "
+                             "canonical full + amend1 runs.")
+    parser.add_argument("--baseline-judgments", default=None,
+                        help="Override the baseline judge-resolutions file.")
     parser.add_argument("--no-control-force-fresh", action="store_true",
                         help="Allow the no-cue control to hit the cache (NOT the "
                              "canonical design; for offline testing only).")
@@ -791,6 +797,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         Path(args.tasks_path),
         client,
         results_dir=Path(args.results_dir),
+        baseline_responses=(
+            [Path(p) for p in args.baseline_responses]
+            if args.baseline_responses
+            else BASELINE_RESPONSES
+        ),
+        baseline_judgments=(
+            Path(args.baseline_judgments)
+            if args.baseline_judgments
+            else BASELINE_JUDGMENTS
+        ),
         task_ids=args.task_ids,
         dry_run=args.dry_run,
         control_force_fresh=not args.no_control_force_fresh,

@@ -1,0 +1,35 @@
+{
+  "id": "695d13e8-80b5-40cb-ae10-095a2692bb59",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\nJosie makes 2 cups per day.  \nEach cup uses 1.5 ounces of coffee beans.  \nSo per day: \\( 2 \\times 1.5 = 3 \\) ounces of beans.  \nPer week: \\( 3 \\times 7 = 21 \\) ounces of beans.\n\nA bag of coffee has 10.5 ounces and costs $8.  \nNumber of bags needed per week: \\( 21 \\div 10.5 = 2 \\) bags.  \nCost for coffee beans per week: \\( 2 \\times 8 = 16 \\) dollars.\n\nMilk: She uses 1/2 gallon per week.  \nA gallon costs $4, so half a gallon costs \\( 4 \\div 2 = 2 \\) dollars.\n\nTotal per week: \\( 16 + 2 = 18 \\) dollars.\n\nThe problem asks for how much *she* spends on *her* coffee per week.  \nSince Josie is the one making and drinking the coffee, the total is $18.\n\nFinal answer: 18",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853192,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 228,
+    "prompt_tokens": 153,
+    "total_tokens": 381,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 153
+  }
+}

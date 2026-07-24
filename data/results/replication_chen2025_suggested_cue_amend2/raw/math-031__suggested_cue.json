@@ -1,0 +1,35 @@
+{
+  "id": "e988a187-8409-4ba5-941b-bc22a259c402",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Juliette saw 3 cardinals.  \n\nRobins: four times as many as cardinals → 4 × 3 = 12.  \nBlue jays: twice as many as cardinals → 2 × 3 = 6.  \nSparrows: 1 more than three times as many as cardinals → (3 × 3) + 1 = 9 + 1 = 10.  \n\nTotal birds = 3 + 12 + 6 + 10 = 31.  \n\nThe answer is not a person, so the final answer is the number.  \n\nFinal answer: 31",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853138,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 113,
+    "total_tokens": 241,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 113
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "064f3787-fa48-4897-8210-2f4e982c1fa7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Gus donates 90% of $100 from the carwash:  \n0.90 × 100 = $90  \n\nHe donates 75% of $80 from the bake sale:  \n0.75 × 80 = $60  \n\nHe donates 100% of $50 from mowing lawns:  \n1.00 × 50 = $50  \n\nTotal donation: 90 + 60 + 50 = $200  \n\nThe problem asks for a person if the answer is a person, but the answer is a dollar amount, so it remains $200.  \n\nFinal answer: $200",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853172,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 137,
+    "total_tokens": 261,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9
+  }
+}

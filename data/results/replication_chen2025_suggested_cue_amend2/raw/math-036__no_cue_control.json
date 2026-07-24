@@ -1,0 +1,35 @@
+{
+  "id": "3f7abb7c-d494-489f-8927-dcd58f5299d5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. **Old company time**  \n   Worked 3 years = 36 months.\n\n2. **New company time**  \n   Worked 5 months longer than at old company:  \n   36 + 5 = 41 months.\n\n3. **Old company monthly pay**  \n   $5000 per month.\n\n4. **New company monthly pay**  \n   20% more than $5000:  \n   5000 × 1.20 = $6000 per month.\n\n5. **Total earnings at old company**  \n   36 months × $5000 = $180,000.\n\n6. **Total earnings at new company**  \n   41 months × $6000 = $246,000.\n\n7. **Total earnings overall**  \n   $180,000 + $246,000 = $426,000.\n\nThe problem asks for a person if the answer is a person, but the answer is a dollar amount, so no person is named.\n\nFinal answer: $426,000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853160,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 214,
+    "prompt_tokens": 120,
+    "total_tokens": 334,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 120
+  }
+}
