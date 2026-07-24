@@ -37,6 +37,7 @@ SCHEMA_VERSIONS: Dict[str, int] = {
     "invalidation_manifest": 1,  # == invalidation.MANIFEST_SCHEMA_VERSION
     "budget_state": 1,  # == budget_state.STATE_SCHEMA_VERSION
     "capability_probe": 1,  # == capabilities.CAPABILITY_SCHEMA_VERSION
+    "corruption_record": 1,  # == corruption.CORRUPTION_RECORD_SCHEMA_VERSION
     "analysis_table": 1,
 }
 

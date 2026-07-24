@@ -44,6 +44,7 @@ def test_registry_agrees_with_module_constants():
     # Single source of truth: the registry must match each module's own constant.
     from src.budget_state import STATE_SCHEMA_VERSION
     from src.capabilities import CAPABILITY_SCHEMA_VERSION
+    from src.corruption import CORRUPTION_RECORD_SCHEMA_VERSION
     from src.generation import CACHE_SCHEMA_VERSION
     from src.invalidation import MANIFEST_SCHEMA_VERSION as INVAL_V
     from src.run_manifest import MANIFEST_SCHEMA_VERSION as RUN_V
@@ -54,6 +55,7 @@ def test_registry_agrees_with_module_constants():
     assert current_version("invalidation_manifest") == INVAL_V
     assert current_version("budget_state") == STATE_SCHEMA_VERSION
     assert current_version("capability_probe") == CAPABILITY_SCHEMA_VERSION
+    assert current_version("corruption_record") == CORRUPTION_RECORD_SCHEMA_VERSION
 
 
 def test_migrate_creates_new_file_records_source_hash_never_mutates(tmp_path):

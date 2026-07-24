@@ -103,6 +103,10 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `src/dataset_licenses.py` | Verified dataset licenses (B6). |
 | `src/evaluation.py` | Deterministic scoring + provenance-gated LLM judge (C1). `evaluate_with_llm` raises by design. |
 | `src/parsing.py` | CoT step-boundary parser v1.2.0 (D1): numbered/paragraph/line/sentence strategies, exact source spans, fail-closed validation, caller-supplied LLM fallback; D2 boundary F1 scorer. D3-validated at macro-F1 0.887 (accepted deviation). |
+| `src/corruption.py` | E2 corruption primitives: frozen quartile position mapping (D-E1a), span-exact edit/omission/truncation surgery (D-E1b inclusive), structured `corruption_record` records, clean byte-identical control. No semantic edits or model calls (E3). |
+| `src/corruption_operators.py` | E3 per-task-type semantic edit operators: math numeric-tail edits + deterministic linear-chain implied-answer recompute; logic entity swap / relation negation (implied `not_defined` — spec v1.1.0 deviation); factual own-context distractor swap + relation flip; ethics reviewed fact-edit dictionary + moral-polarity flip. Fail-closed (unapplied → adjudication). |
+| `src/corruption_dispatch.py` | E3 dispatcher: operator selection, spec §4.1 position-adjustment rule, implied-answer wiring. No model calls. |
+| `scripts/build_corruption_pilot.py` | Builds the frozen E3 pilot sample (spec §7.2) → `data/validation/corruption_pilot_v1.{jsonl,md}` for reviewer inspection. |
 | `src/hints.py` | Hint-paradigm cue construction (C4/F). |
 | `src/analysis/` | Canonical metrics/stats/figures (Milestone G). Notebooks may call, never contain, canonical calculations. |
 | `src/probing/` | Direction 2 activation extraction and probes (Milestone H, conditional). |
@@ -143,6 +147,7 @@ tests run offline with API keys unset; `live_api` marker is excluded by default.
 | `docs/receipt_policy.md` | Receipt retention + release deny-by-default policy (A7). |
 | `docs/CoT_Faithfulness_Benchmark_Notes.md` | Research notes. |
 | `docs/replication_c4.md` | C4 replication design notes. |
+| `docs/corruption_spec.md` | E1 per-task-type corruption specification (v1.1.0, approved 2026-07-24; v1.1.0 records the logic implied-answer deviation). |
 | `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (v1.1.0, approved). |
 | `docs/validation/` | Validation reports: judge rubric (`judge_answer-equivalence_rubric_1.0.{md,json}`), `replication_chen2025_report.md`. |
 | `logs/cost_log.csv` | Append-only API-spend ledger (corrected; historical spend $0.08 approved 2026-07-22). |
@@ -230,8 +235,29 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   0.90) — below the 0.90 gate, **accepted deviation** (decisions log
   2026-07-24; all remaining disagreements are merge-convention differences on
   coherent corruption units). Report: `docs/validation/parser_validation_report.md`.
-  **Next milestone: E (Phase 3 step corruption — E1 per-task corruption spec
-  approval, then E2–E5).**
+  **E1 complete (2026-07-24):** `docs/corruption_spec.md` v1.0.0 approved —
+  all decision gates D-E1a–D-E1e resolved (decisions log 2026-07-24), incl.
+  full-scope sham controls deferred to lowest Phase-3 priority.
+  **E2 complete (2026-07-24):** `src/corruption.py` — frozen
+  position mapping, span-exact surgery, structured records, 24 tests.
+  **E3 operators landed (2026-07-24):** `src/corruption_operators.py` +
+  `src/corruption_dispatch.py` — math deterministic recompute, logic edits
+  (implied `not_defined`, spec v1.1.0), factual own-context distractors,
+  ethics reviewed dictionary; 23 tests. E3 pilot sample built
+  (`scripts/build_corruption_pilot.py` → `data/validation/corruption_pilot_v1.{jsonl,md}`,
+  12 tasks / 192 conditions).
+  **Milestone E ON HOLD (2026-07-24, researcher decision — pivoting to
+  Milestone F).** The E3 pilot surfaced feasibility limits in the step-
+  corruption design: ethics subtle/reversal produce incoherent stimuli on
+  1-step fused-stance CoTs; math reversal coverage is ~12%; `followed_corruption`
+  survives only for math (deterministic) and partially factual; logic/ethics
+  degrade to change-detection. Two operator bugs remain queued (logic
+  quoted-clue edits must be excluded; position-adjustment must not collide
+  with another position's target). Corruption work stops here pending the
+  hint paradigm (Milestone F), which is more feasible now (C4 harness proven
+  end-to-end). Milestone E artifacts are preserved and tests remain green
+  (443 total); E is NOT complete — E3 pilot review, E4, E5 are pending.
+  **Next: Milestone F (hint paradigm), not yet started.**
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
   candidate regeneration verified after the move, and re-merge of
@@ -767,6 +793,9 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-23 | **Math re-perturbation amendment approved and merged.** 41/50 math tasks were verbatim GSM8K (dictionary coverage gap). Dictionaries expanded only (researcher-chosen scope), ≥1 swap per task enforced fail-closed, object swaps for the 8 nameless tasks. Canonical hash `f80b1f83…` → `2c59bafd…`; ids/sources/truths/probe flags unchanged. Math baseline amend2 (49/50; math-022 failure is a pre-existing prompt-template quirk) and C4 math amend2 (shift 0%, matching pre-amendment math) re-run; non-math rows remain valid. |
 | 2026-07-23 | **Phase 1 checkpoint signed off.** C4 report + shifter transcripts reviewed; Milestone D (parser) approved to begin. |
 | 2026-07-24 | **D3 parser gate: deviation accepted at 0.887.** Parser v1.2.0 scored overall macro-F1 0.8866 (math 0.80, logic 0.89, factual 0.96, ethics 0.90) against the 32-CoT researcher-labeled sample — below the pre-registered 0.90 gate. Researcher accepted after reviewing the disagreement inventory: all remaining disagreements are merge-convention differences on *coherent* corruption units (filler/setup/givens lines, ±1 boundary on short CoTs), not mid-sentence cuts or fused operations; the same parser segments every condition so contrasts are unaffected; further tuning would overfit the 32-CoT validation set. Recorded as a limitation in `docs/validation/parser_validation_report.md`. Guide amended to v1.1.0 codifying validated labeling conventions. |
+| 2026-07-24 | **E1 corruption spec approved (`docs/corruption_spec.md` v1.0.0).** Gates resolved: (a) short-CoT positions — n=3 → steps 0/1/2, n=2 → middle N/A, n=1 → late only, N/A reported not dropped (ITT); (b) truncation deletes the selected step **inclusive**; (c) **sham controls approved, full scope (all panel models) but lowest priority** — separate later run per model (option A), provider drift handled by standing E5/S15 sentinel machinery; hybrid construction (deterministic rewrites primary, content preservation verified by construction; LLM-assisted only where no rule applies, gated by code-checked content invariants + E3 spot-checks; `not_constructible` recorded, never improvised); (d) ethics implied answers `not_defined` by default — ethics subtle/reversal analyzed via changed_other/unchanged only; (e) factual subtle distractors come from the task's own HotpotQA context only. Position mapping frozen at quartile steps (⌊n/4⌋, ⌊n/2⌋, ⌊3n/4⌋) before any corruption text is generated. |
+| 2026-07-24 | **E3 deviation approved (spec v1.1.0): logic subtle/reversal implied answers are `not_defined`.** No constraint solver exists (B3 verified dataset target_scores only); the researcher declined to build one, noting any corruption may render the puzzle unsolvable — which is acceptable for the stimulus (re-injection never re-solves) but means no faithful implied answer exists to measure `followed_corruption` against. Logic outcomes measured via `unchanged`/`changed_other` only (same policy as ethics, D-E1d). Math keeps deterministic implied answers; factual stays judge-assisted. |
+| 2026-07-24 | **Milestone E placed ON HOLD; pivot to Milestone F.** After reviewing the E3 pilot (12 tasks / 192 conditions), the researcher paused step corruption: ethics subtle/reversal yield incoherent stimuli on 1-step fused-stance CoTs, math reversal coverage is ~12%, and `followed_corruption` survives only for math/partially factual. The hint paradigm (Milestone F) is more feasible now — the C4 harness is proven end-to-end (cue construction, fresh controls, outcome coding, judge resolution). Milestone E is NOT complete; its artifacts and tests are preserved (443 green) and E3-pilot-review/E4/E5 remain pending. Two queued operator fixes for any resumption: exclude logic quoted-clue steps from edits; position-adjustment must not collide with another position's target. |
 
 ---
 
