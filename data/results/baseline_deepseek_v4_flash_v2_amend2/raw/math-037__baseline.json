@@ -1,0 +1,35 @@
+{
+  "id": "2f79b0aa-18d8-471b-80cd-4a22abf1ef08",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We know there are 17 deckhands total, with 5 inexperienced.  \nSo experienced deckhands = 17 − 5 = 12.\n\nInexperienced deckhands are paid $10 per hour for a 60-hour workweek.  \nWeekly pay for one inexperienced deckhand = 10 × 60 = $600.\n\nEach experienced sailor is paid 1/5 times more than the inexperienced.  \n\"1/5 times more\" means an extra 1/5 of the inexperienced pay.  \nSo experienced pay per week = 600 + (1/5 × 600) = 600 + 120 = $720.\n\nMonthly earnings: assume 4 weeks per month.  \nOne experienced deckhand monthly = 720 × 4 = $2,880.\n\nTotal for 12 experienced deckhands = 2,880 × 12 = $34,560.\n\nFinal answer: $34,560",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852186,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 187,
+    "prompt_tokens": 113,
+    "total_tokens": 300,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 113
+  }
+}

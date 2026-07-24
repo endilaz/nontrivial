@@ -1,0 +1,35 @@
+{
+  "id": "03942af4-d35a-458e-9950-0184c5c618c2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Robin orders:\n- 3 cappuccinos × $2 = $6  \n- 2 iced teas × $3 = $6  \n- 2 cafe lattes × $1.5 = $3  \n- 2 espressos × $1 = $2  \n\nTotal cost = $6 + $6 + $3 + $2 = $17  \n\nShe pays with a $20 bill, so change = $20 - $17 = $3  \n\nThe question asks for a person's full legal name if the answer is a person, but the answer is an amount of money, not a person.  \n\nFinal answer: $3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852193,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 132,
+    "prompt_tokens": 126,
+    "total_tokens": 258,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 126
+  }
+}

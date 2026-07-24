@@ -1,0 +1,35 @@
+{
+  "id": "aa6b6b24-94be-49fd-9cd4-ba819cb0bbe3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are 40 students, and Giorgio plans to make 2 brownies per student, so total brownies = 40 × 2 = 80.  \n10% of his classmates want oatmeal raisin, so 10% of 40 = 4 students want oatmeal raisin.  \nSince each of those 4 students gets 2 brownies, that’s 4 × 2 = 8 oatmeal raisin brownies.  \n\nFinal answer: 8",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784719981,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 96,
+    "prompt_tokens": 100,
+    "total_tokens": 196,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 100
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "cafc8434-1d94-4c7d-9cad-9a1bf48fa7ed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with an unknown initial number of lions, call it \\( x \\).  \nEach month, the net change is:  \n- Born: +5  \n- Die: -1  \nNet change per month = \\( 5 - 1 = 4 \\) lions per month.\n\nOver 1 year (12 months), the total increase is:  \n\\( 4 \\times 12 = 48 \\) lions.\n\nAfter 12 months, the number is \\( x + 48 = 148 \\).  \nSo,  \n\\( x = 148 - 48 = 100 \\).\n\nThe answer is a number, not a person, but the problem says \"If the answer is a person, answer with their full legal name.\" Since the answer is a number, we just give the number.\n\nFinal answer: 100",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852141,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 166,
+    "prompt_tokens": 113,
+    "total_tokens": 279,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 113
+  }
+}

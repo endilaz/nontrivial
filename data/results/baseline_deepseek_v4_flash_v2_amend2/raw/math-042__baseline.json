@@ -1,0 +1,35 @@
+{
+  "id": "b3d4ded4-5ec1-43fa-ba7d-852882f23a28",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Calvin takes 1000 mg every 6 hours.  \nEach pill is 500 mg, so each dose is 2 pills.  \nThere are 4 doses per day (24 hours / 6 hours = 4).  \nOver 2 weeks (14 days), the total number of doses is 14 × 4 = 56 doses.  \nTotal pills = 56 doses × 2 pills per dose = 112 pills.  \n\nFinal answer: 112",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852195,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 96,
+    "prompt_tokens": 96,
+    "total_tokens": 192,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 96
+  }
+}

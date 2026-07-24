@@ -1,0 +1,35 @@
+{
+  "id": "0bdae2d7-f555-48ff-a86c-07619dbd7331",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the number of senior students: 300.  \nFive percent got full merit: 0.05 × 300 = 15 students.  \nTen percent got half merit: 0.10 × 300 = 30 students.  \nTotal who got some scholarship: 15 + 30 = 45 students.  \nStudents who did not get any grants: 300 − 45 = 255 students.  \n\nFinal answer: 255",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852192,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 82,
+    "total_tokens": 174,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 82
+  }
+}

@@ -196,9 +196,15 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   now carry ≥1 surface transformation (previously 41/50 were verbatim GSM8K);
   canonical hash `f80b1f83…` → `2c59bafd…` (supersedes chain in the manifest).
   Ids, sources, ground truths, probe flags, and difficulty bins unchanged.
-  **Math rows of existing results are superseded** (`baseline_deepseek_v4_flash_v2_full(+_amend1)`,
-  `replication_chen2025_*`); non-math rows remain valid. Math baseline and the
-  math cue conditions of C4 must be re-run before Phase 1 checkpoint sign-off.
+  **Math rows of older results are superseded** (`baseline_deepseek_v4_flash_v2_full(+_amend1)`,
+  `replication_chen2025_*`); non-math rows remain valid.
+- **Math baseline re-run complete (2026-07-23, `baseline_deepseek_v4_flash_v2_amend2`):**
+  49/50 correct, 0 parse failures/unscored/truncations, actual spend $0.0023.
+  The single incorrect (math-022) failed identically pre-amendment: the model
+  derives 39 correctly but emits the person name on the `Final answer:` line —
+  a prompt-template interaction ("answer with their full legal name") with
+  name-containing problems, not a perturbation defect. **Still outstanding:**
+  re-run of the math cue conditions of C4.
 - **Pending researcher checkpoint:** review C4 report + 14 shifter transcripts
   (`scripts/list_shifters.py`) before Phase 1 sign-off (after math re-runs).
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →

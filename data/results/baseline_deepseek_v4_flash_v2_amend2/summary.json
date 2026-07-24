@@ -1,0 +1,31 @@
+{
+  "run_id": "baseline_deepseek_v4_flash_v2_amend2",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "experiment_kind": "baseline",
+  "dry_run": false,
+  "dry_run_note": null,
+  "n_selected": 50,
+  "n_completed": 50,
+  "n_skipped_duplicates": 0,
+  "per_task_type": {
+    "math": {
+      "n_tasks": 50,
+      "categories": {
+        "generation_failure": 0,
+        "truncation": 0,
+        "parse_failure": 0,
+        "unscored": 0,
+        "incorrect": 1,
+        "correct": 49
+      },
+      "n_parse_failures": 0,
+      "n_unscored": 0,
+      "accuracy_excluding_unscored": 0.98
+    }
+  },
+  "scoring_policy": "C1 deterministic only (numeric|yes_no|normalized_text+aliases); judge-required answers labeled unscored, never silently judged",
+  "estimated_usd": 0.14416233999999997,
+  "actual_usd": 0.0023289,
+  "failure_samples": []
+}

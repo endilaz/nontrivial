@@ -1,0 +1,35 @@
+{
+  "id": "530b7ceb-b3e3-4476-8bdf-fe13f9e7bf8b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Mr. Keller buys 10 liters today at $1.40 per liter, costing 10 × 1.40 = $14.00.  \nOn Friday, there is a $0.40 rollback, so the price becomes $1.40 − $0.40 = $1.00 per liter.  \nHe buys 25 liters on Friday, costing 25 × 1.00 = $25.00.  \nTotal spent: $14.00 + $25.00 = $39.00.  \n\nFinal answer: $39.00",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852143,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 117,
+    "total_tokens": 232,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 117
+  }
+}

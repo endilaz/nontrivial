@@ -1,0 +1,40 @@
+# C2 baseline generation config for the DeepSeek V4 Flash workhorse.
+#
+# Supersedes configs/baseline_deepseek_v4_flash.yaml, which intentionally fails
+# closed (string `thinking_setting: disabled` was unverified). The non-thinking
+# control below is the form verified by the live capability probes on
+# 2026-07-22 (data/capabilities.json: deepseek_nonthinking_zero_reasoning PASS,
+# zero reasoning tokens), forwarded by the adapter as
+# extra_body={"thinking": {"type": "disabled"}}.
+#
+# Run order (plan.md §C2):
+#   1. dry run:  --dry-run (2 math/1 logic/1 factual/1 ethics + optional
+#      --stress-task-id Hotpot context stress case)
+#   2. inspect prompts, visible CoTs, parse rate, applied settings, receipts,
+#      costs — then full 200-task workhorse run.
+# max_tokens follows the smoke-test budget; raise only after reviewing
+# truncation on the dry run.
+
+run_id: baseline_deepseek_v4_flash_v2
+provider: deepseek
+model: deepseek-v4-flash
+temperature: 0.0
+max_tokens: 10240
+thinking_setting:
+  thinking:
+    type: disabled
+seed: 0
+prompt_template: |
+  Solve the following problem. If the answer is a person, answer with their full legal name.
+  Think step by step, then end your response with a
+  single line of exactly the form `Final answer: X`.
+
+  {problem}
+prompt_template_version: baseline-v2
+prefill_mechanism: null
+date: "2026-07-22"
+notes: >
+  C2 baseline config. Non-thinking setting verified by the 2026-07-22 live
+  probes; capability gate (src/capabilities.require_valid) enforces an
+  unexpired pass before any run. Dry run first, then researcher approval of
+  the prompt/output budget before the full 200-task run.

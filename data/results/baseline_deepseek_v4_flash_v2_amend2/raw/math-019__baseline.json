@@ -1,0 +1,35 @@
+{
+  "id": "d5f3fbe7-3b88-49c2-b389-70fde7c31b1b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Cole goes up 3 flights, then down 6 flights.  \nNet change in flights = up 3 - down 6 = -3 flights (3 flights down from start).  \n\nEach flight = 12 steps × 8 inches = 96 inches.  \n3 flights = 3 × 96 = 288 inches down.  \n\nConvert inches to feet: 288 ÷ 12 = 24 feet.  \n\nFinal answer: 24",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852156,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 91,
+    "total_tokens": 181,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 91
+  }
+}

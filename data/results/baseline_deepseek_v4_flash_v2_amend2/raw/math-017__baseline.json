@@ -1,0 +1,35 @@
+{
+  "id": "3ac8336a-d4bf-4f18-9dd2-4a48fd593e4b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Evan wants to earn $20 per hour total.  \nMowing takes 1 hour and pays $15, so his effective rate for that part is $15/hour, which is $5/hour less than his target.  \nTo average $20/hour over the whole job, the planting part must make up for that shortfall.  \n\nTotal hours worked: 1 (mowing) + 2 (planting) = 3 hours.  \nDesired total pay: 3 hours × $20/hour = $60.  \nHe already gets $15 from mowing, so planting must pay $60 − $15 = $45.  \n\nFinal answer: $45.  \n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784852154,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 143,
+    "prompt_tokens": 116,
+    "total_tokens": 259,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 116
+  }
+}
