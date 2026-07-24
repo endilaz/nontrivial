@@ -32,7 +32,9 @@
 #
 # status is researcher-approved before application (ground rule 3).
 
-status: pending_researcher_approval
+status: approved
+approved_by: researcher
+approved_at: 2026-07-23
 amendment_id: amend-math-perturbation-2026-07-23
 reason_code: contamination_control_gap
 

@@ -44,6 +44,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 |---|---|
 | `configs/task_selection.yaml` | Frozen task-sampling spec (researcher-approved 2026-07-22); seeds, strata, quotas, rejection codes. |
 | `configs/task_amendment_factual_2026-07-22.yaml` | Factual task-set amendment applied after initial B build. |
+| `configs/task_amendment_math_perturbation_2026-07-23.yaml` | Math re-perturbation amendment (contamination fix; approved 2026-07-23). |
 | `configs/smoke_test.yaml` | 5-problem end-to-end smoke test config. |
 | `configs/baseline_deepseek_v4_flash.yaml` | **Invalid** legacy baseline (unverified string thinking setting; fails closed). |
 | `configs/baseline_deepseek_v4_flash_v2.yaml` | Valid workhorse baseline config (C2). |
@@ -110,7 +111,8 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | Path | Description |
 |---|---|
 | `scripts/build_task_set.py` | Build/regenerate the canonical task set (B). |
-| `scripts/amend_task_set.py` | Apply reviewed task-set amendments. |
+| `scripts/amend_task_set.py` | Apply reviewed task-set amendments (task replacement). |
+| `scripts/amend_math_perturbation.py` | 2026-07-23 math re-perturbation amendment (in-place, ids/sources unchanged). |
 | `scripts/export_task_schema.py` | Export `task_set.schema.json`. |
 | `scripts/invalidate_artifacts.py` | A2 invalidation command (idempotent, dry-run testable). |
 | `scripts/capability_probes.py` | Live capability probe runner (reserve→preflight→generate→record→reconcile) (A3). |
@@ -190,8 +192,15 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   dev agreement, judge enabled); **C4 replication (2026-07-23): Chen et al. 2025
   suggested-answer cue — shift 7.3%, reveal 7.1% (1/14); qualitative pattern
   replicates.** See `docs/validation/replication_chen2025_report.md`.
+- **Math re-perturbation amendment merged (2026-07-23).** All 50 math tasks
+  now carry ≥1 surface transformation (previously 41/50 were verbatim GSM8K);
+  canonical hash `f80b1f83…` → `2c59bafd…` (supersedes chain in the manifest).
+  Ids, sources, ground truths, probe flags, and difficulty bins unchanged.
+  **Math rows of existing results are superseded** (`baseline_deepseek_v4_flash_v2_full(+_amend1)`,
+  `replication_chen2025_*`); non-math rows remain valid. Math baseline and the
+  math cue conditions of C4 must be re-run before Phase 1 checkpoint sign-off.
 - **Pending researcher checkpoint:** review C4 report + 14 shifter transcripts
-  (`scripts/list_shifters.py`) before Phase 1 sign-off.
+  (`scripts/list_shifters.py`) before Phase 1 sign-off (after math re-runs).
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
   candidate regeneration verified after the move, and re-merge of

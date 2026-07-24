@@ -47,7 +47,10 @@ from src.task_review import (  # noqa: E402
 )
 from src.task_schema import dump_task, load_task_set  # noqa: E402
 
-CANDIDATES = REPO_ROOT / "data" / "tasks" / "review" / "candidates.jsonl"
+# Base candidates: the AMENDED file (2026-07-22 factual amendment output), which
+# is the exact input that produced the current canonical task set — it excludes
+# tombstoned factual-041/044 and includes approved replacements factual-051/052.
+CANDIDATES = REPO_ROOT / "data" / "tasks" / "review" / "candidates.amended.jsonl"
 DECISIONS = REPO_ROOT / "data" / "tasks" / "review" / "review_decisions.jsonl"
 ADJUDICATION = REPO_ROOT / "data" / "tasks" / "review" / "review_decisions.adjudication.jsonl"
 TASK_SET = REPO_ROOT / "data" / "tasks" / "task_set.jsonl"
