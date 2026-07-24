@@ -212,8 +212,11 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   runner gained `--baseline-responses`/`--baseline-judgments` overrides.
   **Phase C fully closed.** Phase 1 checkpoint (C4 report + shifter review)
   is the only remaining gate before Milestone D.
-- **Pending researcher checkpoint:** review C4 report + 14 shifter transcripts
-  (`scripts/list_shifters.py`) before Phase 1 sign-off (after math re-runs).
+- **Phase 1 checkpoint SIGNED OFF (2026-07-23).** Researcher reviewed the C4
+  report and 14 shifter transcripts and approved. Task set (canonical
+  `2c59bafd…`), baselines, judge validation, and the C4 replication are all
+  accepted. **Next milestone: D (Phase 2 CoT parsing — D1 contracts, D2
+  boundary-scoring annotation guide, D3 32-CoT validation).**
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
   candidate regeneration verified after the move, and re-merge of
@@ -502,7 +505,10 @@ Work through phases in order. Each phase ends with a checkpoint the researcher r
       adoptions). Qualitative pattern replicates. Report:
       `docs/validation/replication_chen2025_report.md`.)*
 - **Checkpoint:** researcher signs off on task set, judge validation, and baseline
-  replication.
+  replication. *(Signed off 2026-07-23: C4 report + 14 shifter transcripts
+  reviewed and approved; task set at canonical hash `2c59bafd…` including the
+  math re-perturbation amendment, math baseline amend2 (49/50), and C4 math
+  amend2 (shift 0%). Milestone D unblocked.)*
 
 ### Phase 2 — CoT parsing (weeks 2–3, highest technical risk)
 - [ ] `src/parsing.py`: split free-form CoT into discrete steps. Strategy:
@@ -733,6 +739,8 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-21 | Preserve and explicitly invalidate existing generated task/result/cache/cost artifacts; regenerate canonical artifacts under new schema versions and run IDs. |
 | 2026-07-22 | Milestone A (A1–A7) infrastructure complete. Live capability probes (Milestone A3) all PASS (`data/capabilities.json`, receipts hashed, expire 2026-08-20): **workhorse `deepseek-v4-flash` confirmed on both hard gates** — non-thinking `thinking:{type:disabled}` → 0 reasoning tokens, and beta Chat Prefix Completion continues the prefix. Also: OpenAI `reasoning_effort:"none"` → 0 reasoning tokens even with an output cap (`gpt-5.4-mini`, resolves matrix open-Q #2/#3); GLM-5.2 via the pinned OpenRouter **DeepInfra** route returns raw reasoning (resolves the route decision and matrix open-Q #7 for DeepSeek non-thinking). Historical API spend reconciled at **$0.08** and approved into `budget_state.json`. |
 | 2026-07-23 | **C4 replication target = Chen et al. 2025 suggested-answer cue, workhorse-only, all 200 tasks, deterministic cue construction** (numeric ladder / opposite stance / factual entity pool). No-cue control is a fresh `force_fresh` sample (Part II §F2 adopted early). Result: shift 7.3%, reveal 7.1% (1/14) — qualitative pattern replicates (`docs/validation/replication_chen2025_report.md`). 8 ethics tasks excluded from cue condition (baseline already opposite stance) — recorded, not improvised. Engineering lesson: any ad-hoc script calling `judge_equivalence` must also `costs.log_cost`; the resolver's 56 judge calls were retroactively logged from receipts. |
+| 2026-07-23 | **Math re-perturbation amendment approved and merged.** 41/50 math tasks were verbatim GSM8K (dictionary coverage gap). Dictionaries expanded only (researcher-chosen scope), ≥1 swap per task enforced fail-closed, object swaps for the 8 nameless tasks. Canonical hash `f80b1f83…` → `2c59bafd…`; ids/sources/truths/probe flags unchanged. Math baseline amend2 (49/50; math-022 failure is a pre-existing prompt-template quirk) and C4 math amend2 (shift 0%, matching pre-amendment math) re-run; non-math rows remain valid. |
+| 2026-07-23 | **Phase 1 checkpoint signed off.** C4 report + shifter transcripts reviewed; Milestone D (parser) approved to begin. |
 
 ---
 
@@ -896,7 +904,7 @@ Do not mark these milestones complete yet:
 | C1 evaluation | **Complete.** Deterministic scoring (numeric/yes-no/normalized-text+aliases) with structured `EvaluationResult`; LLM judge is a configured, provenance-gated experiment (`JudgeConfig`, rubric `answer-equivalence` v1.0.0), enabled only after C3 approval | — |
 | C2 baselines | **Complete (2026-07-22).** Dry run + full 200-task workhorse baseline on the canonical task set (`baseline_deepseek_v4_flash_v2_full` + `_amend1`); six outcome categories; ethics reported as source-label agreement | — |
 | C3 judge validation | **Complete (2026-07-22).** 53-pair frozen validation set; 26/26 dev-split agreement; researcher approved + judge enabled; 14 unscored baseline answers resolved | — |
-| C4 replication | **Complete (2026-07-23).** Chen et al. 2025 suggested-answer cue, workhorse-only, all 200 tasks, deterministic cues + fresh force-fresh control (`replication_chen2025_suggested_cue_full_v2`); shift 7.3%, reveal 7.1% (1/14) — qualitative pattern replicates. Report: `docs/validation/replication_chen2025_report.md`. 8 ethics cue-construction exclusions recorded; factual outcomes resolved via the C3 judge (57 judgments); cost $0.081 total | **Researcher checkpoint: review report + 14 shifter transcripts before Phase 1 sign-off** |
+| C4 replication | **Complete (2026-07-23).** Chen et al. 2025 suggested-answer cue, workhorse-only, all 200 tasks, deterministic cues + fresh force-fresh control (`replication_chen2025_suggested_cue_full_v2`); shift 7.3%, reveal 7.1% (1/14) — qualitative pattern replicates. Report: `docs/validation/replication_chen2025_report.md`. 8 ethics cue-construction exclusions recorded; factual outcomes resolved via the C3 judge (57 judgments); cost $0.081 total. Math rows re-run post-amendment (`_amend2`, shift 0% — matching pre-amendment math) | — (Phase 1 checkpoint signed off 2026-07-23) |
 
 ### 0.5 Important intentional blockers
 
@@ -911,8 +919,8 @@ Do not mark these milestones complete yet:
 	not a trustworthy remaining-budget source until A2/A4 reconciliation.
 - The literature refresh remains on hold and must not be launched implicitly.
 - The closed-frontier model remains undecided.
-- Do not begin Milestone D until A-C have passed their acceptance gates and the
-	researcher has approved the Phase 1 checkpoint.
+- ~~Do not begin Milestone D~~ — Phase 1 checkpoint was approved 2026-07-23;
+	Milestone D is unblocked.
 
 ### 0.6 Recommended next-session sequence
 
