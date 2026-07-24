@@ -4,7 +4,14 @@ from __future__ import annotations
 
 import pytest
 
-from src.parsing import PARSER_VERSION, ParseResult, parse_cot, split_reasoning
+from src.parsing import (
+    PARSER_VERSION,
+    ParseResult,
+    macro_average,
+    parse_cot,
+    score_boundaries,
+    split_reasoning,
+)
 
 
 def _assert_spans_exact(result: ParseResult, reasoning: str) -> None:
@@ -321,3 +328,84 @@ class TestRealisticFormats:
             if not result.ok:
                 failures.append((row["task_id"], result.validation_errors))
         assert failures == []
+
+
+# ---------------------------------------------------------------------------
+# D2 boundary F1 scorer (hand-calculated)
+# ---------------------------------------------------------------------------
+
+
+class TestBoundaryScoring:
+    def test_perfect_match(self) -> None:
+        reasoning = "aaa. bbb. ccc."
+        # gold/predicted end_char of non-final steps: after "aaa." and "bbb."
+        score = score_boundaries(reasoning, [4, 9], [4, 9])
+        assert score.f1 == 1.0
+        assert score.matched == 2
+
+    def test_no_boundaries_either_side_is_perfect(self) -> None:
+        score = score_boundaries("single step.", [], [])
+        assert score.f1 == 1.0
+
+    def test_oversegmenting_boundary_free_gold_is_zero(self) -> None:
+        score = score_boundaries("single step.", [], [6])
+        assert score.f1 == 0.0
+        assert score.precision == 0.0
+        assert score.recall == 0.0
+
+    def test_undersegmenting_is_zero(self) -> None:
+        score = score_boundaries("aaa. bbb.", [4], [])
+        assert score.f1 == 0.0
+
+    def test_whitespace_tolerance_matches(self) -> None:
+        reasoning = "aaa. bbb. ccc."
+        # predicted boundary 2 chars later, gap is ". " -> not whitespace-only
+        # at offset 6 ("b") — use offset 5 (the space) and 6? Gap " " only.
+        score = score_boundaries(reasoning, [4], [5])
+        assert score.matched == 1
+        assert score.f1 == 1.0
+
+    def test_non_whitespace_gap_no_match(self) -> None:
+        reasoning = "aaa. bbb."
+        # predicted boundary at 6 (after "b"): gap " b" contains 'b'.
+        score = score_boundaries(reasoning, [4], [6])
+        assert score.matched == 0
+        assert score.f1 == 0.0
+
+    def test_partial_match_hand_calculated(self) -> None:
+        reasoning = "aa. bb. cc. dd."
+        gold = [3, 7, 11]
+        pred = [3, 11]  # one correct, missed middle
+        score = score_boundaries(reasoning, gold, pred)
+        assert score.matched == 2
+        assert score.precision == 1.0
+        assert abs(score.recall - 2 / 3) < 1e-9
+        assert abs(score.f1 - 0.8) < 1e-9
+
+    def test_extra_predicted_boundary_lowers_precision(self) -> None:
+        reasoning = "aa. bb. cc."
+        gold = [3, 7]
+        pred = [3, 5, 7]  # extra bogus boundary (offset 5 gap "b" -> no match)
+        score = score_boundaries(reasoning, gold, pred)
+        assert score.matched == 2
+        assert abs(score.precision - 2 / 3) < 1e-9
+        assert score.recall == 1.0
+        assert abs(score.f1 - 0.8) < 1e-9
+
+    def test_greedy_matching_is_one_to_one(self) -> None:
+        reasoning = "aa. bb."
+        gold = [3, 7]
+        pred = [3, 3]  # duplicate predictions cannot both match gold[0]
+        score = score_boundaries(reasoning, gold, pred)
+        assert score.matched == 1
+
+    def test_macro_average(self) -> None:
+        s1 = score_boundaries("aa. bb.", [3], [3])
+        s2 = score_boundaries("cc. dd.", [3], [])
+        assert macro_average([s1, s2]) == 0.5
+
+    def test_macro_average_empty_raises(self) -> None:
+        import pytest as _pytest
+
+        with _pytest.raises(ValueError):
+            macro_average([])

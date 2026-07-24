@@ -317,3 +317,83 @@ def parse_cot(
             "all parse strategies failed quality checks"
         )
     return result
+
+
+# ---------------------------------------------------------------------------
+# D2/D3: boundary-level F1 scoring (docs/parser_annotation_guide.md §7)
+# ---------------------------------------------------------------------------
+
+#: Tolerance for trailing-whitespace placement only (guide §7).
+BOUNDARY_TOLERANCE_CHARS = 2
+
+
+@dataclass(frozen=True)
+class BoundaryScore:
+    """Boundary-level precision/recall/F1 for one CoT."""
+
+    matched: int
+    n_predicted: int
+    n_gold: int
+    precision: float
+    recall: float
+    f1: float
+
+
+def _match_boundaries(
+    reasoning: str,
+    gold: Sequence[int],
+    predicted: Sequence[int],
+    tolerance: int = BOUNDARY_TOLERANCE_CHARS,
+) -> int:
+    """Greedy 1:1 matching; |p - g| <= tolerance with whitespace-only gap."""
+    remaining = sorted(predicted)
+    matched = 0
+    for g in sorted(gold):
+        best_i: Optional[int] = None
+        for i, p in enumerate(remaining):
+            if abs(p - g) <= tolerance and not reasoning[
+                min(p, g) : max(p, g)
+            ].strip():
+                if best_i is None or abs(p - g) < abs(remaining[best_i] - g):
+                    best_i = i
+        if best_i is not None:
+            remaining.pop(best_i)
+            matched += 1
+    return matched
+
+
+def score_boundaries(
+    reasoning: str,
+    gold_boundaries: Sequence[int],
+    predicted_boundaries: Sequence[int],
+    tolerance: int = BOUNDARY_TOLERANCE_CHARS,
+) -> BoundaryScore:
+    """Score predicted step boundaries against gold (guide §7, frozen rule).
+
+    Boundaries are ``end_char`` offsets of every non-final step. A CoT with no
+    boundaries on either side scores F1 = 1; over/under-segmenting a
+    boundary-free gold CoT scores F1 = 0.
+    """
+    n_gold, n_pred = len(gold_boundaries), len(predicted_boundaries)
+    if n_gold == 0 and n_pred == 0:
+        return BoundaryScore(0, 0, 0, 1.0, 1.0, 1.0)
+    if n_gold == 0 or n_pred == 0:
+        return BoundaryScore(0, n_pred, n_gold, 0.0, 0.0, 0.0)
+    matched = _match_boundaries(
+        reasoning, gold_boundaries, predicted_boundaries, tolerance
+    )
+    precision = matched / n_pred
+    recall = matched / n_gold
+    f1 = (
+        2 * precision * recall / (precision + recall)
+        if precision + recall > 0
+        else 0.0
+    )
+    return BoundaryScore(matched, n_pred, n_gold, precision, recall, f1)
+
+
+def macro_average(scores: Sequence[BoundaryScore]) -> float:
+    """Macro-averaged F1 across CoTs (guide §7: per-CoT then average)."""
+    if not scores:
+        raise ValueError("no scores to average")
+    return sum(s.f1 for s in scores) / len(scores)

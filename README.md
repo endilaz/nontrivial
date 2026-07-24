@@ -79,7 +79,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `data/cache/invalidated/2026-07-21/` | Preserved v1 cache receipts (gitignored; recorded by hash). |
 | `data/capabilities.json` | Live capability probe records (pass/fail/inconclusive + receipt hash + expiration 2026-08-20). |
 | `data/invalidation/manifest_2026-07-21.json` | SHA-256 invalidation manifest for all 58 moved artifacts (A2). |
-| `data/validation/` | Validation data artifacts. |
+| `data/validation/` | Validation data artifacts, incl. D3 frozen sample `parser_sample_v1.jsonl` + annotation file `parser_annotations_v1.jsonl`. |
 
 ### `src/` — library code
 
@@ -125,6 +125,7 @@ All paths are relative to the repo root (`/Users/daniel/Documents/coding/nontriv
 | `scripts/rescore_baseline_judged.py` | Resolve previously-unscored baseline answers via the approved judge. |
 | `scripts/run_replication.py` | C4 published-result replication runner. |
 | `scripts/list_shifters.py` | Inspect cue-shifted tasks/transcripts from replication runs (C4 helper). |
+| `scripts/build_parser_validation_sample.py` | Build the frozen 32-CoT D3 parser-validation sample + annotation template (D3). |
 
 ### `tests/` — offline test suite
 
@@ -140,7 +141,7 @@ tests run offline with API keys unset; `live_api` marker is excluded by default.
 | `docs/receipt_policy.md` | Receipt retention + release deny-by-default policy (A7). |
 | `docs/CoT_Faithfulness_Benchmark_Notes.md` | Research notes. |
 | `docs/replication_c4.md` | C4 replication design notes. |
-| `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (draft, pending researcher approval). |
+| `docs/parser_annotation_guide.md` | D2 step-boundary annotation + F1 scoring guide (**approved 2026-07-23**). |
 | `docs/validation/` | Validation reports: judge rubric (`judge_answer-equivalence_rubric_1.0.{md,json}`), `replication_chen2025_report.md`. |
 | `logs/cost_log.csv` | Append-only API-spend ledger (corrected; historical spend $0.08 approved 2026-07-22). |
 | `logs/budget_state.json` | Locked budget reservation state (A4). |
@@ -942,11 +943,14 @@ Start with the smallest offline, reversible slice and validate after each edit:
 8. ~~Complete C1 offline deterministic evaluation and validation-set tooling.~~
 	 ~~C2 live baselines~~ and ~~C4 replication~~ (all done 2026-07-22/23).
 	 ~~Phase 1 checkpoint~~ (signed off 2026-07-23). **Milestone D in
-	 progress:** D1 parser implemented (`src/parsing.py` v1.0.0, 30 tests,
-	 all 250 on-disk baseline CoTs parse cleanly); D2 annotation guide
-	 drafted (`docs/parser_annotation_guide.md`, pending researcher
-	 approval). **Next: researcher approves the D2 guide, then D3
-	 (32-CoT sample + hand labeling + F1 validation).**
+	 progress:** D1 parser implemented (`src/parsing.py` v1.0.0 + boundary
+	 F1 scorer, 41 tests, all 250 on-disk baseline CoTs parse cleanly);
+	 D2 annotation guide **approved 2026-07-23**; D3 frozen 32-CoT sample
+	 built (`data/validation/parser_sample_v1.jsonl`, seed 20260723, 8/type)
+	 with annotation template. **Next: researcher labels boundaries in
+	 `data/validation/parser_annotations_v1.jsonl` (guide
+	 `docs/parser_annotation_guide.md`), then the D3 F1 report
+	 (gate: overall macro-F1 >= 0.90, per-type reported).**
 
 When a task requires an unresolved scientific choice, record the exact decision
 gate from Sections 15, 17, and 19 and stop that slice. Continue independent

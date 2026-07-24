@@ -1,9 +1,10 @@
-# CoT Step-Boundary Annotation Guide (v1.0.0, DRAFT for researcher approval)
+# CoT Step-Boundary Annotation Guide (v1.0.0)
 
-**Status:** Draft — researcher approval required (Milestone D2 gate, Part II §8 D2).
-This guide fixes what counts as one reasoning step, how boundaries are matched
-for scoring, and how uncertain cases are adjudicated. The parser F1 reported in
-D3 is defined by this document; do not change the rules after seeing results.
+**Status:** Approved by the researcher 2026-07-23 (Milestone D2 gate, Part II
+§8 D2). This guide fixes what counts as one reasoning step, how boundaries are
+matched for scoring, and how uncertain cases are adjudicated. The parser F1
+reported in D3 is defined by this document; do not change the rules after
+seeing results.
 
 ---
 
