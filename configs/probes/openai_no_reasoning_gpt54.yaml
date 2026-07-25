@@ -1,0 +1,16 @@
+# Panel-extension probe (Milestone F panel prep, 2026-07-24): full gpt-5.4
+# no-reasoning + output cap -> 0 reasoning tokens. The A3 probe verified this on
+# gpt-5.4-mini; the F panel run uses the full model, and behavior may differ
+# across the family. Same assertion as the mini probe (reasoning_effort:"none"
+# keeps reasoning tokens at zero even with an output cap set).
+probe_id: openai_no_reasoning_zero_gpt54
+provider: openai
+model: gpt-5.4
+capability: thinking_disabled
+assertion: reasoning_tokens_zero
+thinking_setting: disabled   # -> reasoning_effort:"none" in the adapter
+max_tokens: 32
+temperature: 0.0
+messages:
+  - role: user
+    content: "What is 40 + 2? Reply with just the number."

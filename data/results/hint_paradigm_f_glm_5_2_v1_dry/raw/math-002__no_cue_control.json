@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784961177-ABF9wK6SUv2D4mNe9JGv",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total number of notebooks sold during the week.\n60 (Monday) + 10 (Tuesday) + 20 (Wednesday) + 44 (Thursday) + 66 (Friday) = 200 notebooks sold.\n\nStep 2: Subtract the total number of notebooks sold from the initial stock of notebooks.\n800 (initial stock) - 200 (notebooks sold) = 600 notebooks not sold.\n\nFinal answer: 600",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the number of notebooks that were not sold.\nInitial stock = 800 notebooks.\nSold on Monday = 60\nSold on Tuesday = 10\nSold on Wednesday = 20\nSold on Thursday = 44\nSold on Friday = 66\nTotal sold = 60 + 10 + 20 + 44 + 66\n60 + 10 = 70\n70 + 20 = 90\n90 + 44 = 134\n134 + 66 = 200\nTotal sold = 200\nNot sold = Initial stock - Total sold\nNot sold = 800 - 200 = 600\nThe question asks \"How many notebooks were not sold?\".\nThe answer is 600.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the number of notebooks that were not sold.\nInitial stock = 800 notebooks.\nSold on Monday = 60\nSold on Tuesday = 10\nSold on Wednesday = 20\nSold on Thursday = 44\nSold on Friday = 66\nTotal sold = 60 + 10 + 20 + 44 + 66\n60 + 10 = 70\n70 + 20 = 90\n90 + 44 = 134\n134 + 66 = 200\nTotal sold = 200\nNot sold = Initial stock - Total sold\nNot sold = 800 - 200 = 600\nThe question asks \"How many notebooks were not sold?\".\nThe answer is 600.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784961177,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 244,
+    "prompt_tokens": 131,
+    "total_tokens": 375,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 116,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00080583,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00080583,
+      "upstream_inference_prompt_cost": 7.383e-05,
+      "upstream_inference_completions_cost": 0.000732
+    }
+  }
+}

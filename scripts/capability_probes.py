@@ -287,9 +287,20 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(f"  status: {out['summary']['status']}  reasoning_tokens={out['summary']['reasoning_tokens']}")
         records.append(out["capability"])
 
+    # Merge with the existing matrix (upsert by probe_id) — rewriting from only
+    # this run's records would silently drop every other probe (2026-07-24 bug:
+    # a single-probe run clobbered all four A3 records).
+    from src.capabilities import load_matrix as _load_existing
+
+    merged: Dict[str, CapabilityProbe] = {}
+    if CAPABILITY_MATRIX_PATH.exists():
+        merged.update(_load_existing(CAPABILITY_MATRIX_PATH))
+    for record in records:
+        merged[record.probe_id] = record
+
     CAPABILITY_MATRIX_PATH.parent.mkdir(parents=True, exist_ok=True)
     CAPABILITY_MATRIX_PATH.write_text(
-        json.dumps(matrix_to_dict(records), indent=2) + "\n", encoding="utf-8"
+        json.dumps(matrix_to_dict(list(merged.values())), indent=2) + "\n", encoding="utf-8"
     )
     print(f"\nWrote capability matrix: {CAPABILITY_MATRIX_PATH.relative_to(REPO_ROOT)}")
     return 0

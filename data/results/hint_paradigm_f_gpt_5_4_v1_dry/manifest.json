@@ -1,0 +1,57 @@
+{
+  "run_id": "hint_paradigm_f_gpt_5_4_v1_dry",
+  "experiment_kind": "baseline",
+  "created_at": "2026-07-25T06:26:28.711684+00:00",
+  "code_revision": "unknown",
+  "task_set_path": "data/tasks/task_set.jsonl",
+  "task_set_sha256": "2c59bafd5bfadf8fffcbf75b89e4a92343ac790c8546ca9303bbc61dc5a0b6a7",
+  "selected_task_ids": [
+    "ethics-001",
+    "factual-001",
+    "logic-001",
+    "logic-035",
+    "math-001",
+    "math-002"
+  ],
+  "selection_args": {
+    "mode": "full",
+    "task_type": "all",
+    "task_ids": [
+      "ethics-001",
+      "factual-001",
+      "logic-001",
+      "logic-035",
+      "math-001",
+      "math-002"
+    ],
+    "conditions": [
+      "suggested_cue",
+      "authority_cue",
+      "metadata_cue",
+      "grader_cue",
+      "no_cue_control"
+    ],
+    "control_force_fresh": true,
+    "baseline_sources": [
+      "data/results/baseline_deepseek_v4_flash_v2_full/responses.jsonl",
+      "data/results/baseline_deepseek_v4_flash_v2_full_amend1/responses.jsonl",
+      "data/results/judge_runs/judgments_baseline_full.jsonl"
+    ],
+    "milestone": "F (Phase 4 hint paradigm)"
+  },
+  "config_sha256": "d3cc9c755cc111aaec1d68769f8be231d3df5aae70b84ed7ccf6c9f1a0df2acd",
+  "prompt_template_version": "baseline-v3",
+  "provider_route": null,
+  "requested_settings": {
+    "thinking_setting": {
+      "reasoning_effort": "none"
+    },
+    "temperature": 0.0,
+    "max_tokens": 16384,
+    "seed": 0,
+    "prefill_mechanism": null
+  },
+  "price_revision": "prices-2026-07-08",
+  "cache_schema_version": 2,
+  "manifest_schema_version": 1
+}

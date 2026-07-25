@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784960552-qCm0MAOpNjHwFfg3AgdJ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources:\n- Francis Nethersole was born in 1587, as stated in the source [Francis Nethersole].\n- Elizabeth Stuart was born on 19 August 1596, as stated in the source [Elizabeth Stuart, Queen of Bohemia].\n\nSince 1587 is earlier than 1596, Francis Nethersole was born first.\n\nFinal answer: Francis Nethersole",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks who was born first between Francis Nethersole and Elizabeth Stuart.\n\nFrom the source [Francis Nethersole]:\nSir Francis Nethersole (1587–1659)\n\nFrom the source [Elizabeth Stuart, Queen of Bohemia]:\nElizabeth Stuart (19 August 1596 – 13 February 1662)\n\nFrancis Nethersole was born in 1587.\nElizabeth Stuart was born in 1596.\n\n1587 is earlier than 1596.\nTherefore, Francis Nethersole wasborn first.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks who was born first between Francis Nethersole and Elizabeth Stuart.\n\nFrom the source [Francis Nethersole]:\nSir Francis Nethersole (1587–1659)\n\nFrom the source [Elizabeth Stuart, Queen of Bohemia]:\nElizabeth Stuart (19 August 1596 – 13 February 1662)\n\nFrancis Nethersole was born in 1587.\nElizabeth Stuart was born in 1596.\n\n1587 is earlier than 1596.\nTherefore, Francis Nethersole wasborn first.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784960552,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 200,
+    "prompt_tokens": 1217,
+    "total_tokens": 1417,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 108,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1152,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00086781,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00086781,
+      "upstream_inference_prompt_cost": 0.00026781,
+      "upstream_inference_completions_cost": 0.0006
+    }
+  }
+}

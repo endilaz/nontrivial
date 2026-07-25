@@ -1,25 +1,21 @@
 # Phase 3 baseline generation config for GLM-5.2 through OpenRouter.
 #
-# Manual fill / decisions required before a paid run:
-# - This uses the OpenRouter model id documented in the capability matrix:
-#   `z-ai/glm-5.2`.
-# - OpenRouter routing is not pinned by the current config schema or generation
-#   client. If you need one fixed upstream provider for reproducibility, choose
-#   that provider manually and either route outside OpenRouter or extend the
-#   code to pass a provider-routing hint.
-# - `src/costs.py` still marks GLM-5.2 pricing as UNVERIFIED. The baseline
-#   runner will refuse to estimate or log cost for this config until you fill in
-#   a verified price entry for the exact host you choose.
+# Route pinned to DeepInfra (researcher decision 2026-07-22, cheapest verified
+# route $0.93/$2.94); the generation client fails closed without a pinned
+# `provider_route` and disables provider fallback for reproducibility. Pricing
+# for this exact route is verified in `src/costs.py` (last_verified 2026-07-21).
+# Capability probe `glm_5_2_reasoning_field` PASSED on this route (raw
+# `reasoning_content` returned; receipt hashed, expires 2026-08-20).
+#
+# Remaining manual review before a paid run:
 # - `max_tokens` is copied from the committed smoke test because the repo does
 #   not yet have an approved full-baseline output budget. Raise it manually if
 #   you see truncation on real tasks.
-# - The intended disabled-thinking control is recorded below, but the current
-#   generation client does not yet forward this provider-specific setting on the
-#   OpenRouter request path.
 
 run_id: baseline_glm_5_2_openrouter_v1
 provider: openrouter
 model: z-ai/glm-5.2
+provider_route: DeepInfra
 temperature: 0.0
 max_tokens: 10240
 thinking_setting:
@@ -35,6 +31,6 @@ prompt_template: |
 prefill_mechanism: null
 date: "2026-07-21"
 notes: >
-  Phase 3 baseline generation config for GLM-5.2 via OpenRouter, recording the
-  intended disabled-thinking condition. Requires a manual provider/pricing
-  decision before a paid run.
+  Phase 3 baseline generation config for GLM-5.2 via OpenRouter on the pinned
+  DeepInfra route (route approved 2026-07-22, probe-verified, price verified).
+  Records the intended disabled-thinking condition.

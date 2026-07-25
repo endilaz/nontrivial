@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Q8RAFah5OPPW065wS9mx1RVYPw5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the sources:\n\n- **“Francis Nethersole”** states that **Sir Francis Nethersole (1587–1659)** was born in **1587**.\n- **“Elizabeth Stuart, Queen of Bohemia”** states that **Elizabeth Stuart (19 August 1596 – 13 February 1662)** was born in **1596**.\n\nSince **1587** is earlier than **1596**, **Francis Nethersole** was born first.\n\nFinal answer: Francis Nethersole",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784960811,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 1205,
+    "total_tokens": 1315,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

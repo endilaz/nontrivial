@@ -1,0 +1,22 @@
+# Panel-extension probe (Milestone F panel prep, 2026-07-24): GLM-5.2 on the
+# pinned OpenRouter DeepInfra route emits ZERO reasoning tokens when thinking
+# is disabled ({"thinking": {"type": "disabled"}}). The A3 probe verified the
+# raw reasoning field with thinking ENABLED; the F panel config requests
+# disabled thinking, and the runner's capability gate fails closed without a
+# thinking_disabled probe for this exact provider+model. If this probe fails,
+# GLM-5.2 cannot run in the non-thinking stratum on this route and the panel
+# decision reverts to the researcher (hidden-reasoning stratum).
+probe_id: glm_5_2_no_thinking_deepinfra
+provider: openrouter
+model: z-ai/glm-5.2
+capability: thinking_disabled
+assertion: reasoning_tokens_zero
+provider_route: DeepInfra
+thinking_setting:
+  thinking:
+    type: disabled
+max_tokens: 64
+temperature: 0.0
+messages:
+  - role: user
+    content: "What is 40 + 2? Reply with just the number."

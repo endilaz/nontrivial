@@ -172,16 +172,26 @@ def run_hint_paradigm(
     tasks = load_tasks(tasks_path)
     task_set_sha = verify_task_set_hash(tasks_path, task_set_manifest_path)
 
-    # A3 capability gate (same as the baseline/replication runners).
+    # A3 capability gate (same as the baseline/replication runners). Two strata:
+    # - non-thinking (default): a passing thinking_disabled probe is required.
+    # - hidden-reasoning (researcher Option A, 2026-07-24): a config that
+    #   explicitly ENABLES thinking requires a passing raw_reasoning_field probe
+    #   instead — the model runs as a native reasoner (e.g. GLM-5.2, whose
+    #   disabled-thinking probe FAILED on the pinned DeepInfra route).
     if config.thinking_setting != "none_supported":
         probes = load_matrix(capability_matrix_path)
+        thinking_enabled = (
+            isinstance(config.thinking_setting, dict)
+            and config.thinking_setting.get("thinking", {}).get("type") == "enabled"
+        )
+        required = "raw_reasoning_field" if thinking_enabled else "thinking_disabled"
         match = next(
             (
                 p
                 for p in probes.values()
                 if p.provider == config.provider
                 and p.model == config.model
-                and p.capability == "thinking_disabled"
+                and p.capability == required
             ),
             None,
         )

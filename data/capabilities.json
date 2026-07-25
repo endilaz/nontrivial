@@ -45,6 +45,28 @@
       "expires_on": "2026-08-20",
       "receipt_sha256": "c75ce63eb169714ba8ad3927efcef56c56ab07abf892ea0ffc7eaa57dd7a40b4",
       "notes": "assertion=reasoning_field_present; reasoning_tokens=87; mechanism=None"
+    },
+    {
+      "probe_id": "openai_no_reasoning_zero_gpt54",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "capability": "thinking_disabled",
+      "status": "pass",
+      "verified_on": "2026-07-24",
+      "expires_on": "2026-08-23",
+      "receipt_sha256": "ee09ea0819057fe603155d4d1bf80b5fe871b305262f514711c2ee9188364c4b",
+      "notes": "assertion=reasoning_tokens_zero; reasoning_tokens=0; mechanism=None"
+    },
+    {
+      "probe_id": "glm_5_2_no_thinking_deepinfra",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.2",
+      "capability": "thinking_disabled",
+      "status": "fail",
+      "verified_on": "2026-07-24",
+      "expires_on": "2026-08-23",
+      "receipt_sha256": "27a05b11eecc9c97a464450682ee9e035a20fc8e78b6fcbe29da05d1ba02469c",
+      "notes": "assertion=reasoning_tokens_zero; reasoning_tokens=55; mechanism=None \u2014 DeepInfra route ignores disabled-thinking toggle; GLM panel runs in hidden-reasoning stratum (Option A)"
     }
   ]
 }

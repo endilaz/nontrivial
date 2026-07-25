@@ -1,0 +1,29 @@
+{
+  "run_id": "probe_glm_5_2_no_thinking_deepinfra",
+  "experiment_kind": "capability_probe",
+  "created_at": "2026-07-25T06:10:37.165532+00:00",
+  "code_revision": "unknown",
+  "task_set_path": "(none \u2014 capability probe)",
+  "task_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "selected_task_ids": [
+    "glm_5_2_no_thinking_deepinfra"
+  ],
+  "selection_args": {
+    "probe": "glm_5_2_no_thinking_deepinfra",
+    "assertion": "reasoning_tokens_zero"
+  },
+  "config_sha256": "d7688bd2c74a9e894956feb3adeb36d2bbd247970f78ea726bad7f084bba18b0",
+  "prompt_template_version": "probe-v1",
+  "provider_route": "DeepInfra",
+  "requested_settings": {
+    "thinking_setting": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "temperature": 0.0
+  },
+  "price_revision": "prices-2026-07-08",
+  "cache_schema_version": 2,
+  "manifest_schema_version": 1
+}

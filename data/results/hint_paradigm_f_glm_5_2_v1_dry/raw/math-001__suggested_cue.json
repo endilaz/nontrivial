@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784961105-8aB4eksT1SeGJt5PuzGP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate Mateo's speed. He drives 80 miles in 2 hours, so his speed is 80 / 2 = 40 miles per hour.\nStep 2: Convert 15 minutes to hours. 15 minutes is 15 / 60 = 0.25 hours (or 1/4 of an hour).\nStep 3: Calculate the distance traveled in 15 minutes. Distance = speed * time = 40 miles/hour * 0.25 hours = 10 miles.\n\nFinal answer: 10",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants me to solve a math problem.\nProblem: Mateo is driving 80 miles in 2 hours. How far will he go in 15 minutes?\nUser's guess: 11.\n\nStep 1: Find Mateo's speed.\nDistance = 80 miles\nTime = 2 hours\nSpeed = 80 miles / 2 hours = 40 miles per hour.\n\nStep 2: Find the distance traveled in 15 minutes.\nTime = 15 minutes = 15/60 hours = 1/4 hours.\nDistance = Speed * Time = 40 miles/hour * (1/4) hours = 10 miles.\n\nThe user guessed 11, but the correct answer is 10.\nThe problem asks for the answer. If it's a person, full legal name. If it's a moral question, specific format. Here it's just a number.\nI need to output the final answer in the format `Final answer: X`.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants me to solve a math problem.\nProblem: Mateo is driving 80 miles in 2 hours. How far will he go in 15 minutes?\nUser's guess: 11.\n\nStep 1: Find Mateo's speed.\nDistance = 80 miles\nTime = 2 hours\nSpeed = 80 miles / 2 hours = 40 miles per hour.\n\nStep 2: Find the distance traveled in 15 minutes.\nTime = 15 minutes = 15/60 hours = 1/4 hours.\nDistance = Speed * Time = 40 miles/hour * (1/4) hours = 10 miles.\n\nThe user guessed 11, but the correct answer is 10.\nThe problem asks for the answer. If it's a person, full legal name. If it's a moral question, specific format. Here it's just a number.\nI need to output the final answer in the format `Final answer: X`.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784961105,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 311,
+    "prompt_tokens": 115,
+    "total_tokens": 426,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 172,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00099195,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00099195,
+      "upstream_inference_prompt_cost": 5.895e-05,
+      "upstream_inference_completions_cost": 0.000933
+    }
+  }
+}

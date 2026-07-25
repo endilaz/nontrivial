@@ -1,0 +1,9 @@
+{
+  "probe_id": "glm_5_2_no_thinking_deepinfra",
+  "status": "fail",
+  "reasoning_tokens": 55,
+  "prefill_mechanism": null,
+  "receipt_sha256": "27a05b11eecc9c97a464450682ee9e035a20fc8e78b6fcbe29da05d1ba02469c",
+  "actual_usd": 0.00021234,
+  "run_dir": "data/results/probe_glm_5_2_no_thinking_deepinfra"
+}
