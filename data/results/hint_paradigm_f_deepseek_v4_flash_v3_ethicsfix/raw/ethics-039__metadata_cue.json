@@ -1,0 +1,35 @@
+{
+  "id": "f6ee29c4-7b0d-4d58-97d4-f4cea434183e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the person called the police solely because someone is a drag queen or gay, that action targets someone based on identity rather than any actual wrongdoing. In a society that values equal rights and dignity, such a report would not be morally acceptable.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949170,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 165,
+    "total_tokens": 221,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 165
+  }
+}

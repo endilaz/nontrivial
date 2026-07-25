@@ -1,0 +1,35 @@
+{
+  "id": "f3002126-2336-4502-bef7-3b370bec1126",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: Basketball player directly left of cricketer.  \nPossible positions: (Basketball, Cricketer) = (1,2) or (2,3).\n\nFrom clue 1: Grilled cheese is somewhere left of basketball player.  \nIf basketball is in 1, no one is left of them — impossible.  \nSo basketball must be in 2, cricketer in 3.  \nThus: House 2 = basketball, House 3 = cricketer.\n\nFrom clue 3: Basketball player (house 2) and pizza eater are next to each other.  \nSo pizza is either house 1 or house 3.  \nHouse 3 is cricketer, so pizza could be house 1 or 3.  \nBut clue 6: Cat lover is somewhere left of pizza eater.  \nIf pizza were house 1, no one left of them — impossible.  \nSo pizza must be house 3.  \nThus: House 3 = pizza.\n\nFrom clue 6: Cat lover left of pizza (house 3) → cat lover is house 1 or 2.\n\nFrom clue 5: Grilled cheese directly left of bird keeper.  \nPossible pairs: (1,2) or (2,3).  \nBut house 3 already has pizza, so bird keeper cannot be house 3 if grilled cheese is house 2 (since house 3 is pizza, not bird).  \nCheck (1,2): House 1 = grilled cheese, House 2 = bird keeper.  \nCheck (2,3): House 2 = grilled cheese, House 3 = bird keeper — but house 3 is pizza, conflict.  \nSo only (1,2) works: House 1 = grilled cheese, House 2 = bird keeper.\n\nFrom clue 1: Grilled cheese (house 1) is left of basketball (house 2) — satisfied.\n\nNow we have:  \nHouse 1: grilled cheese  \nHouse 2: basketball, bird keeper  \nHouse 3: pizza, cricketer\n\nFrom clue 4: Radio not in house 1 → radio in house 2 or 3.\n\nFrom clue 7: Television directly left of phone.  \nPossible pairs: (1,2) or (2,3).\n\nCheck (1,2): House 1 = TV, House 2 = phone.  \nCheck (2,3): House 2 = TV, House 3 = phone.\n\nNow assign devices: TV, phone, radio.  \nIf (1,2) = TV, phone → radio must be house 3. That satisfies clue 4 (radio not house 1).  \nIf (2,3) = TV, phone → radio must be house 1, but clue 4 says radio not house 1 — impossible.  \nSo only (1,2) works: House 1 = TV, House 2 = phone, House 3 = radio.\n\nNow we have:  \nHouse 1: grilled cheese, TV  \nHouse 2: basketball, bird keeper, phone  \nHouse 3: pizza, cricketer, radio\n\nRemaining characteristics:  \nPets: dog, bird, cat. Bird is house 2.  \nFrom clue 6: Cat lover left of pizza (house 3) → cat lover is house 1 or 2.  \nHouse 2 already has bird, so cat lover must be house 1.  \nThus: House 1 = cat lover, House 2 = bird keeper, House 3 = dog owner.\n\nSports: basketball (house 2), cricketer (house 3), swimmer left → swimmer must be house 1.\n\nFoods: grilled cheese (house 1), pizza (house 3), so fried rice is house 2.\n\nFinal assignments:  \nHouse 1: grilled cheese, TV, cat lover, swimmer  \nHouse 2: fried rice, phone, bird keeper, basketball  \nHouse 3: pizza, radio, dog owner, cricketer\n\nSwimmer lives in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905481,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 859,
+    "prompt_tokens": 350,
+    "total_tokens": 1209,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 350
+  }
+}

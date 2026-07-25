@@ -1,0 +1,35 @@
+{
+  "id": "786e19f4-2841-43a3-9130-01c060a09015",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nLet’s list the attributes:  \n- Devices: phone, television  \n- Books: history, science fiction  \n- Shoes: high heels, loafers  \n- Drinks: tea, coffee  \n\nClues:  \n1. Phone not in house 1 → phone is in house 2.  \n2. Science fiction fanatic is left of tea drinker → possible pairs: (SF in house 1, tea in house 2) or (SF in house 1, tea in house 1 is impossible because left means strictly left, so only SF in 1, tea in 2 works).  \n3. Loafers not in house 1 → loafers in house 2.  \n\nFrom clue 1, phone is in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910451,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 182,
+    "prompt_tokens": 246,
+    "total_tokens": 428,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 118
+  }
+}

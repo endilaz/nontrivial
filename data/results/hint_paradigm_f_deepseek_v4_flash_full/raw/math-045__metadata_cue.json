@@ -1,0 +1,35 @@
+{
+  "id": "3ab46453-4fe8-4916-8084-8ca458704cbb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We know Ines sells 10 candy bars on the first day.  \nEach day after, she sells 4 more than the previous day.  \nShe sells 6 days a week.\n\nDay 1: 10  \nDay 2: 14  \nDay 3: 18  \nDay 4: 22  \nDay 5: 26  \nDay 6: 30  \n\nTotal candy bars = \\(10 + 14 + 18 + 22 + 26 + 30\\)  \nSum = \\(10+14=24\\), \\(24+18=42\\), \\(42+22=64\\), \\(64+26=90\\), \\(90+30=120\\)  \n\nEach candy bar costs $0.10.  \nEarnings = \\(120 \\times 0.10 = 12\\) dollars.\n\nFinal answer: 12",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908690,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 173,
+    "prompt_tokens": 162,
+    "total_tokens": 335,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 162
+  }
+}

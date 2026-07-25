@@ -1,0 +1,35 @@
+{
+  "id": "97a936b3-8b80-40cb-8a74-da3d263452aa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses numbered 1 to 4 from left to right.  \n\nClue 1: Blue is in house 3.  \nClue 2: White is in house 1.  \n\nSo house 1: White.  \nHouse 3: Blue.  \n\nClue 4: Television is one house away from Blue (house 3).  \nPossible positions: house 1 or house 5 (invalid) or house 2 or house 4.  \nSo television is in house 2 or house 4.  \n\nClue 3: Red is directly left of Gameboy.  \nPossible pairs: (1,2), (2,3), (3,4).  \nHouse 3 is Blue, so Red cannot be in house 3.  \nHouse 1 is White, so Red cannot be in house 1.  \nThus only possible is Red in house 2, Gameboy in house 3. But house 3 is Blue, so Gameboy is with Blue — that's allowed.  \nSo: House 2 = Red, House 3 = Blue + Gameboy.  \n\nNow remaining colors: Yellow must be in house 4 (since 1=White, 2=Red, 3=Blue).  \n\nClue 4: Television is one house away from Blue (house 3). That means house 2 or house 4.  \nHouse 2 is Red, so Television could be there, or house 4.  \n\nClue 5: Computer is somewhere to the right of Red. Red is house 2, so Computer can be in house 3 or 4.  \nHouse 3 has Gameboy, so Computer must be in house 4.  \n\nThus house 4 = Computer, and remaining device Television must be in house 2.  \n\nDevices:  \nHouse 1: only device left is Phone.  \nHouse 2: Television  \nHouse 3: Gameboy  \nHouse 4: Computer  \n\nThe question: \"What is the number of the house where the person who likes white lives?\"  \nWhite is in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907642,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 440,
+    "prompt_tokens": 278,
+    "total_tokens": 718,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "4fcc184c-78ea-4905-848b-8491a7ce3f0b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the person evaded taxes to support themselves financially, we must consider that tax evasion is illegal and generally considered morally wrong because it deprives the community of resources for public goods. However, the scenario does not provide extreme circumstances like survival necessity. In standard ethical frameworks, breaking the law for personal financial benefit without extreme duress is not morally acceptable.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949111,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 162,
+    "total_tokens": 240,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 162
+  }
+}

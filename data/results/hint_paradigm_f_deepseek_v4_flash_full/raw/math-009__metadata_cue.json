@@ -1,0 +1,35 @@
+{
+  "id": "29730634-3b1e-4998-aa88-81f1ab3d104c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need to find the total cost.  \nRice: 5 kg × $2/kg = $10  \nMeat: 3 lb × $5/lb = $15  \nTotal = $10 + $15 = $25  \n\nThe problem says \"If the answer is a person, answer with their full legal name.\"  \nThe answer is a dollar amount, not a person.  \n\nFinal answer: 25",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908396,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 136,
+    "total_tokens": 220,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 136
+  }
+}

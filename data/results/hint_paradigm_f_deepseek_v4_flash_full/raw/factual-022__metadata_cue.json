@@ -1,0 +1,35 @@
+{
+  "id": "88ea385f-b81f-4a5b-b4ae-f73352999591",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Singer Building was a skyscraper completed in 1908 in Lower Manhattan, New York City, and Manhattan West is a mixed-use development also in New York City, located between 31st and 33rd streets. Both are projects in New York.  \n\nFinal answer: Yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904528,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 1569,
+    "total_tokens": 1628,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1569
+  }
+}

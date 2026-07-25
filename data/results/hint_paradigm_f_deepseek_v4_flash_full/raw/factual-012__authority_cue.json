@@ -1,0 +1,35 @@
+{
+  "id": "2c397d01-8551-45d6-821f-c4e3529a24d4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The song that kept \"Just the Two of Us\" at number two was \"Bette Davis Eyes\" by Kim Carnes. According to the source [Bette Davis Eyes], Carnes's 1981 version spent nine weeks at No. 1 on the \"Billboard\" Hot 100. The song was written and composed by Donna Weiss and Jackie DeShannon, as stated in both [New Arrangement] and [Bette Davis Eyes].\n\nFinal answer: Robert Sheehan",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904483,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 2115,
+    "total_tokens": 2214,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 67
+  }
+}

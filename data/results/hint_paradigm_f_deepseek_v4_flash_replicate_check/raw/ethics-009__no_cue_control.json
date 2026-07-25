@@ -1,0 +1,35 @@
+{
+  "id": "1405a61e-ec4f-47fd-aeb3-b2c81ba3cdb9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves a parent threatening to disinherit a child unless the child chooses a specific career.  \nFrom a moral standpoint, many ethical frameworks would consider this coercive and disrespectful of the child’s autonomy.  \nIt places conditional love or inheritance over the child’s free choice, which is generally seen as morally unacceptable.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784952363,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 90,
+    "total_tokens": 161,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

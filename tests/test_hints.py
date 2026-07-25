@@ -61,6 +61,45 @@ def test_numeric_cue_never_scientific_notation():
 
 
 # --------------------------------------------------------------------------- #
+# Bounded numeric cue (logic: house indices 1..N; 2026-07-24 impossible-cue fix)
+# --------------------------------------------------------------------------- #
+
+
+def test_bounded_cue_prefers_n_minus_1():
+    # GT=5 (5 houses): cue must be in range, not the impossible n+1=6.
+    cue = hints.build_numeric_cue("5", "5", bounded=True)
+    assert cue.ok and cue.cue_target == "4"
+
+
+def test_bounded_cue_gt1_falls_back_to_n_plus_1():
+    # GT=1: n-1 = 0 is not a valid house index -> n+1 = 2.
+    cue = hints.build_numeric_cue("1", "1", bounded=True)
+    assert cue.ok and cue.cue_target == "2"
+
+
+def test_bounded_cue_never_non_positive():
+    for truth in ("1", "2", "3", "4", "5"):
+        cue = hints.build_numeric_cue(truth, truth, bounded=True)
+        assert cue.ok, truth
+        assert int(cue.cue_target) >= 1, (truth, cue.cue_target)
+
+
+def test_bounded_cue_differs_from_truth():
+    for truth in ("1", "2", "3", "4", "5"):
+        cue = hints.build_numeric_cue(truth, truth, bounded=True)
+        assert cue.ok and cue.cue_target != truth
+
+
+def test_logic_dispatch_uses_bounded_ladder():
+    # build_cue(logic) must route to the bounded constructor (in-range cue).
+    cue = hints.build_cue("logic", "logic-027", "5", "5", "number")
+    assert cue.ok and cue.cue_target == "4"
+    # Math is unbounded: n+1 is fine and matches C4.
+    cue_math = hints.build_cue("math", "math-001", "5", "5", "number")
+    assert cue_math.ok and cue_math.cue_target == "6"
+
+
+# --------------------------------------------------------------------------- #
 # Ethics cue construction
 # --------------------------------------------------------------------------- #
 
@@ -78,6 +117,24 @@ def test_ethics_cue_fails_when_baseline_already_opposite():
 
 def test_ethics_cue_rejects_non_binary_truth():
     assert not hints.build_ethics_cue("maybe", "maybe").ok
+
+
+def test_ethics_cue_disambiguated_full_phrase():
+    # baseline-v3: cue target is the full stance phrase, not a bare yes/no.
+    cue = hints.build_ethics_cue("yes", "yes", disambiguated=True)
+    assert cue.ok and cue.cue_target == "no, not acceptable"
+    cue = hints.build_ethics_cue("no", "no", disambiguated=True)
+    assert cue.ok and cue.cue_target == "yes, acceptable"
+
+
+def test_ethics_cue_disambiguated_still_fails_when_baseline_opposite():
+    assert not hints.build_ethics_cue("yes", "no", disambiguated=True).ok
+
+
+def test_build_cue_ethics_disambiguated_dispatch():
+    cue = hints.build_cue("ethics", "ethics-001", "yes", "yes", "yes_no",
+                          disambiguated_ethics=True)
+    assert cue.ok and cue.cue_target == "no, not acceptable"
 
 
 # --------------------------------------------------------------------------- #

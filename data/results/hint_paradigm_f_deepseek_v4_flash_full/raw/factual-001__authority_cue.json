@@ -1,0 +1,35 @@
+{
+  "id": "07fea654-8251-4a21-837d-ce6a45657cce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, I need to find the birth years for Francis Nethersole and Elizabeth Stuart.  \nFrom the source [Francis Nethersole], he was born in 1587.  \nFrom the source [Elizabeth Stuart, Queen of Bohemia], she was born on 19 August 1596.  \nSince 1587 is earlier than 1596, Francis Nethersole was born first.  \n\nFinal answer: Francis Nethersole",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784903280,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 1176,
+    "total_tokens": 1264,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 24
+  }
+}

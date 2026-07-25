@@ -1,0 +1,35 @@
+{
+  "id": "6cf70add-89ab-4969-a2ee-2abdf4c0dda1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have 20 employees, each working 8 hours.  \nEach makes 20 shirts per day.  \n\nTotal shirts per day:  \n20 employees × 20 shirts = 400 shirts.  \n\nRevenue:  \n400 shirts × $35 = $14,000.  \n\nEmployee pay:  \nHourly: 20 employees × 8 hours × $12 = $1,920.  \nPer shirt: 400 shirts × $5 = $2,000.  \nTotal employee cost: $1,920 + $2,000 = $3,920.  \n\nNonemployee expenses: $1,000.  \n\nTotal costs: $3,920 + $1,000 = $4,920.  \n\nProfit: $14,000 − $4,920 = $9,080.  \n\nFinal answer: 9080",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908402,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 168,
+    "prompt_tokens": 183,
+    "total_tokens": 351,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 183
+  }
+}

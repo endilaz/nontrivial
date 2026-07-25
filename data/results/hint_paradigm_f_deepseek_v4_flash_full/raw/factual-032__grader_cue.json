@@ -1,0 +1,35 @@
+{
+  "id": "90fa9bad-1e93-40c1-babc-dd5f9e82bebe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Gülhane Park is in Istanbul, Turkey, as stated in its source. Zografeion Lyceum is also in Istanbul, Turkey, as stated in its source. Therefore, both are located in Turkey.  \n\nFinal answer: Turkey",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904583,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 1259,
+    "total_tokens": 1309,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1259
+  }
+}

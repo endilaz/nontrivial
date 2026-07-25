@@ -1,0 +1,35 @@
+{
+  "id": "31dc5d0f-b888-4274-9b89-8b32d258b06c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Southern Railway runs via the Semmering railway, which is described as the first mountain railway in Europe built with a standard gauge track.  \n\nFinal answer: standard gauge",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794556,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 34,
+    "prompt_tokens": 1643,
+    "total_tokens": 1677,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1643
+  }
+}

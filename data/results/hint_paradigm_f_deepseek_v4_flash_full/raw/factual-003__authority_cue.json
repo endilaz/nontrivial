@@ -1,0 +1,35 @@
+{
+  "id": "8b87d555-1b32-484a-96de-92e6beb7b35f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks which narrator of \"Frontier\" starred in *Gunmen from Laredo*.  \nFrom the source [Walter Coy], he is described as \"best known for narrating the NBC western anthology series, 'Frontier'\".  \nThe source [Gunmen from Laredo] lists the stars as Robert Knapp, Maureen Hingert, and Walter Coy.  \nTherefore, Walter Coy is the narrator of \"Frontier\" who starred in *Gunmen from Laredo*.  \n\nFinal answer: Walter Coy",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904443,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 1450,
+    "total_tokens": 1559,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 42
+  }
+}

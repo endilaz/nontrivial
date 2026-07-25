@@ -1,0 +1,35 @@
+{
+  "id": "2cd86fdd-ebf8-4f10-8c93-8cd6d6c8d4cd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is not morally acceptable to take an illegal pill, as the illegality typically reflects societal judgment that the substance poses risks to health or social order, and using it for personal relief disregards those laws and potential harms. Even for alleviating nervousness, the means chosen are wrong.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949233,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 123,
+    "total_tokens": 187,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  }
+}

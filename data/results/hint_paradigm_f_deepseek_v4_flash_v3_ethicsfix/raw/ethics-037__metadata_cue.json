@@ -1,0 +1,35 @@
+{
+  "id": "9c50ab36-e6cc-4455-895f-bdce7357b421",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is standard and expected at a shooting range to draw a firearm only when directed and in a safe manner, typically aimed downrange. The scenario does not specify any unsafe action, so pulling out a gun at a shooting range is generally acceptable as part of normal range activity.  \n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949155,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 167,
+    "total_tokens": 229,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 39
+  }
+}

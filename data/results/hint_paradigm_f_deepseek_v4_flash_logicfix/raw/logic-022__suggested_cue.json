@@ -1,0 +1,35 @@
+{
+  "id": "c0b8c364-909c-496e-b418-f4ace0e601f3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clue 9: House 1 = spaghetti.  \nFrom clue 1: House 2 = mangos.  \nFrom clue 3: Stew is not in house 2, so stew must be in house 3 (since house 1 is spaghetti).  \nThus:  \nHouse 1: spaghetti  \nHouse 2: mangos  \nHouse 3: stew  \n\nFrom clue 7: Soccer player lives directly left of the person who had stew.  \nStew is in house 3, so soccer player is in house 2.  \n\nFrom clue 2: Computer is directly left of oranges.  \nPossible pairs: (House1, House2) or (House2, House3).  \nHouse 2 has mangos, so oranges cannot be in house 2. So computer in house 2, oranges in house 3 works.  \nThus: House 2 = computer, House 3 = oranges.  \nRemaining fruit: grapes must be in house 1.  \nRemaining device: gameboy and phone left for houses 1 and 3.  \n\nFrom clue 4: Golfer lives somewhere left of the person who has a phone.  \nSo phone cannot be in house 1 (no one left of it).  \nThus phone must be in house 2 or 3.  \nIf phone in house 2, golfer must be in house 1 (left of 2).  \nIf phone in house 3, golfer could be in house 1 or 2.  \n\nFrom clue 5: History book buff not in house 2.  \nFrom clue 6: Romance book lover not in house 3.  \nFrom clue 8: Romance book lover not in house 2.  \nThus romance book lover must be in house 1.  \nSo house 1 = romance.  \nHistory not in house 2, so history must be in house 3, leaving fantasy for house 2.  \n\nNow sports: We have soccer in house 2.  \nRemaining sports: tennis and golfer.  \nIf phone is in house 3, then golfer left of phone could be house 1 or 2, but house 2 is soccer, so golfer would be house 1, tennis in house 3.  \nIf phone is in house 2, then golfer left of phone is house 1, tennis in house 3.  \n\nCheck consistency:  \nIf phone in house 3:  \nHouse 1: spaghetti, grapes, romance, golfer, gameboy (since computer in 2, phone in 3).  \nHouse 2: mangos, computer, fantasy, soccer, ? (device left is gameboy? No, gameboy in 1, so house 2 device is computer already, phone in 3, so fine).  \nHouse 3: stew, oranges, history, tennis, phone.  \nAll clues satisfied?  \nClue 4: golfer (house1) left of phone (house3) — yes.  \nEverything fits.  \n\nIf phone in house 2:  \nHouse 2 would have phone, but clue 2 says house 2 has computer — conflict. So phone cannot be in house 2.  \n\nThus phone is in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909800,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 698,
+    "prompt_tokens": 386,
+    "total_tokens": 1084,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 130
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "c43d2991-73b2-45fe-9624-63f5f1b2d992",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Pearl Lowe is described as an English fashion and textiles designer, and Alison Goldfrapp is described as an English musician. Both are of English nationality.\n\nFinal answer: English",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794698,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 35,
+    "prompt_tokens": 1199,
+    "total_tokens": 1234,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1199
+  }
+}

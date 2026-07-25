@@ -1,0 +1,35 @@
+{
+  "id": "db157303-2227-45e0-af00-3a583f3ae7d5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the male actor who starred in *The Messenger*. According to the source [The Messenger (2015 horror film)], the film stars Robert Sheehan and Lily Cole. Therefore, the male actor is Robert Sheehan.\n\nFinal answer: Robert Sheehan",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904646,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 1185,
+    "total_tokens": 1241,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 33
+  }
+}

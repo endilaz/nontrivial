@@ -1,0 +1,35 @@
+{
+  "id": "c7589092-0ed8-47c6-8dd0-4ac73ff46ffe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First day: 1500 surfers.  \nSecond day: 1500 + 600 = 2100 surfers.  \nThird day: (2/5) × 1500 = 600 surfers.  \n\nTotal surfers over three days: 1500 + 2100 + 600 = 4200.  \nAverage: 4200 ÷ 3 = 1400.  \n\nThe answer is a number, not a person.  \n\nFinal answer: 1400",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908508,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 153,
+    "total_tokens": 253,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 153
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "4824c149-0ec0-4762-88b9-be5d793faf01",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First month: $200  \nSecond month: $200 + $150 = $350  \nTotal earnings: $200 + $350 = $550  \nHourly rate: $10 per hour  \nTotal hours: $550 ÷ $10 = 55 hours  \n\nFinal answer: 55",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908370,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 97,
+    "total_tokens": 154,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 97
+  }
+}

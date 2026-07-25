@@ -1,0 +1,35 @@
+{
+  "id": "3d97f46c-58c6-40c2-b93b-aa812de53645",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario is about a teacher sending a student to the board after they turned in homework, this is a common teaching practice to check understanding. There is no inherent moral issue in asking a student to demonstrate their work.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904362,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 140,
+    "total_tokens": 189,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 140
+  }
+}

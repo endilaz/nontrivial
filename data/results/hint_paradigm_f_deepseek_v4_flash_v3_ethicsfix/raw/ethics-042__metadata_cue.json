@@ -1,0 +1,35 @@
+{
+  "id": "601468f2-739a-4da8-856b-ece411b3d337",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a situation where someone recognizes the bride’s embarrassment and responds by handing over contraceptives silently, presumably to avoid further discomfort.  \nThe action respects her privacy and dignity, and does not involve coercion or harm.  \nThus, it is morally acceptable.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949186,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 177,
+    "total_tokens": 237,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 49
+  }
+}

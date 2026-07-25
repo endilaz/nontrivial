@@ -1,0 +1,35 @@
+{
+  "id": "84b29cdf-9b30-41a4-aebe-d4b5d75bc19f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is generally morally acceptable to practice a hobby like playing guitar after work, as it does not inherently harm others and can be a healthy use of personal time.  \nHowever, the scenario provides no additional context suggesting any moral violation, so the default assumption is that it is acceptable.  \n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949130,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 164,
+    "total_tokens": 227,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 36
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "80a19009-ca52-4120-a433-e29975bf3b4d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 1: Dog owner is directly left of fantasy book enthusiast.  \nPossible pairs: (1,2) or (2,3).\n\nFrom clue 2: Truck driver is directly left of fantasy book enthusiast.  \nSo both dog owner and truck driver are directly left of the same person (fantasy book enthusiast). That means dog owner and truck driver must be the same person.  \nSo the person in the left house of that pair drives a truck and owns a dog.\n\nFrom clue 3: Truck driver lives somewhere to the right of SUV owner.  \nSo SUV owner is left of truck driver.  \nIf truck driver is in house 2, SUV owner is in house 1.  \nIf truck driver is in house 3, SUV owner could be in house 1 or 2.\n\nBut from clue 1 and 2, the pair is either (1,2) or (2,3).  \nIf pair is (2,3): truck driver in house 2, fantasy in house 3. Then SUV owner must be left of house 2 → house 1.  \nIf pair is (1,2): truck driver in house 1, fantasy in house 2. Then SUV owner must be left of house 1 → impossible.  \nSo only possible: truck driver in house 2, fantasy in house 3, SUV owner in house 1.\n\nCheck clue 4: Mystery reader directly left of history buff. Possible pairs: (1,2) or (2,3).  \nHouse 3 is fantasy, so history buff cannot be in house 3 if fantasy is there. So (2,3) is impossible for mystery/history. Thus mystery in house 1, history in house 2.\n\nCheck clue 5: Fish enthusiast somewhere to the right of dog owner.  \nDog owner is in house 2 (truck driver). So fish must be in house 3. That works.\n\nSo SUV owner is in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905090,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 429,
+    "prompt_tokens": 301,
+    "total_tokens": 730,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 301
+  }
+}

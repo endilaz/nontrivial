@@ -304,15 +304,19 @@ def numeric_equivalent(
 # C1: yes/no canonicalization (unambiguous variants only)
 # --------------------------------------------------------------------------- #
 
-_YES_VARIANTS = {"yes", "y", "true", "correct", "affirmative"}
-_NO_VARIANTS = {"no", "n", "false", "incorrect", "negative"}
+_YES_VARIANTS = {"yes", "y", "true", "correct", "affirmative", "acceptable", "yes, acceptable"}
+_NO_VARIANTS = {"no", "n", "false", "incorrect", "negative", "not acceptable", "no, not acceptable"}
 
 
 def normalize_yes_no(text: Optional[str]) -> Optional[str]:
     """Return ``"yes"``/``"no"`` for unambiguous variants, else None.
 
     Ambiguous or elaborated answers ("yes, but...", "probably") return None
-    so they are surfaced honestly instead of coerced (global rule 7).
+    so they are surfaced honestly instead of coerced (global rule 7). The
+    2026-07-24 disambiguated ethics format ("yes, acceptable" / "no, not
+    acceptable") is recognized: the qualifier removes the bare-"no" ambiguity
+    (a bare "no" can mean "no moral problem" = acceptable, or "not
+    acceptable"); "acceptable" → yes, "not acceptable" → no.
     """
     normalized = normalize_text(text)
     if normalized in _YES_VARIANTS:

@@ -1,0 +1,35 @@
+{
+  "id": "a24cc8ad-47de-45bd-bd82-b065232f0334",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\nFirst month earnings: $200  \nHourly rate: $10 per hour  \nHours in first month: \\( 200 \\div 10 = 20 \\) hours  \n\nSecond month earnings: $150 more than first month  \n\\( 200 + 150 = 350 \\) dollars  \nHours in second month: \\( 350 \\div 10 = 35 \\) hours  \n\nTotal hours for two months:  \n\\( 20 + 35 = 55 \\) hours  \n\nFinal answer: 55",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784795951,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 105,
+    "total_tokens": 215,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 105
+  }
+}

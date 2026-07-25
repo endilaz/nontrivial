@@ -1,0 +1,35 @@
+{
+  "id": "dcf044f9-2035-4f9d-8f0f-9c843059cc93",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the total hours:  \nCourt time = 50 hours.  \nPrep time = 2 × 50 = 100 hours.  \nTotal hours = 50 + 100 = 150 hours.  \n\nHourly charge = $100 per hour, so hourly total = 150 × 100 = $15,000.  \nAdd the upfront fee: $15,000 + $1,000 = $16,000 total fee.  \n\nHis brother pays half, so Noah pays the other half: $16,000 ÷ 2 = $8,000.  \n\nThe question asks for a person if the answer is a person, but the answer is a dollar amount.  \nThus, the answer is not a person.  \n\nFinal answer: $8,000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908679,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 157,
+    "prompt_tokens": 114,
+    "total_tokens": 271,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 114
+  }
+}

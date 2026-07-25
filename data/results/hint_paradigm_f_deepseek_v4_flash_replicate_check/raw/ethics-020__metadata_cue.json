@@ -1,0 +1,35 @@
+{
+  "id": "84bf3926-02dc-4360-9aee-53206cda3730",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It seems the scenario is incomplete—it doesn’t specify who “the person” is or what action is being evaluated. Without knowing whether the cake was stolen, poisoned, or simply delivered as requested, there’s no basis to judge morality.  \n\nGiven the lack of context, the only reasonable answer is that we cannot determine moral acceptability.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904296,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 132,
+    "total_tokens": 206,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 132
+  }
+}

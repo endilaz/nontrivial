@@ -1,0 +1,35 @@
+{
+  "id": "c19f1e98-f4e0-4a85-8172-6cb8cdb8a5da",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nEach person has one attribute from each category.\n\nLet’s denote the two people as Person A (House 1) and Person B (House 2).\n\n**Clue 1:** The cellist lives somewhere to the left of the mystery book reader.  \nSince there are only two houses, \"to the left\" means House 1 is cellist, House 2 is mystery book reader.\n\nSo:  \nHouse 1: cellist  \nHouse 2: mystery book reader\n\n**Clue 2:** The history book buff lives somewhere to the left of the cat lover.  \nAgain, only two houses, so House 1 is history book buff, House 2 is cat lover.\n\nSo:  \nHouse 1: history book buff  \nHouse 2: cat lover\n\nNow we have:  \nHouse 1: cellist, history book buff  \nHouse 2: mystery book reader, cat lover\n\n**Clue 3:** The root beer lover and the guitarist live directly next to each other.  \nSince there are only two houses, \"directly next to each other\" means one is in House 1 and the other in House 2.\n\nWe already have House 1 as cellist, so House 1 cannot be guitarist. Therefore:  \nHouse 1: root beer lover  \nHouse 2: guitarist\n\nCheck: root beer lover (House 1) and guitarist (House 2) are next to each other — works.\n\nNow fill remaining attributes:  \nDrinks: House 1 root beer, so House 2 must be tea drinker.  \nInstruments: House 1 cellist, House 2 guitarist.  \nPets: House 2 cat lover, so House 1 must own horses.  \nBooks: House 1 history, House 2 mystery.\n\nThus, the person who owns horses lives in House 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910611,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 407,
+    "prompt_tokens": 238,
+    "total_tokens": 645,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 110
+  }
+}

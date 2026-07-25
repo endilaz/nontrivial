@@ -1,0 +1,35 @@
+{
+  "id": "36049a75-5cbc-4209-88b5-1c0dd5ef3687",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves a parent using the threat of disinheritance to pressure an adult child into a specific career. Morally, this is generally considered unacceptable because it undermines the child's autonomy, uses coercion rather than persuasion, and prioritizes the parent's desires over the child's well-being and freedom of choice.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949004,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 127,
+    "total_tokens": 198,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 127
+  }
+}

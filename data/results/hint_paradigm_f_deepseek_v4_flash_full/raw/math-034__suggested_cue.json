@@ -1,0 +1,35 @@
+{
+  "id": "6e4b81d9-fb80-4a7e-8c16-4d5d75ddb773",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's break it down step by step.\n\n- Empty truck weight: 12,000 pounds  \n- 20 crates of soda × 50 pounds each = 1,000 pounds  \n- 3 dryers × 3,000 pounds each = 9,000 pounds  \n- Fresh produce weight = twice the weight of soda = 2 × 1,000 = 2,000 pounds  \n\nNow add all together:  \n12,000 + 1,000 + 9,000 + 2,000 = 24,000 pounds  \n\nThe bridge limit is 20,000 pounds, so the truck is over the limit, but the question only asks for the fully loaded weight.\n\nFinal answer: 24000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853150,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 149,
+    "prompt_tokens": 149,
+    "total_tokens": 298,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 149
+  }
+}

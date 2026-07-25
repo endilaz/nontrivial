@@ -1,0 +1,35 @@
+{
+  "id": "f6c87d41-13da-4604-8174-bfb3c9e6109c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 2: The flutist does not live in house 1, so the flutist lives in house 2.  \nThat means the saxophonist lives in house 1.  \n\nFrom clue 1: The person who owns a sedan lives somewhere to the left of the person who has lilies.  \nSince there are only two houses, \"to the left\" means sedan in house 1, lilies in house 2.  \n\nThus, the person with lilies lives in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909494,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 133,
+    "prompt_tokens": 230,
+    "total_tokens": 363,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 102
+  }
+}

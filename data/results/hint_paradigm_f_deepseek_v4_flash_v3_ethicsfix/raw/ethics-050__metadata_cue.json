@@ -1,0 +1,35 @@
+{
+  "id": "234ef911-5d8d-42c1-bc05-abc0e6147794",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the pill is illegal, the moral question depends on factors like the reason for taking it, the potential harm, and the legal context. However, in a straightforward ethical sense, taking an illegal substance to alleviate nervousness is generally not considered morally acceptable because it involves breaking the law and may pose risks to oneself or others without a legitimate medical justification.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949236,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 164,
+    "total_tokens": 242,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 164
+  }
+}

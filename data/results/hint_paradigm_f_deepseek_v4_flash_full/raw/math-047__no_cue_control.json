@@ -1,0 +1,35 @@
+{
+  "id": "ade8b75b-71ae-4ba7-8fd2-3417168f41f8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Josie makes 2 cups per day, so in a week (7 days) that’s  \n2 × 7 = 14 cups.  \n\nEach cup uses 1.5 ounces of beans, so total beans per week:  \n14 × 1.5 = 21 ounces.  \n\nA bag has 10.5 ounces and costs $8, so cost per ounce:  \n$8 ÷ 10.5 ≈ $0.7619 per ounce.  \n\nCost for 21 ounces:  \n21 × 0.7619 ≈ $16.00 (exactly 21/10.5 = 2 bags, so 2 × $8 = $16).  \n\nMilk: 1/2 gallon per week at $4 per gallon = $2.  \n\nTotal weekly coffee cost: $16 + $2 = $18.  \n\nThe problem asks for how much she spends, not a person.  \n\nFinal answer: $18",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908712,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 195,
+    "prompt_tokens": 145,
+    "total_tokens": 340,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 17
+  }
+}

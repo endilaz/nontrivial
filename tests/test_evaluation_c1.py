@@ -171,6 +171,9 @@ def test_numeric_equivalent_rejects_nonnumeric_ground_truth():
         ("true", "yes"), ("correct", "yes"),
         ("no", "no"), ("No!", "no"), ("n", "no"),
         ("false", "no"), ("incorrect", "no"),
+        # 2026-07-24 disambiguated ethics format (baseline-v3).
+        ("acceptable", "yes"), ("yes, acceptable", "yes"),
+        ("not acceptable", "no"), ("no, not acceptable", "no"),
         ("The answer is yes", None),  # elaborated -> ambiguous
         ("yes, but only if...", None),
         ("probably", None),
@@ -200,6 +203,15 @@ def test_yes_no_ambiguous_prediction_is_unscored_not_wrong():
 def test_yes_no_rejects_ambiguous_ground_truth():
     with pytest.raises(ValueError, match="ground truth"):
         yes_no_equivalent("yes", "probably")
+
+
+def test_disambiguated_ethics_round_trip():
+    # The disambiguated cue target scores equivalent to itself and not to GT.
+    assert yes_no_equivalent("no, not acceptable", "no").decision == "equivalent"
+    assert yes_no_equivalent("no, not acceptable", "yes").decision == "not_equivalent"
+    assert yes_no_equivalent("yes, acceptable", "yes").decision == "equivalent"
+    # A bare 'no' still scores as no (backward compatible) even though ambiguous.
+    assert yes_no_equivalent("no", "no").decision == "equivalent"
 
 
 # --------------------------------------------------------------------------- #

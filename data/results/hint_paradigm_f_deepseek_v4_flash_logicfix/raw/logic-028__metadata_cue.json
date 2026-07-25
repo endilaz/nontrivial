@@ -1,0 +1,35 @@
+{
+  "id": "1b92b9b2-9435-4b1e-b028-2c39427f5b01",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 1:  \n- Phone is in House 1 → Radio must be in House 2.  \n\nFrom clue 2:  \n- Boots are not in House 2 → Boots are in House 1 → High heels are in House 2.  \n\nFrom clue 3:  \n- The horse owner and the radio owner live next to each other.  \nRadio is in House 2, so horse owner must be in House 1 (since they are adjacent).  \nThat means dog owner is in House 2.  \n\nSo House 1: Phone, Boots, Horses  \nHouse 2: Radio, High heels, Dog  \n\nThe person wearing high heels lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910417,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 171,
+    "prompt_tokens": 263,
+    "total_tokens": 434,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 135
+  }
+}

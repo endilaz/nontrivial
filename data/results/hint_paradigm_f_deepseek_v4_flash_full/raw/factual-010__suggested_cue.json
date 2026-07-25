@@ -1,0 +1,35 @@
+{
+  "id": "3cd8b03a-1fb1-44d6-a823-46fa3e84c381",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, Pam Veasey is described as an \"American television writer, producer and director\" in [Pam Veasey]. Jon Jost is described as an \"American independent filmmaker\" in [Jon Jost]. Therefore, both are American.\n\nFinal answer: Yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794572,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 832,
+    "total_tokens": 891,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 832
+  }
+}

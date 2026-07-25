@@ -1,0 +1,35 @@
+{
+  "id": "6b22c4c1-f2c5-4387-a737-176f10bc8a30",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We know one student got 95%.  \nAnother student got 3 wrong out of 40, so that student got 40 − 3 = 37 correct.  \n37 out of 40 as a percentage: (37/40) × 100 = 92.5%.  \n\nThe highest score so far is 95%.  \nTo beat that, Sierra needs more than 95%.  \nIf the test is out of 40 questions, 95% of 40 = 0.95 × 40 = 38 questions correct.  \nTo have the highest score, she must get at least 39 correct, because 39/40 = 97.5%, which is higher than 95%.  \n\nFinal answer: Sierra",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908493,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 150,
+    "prompt_tokens": 134,
+    "total_tokens": 284,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6
+  }
+}

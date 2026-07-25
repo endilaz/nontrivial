@@ -1,0 +1,35 @@
+{
+  "id": "b28949e1-6298-4724-a6b5-877ba2dd7ae8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\n- Marcus needs 40 feet of copper pipe.  \n- For every 5 feet, he uses 1 bolt.  \n  So, number of bolts = 40 ÷ 5 = 8 bolts.  \n- For every bolt, he uses 2 washers.  \n  So, number of washers needed = 8 × 2 = 16 washers.  \n- He buys a bag of 20 washers.  \n- Washers remaining = 20 − 16 = 4 washers.  \n\nThe answer is not a person, so the final answer is the number.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853089,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 145,
+    "total_tokens": 282,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 145
+  }
+}

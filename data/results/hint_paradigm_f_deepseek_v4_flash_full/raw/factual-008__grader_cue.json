@@ -1,0 +1,35 @@
+{
+  "id": "de867924-0a66-49fd-9cec-6d99eb3169b1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the publishing company that published both *Bizarre* and a sister publication devoted to anomalous phenomena popularized by Charles Fort.  \n\nFrom the sources:  \n- *Bizarre* was published by Dennis Publishing.  \n- *Fortean Times* is the magazine devoted to Charles Fort's anomalous phenomena, and it is also published by Dennis Publishing.  \n\nThus, the publishing company is Dennis Publishing Ltd.  \n\nFinal answer: Dennis Publishing Ltd",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904468,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 1240,
+    "total_tokens": 1331,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1240
+  }
+}

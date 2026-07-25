@@ -1,0 +1,35 @@
+{
+  "id": "298f0e9c-65f6-44b0-820b-e5dc727eb766",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down:\n\n- Mowing: 1 hour, pays $15 → that’s $15/hour.  \n- Evan wants to make $20/hour overall.  \n- Planting flowers takes 2 hours.  \n\nFor the planting job, to average $20/hour across both jobs, the total pay for both jobs must equal $20/hour × total hours worked.\n\nTotal hours = 1 (mowing) + 2 (planting) = 3 hours.  \nDesired total pay = 3 × $20 = $60.  \nHe already gets $15 from mowing, so planting must pay $60 − $15 = $45.\n\nThus, Evan should charge $45 for planting the flowers.\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908453,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 144,
+    "total_tokens": 297,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 144
+  }
+}

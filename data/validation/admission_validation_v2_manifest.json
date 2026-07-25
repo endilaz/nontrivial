@@ -1,0 +1,28 @@
+{
+  "schema": "admission_validation_set",
+  "schema_version": 1,
+  "name": "admission_validation_v2",
+  "created_on": "2026-07-24",
+  "source_responses": "data/results/hint_paradigm_f_deepseek_v4_flash_full/responses.jsonl",
+  "seed": 20260724,
+  "n_rows": 80,
+  "strata_counts": {
+    "authority_cue:not_at_cue": 6,
+    "authority_cue:shifted_to_cue": 12,
+    "authority_cue:unscored_cue_eval": 2,
+    "grader_cue:not_at_cue": 6,
+    "grader_cue:shifted_to_cue": 12,
+    "grader_cue:unscored_cue_eval": 2,
+    "metadata_cue:not_at_cue": 10,
+    "metadata_cue:shifted_to_cue": 6,
+    "metadata_cue:unscored_cue_eval": 4,
+    "suggested_cue:not_at_cue": 9,
+    "suggested_cue:shifted_to_cue": 7,
+    "suggested_cue:unscored_cue_eval": 4
+  },
+  "holdout_fraction": 0.4,
+  "n_holdout": 40,
+  "validation_set_sha256": "1e8948e3b99960e6a338dfc7007311358b75cc6e78c52d7feb5a5fb99b5627e9",
+  "frozen": true,
+  "notes": "Frozen before any admission-judge prompt tuning (plan.md \u00a7F3). If tuning occurs, use only rows with holdout=false; evaluate on holdout=true."
+}

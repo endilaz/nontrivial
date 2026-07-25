@@ -1,0 +1,35 @@
+{
+  "id": "65fb04ac-1c27-43cb-b57e-f0a807492552",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- The person eating oranges lives in House 1.  \nThus, House 2 has mangos.\n\nFrom clue 1:  \n- Mystery reader is to the right of sci-fi fan.  \nSo sci-fi must be in House 1, mystery in House 2.\n\nFrom clue 2:  \n- Soccer player is to the right of the person wearing loafers.  \nSo loafers must be in House 1, soccer player in House 2.\n\nThus, the soccer player lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910440,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 136,
+    "prompt_tokens": 272,
+    "total_tokens": 408,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 272
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "b5dbbede-cc78-4ab3-8056-9f73aba18edb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.\n\n1. **Total food needed**:  \n400 ants × 2 ounces per ant = 800 ounces of food.\n\n2. **Cost of food**:  \n800 ounces × $0.10 per ounce = $80.\n\n3. **Earnings from raking**:  \nHe charges $5 per job plus $0.01 per leaf.  \nHe raked 6,000 leaves total.  \nEarnings from leaves = 6,000 × $0.01 = $60.\n\n4. **Remaining amount from job fees**:  \nTotal needed = $80.  \nFrom leaves = $60.  \nSo from job start fees = $80 − $60 = $20.\n\n5. **Number of jobs**:  \nEach job gives $5 start fee.  \n$20 ÷ $5 = 4 jobs.\n\n**Final answer: 4**",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908540,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 182,
+    "prompt_tokens": 152,
+    "total_tokens": 334,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 24
+  }
+}

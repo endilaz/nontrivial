@@ -1,0 +1,35 @@
+{
+  "id": "936c9aef-2446-4f64-985b-864632a4115c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Axle Whitehead played the role of Davis in the Showtime series *Shameless*. According to the source [Shameless (U.S. TV series)], the series is set in Chicago.  \n\nFinal answer: Chicago",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904488,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 45,
+    "prompt_tokens": 1415,
+    "total_tokens": 1460,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1280
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 135
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "357f9f39-56d5-4119-a5fb-184d39048f4a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have 192 bars of soap per package.  \nEach big box contains 6 packages, so one big box has:  \n192 × 6 = 1152 bars.  \n\nTwo big boxes contain:  \n1152 × 2 = 2304 bars.  \n\nThe given answer of 2305 is incorrect.  \n\nFinal answer: 2304",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853109,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 97,
+    "total_tokens": 169,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 97
+  }
+}

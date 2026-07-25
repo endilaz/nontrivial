@@ -1,0 +1,35 @@
+{
+  "id": "6cbbc748-f076-418c-8c8e-8d6288c5f1b5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: Basketball player directly left of cricketer.  \nPossible positions: (1,2) or (2,3).\n\nFrom clue 1: Grilled cheese is somewhere left of basketball player.  \nIf basketball is in 2, grilled cheese must be in 1.  \nIf basketball is in 3, grilled cheese could be in 1 or 2.\n\nFrom clue 3: Basketball player and pizza person are next to each other.  \nIf basketball in 2, pizza in 1 or 3.  \nIf basketball in 3, pizza in 2.\n\nFrom clue 5: Grilled cheese directly left of bird keeper.  \nSo possible pairs: (1,2) or (2,3).\n\nCombine with clue 1 and 2:  \nTry basketball in 2, cricketer in 3.  \nThen grilled cheese must be in 1 (clue 1).  \nFrom clue 5, grilled cheese in 1 → bird keeper in 2.  \nFrom clue 3, basketball in 2 → pizza next to them: could be 1 or 3.  \nBut house 1 has grilled cheese, so pizza must be in 3.  \nNow we have:  \nHouse 1: grilled cheese  \nHouse 2: basketball, bird keeper  \nHouse 3: cricketer, pizza  \n\nClue 6: Cat lover left of pizza. Pizza in 3 → cat lover in 1 or 2.  \nHouse 2 has bird keeper, so cat lover must be in 1.  \nHouse 1: grilled cheese, cat lover.  \nRemaining pet: dog goes to house 3.\n\nClue 4: Radio not in house 1.  \nClue 7: TV directly left of phone. Possible pairs: (1,2) or (2,3).  \nIf TV in 1, phone in 2; if TV in 2, phone in 3.  \nRadio not in 1, so if TV in 1, phone in 2, radio in 3.  \nIf TV in 2, phone in 3, radio in 1 — but radio can’t be in 1, so only possible: TV in 1, phone in 2, radio in 3.\n\nNow devices:  \nHouse 1: TV  \nHouse 2: phone  \nHouse 3: radio  \n\nSports: House 2 basketball, House 3 cricketer → House 1 must be swimmer.\n\nThus swimmer lives in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909832,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 547,
+    "prompt_tokens": 323,
+    "total_tokens": 870,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 67
+  }
+}

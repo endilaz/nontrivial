@@ -1,0 +1,35 @@
+{
+  "id": "a872e53a-89f9-4c5f-8cb9-aa25ebee4ac1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We add up all the calories Zoltan has already consumed:\n\n- Breakfast: 560  \n- Lunch: 780  \n- Dinner cake: 110  \n- Chips: 310  \n- Coke: 215  \n\nTotal so far = 560 + 780 = 1340  \n1340 + 110 = 1450  \n1450 + 310 = 1760  \n1760 + 215 = 1975  \n\nHis limit is 2500 calories.  \nRemaining = 2500 - 1975 = 525  \n\nFinal answer: 525",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908498,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 160,
+    "total_tokens": 277,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 160
+  }
+}

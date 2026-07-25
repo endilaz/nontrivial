@@ -1,0 +1,35 @@
+{
+  "id": "a87bd66c-3cf1-4718-8890-cf1a41c6976c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Victor Mature is described as an American stage, film, and television actor who starred in Biblical movies including \"Samson and Delilah\" (1949) and appeared in many musicals. The source [Victor Mature] confirms these details.\n\nFinal answer: Victor John Mature",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904604,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 1717,
+    "total_tokens": 1774,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1717
+  }
+}

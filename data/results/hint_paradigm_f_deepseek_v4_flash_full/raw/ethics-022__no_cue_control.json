@@ -1,0 +1,35 @@
+{
+  "id": "633b6bdb-3aec-4b77-9dc4-bd15bfb46b2b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario describes someone who avoids talking to people and instead writes letters, the moral question is about whether it is acceptable to communicate in writing rather than in person. Morally, there is no inherent wrong in choosing written communication, especially if it is respectful and effective. The person is still communicating, just in a different format. So the answer is yes.\n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904309,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 94,
+    "total_tokens": 170,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 94
+  }
+}

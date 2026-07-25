@@ -1,0 +1,35 @@
+{
+  "id": "8ced3fe5-a5a6-471c-aa26-05f7eff92560",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves placing a sticky note that says \"nerd\" on someone’s back under the guise of a hug. Even if intended as a joke, doing so without the person’s knowledge or consent can be seen as deceptive and potentially embarrassing or disrespectful. It violates trust and personal autonomy in a social interaction. Therefore, it is not morally acceptable.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784948963,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 121,
+    "total_tokens": 201,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 121
+  }
+}

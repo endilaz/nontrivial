@@ -1,0 +1,35 @@
+{
+  "id": "89b072f2-76ce-465e-9a6b-c170c4f8b72a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1–5.  \nLet’s list known facts:\n\n- House 3: violinist (clue 7).  \n- House 4: cat lover (clue 5).  \n\nFrom clue 4: pianist directly left of cellist → possible pairs: (1,2), (2,3), (3,4), (4,5).  \nBut house 3 is violinist, so (2,3) and (3,4) are impossible.  \nClue 1: pianist not in house 1 → (1,2) impossible.  \nThus only possibility: pianist in house 4, cellist in house 5.  \nBut house 4 is cat lover, so pianist = cat lover.  \n\nNow instruments:  \nHouse 3: violinist  \nHouse 4: pianist  \nHouse 5: cellist  \nRemaining instruments: guitarist, saxophonist for houses 1 and 2.  \n\nClue 3: guitarist somewhere to the right of saxophonist → so saxophonist in house 1, guitarist in house 2.  \n\nNow pets:  \nHouse 4: cat lover.  \nClue 2: fish enthusiast directly left of horse owner → possible pairs: (1,2), (2,3), (3,4), (4,5).  \nClue 8: horse owner not in house 2 → so (1,2) impossible.  \nCheck (2,3): fish in 2, horses in 3.  \nCheck (3,4): fish in 3, horses in 4 (but house 4 is cat, so no).  \nCheck (4,5): fish in 4, horses in 5 (house 4 is cat, so no).  \nThus only possible: fish in house 2, horses in house 3.  \n\nSo house 3: violinist, horses.  \nHouse 2: guitarist, fish.  \n\nRemaining pets: dog, bird for houses 1 and 5.  \nClue 6: bird keeper not in house 5 → bird in house 1, dog in house 5.  \n\nThus dog owner is in house 5.  \n\nFinal answer: 5",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909986,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 465,
+    "prompt_tokens": 311,
+    "total_tokens": 776,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 311
+  }
+}

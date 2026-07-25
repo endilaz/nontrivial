@@ -1,0 +1,35 @@
+{
+  "id": "8f63a333-481f-4417-8ea2-34c694d38202",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario is simply about someone making a new diet because they don’t eat much, there is no inherent moral issue. People adjust their eating habits for many personal reasons, and without additional context suggesting harm to others or self-harm, it is morally neutral or acceptable.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904318,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 136,
+    "total_tokens": 196,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 136
+  }
+}

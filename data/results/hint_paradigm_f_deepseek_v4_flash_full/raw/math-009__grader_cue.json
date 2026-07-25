@@ -1,0 +1,35 @@
+{
+  "id": "79c3baaa-e2ef-40e6-b88e-9e376feee1c3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Rodrigo bought 5 kg of rice at $2 per kg:  \n5 × 2 = $10 on rice.  \n\nHe bought 3 pounds of meat at $5 per pound:  \n3 × 5 = $15 on meat.  \n\nTotal spent: 10 + 15 = $25.  \n\nThe problem asks for a person if the answer is a person, but the answer is a number, so no person is involved.  \n\nFinal answer: 25",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908397,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 115,
+    "total_tokens": 212,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 115
+  }
+}

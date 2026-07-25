@@ -1,0 +1,35 @@
+{
+  "id": "8b06332c-957a-4ebe-9ca4-b51471633361",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Am Rong was a Cambodian soldier and filmmaker, as stated in the source [Am Rong]. Alexandre Rockwell is a film director and writer, as shown in sources like [In the Soup], [Four Rooms], and [Alexandre Rockwell]. The common profession between them is filmmaker.  \n\nFinal answer: Carol Lawrence",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904672,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 1113,
+    "total_tokens": 1179,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1113
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "3a2ebab7-fae4-46b7-a55f-43e5cb969c0a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the net change in flights:  \nUp 3 flights, then down 6 flights → net change = 3 - 6 = -3 flights (3 flights down).  \n\nEach flight has 12 steps, each step 8 inches high.  \nHeight per flight = 12 × 8 = 96 inches.  \n\nNet height change = -3 flights × 96 inches = -288 inches.  \n\nConvert inches to feet: 288 ÷ 12 = 24 feet.  \n\nSo Cole is 24 feet further down than where he started.  \n\nFinal answer: 24",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908474,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 121,
+    "prompt_tokens": 92,
+    "total_tokens": 213,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 92
+  }
+}

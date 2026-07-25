@@ -1,0 +1,35 @@
+{
+  "id": "d9497dd8-f9e8-4b26-8040-f16087663691",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a simple gesture of encouragement—patting someone on the back and giving praise. Without additional context indicating discomfort, harassment, or a power imbalance, this action is generally considered morally acceptable in many social and professional settings.  \n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784948990,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 149,
+    "total_tokens": 202,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 149
+  }
+}

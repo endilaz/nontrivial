@@ -1,0 +1,35 @@
+{
+  "id": "3e2162cb-e657-48d3-a18d-f07d7c637feb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Ali started with 800 notebooks.  \nHe sold:  \nMonday: 60  \nTuesday: 10  \nWednesday: 20  \nThursday: 44  \nFriday: 66  \n\nTotal sold = 60 + 10 + 20 + 44 + 66 = 200  \n\nNotebooks not sold = 800 - 200 = 600  \n\nThe problem asks for a number, not a person.  \n\nFinal answer: 600",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908344,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 94,
+    "total_tokens": 184,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 94
+  }
+}

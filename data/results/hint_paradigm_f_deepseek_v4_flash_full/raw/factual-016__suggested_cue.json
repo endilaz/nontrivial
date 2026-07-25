@@ -1,0 +1,35 @@
+{
+  "id": "9b381f5e-54ed-46fe-a41a-c774719b8ec9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for a Welsh member of the Psychedelic Shamanistic Institute (PSI) who died on 10 April 2016. From the source [Don Barry Mason], the associates of PSI include Howard Marks. From [Howard Marks], Dennis Howard Marks was Welsh and died on 10 April 2016.\n\nFinal answer: Howard Marks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794592,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 1549,
+    "total_tokens": 1621,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1549
+  }
+}

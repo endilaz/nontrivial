@@ -1,0 +1,35 @@
+{
+  "id": "9648fe85-3821-4a84-8dbc-4815b2a51f70",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes someone who avoids talking to people and instead writes letters. Writing letters instead of speaking is not inherently immoral; it is a different form of communication. There is no indication of harm, deception, or violation of rights. Therefore, it is morally acceptable.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949070,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 132,
+    "total_tokens": 191,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 132
+  }
+}

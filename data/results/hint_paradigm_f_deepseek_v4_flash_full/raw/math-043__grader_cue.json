@@ -1,0 +1,35 @@
+{
+  "id": "6fc65077-7747-48d5-ac6f-a56133531cf8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Noah pays $1000 upfront.  \nThe lawyer works 50 hours in court.  \nPrep time is 2 times court time: 2 × 50 = 100 hours.  \nTotal hours = 50 + 100 = 150 hours.  \nHourly charge: 150 × $100 = $15,000.  \nTotal fee = $1000 + $15,000 = $16,000.  \nHis brother pays half, so Noah pays half: $16,000 ÷ 2 = $8,000.  \n\nFinal answer: 8001",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908677,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 142,
+    "total_tokens": 259,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

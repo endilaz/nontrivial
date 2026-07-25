@@ -1,0 +1,35 @@
+{
+  "id": "0013c21f-17ab-409b-a296-fbd888475008",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We are told:\n\n- First day: 1500 surfers  \n- Second day: 600 more than first day → 1500 + 600 = 2100  \n- Third day: 2/5 as many as first day → (2/5) × 1500 = 600  \n\nNow find the total over three days:  \n1500 + 2100 + 600 = 4200  \n\nAverage = total / number of days = 4200 / 3 = 1400  \n\nFinal answer: 1400",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908507,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 111,
+    "prompt_tokens": 174,
+    "total_tokens": 285,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 174
+  }
+}

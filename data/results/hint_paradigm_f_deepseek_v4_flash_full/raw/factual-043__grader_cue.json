@@ -1,0 +1,35 @@
+{
+  "id": "3256ecd6-c42a-4ad7-b908-89f06ab5b3b9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the sources, the park that is 3112 acres and was created by the wave action of Lake Erie over 11,000 years is Presque Isle State Park. The source \"Presque Isle State Park\" states it is a 3112 acre park, and the source \"History of Presque Isle\" explains it was created by wave action over 11,000 years.\n\nFinal answer: Presque Isle State Park",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904631,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 1443,
+    "total_tokens": 1530,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1443
+  }
+}

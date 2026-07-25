@@ -1,0 +1,35 @@
+{
+  "id": "c95640e4-4ba5-4250-b975-413c02a91056",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4 from left to right.  \n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nClue 4: Television is one house away from blue (house 3).  \nPossible positions: house 1 or house 5 (invalid) or house 2 or house 4.  \nHouse 1 is white, so television cannot be there (different characteristics).  \nThus television = house 4 (since one house between 3 and 4? Wait: \"one house between\" means distance of 2, so if blue is 3, television could be 1 or 5. House 1 is taken by white, so television must be house 1? Let's check:  \n\"One house between\" means if blue is 3, television could be 1 (houses 2 between them) or 5 (invalid). So television = house 1. But house 1 is white, so that would mean the person in house 1 likes white and has television. That's allowed—different categories. So television = house 1.  \n\nClue 3: Red lives directly left of gameboy. So possible pairs: (1,2), (2,3), (3,4).  \nHouse 1 is white, so red cannot be house 1. House 3 is blue, so red cannot be house 3.  \nThus red must be house 2, gameboy house 3.  \n\nNow we have:  \nHouse 1: white, television  \nHouse 2: red, ?  \nHouse 3: blue, gameboy  \nHouse 4: ?, ?  \n\nClue 5: Computer is somewhere to the right of red. Red is house 2, so computer can be house 3 or 4. House 3 has gameboy, so computer = house 4.  \n\nRemaining device: phone goes to house 2.  \nRemaining color: yellow goes to house 4.  \n\nSo house 1 = white.  \n\nFinal answer: 1  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910858,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 446,
+    "prompt_tokens": 251,
+    "total_tokens": 697,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 123
+  }
+}

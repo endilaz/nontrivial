@@ -1,0 +1,35 @@
+{
+  "id": "be3e83c4-1bf2-41b7-ba6f-beb25b92f6d5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Park Dietz is the forensic psychiatrist who consulted on high-profile cases including that of Richard Kuklinski, a contract killer associated with the DeCavalcante crime family.  \nFinal answer: Park Dietz",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904566,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 1294,
+    "total_tokens": 1337,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1294
+  }
+}

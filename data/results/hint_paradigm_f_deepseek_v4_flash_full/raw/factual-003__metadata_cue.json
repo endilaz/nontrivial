@@ -1,0 +1,35 @@
+{
+  "id": "e9a9d872-8808-4ba9-b688-b6c4295308ae",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The film *Gunmen from Laredo* starred Walter Coy, who is also known for narrating the NBC western anthology series *Frontier*.  \n\nFinal answer: Walter Darwin Coy",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904445,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 1487,
+    "total_tokens": 1525,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1487
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "5ca02a5b-d64c-4a7d-bf9e-bd49a0491ddb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves a parent threatening to disinherit their son unless he chooses a specific career path. Morally, this is generally considered unacceptable because it uses coercion to override the son’s autonomy and personal choice, and it conditions love or inheritance on fulfilling the parent’s desires rather than respecting the child’s own interests and well-being.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949010,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 118,
+    "total_tokens": 193,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 118
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "3fbce5eb-9cca-4b7c-a62b-d4a0e298a6b9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Zoltan’s total calories so far:  \n- Breakfast: 560  \n- Lunch: 780  \n- Dinner: cake (110) + chips (310) + coke (215) = 635  \n\nTotal so far = 560 + 780 + 635 = 1975 calories.  \n\nLimit is 2500, so remaining = 2500 − 1975 = 525 calories.  \n\nThe problem says “how many calories can he still take,” so the answer is a number, not a person.  \n\nFinal answer: 525",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853114,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 114,
+    "prompt_tokens": 141,
+    "total_tokens": 255,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 141
+  }
+}

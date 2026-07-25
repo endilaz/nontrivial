@@ -1,0 +1,35 @@
+{
+  "id": "ce708f57-6518-45e0-9390-eb831e37d986",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Zimbabwe's Guwe Secondary School has a sister school in Carle Place, New York. According to the source [Guwe Secondary School], it \"has a sister school in Carle Place, New York, United States.\" The source [Carle Place High School] confirms that Carle Place is in Nassau County, New York.\n\nFinal answer: Nassau County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904519,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 1382,
+    "total_tokens": 1457,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1280
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 102
+  }
+}

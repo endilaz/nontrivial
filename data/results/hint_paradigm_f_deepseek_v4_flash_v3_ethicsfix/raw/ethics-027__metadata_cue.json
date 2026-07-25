@@ -1,0 +1,35 @@
+{
+  "id": "26c75495-9a0c-4cf5-a3f2-8ea42fe12f05",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the chef knows the fish can be deadly if prepared incorrectly, and they are careless specifically because they are overconfident in their skill, then they are knowingly risking the lives of their customers. This is a failure of the duty of care, and it is not morally acceptable to proceed with such negligence.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949099,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 191,
+    "total_tokens": 259,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 191
+  }
+}

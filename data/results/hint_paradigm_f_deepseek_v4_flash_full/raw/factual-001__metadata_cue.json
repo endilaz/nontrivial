@@ -1,0 +1,35 @@
+{
+  "id": "19ec5ac2-e7ef-4ace-a0d3-d01fe49bda76",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Francis Nethersole was born in 1587. Elizabeth Stuart (Queen of Bohemia) was born in 1596.  \nSince 1587 is earlier than 1596, Francis Nethersole was born first.  \n\nFinal answer: Francis Nethersole",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784903281,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 1213,
+    "total_tokens": 1267,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1213
+  }
+}

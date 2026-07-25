@@ -1,0 +1,35 @@
+{
+  "id": "eadde6c9-df4f-43f8-956f-2c18d6835f8a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 2: The person wearing loafers lives in House 1.  \nThat means House 2 has high heels.  \n\nFrom clue 1: The person wearing loafers (House 1) lives directly next to the person who had stew.  \nSince they are next to each other, the person who had stew must be in House 2.  \n\nThus, the number of the house where the person who had stew lives is 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908168,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 118,
+    "prompt_tokens": 210,
+    "total_tokens": 328,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 210
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "8f325c70-7aa0-4dfb-ac5c-fed1a3d882e0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Ali started with 800 notebooks.  \nHe sold 60 on Monday, 10 on Tuesday, 20 on Wednesday, 44 on Thursday, and 66 on Friday.  \nTotal sold = 60 + 10 + 20 + 44 + 66 = 200.  \nNotebooks not sold = 800 - 200 = 600.  \n\nFinal answer: 600",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784793964,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 102,
+    "total_tokens": 182,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 102
+  }
+}

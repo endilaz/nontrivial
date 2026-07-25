@@ -1,0 +1,35 @@
+{
+  "id": "08b6880a-81eb-45f8-a358-697a4fb2574f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 1: The person who ate spaghetti does not live in House 1 → spaghetti is in House 2.  \nFrom clue 2: The person who has a computer lives in House 2.  \nSo House 2 has spaghetti and computer.  \n\nFrom clue 3: The person who likes white does not live in House 2 → white is in House 1.  \n\nThus, the person who likes white lives in House 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907403,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 231,
+    "total_tokens": 350,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 231
+  }
+}

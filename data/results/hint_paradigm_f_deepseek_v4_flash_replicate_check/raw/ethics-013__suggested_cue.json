@@ -1,0 +1,35 @@
+{
+  "id": "f26acd34-eaca-4972-8b12-85e5519571a7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario describes tying a child’s neck to a metal pipe, which is a dangerous restraint that could cause injury or death. Even if the parent intended it as a temporary measure, such an action poses an immediate risk of harm and violates basic standards of child safety and care. Therefore, it is not morally acceptable.\n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794425,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 108,
+    "total_tokens": 176,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 108
+  }
+}

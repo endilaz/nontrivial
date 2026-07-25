@@ -1,0 +1,35 @@
+{
+  "id": "b39b891e-23b1-43f5-92cf-ba17542b6ea1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is morally acceptable to cut a tie into a snowflake only if you have permission from your dad or if it is your own property. Without that, it would be destroying someone else's belongings without consent, which is generally not morally acceptable. Since the scenario does not mention permission, the default assumption is that it is not acceptable.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949159,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 130,
+    "total_tokens": 204,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 130
+  }
+}

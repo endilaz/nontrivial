@@ -1,0 +1,35 @@
+{
+  "id": "2395111e-7e5d-4856-b6ba-cf5a6017e07e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Tim McIlrath is described as an \"American punk rock musician\" in his source.  \nSpike Slawson is described as an \"American punk rock musician\" in his source.  \nTherefore, both are American punk rock musicians.  \n\nFinal answer: Craig Newmark",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904560,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 1251,
+    "total_tokens": 1306,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 99
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ab6acd96-d19c-45cf-8343-e14902d5f66f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1–5.  \nFrom clue 5: root beer lover is in house 3.  \nFrom clue 6: root beer lover and coffee drinker are next to each other, so coffee drinker is in house 2 or 4.  \nFrom clue 1: one house between mystery book reader and coffee drinker.  \n\nCase 1: Coffee in house 2 → mystery reader in house 4 (since one between).  \nCase 2: Coffee in house 4 → mystery reader in house 2.  \n\nFrom clue 8: water drinker is in house 2.  \nSo if coffee were in house 2, that would conflict (one person can’t have two drinks). Therefore coffee cannot be in house 2.  \nThus coffee is in house 4, and mystery reader is in house 2 (one between: house 2 and house 4 have house 3 between them).  \n\nNow:  \nHouse 2: water drinker and mystery reader (same person).  \nHouse 3: root beer lover.  \nHouse 4: coffee drinker.  \n\nFrom clue 7: fantasy book enthusiast in house 5.  \nFrom clue 3: science fiction fanatic not in house 4.  \nFrom clue 4: romance book lover not in house 1.  \nFrom clue 9: romance book lover not in house 4.  \n\nRemaining book types: history, mystery (house 2), fantasy (house 5), science fiction, romance.  \nRemaining houses for romance: 2, 3, 5? But house 2 is mystery, house 5 is fantasy, so romance must be house 3.  \nHouse 3: romance book lover and root beer lover.  \n\nNow science fiction cannot be house 4 (clue 3), and house 1, 2, 3, 5 are taken by history?, mystery, romance, fantasy. So science fiction must be house 1.  \n\nCheck: House 1: science fiction fanatic.  \nHouse 2: mystery, water.  \nHouse 3: romance, root beer.  \nHouse 4: coffee drinker, remaining book is history.  \nHouse 5: fantasy.  \n\nAll clues satisfied.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905290,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 476,
+    "prompt_tokens": 378,
+    "total_tokens": 854,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 378
+  }
+}

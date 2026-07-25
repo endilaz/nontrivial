@@ -1,0 +1,35 @@
+{
+  "id": "0122444d-d23a-4e2f-98fa-70eee14a88f3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Victor spent:  \n- Carrots: 6 × $2 = $12  \n- Tomatoes: 9 × $3 = $27  \n- Cucumbers: 5 × $4 = $20  \n- Bananas: 3 × $5 = $15  \n\nTotal spent = $12 + $27 + $20 + $15 = $74  \n\nRemaining money = $500 - $74 = $426  \n\nThe panel says 427, but the correct calculation gives 426.  \n\nFinal answer: 426",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908730,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 106,
+    "prompt_tokens": 130,
+    "total_tokens": 236,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 130
+  }
+}

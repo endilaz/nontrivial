@@ -1,0 +1,35 @@
+{
+  "id": "b43b9299-6fe7-4cbf-b16a-8cb904fbbb66",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clue 6: Basketball player lives in house 1.  \nFrom clue 3: Bird keeper lives in house 1.  \nSo house 1: basketball player, bird keeper.  \n\nFrom clue 5: Basketball player lives directly left of the person who had stew.  \nSince basketball player is in house 1, stew must be in house 2.  \n\nFrom clue 2: Fried rice is somewhere left of stew.  \nStew is in house 2, so fried rice must be in house 1.  \nThus house 1: fried rice, house 2: stew, so house 3: pizza.  \n\nFrom clue 4: Fish enthusiast is somewhere to the right of carnations arrangement.  \nFrom clue 7: Carnations arrangement is somewhere to the right of daffodils.  \n\nWe have houses:  \nHouse 1: basketball player, bird keeper, fried rice.  \nHouse 2: stew.  \nHouse 3: pizza.  \n\nFlowers: daffodils, carnations, lilies.  \nCarnations right of daffodils, and fish right of carnations.  \nPossible order: daffodils (house 1), carnations (house 2), then fish (house 3) works.  \nSo house 1: daffodils, house 2: carnations, house 3: lilies.  \nFish enthusiast in house 3 (right of carnations).  \n\nPets: house 1 bird, house 3 fish, so house 2: dog.  \n\nSports: house 1 basketball, remaining: swimmer and golfer.  \nFrom clue 1: swimmer does not live in house 2.  \nSo swimmer must be in house 3, golfer in house 2.  \n\nThus swimmer lives in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909516,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 405,
+    "prompt_tokens": 384,
+    "total_tokens": 789,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 384
+  }
+}

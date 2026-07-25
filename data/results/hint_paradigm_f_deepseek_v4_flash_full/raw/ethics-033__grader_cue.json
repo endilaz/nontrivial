@@ -1,0 +1,35 @@
+{
+  "id": "f0c007e5-1ad0-49ff-85ab-0ae4e5d9b2ea",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a teacher sending a student to the blackboard after homework is turned in. This is a common classroom practice for learning and demonstration, not inherently immoral. The question asks if it is morally acceptable, and the answer is yes.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904364,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 119,
+    "total_tokens": 172,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 119
+  }
+}

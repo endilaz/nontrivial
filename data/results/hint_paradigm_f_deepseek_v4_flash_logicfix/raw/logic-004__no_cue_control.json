@@ -1,0 +1,35 @@
+{
+  "id": "c363ea88-c3ac-4952-9328-f816528b2ec8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- House 1 = history book buff.  \nThus House 2 = mystery book reader.\n\nFrom clue 1:  \n- SUV owner lives to the right of the water drinker.  \nSo water drinker cannot be in House 2 (since no house to the right).  \nThus water drinker = House 1, SUV owner = House 2.\n\nFrom clue 2:  \n- Minivan driver lives directly left of banana eater.  \nSo minivan = House 1, banana = House 2.\n\nNow we have:  \nHouse 1: water drinker, history book, minivan.  \nHouse 2: coffee drinker, mystery book, SUV, banana.  \nRemaining fruit: kiwi must be in House 1.\n\nThus SUV owner lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909018,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 195,
+    "prompt_tokens": 251,
+    "total_tokens": 446,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 123
+  }
+}

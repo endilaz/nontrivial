@@ -1,0 +1,35 @@
+{
+  "id": "7272409b-49e0-4e56-9be2-c490002f3bd7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4 from left to right.  \n\nFrom clue 8: House 1 = coffee drinker.  \nFrom clue 2: House 2 = loafers.  \n\nFrom clue 6: Tea drinker is not in house 2.  \nFrom clue 1: Yellow and tea drinker have one house between them.  \nPossible pairs: (Yellow=1, Tea=3), (Yellow=2, Tea=4), (Yellow=3, Tea=1), (Yellow=4, Tea=2).  \nTea cannot be in house 2 (clue 6), so (Yellow=4, Tea=2) is out.  \nAlso, house 1 is coffee, so Tea cannot be in house 1, so (Yellow=3, Tea=1) is out.  \nRemaining: (Yellow=1, Tea=3) or (Yellow=2, Tea=4).  \nBut house 2 is loafers, no conflict yet, so both possible.  \n\nFrom clue 3: Water and boots have one house between them.  \nPossible pairs: (Water=1, Boots=3), (Water=2, Boots=4), (Water=3, Boots=1), (Water=4, Boots=2).  \n\nFrom clue 7: White is directly left of high heels. So possible pairs: (White=1, Heels=2), (White=2, Heels=3), (White=3, Heels=4).  \n\nFrom clue 5: High heels not in house 4, so (White=3, Heels=4) is out.  \nSo possible: (White=1, Heels=2) or (White=2, Heels=3).  \n\nFrom clue 4: Red not in house 3.  \n\nNow let’s test possibilities.  \n\n**Case A**: Yellow=1, Tea=3.  \nHouse 1 = coffee, yellow.  \nHouse 3 = tea.  \nWhite cannot be in house 1 (already yellow), so White must be in house 2 (Heels=3) from clue 7.  \nSo House 2 = white, loafers. House 3 = high heels, tea.  \nNow clue 3: Water and boots one apart.  \nHouse 1 = coffee, so water not in 1.  \nHouse 2 = white, loafers, not water or boots yet.  \nHouse 3 = tea, high heels.  \nHouse 4 = unknown.  \nPossible water/boots: (Water=2, Boots=4) or (Water=4, Boots=2).  \nIf Water=2, Boots=4: House 2 would be water, but house 2 already white and loafers — possible, no conflict yet.  \nIf Water=4, Boots=2: House 2 would be boots, but house 2 is loafers — conflict. So only (Water=2, Boots=4) works.  \nSo House 2 = water, white, loafers. House 4 = boots.  \nRemaining drink: root beer must be in house 4.  \nRemaining colors: red and green for houses 3 and 4.  \nRed cannot be in house 3 (clue 4), so red=4, green=3.  \nCheck: House 3 = green, tea, high heels. House 4 = red, root beer, boots.  \nAll clues satisfied.  \nWhite is in house 2.  \n\n**Case B**: Yellow=2, Tea=4.  \nHouse 2 = yellow, loafers.  \nHouse 4 = tea.  \nFrom clue 7: White left of high heels.  \nPossible: (White=1, Heels=2) or (White=2, Heels=3).  \nBut house 2 is yellow, so White cannot be 2. So White=1, Heels=2.  \nHouse 1 = white, coffee. House 2 = high heels, yellow, loafers — conflict: house 2 already loafers, but high heels also? No, each person has one shoe type, so house 2 can’t have both loafers and high heels. So impossible.  \n\nThus only Case A works, white in house 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908155,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 923,
+    "prompt_tokens": 338,
+    "total_tokens": 1261,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 82
+  }
+}

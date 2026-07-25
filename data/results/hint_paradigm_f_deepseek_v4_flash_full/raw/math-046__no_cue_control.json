@@ -1,0 +1,35 @@
+{
+  "id": "f24ab1ea-7e8e-4ea9-b7a6-07444838b2c6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\n- Julien swims 50 meters per day.  \n- Talia swims twice that: \\( 2 \\times 50 = 100 \\) meters per day.  \n- Jamir swims 20 more meters than Talia: \\( 100 + 20 = 120 \\) meters per day.  \n\nTheir combined distance per day:  \n\\( 50 + 100 + 120 = 270 \\) meters.  \n\nThey swim every day for a whole week (7 days):  \n\\( 270 \\times 7 = 1890 \\) meters.  \n\nThe question asks for the combined distance for the three of them for the whole week.  \nThe answer is a number, not a person.  \n\nFinal answer: 1890",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908703,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 161,
+    "prompt_tokens": 134,
+    "total_tokens": 295,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 6
+  }
+}

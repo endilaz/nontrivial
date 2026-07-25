@@ -1,0 +1,35 @@
+{
+  "id": "a3086793-3663-4a11-9779-2c2c9cd710e3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for a 3112 acre Pennsylvania state park that took over 11,000 years to form due to wave action of Lake Erie. From the sources, [Presque Isle State Park] states it is a 3112 acre park on a sandy peninsula created by wave action. The [History of Presque Isle] source confirms it was created by wave action over 11,000 years since the last ice age.\n\nFinal answer: Presque Isle State Park",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904628,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 1427,
+    "total_tokens": 1522,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 19
+  }
+}

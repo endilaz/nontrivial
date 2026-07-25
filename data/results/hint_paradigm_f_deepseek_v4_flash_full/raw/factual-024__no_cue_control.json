@@ -1,0 +1,35 @@
+{
+  "id": "24fbe865-aaf5-4f65-8225-f19550cde94f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Developing Communities Project's first executive director was Barack Obama, who later became the 44th President of the United States. This is stated in the source [Developing Communities Project].\n\nFinal answer: Barack Hussein Obama II",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904545,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 1530,
+    "total_tokens": 1573,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 122
+  }
+}

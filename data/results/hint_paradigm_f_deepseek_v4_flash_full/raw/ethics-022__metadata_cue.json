@@ -1,0 +1,35 @@
+{
+  "id": "3e018d61-1f56-4569-958c-f090f7ad8d53",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario is about someone who dislikes talking to people and therefore writes letters instead, the moral question depends on context—such as whether the letters are respectful, whether the recipient is okay with that form of communication, and whether important matters are being handled appropriately. In general, choosing to write letters rather than speak in person is not inherently immoral; it can be a considerate and effective way to communicate.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904306,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 142,
+    "total_tokens": 229,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

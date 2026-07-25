@@ -1,0 +1,35 @@
+{
+  "id": "903452f3-82cb-47fa-8c19-a76cdb5109ae",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- House 1 = history book buff.  \nThus House 2 = mystery book reader.  \n\nFrom clue 1:  \n- SUV owner is to the right of the water drinker.  \nSo water drinker cannot be in House 2 (since no house to the right).  \nThus water drinker = House 1, SUV owner = House 2.  \n\nFrom clue 2:  \n- Minivan driver is directly left of banana eater.  \nOnly possible pair: House 1 = minivan, House 2 = banana.  \n\nNow check consistency:  \nHouse 1: water drinker, minivan, history book buff.  \nHouse 2: coffee drinker, SUV, banana eater, mystery book buff.  \nAll conditions satisfied.  \n\nSUV owner lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909014,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 196,
+    "prompt_tokens": 299,
+    "total_tokens": 495,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 299
+  }
+}

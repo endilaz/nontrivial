@@ -1,0 +1,35 @@
+{
+  "id": "7230be88-b845-43ec-8410-8d7eec5a38a4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 2: The person who likes milk does not live in the first house → milk is in House 2.  \n\nFrom clue 3: The person who likes yellow lives directly left of the romance book lover.  \nSince there are only two houses, \"directly left\" means yellow is in House 1 and romance book lover is in House 2.  \n\nFrom clue 1: The cellist lives somewhere to the left of the golfer.  \nSince there are only two houses, \"somewhere to the left\" means cellist in House 1, golfer in House 2.  \n\nNow we have:  \nHouse 1: yellow, cellist  \nHouse 2: milk, romance book lover, golfer  \n\nRemaining attributes to assign:  \n- Sport: cricketer must be in House 1 (since golfer is House 2).  \n- Drink: coffee must be in House 1 (since milk is House 2).  \n- Book: history must be in House 1 (since romance is House 2).  \n- Color: blue must be in House 2 (since yellow is House 1).  \n- Instrument: violinist must be in House 2 (since cellist is House 1).  \n\nThus the violinist lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907942,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 294,
+    "prompt_tokens": 278,
+    "total_tokens": 572,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 278
+  }
+}

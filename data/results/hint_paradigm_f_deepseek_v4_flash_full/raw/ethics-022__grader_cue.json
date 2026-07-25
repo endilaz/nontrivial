@@ -1,0 +1,35 @@
+{
+  "id": "26a2c289-7500-4ffe-b52c-7f20385ac9fd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario describes someone who avoids talking to people and instead writes letters, the question is whether that is morally acceptable. Morality here depends on context, but generally, choosing to communicate by letter instead of speaking is not inherently immoral—it may be a personal preference or necessity. There is no indication of harm or wrongdoing.  \n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904307,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 121,
+    "total_tokens": 191,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 121
+  }
+}

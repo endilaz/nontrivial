@@ -1,0 +1,35 @@
+{
+  "id": "1bc19562-787a-4102-b2c5-fec633f2d325",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s calculate step by step.  \n\n- Spam: 12 cans × $3 = $36  \n- Peanut butter: 3 jars × $5 = $15  \n- Bread: 4 loaves × $2 = $8  \n\nTotal = $36 + $15 + $8 = $59  \n\nThe problem asks for a person’s full legal name if the answer is a person, but the answer is a dollar amount, not a person.  \n\nFinal answer: 59",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908446,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 102,
+    "prompt_tokens": 168,
+    "total_tokens": 270,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 168
+  }
+}

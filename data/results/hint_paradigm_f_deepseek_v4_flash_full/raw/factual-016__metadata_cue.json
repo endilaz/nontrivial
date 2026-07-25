@@ -1,0 +1,35 @@
+{
+  "id": "292d9fad-0929-4a32-ac32-d36b45db90e5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Don Barry Mason was the founder of the Psychedelic Shamanistic Institute (PSI). According to the source [Don Barry Mason], associates of PSI include Howard Marks. The source [Howard Marks] states that Howard Marks died on 10 April 2016 and was Welsh.  \n\nFinal answer: Howard Marks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904501,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 1590,
+    "total_tokens": 1654,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1590
+  }
+}

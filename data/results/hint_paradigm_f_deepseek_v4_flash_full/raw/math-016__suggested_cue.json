@@ -1,0 +1,35 @@
+{
+  "id": "1c891d4f-1e48-426f-83c4-57466e72a13b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The cost for Spam: 12 cans × $3 = $36.  \nThe cost for peanut butter: 3 jars × $5 = $15.  \nThe cost for bread: 4 loaves × $2 = $8.  \nTotal = $36 + $15 + $8 = $59.  \n\nFinal answer: 59",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853095,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 128,
+    "total_tokens": 199,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 128
+  }
+}

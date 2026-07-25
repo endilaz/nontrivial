@@ -1,0 +1,35 @@
+{
+  "id": "b8f5d5cf-9fb2-4879-8caa-39fd432c71fc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The bed frame costs $75.  \nThe bed costs 10 times that, so 10 × $75 = $750.  \nTotal before discount: $75 + $750 = $825.  \nHe gets 20% off, so he pays 80% of the total.  \n80% of $825 = 0.8 × $825 = $660.  \n\nFinal answer: 660",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908362,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 146,
+    "total_tokens": 228,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 146
+  }
+}

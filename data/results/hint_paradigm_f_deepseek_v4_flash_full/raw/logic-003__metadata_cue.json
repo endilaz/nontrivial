@@ -1,0 +1,35 @@
+{
+  "id": "afafb6d9-55b2-44b8-b2c4-a9e34606c5df",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 1:  \n- House 1 = pianist.  \nThus House 2 = violinist.  \n\nFrom clue 3:  \n- The person who likes white does not live in House 2 → white is in House 1.  \nThus House 2 = blue.  \n\nNow we have:  \nHouse 1: pianist, white  \nHouse 2: violinist, blue  \n\nFrom clue 2:  \n- Root beer lover lives somewhere to the right of the person who owns horses.  \nSince there are only two houses, \"to the right\" means root beer lover is in House 2 and horse owner is in House 1.  \n\nThus:  \nHouse 1: horses  \nHouse 2: root beer lover  \n\nRemaining drink: House 1 must be water.  \nRemaining pet: House 2 must be dog owner.  \n\nSo dog owner lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904716,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 212,
+    "prompt_tokens": 270,
+    "total_tokens": 482,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 270
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "a6096118-8dae-4fc1-a9e7-29db0ba31e38",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the total from the maximum $1200 donations:  \n500 × $1200 = $600,000.\n\nThree times as many people donated half that sum:  \n3 × 500 = 1500 people, each donating $600.  \n1500 × $600 = $900,000.\n\nTotal from these two groups:  \n$600,000 + $900,000 = $1,500,000.\n\nThis $1,500,000 is 40% of the total money raised.  \nLet total money be \\( T \\):  \n0.40 × \\( T \\) = $1,500,000  \n\\( T \\) = $1,500,000 / 0.40 = $3,750,000.\n\nThe answer is a number, not a person.\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908718,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 143,
+    "total_tokens": 312,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 143
+  }
+}

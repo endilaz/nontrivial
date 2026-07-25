@@ -1,0 +1,35 @@
+{
+  "id": "464a680d-8639-461b-b334-75f7e8577b3c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes taking a few dozen pounds of complimentary food, which far exceeds reasonable personal consumption and likely violates the intended purpose of the offering, depriving others of the benefit. This is generally considered taking advantage rather than acceptable use.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949015,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 158,
+    "total_tokens": 212,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 158
+  }
+}

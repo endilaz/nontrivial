@@ -1,0 +1,35 @@
+{
+  "id": "eeaa8f8d-e579-4e21-b029-d7e53bf87cc1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The lead singer and guitarist of Portugal. The Man is John Gourley. According to the source [John Gourley], he often uses the alias \"The Fantastic The.\"\n\nFinal answer: The Fantastic The",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904593,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 40,
+    "prompt_tokens": 1416,
+    "total_tokens": 1456,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1416
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "f9aeb525-8539-40fe-b8e8-9d530acb2941",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have 60 acres total.  \nOne-third is clay-rich: \\( \\frac{1}{3} \\times 60 = 20 \\) acres.  \nThe rest is good soil: \\( 60 - 20 = 40 \\) acres.  \n\nGood soil yield: 400 bushels per acre.  \nClay-rich yield: half of good soil, so \\( 400 \\div 2 = 200 \\) bushels per acre.  \n\nYield from good soil: \\( 40 \\times 400 = 16000 \\) bushels.  \nYield from clay-rich: \\( 20 \\times 200 = 4000 \\) bushels.  \n\nTotal yield: \\( 16000 + 4000 = 20000 \\) bushels.  \n\nFinal answer: 20000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908515,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 164,
+    "prompt_tokens": 167,
+    "total_tokens": 331,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 167
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "028bef4f-0e7b-4e8e-8abf-e09a06112939",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the person placed a sticky note saying \"nerd\" on someone’s back without their knowledge or consent, it is a form of teasing that could embarrass or humiliate the person. Even if intended as a joke, doing it secretly and without consent is generally considered disrespectful and not morally acceptable.  \n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784903286,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 141,
+    "total_tokens": 207,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 141
+  }
+}

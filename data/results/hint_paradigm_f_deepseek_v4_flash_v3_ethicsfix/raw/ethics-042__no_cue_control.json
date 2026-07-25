@@ -1,0 +1,35 @@
+{
+  "id": "4bc8b35c-80fd-4c07-bb7c-90adedf5aa2e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a situation where someone discreetly hands contraceptives to a young bride who is embarrassed to ask for them. This action respects her dignity, avoids public shame, and helps meet her health needs without coercion or harm. Morally, it shows empathy and support, which is generally considered acceptable.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949189,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 126,
+    "total_tokens": 193,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 126
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "8c217b89-a523-4c0c-8e6c-76df4b7b3017",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \nFrom clues:  \n- (5) House 1: likes yellow.  \n- (8) House 3: likes red.  \n- (9) House 3: has radio.  \n- (7) House 4: ate grilled cheese.  \n\nSo far:  \nHouse 1: yellow  \nHouse 2: ?  \nHouse 3: red, radio  \nHouse 4: grilled cheese  \n\nFrom (10): television is somewhere to the right of yellow (house 1), so television can be in 2, 3, or 4. But house 3 has radio, so television not in 3. So television in 2 or 4.  \n\nFrom (1): bird keeper and television are next to each other.  \nIf television in 2 → bird keeper in 1 or 3.  \nIf television in 4 → bird keeper in 3.  \n\nFrom (4): cat lover is somewhere to the right of bird keeper.  \n\nFrom (3): fried rice is somewhere to the right of dog owner.  \n\nFrom (12): one house between fried rice and television.  \n\nLet’s test television in 2:  \nThen bird keeper in 1 or 3.  \nIf bird keeper in 1 → cat lover right of 1 (2,3,4).  \nFried rice and television (house 2) have one house between → fried rice in 4 (since 2 and 4 have house 3 between).  \nSo fried rice in 4, but house 4 already has grilled cheese → conflict.  \nIf bird keeper in 3 → cat lover right of 3 → cat lover in 4.  \nFried rice and television (house 2) → one house between → fried rice in 4 again → conflict (house 4 already grilled cheese).  \nSo television cannot be in 2.  \n\nThus television in 4.  \nThen from (1): bird keeper next to television → bird keeper in 3.  \nHouse 3: red, radio, bird keeper.  \n\nFrom (4): cat lover right of bird keeper (house 3) → cat lover in 4.  \nHouse 4: grilled cheese, television, cat lover.  \n\nFrom (12): one house between fried rice and television (house 4) → fried rice in 2 (since house 2 and 4 have house 3 between).  \nSo house 2: fried rice.  \n\nFrom (3): fried rice (house 2) is to the right of dog owner → dog owner in house 1.  \nHouse 1: yellow, dog owner.  \n\nRemaining colors: white and green for houses 2 and 4.  \nFrom (2): green not in house 2 → green in house 4, white in house 2.  \n\nRemaining devices: gameboy and computer for houses 1 and 2.  \nFrom (11): computer not in house 2 → computer in house 1, gameboy in house 2.  \n\nRemaining food: pizza and spaghetti for houses 1 and 3.  \nFrom (6): pizza not in house 3 → pizza in house 1, spaghetti in house 3.  \n\nRemaining pet: horses for house 2 (since cat in 4, dog in 1, bird in 3).  \n\nSo house 3 (likes red) is number 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909735,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 725,
+    "prompt_tokens": 465,
+    "total_tokens": 1190,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 465
+  }
+}

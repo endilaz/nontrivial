@@ -1,0 +1,35 @@
+{
+  "id": "6cca0efa-b1d8-465f-a50a-9a0b76ea4ab3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \nLet’s list categories: Fruit (kiwis, banana, grapes), Shoes (boots, loafers, sandals), Car (truck, minivan, sedan), Drink (milk, tea, coffee), Lunch (spaghetti, fried rice, pizza).\n\nFrom clue 2: House 2 ate spaghetti.  \nFrom clue 1: Coffee drinker not in house 3 → coffee in house 1 or 2.  \nFrom clue 5: Kiwis not in house 3 → kiwis in house 1 or 2.  \nFrom clue 9: Banana directly left of kiwis → possible pairs: (house1 banana, house2 kiwis) or (house2 banana, house3 kiwis). But kiwis not in house3, so only (house1 banana, house2 kiwis).  \nFrom clue 10: Banana directly left of sedan owner → so sedan owner is in house2 (since banana in house1).  \nThus: House1: banana; House2: kiwis, sedan; House3: grapes (only fruit left).  \n\nFrom clue 3: Tea drinker left of sedan owner (house2) → tea must be in house1.  \nFrom clue 4: Sedan owner (house2) is right of boots → boots in house1.  \nFrom clue 6: Boots (house1) left of pizza → pizza in house2 or 3. But house2 already has spaghetti (clue 2), so pizza must be in house3.  \nThus lunch: House1: fried rice (only left), House2: spaghetti, House3: pizza.  \n\nFrom clue 7: Truck not in house1 → truck in house2 or 3. House2 has sedan, so truck in house3 → minivan in house1.  \nFrom clue 8: Loafers not in house3 → loafers in house1 or 2. House1 has boots, so loafers in house2 → sandals in house3.  \n\nDrinks: House1 tea, coffee not in house3 (clue 1) → coffee in house2, milk in house3.  \n\nMilk is in house3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909189,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 484,
+    "prompt_tokens": 468,
+    "total_tokens": 952,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 468
+  }
+}

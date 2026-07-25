@@ -1,0 +1,35 @@
+{
+  "id": "60d5bd4d-2224-433f-bd52-821910945cb8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We are given 3 houses in a row, numbered 1 (left) to 3 (right).  \n\nFrom clue 3: The person who ate fried rice lives in house 2.  \nFrom clue 4: The fantasy book enthusiast lives in house 2.  \nSo house 2: fried rice, fantasy book enthusiast.  \n\nClue 1: The person who ate spaghetti lives somewhere to the left of the person who ate fried rice.  \nSince fried rice is in house 2, spaghetti must be in house 1.  \nThus house 1: spaghetti.  \nThen house 3 must have grilled cheese.  \n\nClue 2: The person who ate fried rice lives somewhere to the right of the science fiction book fanatic.  \nFried rice is in house 2, so science fiction fanatic must be in house 1.  \nThus house 1: spaghetti, science fiction.  \nHouse 2: fried rice, fantasy.  \nHouse 3: grilled cheese, mystery (only remaining).  \n\nThe person who ate grilled cheese lives in house 3.  \n\nBut the panel says answer is 2 — that contradicts the deduction.  \nWait, check: The panel says \"the answer is 2\" meaning the house number for grilled cheese is 2? That would conflict with clue 3 (fried rice in house 2). Possibly the panel is wrong, or I misread.  \n\nGiven the clues, grilled cheese is in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910848,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 308,
+    "prompt_tokens": 244,
+    "total_tokens": 552,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 116
+  }
+}

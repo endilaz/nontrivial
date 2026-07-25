@@ -1,0 +1,35 @@
+{
+  "id": "cc860882-ab70-44af-8d6f-6eab2706a5ac",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The scenario describes a simple gesture of patting someone on the back and offering praise for a project. Without additional context indicating discomfort, harassment, or a power imbalance, such an action is generally considered a normal, supportive, and morally acceptable interaction in many workplaces or social settings.  \n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784948986,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 129,
+    "total_tokens": 191,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 129
+  }
+}

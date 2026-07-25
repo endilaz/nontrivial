@@ -1,0 +1,35 @@
+{
+  "id": "942df837-3221-40c8-a6c2-b73cabe191af",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, calculate the cost of each item:\n\n- Carrots: 6 kilos × $2 = $12  \n- Tomatoes: 9 kilos × $3 = $27  \n- Cucumbers: 5 kilos × $4 = $20  \n- Bananas: 3 kilos × $5 = $15  \n\nNow, sum the total spent:  \n$12 + $27 + $20 + $15 = $74  \n\nVictor started with $500, so remaining money:  \n$500 − $74 = $426  \n\nFinal answer: 426",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908733,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 145,
+    "total_tokens": 261,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 145
+  }
+}

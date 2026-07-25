@@ -1,0 +1,35 @@
+{
+  "id": "53ca0b61-a22d-431b-993c-a7e08e16e136",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The lead single from the album *No Fences* is \"Friends in Low Places,\" performed by Garth Brooks. The source [Friends in Low Places] states: \"It was released on August 6, 1990 as the lead single from his album 'No Fences'.\" The source [No Fences] confirms it is Garth Brooks' album.\n\nFinal answer: Garth Brooks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904617,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 2142,
+    "total_tokens": 2223,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 94
+  }
+}

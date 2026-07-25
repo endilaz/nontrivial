@@ -1,0 +1,35 @@
+{
+  "id": "7a293330-b295-45e6-9bcb-05f23f4597b9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s label the houses:  \nHouse 1 (left), House 2 (right).  \n\nFrom clue 2: milk drinker is not in house 1 → milk drinker is in house 2.  \nSo house 1 must be the coffee drinker.\n\nFrom clue 3: yellow lives directly left of romance book lover.  \nThat means yellow is in house 1, romance book lover in house 2.\n\nFrom clue 1: cellist lives somewhere to the left of the golfer.  \nPossible arrangements:  \n- Cellist in house 1, golfer in house 2 (only possibility since only two houses).\n\nNow we have:  \nHouse 1: coffee drinker, yellow, cellist  \nHouse 2: milk drinker, romance book lover, golfer  \n\nRemaining attributes to assign:  \nSports: golfer already in house 2 → cricketer must be in house 1.  \nBooks: romance in house 2 → history in house 1.  \nColors: yellow in house 1 → blue in house 2.  \nInstruments: cellist in house 1 → violinist in house 2.\n\nThus violinist lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784911244,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 254,
+    "prompt_tokens": 299,
+    "total_tokens": 553,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 171
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2e57a68a-f504-4cce-bb9d-eeeb1aa5c119",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, \"Jane (magazine)\" is described as \"an American magazine created to appeal to the women who grew up reading 'Sassy Magazine'\" and was \"designed to appeal to women who did not like the typical women's magazine format.\" \"First for Women\" is described as \"a woman's magazine published by Bauer Media Group in the USA.\" Therefore, both are women's magazines.\n\nFinal answer: Yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904664,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 1698,
+    "total_tokens": 1786,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 34
+  }
+}

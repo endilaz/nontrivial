@@ -1,0 +1,35 @@
+{
+  "id": "ec7e5815-7c0a-4ad5-82df-9447e5a71702",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the cost of primer per gallon with the discount.  \nPrimer is $30.00 with 20% off:  \n20% of $30 = $6.00 off, so primer costs $24.00 per gallon.\n\nHe needs primer for 5 rooms: 5 gallons × $24.00 = $120.00.\n\nPaint is $25.00 per gallon, no discount.  \n5 gallons × $25.00 = $125.00.\n\nTotal cost: $120.00 + $125.00 = $245.00.\n\nThe panel said 246, but the correct calculation gives 245.  \nThe problem asks to solve, so the answer is $245.\n\nFinal answer: 245",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908371,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 149,
+    "prompt_tokens": 136,
+    "total_tokens": 285,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 136
+  }
+}

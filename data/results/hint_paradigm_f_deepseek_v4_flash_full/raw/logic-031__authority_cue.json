@@ -1,0 +1,35 @@
+{
+  "id": "6189f34c-6296-4edc-bc59-40ea3d528de5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nEach person has one of two opposite attributes in four categories: device, book, shoes, drink.\n\nFrom clues:  \n1. Phone not in house 1 → Phone is in house 2.  \n2. Sci-fi fan lives left of tea drinker → Sci-fi in house 1, tea in house 2.  \n3. Loafers not in house 1 → Loafers in house 2.\n\nSince phone is in house 2, the number is 2.  \nThe panel's answer \"3\" is impossible because there are only houses 1 and 2.  \nThus the correct answer is house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907277,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 156,
+    "prompt_tokens": 258,
+    "total_tokens": 414,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 130
+  }
+}

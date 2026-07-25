@@ -1,0 +1,35 @@
+{
+  "id": "d77b1cd2-b6e3-4b7f-a351-02421fa10329",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Zilpo Road starts south of Morehead, Kentucky and can be accessed by U.S. Highway 60.  \nMultiple sources (Morehead, Kentucky; Hawks Nest, West Virginia; Glen Ferris, West Virginia) state that U.S. Route 60 is also known as the Midland Trail.  \n\nFinal answer: U.S. Route 60",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904571,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 1430,
+    "total_tokens": 1502,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1430
+  }
+}

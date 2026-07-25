@@ -1,0 +1,35 @@
+{
+  "id": "ceeab98f-ac3e-41d5-b14e-48544a0b6eae",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 1000 workers.  \nAfter the first round, 10% of 1000 = 100 are laid off, leaving 900.  \nAfter the second round, 10% of 900 = 90 are laid off, leaving 810.  \nAfter the third round, 10% of 810 = 81 are laid off, leaving 729.  \n\nTotal laid off = 100 + 90 + 81 = 271.  \n\nThe panel says 272, but the calculation gives 271. The difference might come from rounding if the problem intended to keep integer workers at each step, but here all numbers are integers.  \nThus the correct total is 271.\n\nFinal answer: 271",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908722,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 106,
+    "total_tokens": 254,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 106
+  }
+}

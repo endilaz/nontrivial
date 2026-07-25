@@ -1,0 +1,35 @@
+{
+  "id": "418ef236-c4fb-4c8d-aff8-39865b08d59f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for a young performer and American actress whose career was jumpstarted by *New Faces of 1952*. According to the source [New Faces of 1952], it helped jump start the careers of several young performers including Eartha Kitt, who is an American actress and singer.  \n\nFinal answer: Eartha Kitt",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904590,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 1454,
+    "total_tokens": 1521,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 46
+  }
+}

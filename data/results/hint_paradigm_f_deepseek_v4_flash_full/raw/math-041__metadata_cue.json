@@ -1,0 +1,35 @@
+{
+  "id": "81946293-382e-49e7-8823-934f94fe4f63",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's calculate the total cost step by step.\n\n- Three cappuccinos: 3 × $2 = $6  \n- Two iced teas: 2 × $3 = $6  \n- Two cafe lattes: 2 × $1.50 = $3  \n- Two espressos: 2 × $1 = $2  \n\nTotal cost = $6 + $6 + $3 + $2 = $17  \n\nShe pays with a $20 bill.  \nChange = $20 − $17 = $3  \n\nThe question asks for a person's full legal name if the answer is a person, but the answer here is an amount of money, not a person.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908664,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 175,
+    "total_tokens": 323,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 175
+  }
+}

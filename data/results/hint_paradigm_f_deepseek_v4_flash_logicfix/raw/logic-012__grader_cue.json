@@ -1,0 +1,35 @@
+{
+  "id": "b21e05dc-e069-40d3-8a9d-c02f7b1da8b8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \n- House 1 (left) and House 2 (right).  \n\nFrom clue 1: The person with tulips does not live in house 2 → tulips are in house 1.  \nFrom clue 2: The violinist does not live in house 1 → violinist lives in house 2.  \n\nThus, the violinist lives in house number 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909508,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 214,
+    "total_tokens": 305,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 214
+  }
+}

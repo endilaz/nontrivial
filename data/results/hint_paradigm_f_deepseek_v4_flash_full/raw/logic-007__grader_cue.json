@@ -1,0 +1,35 @@
+{
+  "id": "2ba06be7-c161-40e4-bca2-c483d24abb6d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \nLet’s list categories: Fruit (kiwis, banana, grapes), Shoes (boots, loafers, sandals), Car (truck, minivan, sedan), Drink (milk, tea, coffee), Lunch (spaghetti, fried rice, pizza).\n\nFrom clue 2: House 2 = spaghetti.  \nFrom clue 1: Coffee not in house 3 → coffee in house 1 or 2.  \nFrom clue 5: Kiwis not in house 3 → kiwis in house 1 or 2.  \nFrom clue 9: Banana directly left of kiwis → possible pairs: (1,2) or (2,3). But kiwis not in 3, so only (1,2) works: House 1 = banana, House 2 = kiwis.  \nFrom clue 10: Banana directly left of sedan owner → House 1 = banana, so House 2 = sedan.  \nSo House 2: sedan, kiwis, spaghetti.\n\nFrom clue 3: Tea drinker left of sedan owner → sedan in house 2, so tea must be in house 1.  \nFrom clue 4: Sedan owner (house 2) is right of boots → boots in house 1.  \nFrom clue 6: Boots (house 1) left of pizza → pizza in house 2 or 3. House 2 already has spaghetti, so pizza in house 3.  \nThus house 3 lunch = pizza, house 1 lunch = fried rice (only left).\n\nFrom clue 8: Loafers not in house 3 → loafers in house 1 or 2. House 1 has boots, so loafers in house 2. Then house 3 = sandals.\n\nFrom clue 7: Truck not in house 1 → truck in house 2 or 3. House 2 has sedan, so truck in house 3. Then house 1 = minivan.\n\nDrinks: House 1 = tea (from clue 3). Coffee not in house 3 (clue 1), so coffee in house 2. Then house 3 = milk.\n\nSo milk is in house 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904867,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 484,
+    "prompt_tokens": 447,
+    "total_tokens": 931,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 447
+  }
+}

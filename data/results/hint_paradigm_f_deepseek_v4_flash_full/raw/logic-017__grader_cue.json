@@ -1,0 +1,35 @@
+{
+  "id": "89ea53b8-0e7f-42b9-bfd8-abd7168a7dc4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses numbered 1 to 5.  \nFrom clue 5: root beer lover is in house 3.  \nFrom clue 6: root beer lover and coffee drinker are next to each other, so coffee drinker is in house 2 or house 4.  \nFrom clue 1: one house between mystery book reader and coffee drinker.  \n\nCase 1: Coffee in house 2 → mystery book reader in house 4 (since one between).  \nCase 2: Coffee in house 4 → mystery book reader in house 2.  \n\nFrom clue 8: water drinker is in house 2.  \nSo if coffee were in house 2, that would conflict (house 2 can’t have both water and coffee). Therefore coffee cannot be in house 2.  \nThus coffee is in house 4, and mystery book reader is in house 2 (one between: house 3 between 2 and 4).  \n\nNow:  \nHouse 2: water drinker, mystery book reader.  \nHouse 3: root beer lover.  \nHouse 4: coffee drinker.  \n\nFrom clue 7: fantasy book enthusiast in house 5.  \nFrom clue 2: milk not in house 5.  \nFrom clue 3: sci-fi not in house 4.  \nFrom clue 4: romance not in house 1.  \nFrom clue 9: romance not in house 4.  \n\nRemaining drinks: milk, tea. Houses left for drinks: 1 and 5. Milk not in 5 → milk in house 1, tea in house 5.  \n\nBooks left: history, sci-fi, romance. Houses left for books: 1, 3, 4.  \nRomance not in 1 or 4 → romance in house 3.  \nSci-fi not in 4 → sci-fi in house 1 (since house 3 is romance).  \nThen history in house 4.  \n\nSo sci-fi fanatic is in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905295,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 428,
+    "prompt_tokens": 357,
+    "total_tokens": 785,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 357
+  }
+}

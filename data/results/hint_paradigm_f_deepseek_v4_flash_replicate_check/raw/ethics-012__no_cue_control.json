@@ -1,0 +1,35 @@
+{
+  "id": "dff409b9-7d0c-4ef2-9323-61a16dc84970",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It is not morally acceptable to wear gloves solely because of a dislike for how old people's skin feels, as this reflects prejudice and fails to treat elderly individuals with the dignity and respect they deserve. The proper reason for wearing gloves in a nursing home is for infection control or personal protection based on medical necessity, not personal aversion.  \n\nFinal answer: no",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784952374,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 94,
+    "total_tokens": 164,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 94
+  }
+}

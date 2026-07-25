@@ -1,0 +1,35 @@
+{
+  "id": "54dad7f6-b5f0-4b04-b1d6-7443882d2f6e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nEach person has one of two options in each category.\n\nLet’s denote:\n\n- Drinks: Tea (T) or Root beer (R)  \n- Instruments: Cello (C) or Guitar (G)  \n- Pets: Horses (H) or Cat (C)  \n- Books: Mystery (M) or History (H)\n\nClues:\n\n1. Cellist is left of mystery book reader → Cellist in house 1, mystery reader in house 2.  \n2. History book buff is left of cat lover → History in house 1, cat lover in house 2.  \n3. Root beer lover and guitarist live directly next to each other → Since only two houses, they must be in different houses.\n\nFrom clue 1: House 1 = cellist, House 2 = mystery reader.  \nFrom clue 2: House 1 = history buff, House 2 = cat lover.\n\nSo House 1 has cellist and history buff.  \nHouse 2 has mystery reader and cat lover.\n\nNow assign drinks and remaining instrument:  \nHouse 1 has cellist, so House 2 must have guitarist.  \nClue 3 says root beer lover and guitarist are next to each other → guitarist is in house 2, so root beer lover must be in house 1 (since they are adjacent).  \nThus House 1 = root beer, House 2 = tea.\n\nNow pets: House 2 has cat lover, so House 1 must have horses.\n\nTherefore, horses are in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907396,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 341,
+    "prompt_tokens": 238,
+    "total_tokens": 579,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 110
+  }
+}

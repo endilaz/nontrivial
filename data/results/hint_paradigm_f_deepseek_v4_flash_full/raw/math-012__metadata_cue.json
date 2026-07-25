@@ -1,0 +1,35 @@
+{
+  "id": "39e77cb1-e833-4e03-9743-5abd430dfe39",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the time to run half a mile at 3 mph:  \nTime = distance / speed = 0.5 miles / 3 mph = 1/6 hour.  \nConvert to minutes: (1/6) × 60 = 10 minutes.\n\nNext, find the time to walk half a mile at 1 mph:  \nTime = 0.5 miles / 1 mph = 0.5 hour.  \nConvert to minutes: 0.5 × 60 = 30 minutes.\n\nTotal time = 10 + 30 = 40 minutes.\n\nFinal answer: 40",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908419,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 125,
+    "prompt_tokens": 143,
+    "total_tokens": 268,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 143
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "7ed546ee-2036-4617-8dab-2b0490677023",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Ali started with 800 notebooks.  \nHe sold 60 on Monday, 10 on Tuesday, 20 on Wednesday, 44 on Thursday, and 66 on Friday.  \n\nFirst, add the sold notebooks:  \n60 + 10 = 70  \n70 + 20 = 90  \n90 + 44 = 134  \n134 + 66 = 200  \n\nThen subtract from the total:  \n800 - 200 = 600  \n\nFinal answer: 600",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784903269,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 142,
+    "total_tokens": 239,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

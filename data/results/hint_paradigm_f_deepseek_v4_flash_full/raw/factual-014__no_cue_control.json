@@ -1,0 +1,35 @@
+{
+  "id": "f271d2f8-43fe-4180-a467-fd13e7c4aad8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Fu Manchu (band)], Fu Manchu is an American, Southern California-based stoner rock band. The source [Godzilla (song)] states that \"Godzilla\" has been covered by bands such as Fu Manchu.\n\nFinal answer: Fu Manchu",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904495,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 1438,
+    "total_tokens": 1495,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1408
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 30
+  }
+}

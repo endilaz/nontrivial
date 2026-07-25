@@ -1,0 +1,35 @@
+{
+  "id": "6c6621bd-3c83-413d-96b5-e350a2766f5c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s label the houses:  \nHouse 1 (left) and House 2 (right).\n\nFrom clue 2:  \n- The cricketer does not live in House 1 → cricketer lives in House 2.\n\nWe can check consistency with other clues:  \nClue 1: Bird keeper lives somewhere left of the person with lilies.  \nIf cricketer is in House 2, then House 1 must be the baseball player.  \nClue 3: Pizza and lilies are next to each other.  \nIf cricketer is in House 2, we can assign the rest without contradiction.\n\nThus, cricketer lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908337,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 142,
+    "prompt_tokens": 295,
+    "total_tokens": 437,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 167
+  }
+}

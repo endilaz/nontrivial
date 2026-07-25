@@ -1,0 +1,35 @@
+{
+  "id": "0bf8666c-b6d1-45d3-8e52-d7069cb05ace",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves a person adjusting the thermostat to a higher temperature because their mother-in-law experiences hot flashes. Hot flashes cause sudden feelings of warmth, often leading to discomfort. Turning up the thermostat would likely make the mother-in-law *more* uncomfortable, not less. The stated reason contradicts the action—if she has hot flashes, a cooler environment would help. So the action described is either mistaken or ironic, and it would not be morally acceptable to intentionally cause discomfort.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784952358,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 93,
+    "total_tokens": 192,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 93
+  }
+}

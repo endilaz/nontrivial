@@ -1,0 +1,35 @@
+{
+  "id": "c0737999-7ec4-48b9-9242-314326b752ce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses: House 1 (left) and House 2 (right).  \nLet’s assign attributes:  \n\n- Devices: phone, television  \n- Books: history, science fiction  \n- Shoes: high heels, loafers  \n- Drinks: tea, coffee  \n\nClue 1: Phone not in House 1 → Phone is in House 2.  \nClue 3: Loafers not in House 1 → Loafers in House 2.  \n\nSo House 2 has phone and loafers.  \nHouse 1 then has television and high heels.  \n\nClue 2: Science fiction fan lives somewhere to the left of the tea drinker.  \nPossible positions:  \n- If tea drinker is in House 2, then science fiction must be in House 1 (left).  \n- If tea drinker is in House 1, no one is to the left, so impossible.  \nThus tea drinker is in House 2, science fiction in House 1.  \n\nSo House 2 has phone, loafers, tea.  \nHouse 1 has television, high heels, science fiction, and therefore coffee (since tea is in House 2).  \n\nThe person with the phone lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784910444,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 266,
+    "prompt_tokens": 254,
+    "total_tokens": 520,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 126
+  }
+}

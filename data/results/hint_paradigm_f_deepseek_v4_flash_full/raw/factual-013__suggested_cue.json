@@ -1,0 +1,35 @@
+{
+  "id": "70b1bde9-89be-4108-87be-8647f131b35c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the sources, Axle Whitehead played a role in the American series \"Shameless\" starting in 2015 ([Axle Whitehead]). The series is set in Chicago ([Shameless (U.S. TV series)]).\n\nFinal answer: Chicago",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784794582,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 1411,
+    "total_tokens": 1463,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1411
+  }
+}

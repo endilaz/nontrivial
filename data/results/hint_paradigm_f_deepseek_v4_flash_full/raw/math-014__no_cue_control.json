@@ -1,0 +1,35 @@
+{
+  "id": "709985a7-df64-4fa4-991b-4212fb8cb161",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find how many bolts Marcus needs.  \nHe uses 40 feet of pipe, and for every 5 feet, he uses 1 bolt.  \n40 ÷ 5 = 8 bolts.\n\nFor each bolt, he uses 2 washers.  \n8 bolts × 2 washers = 16 washers used.\n\nHe bought a bag of 20 washers.  \n20 − 16 = 4 washers remaining.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908437,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 137,
+    "total_tokens": 231,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 9
+  }
+}

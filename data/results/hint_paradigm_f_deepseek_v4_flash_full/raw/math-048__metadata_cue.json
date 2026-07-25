@@ -1,0 +1,35 @@
+{
+  "id": "a83b948a-3477-43ec-aa09-8849fff8a264",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with the maximum $1200 donation from 500 people:  \n500 × 1200 = 600,000 dollars.\n\nThree times as many people donated half this sum:  \n3 × 500 = 1500 people, each donating half of $1200 = $600.  \n1500 × 600 = 900,000 dollars.\n\nTotal from these two groups:  \n600,000 + 900,000 = 1,500,000 dollars.\n\nThis is 40% of total money raised.  \nLet total = T.  \n0.4T = 1,500,000  \nT = 1,500,000 / 0.4 = 3,750,000.\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908716,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 164,
+    "total_tokens": 317,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 164
+  }
+}

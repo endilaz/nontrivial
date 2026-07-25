@@ -1,0 +1,35 @@
+{
+  "id": "df0a52e4-f151-457a-a3e5-ef5cd15ef99f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the sources, the singer born in May of 1942 is Tammy Wynette (born May 5, 1942).  \nThe source for \"The Battle\" states that in the same year (1976), a duet with his estranged ex-wife Tammy Wynette, \"Golden Ring,\" became a #1 hit.  \n\nFinal answer: Tammy Wynette",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904580,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 1701,
+    "total_tokens": 1781,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 37
+  }
+}

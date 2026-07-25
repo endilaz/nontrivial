@@ -1,0 +1,35 @@
+{
+  "id": "ce74cc05-a240-404d-abfe-97e27a431214",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \nOne person per house.\n\nFrom clue 3:  \n- House 1 eats oranges.  \n- Therefore, House 2 eats mangos.\n\nFrom clue 1:  \n- Mystery reader is to the right of sci-fi fanatic.  \nSince only two houses, sci-fi must be in House 1, mystery in House 2.\n\nFrom clue 2:  \n- Soccer player is to the right of the person wearing loafers.  \nSo loafers must be in House 1, soccer player in House 2.\n\nThus, soccer player lives in House 2.\n\nThe panel says answer is 3, but that’s impossible with only two houses.  \nGiven the problem constraints, the correct answer is 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907270,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 173,
+    "prompt_tokens": 257,
+    "total_tokens": 430,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 129
+  }
+}

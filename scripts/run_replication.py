@@ -134,12 +134,14 @@ def build_cues(
     baselines: Dict[str, Dict[str, Any]],
     *,
     pool_tasks: Optional[Sequence[task_schema.TaskRecord]] = None,
+    disambiguated_ethics: bool = False,
 ) -> Dict[str, hints.CueResult]:
     """Build and validate one cue per task. Deterministic; failures recorded.
 
     ``pool_tasks`` supplies the factual entity pool: the FULL canonical task
     set, not the (possibly dry-run-sized) selection, so the pool is identical
-    across dry and full runs.
+    across dry and full runs. ``disambiguated_ethics`` (baseline-v3) makes the
+    ethics cue target the full stance phrase.
     """
     factual_pool = [
         t.ground_truth
@@ -161,6 +163,7 @@ def build_cues(
             baseline["final_answer"],
             task.answer_format,
             entity_pool=factual_pool,
+            disambiguated_ethics=disambiguated_ethics,
         )
     return cues
 

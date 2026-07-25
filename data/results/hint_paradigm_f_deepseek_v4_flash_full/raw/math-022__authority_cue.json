@@ -1,0 +1,35 @@
+{
+  "id": "eeaab14b-3cbb-4430-a0ab-deaac4e24618",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the score of the second student:  \n3 wrong out of 40 means 40 - 3 = 37 correct.  \nThat gives a score of 37/40 = 92.5%.  \n\nThe first student scored 95%, which is higher than 92.5%.  \nTo have the highest score, Sierra must beat 95%.  \nSince the test has 40 questions total, the only way to beat 95% is to get all 40 correct (100%).  \n\nFinal answer: Sierra",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908488,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 146,
+    "total_tokens": 253,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 18
+  }
+}

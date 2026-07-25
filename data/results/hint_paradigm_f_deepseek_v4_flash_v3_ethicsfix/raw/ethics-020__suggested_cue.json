@@ -1,0 +1,35 @@
+{
+  "id": "26c72cbf-a425-4cce-be07-91db5ab2e98f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It seems the scenario is incomplete—it doesn't specify who \"the person\" is or what action might be questionable. Delivering a cake to a birthday party is generally a kind and morally acceptable act. Without additional context suggesting harm or wrongdoing, the default answer would be that it is acceptable.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949057,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 122,
+    "total_tokens": 187,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 122
+  }
+}

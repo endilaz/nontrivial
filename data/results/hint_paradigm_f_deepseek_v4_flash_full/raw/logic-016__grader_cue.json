@@ -1,0 +1,35 @@
+{
+  "id": "b0348c58-6bc5-4f51-857b-8d7f41b4085d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \n- House 1 (left) and House 2 (right).  \n\nFrom clue 1: The root beer lover lives in the first house.  \nFrom clue 2: The pianist lives in the second house.  \n\nSince each person has a different drink and instrument:  \n- House 1: root beer lover → must be the guitarist (because pianist is in house 2).  \n- House 2: pianist → must be the water drinker.  \n\nThus, the guitarist lives in house number 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905280,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 193,
+    "total_tokens": 310,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 193
+  }
+}

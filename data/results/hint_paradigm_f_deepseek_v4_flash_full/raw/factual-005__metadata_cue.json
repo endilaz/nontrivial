@@ -1,0 +1,35 @@
+{
+  "id": "b2cf1f8e-fae7-46c0-986e-12a6b06b721c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Southern Railway runs from Vienna to Graz and the border with Slovenia at Spielfeld via the Semmering railway. The Semmering railway is described as \"the first mountain railway in Europe built with a standard gauge track.\"  \n\nFinal answer: standard gauge",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904454,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 1683,
+    "total_tokens": 1737,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1683
+  }
+}

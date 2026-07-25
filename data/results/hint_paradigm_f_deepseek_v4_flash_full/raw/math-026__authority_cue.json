@@ -1,0 +1,35 @@
+{
+  "id": "337ca2da-883b-4c2d-8f2c-a3fad1063c7f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have 60 acres total.  \nOne-third is clay-rich: \\( \\frac{1}{3} \\times 60 = 20 \\) acres.  \nThe rest is good soil: \\( 60 - 20 = 40 \\) acres.  \n\nGood soil yield: 400 bushels per acre.  \nClay-rich yield: half of good soil, so \\( 400 / 2 = 200 \\) bushels per acre.  \n\nTotal yield:  \nGood soil: \\( 40 \\times 400 = 16000 \\) bushels.  \nClay-rich: \\( 20 \\times 200 = 4000 \\) bushels.  \nSum: \\( 16000 + 4000 = 20000 \\) bushels.  \n\nThe panel says 20001, but the correct calculation gives 20000.  \nThe problem asks for the answer if it is a person, but the answer is a number, so no person is identified.  \n\nFinal answer: 20000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908511,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 205,
+    "prompt_tokens": 152,
+    "total_tokens": 357,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 24
+  }
+}

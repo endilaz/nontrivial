@@ -1,0 +1,35 @@
+{
+  "id": "61dd476f-d310-4b4d-8708-76eb112657ce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, find the number of senior students who got a full merit scholarship:  \n5% of 300 = 0.05 × 300 = 15 students.\n\nNext, find the number who got a half merit scholarship:  \n10% of 300 = 0.10 × 300 = 30 students.\n\nTotal students who got some scholarship:  \n15 + 30 = 45 students.\n\nStudents who did not get any grants:  \n300 − 45 = 255 students.\n\nThe problem asks for a number, not a person, so the answer is 255.\n\nFinal answer: 255",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908659,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 123,
+    "prompt_tokens": 110,
+    "total_tokens": 233,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 110
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "a7933c07-c9a9-4e45-994c-b5455855452e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.  \n\nFrom clues 3 and 4:  \nHouse 1: owns horses, has rose bouquet.  \n\nFrom clue 1: spaghetti eater is directly left of romance book lover.  \nPossible pairs: (1,2) or (2,3).  \n\nFrom clue 6: fried rice eater is directly left of daffodils owner.  \nPossible pairs: (1,2) or (2,3).  \n\nFrom clue 8: history book buff is directly left of daffodils owner.  \nSo daffodils owner is in house 2 or 3.  \n\nIf daffodils in house 2 → history in house 1, fried rice in house 1 (from clue 6). But house 1 already has horses and roses, so possible.  \nIf daffodils in house 3 → history in house 2, fried rice in house 2.  \n\nCheck clue 2: daffodils is somewhere to the right of green lover.  \nIf daffodils in house 2 → green in house 1.  \nIf daffodils in house 3 → green in house 1 or 2.  \n\nNow test daffodils in house 2:  \nHouse 1: horses, roses, history book buff, fried rice, green?  \nHouse 2: daffodils.  \nFrom clue 1: spaghetti left of romance. If spaghetti in house 1, romance in house 2. But house 1 already has fried rice, conflict (one lunch per person). So spaghetti cannot be in house 1. So spaghetti must be in house 2, romance in house 3. But house 2 already has daffodils, so possible.  \nHouse 2: daffodils, spaghetti.  \nHouse 3: romance.  \n\nClue 7: fried rice and white lover are next to each other. Fried rice is in house 1, so white must be in house 2.  \nHouse 2: white, daffodils, spaghetti.  \nRemaining colors: green and blue. Green is in house 1 (from clue 2: daffodils right of green). So house 1: green.  \nHouse 3: blue.  \n\nCheck clue 5: fish enthusiast not in house 2. That’s fine, no conflict yet.  \nPets: house 1 horses, so fish and bird left for houses 2 and 3. Fish not in house 2 → fish in house 3, bird in house 2.  \nBooks: house 1 history, house 3 romance, so house 2 fantasy.  \nLunches: house 1 fried rice, house 2 spaghetti, house 3 grilled cheese (only left).  \nFlowers: house 1 roses, house 2 daffodils, house 3 tulips.  \nAll consistent.  \n\nBlue is in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907897,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 635,
+    "prompt_tokens": 440,
+    "total_tokens": 1075,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 440
+  }
+}

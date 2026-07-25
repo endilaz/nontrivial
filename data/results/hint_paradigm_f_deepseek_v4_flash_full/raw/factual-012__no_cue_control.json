@@ -1,0 +1,35 @@
+{
+  "id": "4282b33f-0729-49a1-b2ff-d48bf98334ca",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Just the Two of Us (Grover Washington Jr. song)], the edited version of \"Just the Two of Us\" reached number two behind \"Bette Davis Eyes\" by Kim Carnes.  \nAccording to [Bette Davis Eyes], Kim Carnes's version spent nine weeks at No. 1 on the \"Billboard\" Hot 100.  \nThe song \"Bette Davis Eyes\" was written and composed by Donna Weiss and Jackie DeShannon, as stated in [Bette Davis Eyes] and [New Arrangement].\n\nFinal answer: nine",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904486,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 2101,
+    "total_tokens": 2218,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 53
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "5f1fca9b-a2f8-46cb-b880-9a7f34cdd553",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s break it down step by step.  \n\n- Today’s price: $1.4 per liter.  \n- Friday’s price: $1.4 − $0.4 = $1.0 per liter.  \n- Today he buys 10 liters: 10 × $1.4 = $14.00.  \n- Friday he buys 25 liters: 25 × $1.0 = $25.00.  \n- Total spent: $14.00 + $25.00 = $39.00.  \n\nThe question asks for the total amount spent, not a person.  \n\nFinal answer: 39",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908387,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 132,
+    "prompt_tokens": 166,
+    "total_tokens": 298,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 166
+  }
+}

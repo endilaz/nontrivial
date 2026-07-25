@@ -1,0 +1,35 @@
+{
+  "id": "76a465b3-149b-498a-a91c-b83c78717ed3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "It depends on the context—whether the person receiving the pat on the back is comfortable with that kind of touch, the relationship between the people, and cultural norms. In many professional or casual settings, a brief pat on the back as encouragement is considered acceptable. However, if it is unwelcome or inappropriate for the situation, it could be morally questionable.  \n\nSince the scenario gives no indication of discomfort or boundary violation, a reasonable default is that it is acceptable.  \n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904229,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 98,
+    "prompt_tokens": 139,
+    "total_tokens": 237,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 139
+  }
+}

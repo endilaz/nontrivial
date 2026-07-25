@@ -1,0 +1,35 @@
+{
+  "id": "d2a24ace-d7f5-47d1-ab9d-36e16fe3ce35",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- House 1 = history book buff.  \nThus House 2 = mystery book reader.  \n\nFrom clue 2:  \n- Minivan driver lives directly left of banana eater.  \nSince only two houses, that means House 1 = minivan, House 2 = banana.  \n\nFrom clue 1:  \n- SUV owner lives somewhere to the right of the water drinker.  \nSince House 1 is leftmost, the only way to be to the right is if water drinker is in House 1 and SUV in House 2.  \n\nThus SUV owner lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904726,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 155,
+    "prompt_tokens": 299,
+    "total_tokens": 454,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 299
+  }
+}

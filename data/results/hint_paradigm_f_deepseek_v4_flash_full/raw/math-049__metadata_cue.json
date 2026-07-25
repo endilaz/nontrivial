@@ -1,0 +1,35 @@
+{
+  "id": "1947f8d6-3130-4aba-96cf-99af3617ce29",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 1000 workers.  \n\n**Round 1:** 10% of 1000 = 100 laid off.  \nRemaining: 1000 - 100 = 900.  \n\n**Round 2:** 10% of 900 = 90 laid off.  \nRemaining: 900 - 90 = 810.  \n\n**Round 3:** 10% of 810 = 81 laid off.  \n\nTotal laid off = 100 + 90 + 81 = 271.  \n\nWait, check:  \n1000 × 0.9 = 900 after first,  \n900 × 0.9 = 810 after second,  \n810 × 0.9 = 729 after third.  \nSo remaining = 729, laid off = 1000 - 729 = 271.  \n\nFinal answer: 271",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908724,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 178,
+    "prompt_tokens": 142,
+    "total_tokens": 320,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  }
+}

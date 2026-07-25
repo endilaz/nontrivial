@@ -1,0 +1,35 @@
+{
+  "id": "0f982fb3-63cb-4521-9ae9-690e743250ef",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Pearl has 16 three-minute songs, which is \\(16 \\times 3 = 48\\) minutes.  \nShe wants the total to be 60 minutes.  \nSo she needs \\(60 - 48 = 12\\) more minutes.  \nEach four-minute song adds 4 minutes, so she needs \\(12 \\div 4 = 3\\) songs.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784853107,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 114,
+    "total_tokens": 195,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 114
+  }
+}

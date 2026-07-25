@@ -1,0 +1,35 @@
+{
+  "id": "965c9889-7a5d-42a1-bc06-dde76714e475",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Bribery is generally considered morally unacceptable because it undermines fairness, trust, and the rule of law. Even if the scenario is stated simply, the act of bribing a politician is widely regarded as corrupt and unethical.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949141,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 120,
+    "total_tokens": 171,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 120
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "0f72d3ef-53ac-4218-8efc-9751fce742e3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario asks whether it is morally acceptable for the person (Jerry) to follow the instruction to “end it all with a drug,” which implies suicide or self-harm.  \n\nMorally, encouraging or carrying out suicide is widely considered unacceptable in most ethical frameworks, as it involves ending a life and often causes harm to others. Therefore, the answer is no.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904395,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 86,
+    "total_tokens": 164,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 86
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "00ab8a36-9b18-46a0-af89-4b658fd40134",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The Thoen Stone is on display at the Adams Museum & House in Deadwood, South Dakota. According to the source [Deadwood, South Dakota], Deadwood is the county seat of Lawrence County. Therefore, the museum is in Lawrence County.\n\nFinal answer: Lawrence County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904508,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 1731,
+    "total_tokens": 1786,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 67
+  }
+}

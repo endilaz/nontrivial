@@ -1,0 +1,35 @@
+{
+  "id": "bb8a20e8-60be-4df6-a98e-9d69f00bccf0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The University of Providence is located in Great Falls, Montana. According to the source [Great Falls, Montana], Great Falls was passed by Missoula and became the third largest city in Montana. The source [University of Providence] states it is a private Roman Catholic university.  \n\nFinal answer: Roman Catholic",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904641,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 1573,
+    "total_tokens": 1634,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1536
+    },
+    "prompt_cache_hit_tokens": 1536,
+    "prompt_cache_miss_tokens": 37
+  }
+}

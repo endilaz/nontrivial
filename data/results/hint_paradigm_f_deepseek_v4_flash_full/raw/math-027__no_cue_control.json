@@ -1,0 +1,35 @@
+{
+  "id": "fd9833a0-5840-45f2-9367-800444f4b5bd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with total money:  \nVeronica: $15  \nMichelle: $12  \nTotal = $27  \n\nCake costs $15, so remaining for soda:  \n$27 - $15 = $12  \n\nSoda costs $3 per bottle, so they can buy:  \n$12 ÷ $3 = 4 bottles  \n\nEach bottle has 12 servings, so total servings:  \n4 × 12 = 48 servings  \n\nThere are 8 guests, so servings per guest:  \n48 ÷ 8 = 6  \n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908524,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 124,
+    "total_tokens": 239,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 124
+  }
+}

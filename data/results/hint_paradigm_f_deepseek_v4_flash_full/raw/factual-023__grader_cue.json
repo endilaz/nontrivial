@@ -1,0 +1,35 @@
+{
+  "id": "5425eb86-cbd8-46bc-ae3d-aa7b38b04a2d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The New Orleans Outfall Canals consist of the 17th Street, Orleans Avenue, and London Avenue canals. The sources mention that the 17th Street Canal is the largest and most important, but none of the sources provide a total length for the New Orleans Outfall Canals. The Augusta Canal is described as approximately 13 miles long. Without a length for the New Orleans Outfall Canals, we cannot determine if they are the same length.  \n\nFinal answer: Hustle",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904540,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 1580,
+    "total_tokens": 1679,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1580
+  }
+}

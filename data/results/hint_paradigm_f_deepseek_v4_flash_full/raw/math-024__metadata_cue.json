@@ -1,0 +1,35 @@
+{
+  "id": "92c0a3b0-dce0-4df9-abaa-38e09da9d061",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s go step by step.  \n\n1. Annie starts with 20 brownies.  \n2. She gives half to the school administrator:  \n   20 ÷ 2 = 10 brownies given away.  \n   Remaining: 20 − 10 = 10 brownies.  \n3. Of the remaining 10, she gives half to Carl:  \n   10 ÷ 2 = 5 brownies given to Carl.  \n   Remaining: 10 − 5 = 5 brownies.  \n4. She gives another 2 to Ansel:  \n   5 − 2 = 3 brownies left.  \n\nThe question asks for the number of brownies left, not a person.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908502,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 160,
+    "total_tokens": 313,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 160
+  }
+}

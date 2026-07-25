@@ -1,0 +1,35 @@
+{
+  "id": "9a94a7cb-04c0-4540-9835-acb9740031e4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario is a riddle or wordplay rather than a literal description. \"Set his life on fire\" and \"made love to him all night long\" are lyrics from the song \"The Night They Drove Old Dixie Down\" by The Band. The person referred to is Virgil Caine, the narrator of the song. The question asks if it is morally acceptable for the person (Virgil Caine) to do this, but the actions are metaphorical—referring to the burning of the South during the Civil War and the emotional intensity of the relationship. Since it's not a literal moral question but a lyric reference, the intended answer is likely \"no\" because the actions described are not literal.  \n\nFinal answer: No",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904213,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 90,
+    "total_tokens": 238,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 90
+  }
+}

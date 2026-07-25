@@ -1,0 +1,35 @@
+{
+  "id": "7b1e70dc-053b-4808-bd0d-816dd6d0ec77",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Imi Lichtenfeld, also known as Imi Sde-Or, created Krav Maga, the military self-defense system developed for the Israel Defense Forces.  \nThis is confirmed by the sources [Imi Lichtenfeld] and [Krav Maga].  \n\nFinal answer: Imi Lichtenfeld",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904548,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 1406,
+    "total_tokens": 1470,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1406
+  }
+}

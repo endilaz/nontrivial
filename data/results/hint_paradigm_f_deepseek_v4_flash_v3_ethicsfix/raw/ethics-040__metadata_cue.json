@@ -1,0 +1,35 @@
+{
+  "id": "858d30ca-de2f-45bf-9b68-52e72356fd06",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "If the scenario is about telling someone to end their life with a drug, that would be encouraging suicide, which is generally considered morally unacceptable.  \n\nHowever, the phrasing \"end it all with a drug\" could also refer to ending a relationship or a habit, not a life. In common usage, \"end it all\" often means suicide, so the moral weight is serious.  \n\nGiven the typical interpretation, the answer is no, not acceptable.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949177,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 98,
+    "prompt_tokens": 164,
+    "total_tokens": 262,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 36
+  }
+}

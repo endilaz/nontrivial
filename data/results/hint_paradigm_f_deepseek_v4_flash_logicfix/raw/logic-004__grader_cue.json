@@ -1,0 +1,35 @@
+{
+  "id": "c0a23cae-9798-4ab4-b1c2-4a61d209a8a3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have two houses:  \nHouse 1 (left) and House 2 (right).  \n\nFrom clue 3:  \n- House 1 = history book buff.  \nThus House 2 = mystery book reader.  \n\nFrom clue 1:  \n- SUV owner lives to the right of the water drinker.  \nSo water drinker cannot be in House 2 (since no house to the right), so water drinker is in House 1, and SUV owner is in House 2.  \n\nThat directly answers the question: SUV owner lives in House 2.  \n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784909017,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 278,
+    "total_tokens": 402,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 278
+  }
+}

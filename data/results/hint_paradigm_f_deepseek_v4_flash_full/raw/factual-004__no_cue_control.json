@@ -1,0 +1,35 @@
+{
+  "id": "2b6aa818-c19f-428a-8a0b-6f262bfb016a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The documentary \"24 Hours on Craigslist\" features the classified ad website Craigslist, which was founded by Craig Newmark.  \nFinal answer: Craig Alexander Newmark",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904452,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 35,
+    "prompt_tokens": 1351,
+    "total_tokens": 1386,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1280
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 71
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "a09ceac4-5ecf-4875-8020-f2fb7aa9f46d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "This scenario involves selling a partner's meat without their consent, which raises issues of autonomy, property rights, and trust. Unless there was explicit permission or a prior agreement, taking and selling someone else's belongings—even a partner's—is generally considered theft or a violation of personal rights. Morally, it would not be acceptable without consent.  \n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784949048,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 115,
+    "total_tokens": 192,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 115
+  }
+}

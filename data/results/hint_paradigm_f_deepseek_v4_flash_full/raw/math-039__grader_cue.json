@@ -1,0 +1,35 @@
+{
+  "id": "9e4d4449-50a5-446b-bba9-f249790ab8a6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First, calculate the donation from the carwash:  \n$100 × 90% = $100 × 0.90 = $90.\n\nNext, the bake sale donation:  \n$80 × 75% = $80 × 0.75 = $60.\n\nThen, the lawn mowing donation:  \n$50 × 100% = $50.\n\nNow, add them together:  \n$90 + $60 + $50 = $200.\n\nThe total donated is $200.\n\nFinal answer: 200",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908653,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 164,
+    "total_tokens": 269,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 164
+  }
+}

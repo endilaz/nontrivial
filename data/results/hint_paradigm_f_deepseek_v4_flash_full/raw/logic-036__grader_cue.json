@@ -1,0 +1,35 @@
+{
+  "id": "dbb2b317-059b-4a4f-9fc8-508a36e8eb3a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses numbered 1, 2, 3 from left to right.  \n\nFrom clue 3: fried rice is in house 2.  \nFrom clue 4: fantasy book enthusiast is in house 2.  \nSo house 2: fried rice, fantasy.  \n\nClue 1: spaghetti is somewhere left of fried rice.  \nFried rice is house 2, so spaghetti must be in house 1.  \nThus house 1: spaghetti.  \n\nClue 2: fried rice (house 2) is to the right of the science fiction fanatic.  \nThat means science fiction fanatic is in house 1 (since only house 1 is left of house 2).  \nSo house 1: spaghetti, science fiction.  \n\nRemaining food: grilled cheese must be in house 3.  \nRemaining book: mystery must be in house 3.  \n\nThe person who ate grilled cheese lives in house 3.  \n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907628,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 202,
+    "prompt_tokens": 259,
+    "total_tokens": 461,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 259
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "34ba0dc8-aaed-4a14-a858-96e2df246e94",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Axle Whitehead played Davis in the American series *Shameless*, which is a remake of the British series of the same name. According to the source [Shameless (U.S. TV series)], the series is set in Chicago.  \n\nFinal answer: Chicago",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904490,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 1432,
+    "total_tokens": 1486,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1432
+  }
+}

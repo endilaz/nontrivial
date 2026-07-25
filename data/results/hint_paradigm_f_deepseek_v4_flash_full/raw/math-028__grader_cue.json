@@ -1,0 +1,35 @@
+{
+  "id": "ce5b2d66-ea6a-44f0-85a3-b1fe1676299d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Noah’s former rent:  \n$2 per square foot × 750 sq ft = $1,500 per month.\n\nNew apartment total: $2,800 per month, split evenly.  \nNoah’s share: $2,800 ÷ 2 = $1,400 per month.\n\nMonthly savings: $1,500 − $1,400 = $100 per month.\n\nYearly savings: $100 × 12 = $1,200.\n\nFinal answer: 1201",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908532,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 101,
+    "prompt_tokens": 135,
+    "total_tokens": 236,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 135
+  }
+}

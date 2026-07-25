@@ -1,0 +1,35 @@
+{
+  "id": "14f9f799-3826-4ba2-9142-e9183cf97391",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3, 4.  \n\nFrom clue 1: House 3 = blue.  \nFrom clue 2: House 1 = white.  \n\nClue 4: Television is one house away from blue (house 3).  \nPossible positions: house 1 or house 5 (invalid) or house 2 or house 4.  \nSo television is in house 2 or house 4.  \n\nClue 3: Red lives directly left of gameboy.  \nPossible pairs: (1,2), (2,3), (3,4).  \nHouse 3 is blue, so red cannot be in house 3.  \nHouse 1 is white, so red cannot be in house 1.  \nThus only possible is (2,3) or (3,4). But house 3 is blue, so (3,4) impossible.  \nSo red = house 2, gameboy = house 3.  \n\nNow house 3 = blue and gameboy.  \n\nClue 4: Television is one house away from house 3 → house 2 or 4.  \nHouse 2 is red, so television cannot be there (each device unique).  \nThus television = house 4.  \n\nRemaining device: phone must be in house 1.  \n\nClue 5: Computer is somewhere to the right of red (house 2).  \nPossible houses: 3 or 4.  \nHouse 3 has gameboy, house 4 has television, so computer cannot be placed? Wait, we have devices: phone (house 1), gameboy (house 3), television (house 4). Computer must be in house 2? But house 2 is red, and computer must be to the right of red, so house 2 is not to the right of itself.  \nThis means we must check: computer must be in house 3 or 4, but both are taken.  \nThus contradiction? Let's re-evaluate.  \n\nActually, we assigned television to house 4 from clue 4, but clue 4 says \"one house between\" — that means exactly one house in between, so television could be house 1?  \nHouse 1 is white, so possible. Let's check:  \nIf television = house 1, then between house 1 and house 3 there is house 2 — yes, one house between.  \nSo television could be house 1.  \n\nThen devices:  \nHouse 1 = white, television.  \nHouse 2 = red.  \nHouse 3 = blue, gameboy (from clue 3).  \nHouse 4 = ?  \n\nRemaining device: phone and computer.  \nClue 5: computer somewhere to the right of red (house 2) → house 3 or 4.  \nHouse 3 has gameboy, so computer = house 4, phone = house 2.  \n\nNow check:  \nHouse 1: white, television  \nHouse 2: red, phone  \nHouse 3: blue, gameboy  \nHouse 4: ?, computer (color unknown, but only yellow left)  \n\nAll clues satisfied.  \n\nThe question: \"What is the number of the house where the person who likes white lives?\"  \nWhite is in house 1.  \n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784907635,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 695,
+    "prompt_tokens": 299,
+    "total_tokens": 994,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 299
+  }
+}

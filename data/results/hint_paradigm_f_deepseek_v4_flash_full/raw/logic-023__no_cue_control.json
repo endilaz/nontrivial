@@ -1,0 +1,35 @@
+{
+  "id": "f6ee6c11-9fdb-4878-a8f3-779ef25ae60c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We have houses 1, 2, 3 from left to right.\n\nFrom clue 2: Basketball player directly left of cricketer.  \nPossible positions: (1,2) or (2,3).\n\nFrom clue 1: Grilled cheese is somewhere left of basketball player.  \nIf basketball is in 2, grilled cheese must be in 1.  \nIf basketball is in 3, grilled cheese could be in 1 or 2.\n\nFrom clue 3: Basketball player and pizza person are next to each other.  \nIf basketball in 2, pizza in 1 or 3.  \nIf basketball in 3, pizza in 2.\n\nFrom clue 5: Grilled cheese directly left of bird keeper.  \nSo possible pairs: (1,2) or (2,3).\n\nCombine with clue 1 and 2:\n\nTry basketball in 2, cricketer in 3.  \nThen grilled cheese must be in 1 (clue 1).  \nFrom clue 5, grilled cheese in 1 → bird keeper in 2.  \nFrom clue 3, basketball in 2 → pizza next to them: could be 1 or 3.  \nHouse 1 has grilled cheese, so pizza cannot be there (different foods). So pizza in 3.  \nNow house 3 has pizza and cricketer.  \nClue 6: Cat lover left of pizza person. Pizza in 3 → cat lover in 1 or 2.  \nHouse 2 is bird keeper, so cat lover could be in 1.  \nHouse 1: grilled cheese, possibly cat lover.  \nRemaining pet: dog owner in house 3.\n\nNow clue 7: TV directly left of phone. Possible pairs: (1,2) or (2,3).  \nHouse 2 has bird keeper, house 3 has cricketer and pizza.  \nCheck devices:  \nIf TV in 1, phone in 2 → radio in 3.  \nClue 4: Radio not in house 1 — satisfied (radio in 3).  \nSo this works.\n\nNow sports: basketball in 2, cricketer in 3 → swimmer must be in 1.\n\nThus swimmer lives in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784905489,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 471,
+    "prompt_tokens": 323,
+    "total_tokens": 794,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 67
+  }
+}

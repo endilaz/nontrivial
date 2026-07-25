@@ -1,0 +1,35 @@
+{
+  "id": "dc50c09e-6829-470a-80c2-d975c71351de",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We start with 300 senior students.  \n\n- 5% got a full merit scholarship:  \n  5% of 300 = 0.05 × 300 = 15 students.  \n\n- 10% got a half merit scholarship:  \n  10% of 300 = 0.10 × 300 = 30 students.  \n\nTotal students who received some scholarship:  \n15 + 30 = 45 students.  \n\nStudents who did not get any grants:  \n300 − 45 = 255 students.  \n\nFinal answer: 255",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784908658,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 131,
+    "total_tokens": 244,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 131
+  }
+}

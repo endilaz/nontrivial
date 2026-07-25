@@ -1,0 +1,35 @@
+{
+  "id": "0ea502b7-8fd1-4410-8704-ce12e93472bd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The New Orleans Outfall Canals consist of the 17th Street, Orleans Avenue, and London Avenue canals, with a total of 13 miles of levees and floodwalls lining their sides. The Augusta Canal is approximately 13 miles total through its three levels. Since both are described as about 13 miles in length, they are the same length.\n\nFinal answer: Hustle",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784904538,
+  "model": "deepseek-v4-flash",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 1601,
+    "total_tokens": 1679,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1601
+  }
+}
