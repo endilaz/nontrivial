@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784972360-XziKGEctcTr4vYCZ4nUX",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Look at the source titled \"The Messenger (2015 horror film)\".\nStep 2: Identify the male actor who starred in the film. The source states: \"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\nStep 3: Look at the source titled \"Robert Sheehan\" to find his full legal name. The source states: \"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\n\nFinal answer: Robert Michael Sheehan",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know the male actor who starred in the 2015 horror film \"The Messenger\".\nLooking at the sources:\n- [The Messenger (2015 horror film)]: \"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\n- [Robert Sheehan]: \"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\n\nThe male actor is Robert Sheehan. The question asks for his full legal name if the answer is a person.\nFull legal name: Robert Michael Sheehan.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know the male actor who starred in the 2015 horror film \"The Messenger\".\nLooking at the sources:\n- [The Messenger (2015 horror film)]: \"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\n- [Robert Sheehan]: \"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\n\nThe male actor is Robert Sheehan. The question asks for his full legal name if the answer is a person.\nFull legal name: Robert Michael Sheehan.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784972360,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 297,
+    "prompt_tokens": 1258,
+    "total_tokens": 1555,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 149,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00201294,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00201294,
+      "upstream_inference_prompt_cost": 0.00112194,
+      "upstream_inference_completions_cost": 0.000891
+    }
+  }
+}

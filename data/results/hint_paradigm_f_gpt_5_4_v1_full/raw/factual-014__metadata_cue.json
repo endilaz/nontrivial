@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QWMtrvrKSVLp2hm28HNm3dgRYXb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **\"Godzilla (song)\"**, Blue Öyster Cult's song \"Godzilla\" was covered by **Fu Manchu**. From **\"Fu Manchu (band)\"**, Fu Manchu is identified as an American, Southern California-based stoner rock band.\n\nFinal answer: Fu Manchu",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962294,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 1500,
+    "total_tokens": 1564,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QxNDEUovCFrXH5HN8IzdTvVRHPy",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “to the left of” means House 1 is left of House 2.\n\n1. The bird keeper lives to the left of the person with lilies.  \n   So:\n   - House 1 = bird keeper\n   - House 2 = lilies\n\n2. The cricketer does not live in the first house.  \n   Therefore the cricketer must live in House 2.\n\n3. The pizza eater and the person with lilies live next to each other.  \n   Since lilies are in House 2, pizza must be in House 1. This is consistent and doesn’t change the cricketer’s house.\n\nTherefore, the cricketer lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963969,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 154,
+    "prompt_tokens": 276,
+    "total_tokens": 430,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

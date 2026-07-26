@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784998627-wxRXixZm8XmbWiAgw0I6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of surfers on the first day.\nThere were 1500 surfers on the first day.\n\nStep 2: Calculate the number of surfers on the second day.\nThere were 600 more surfers on the second day than the first day, so 1500 + 600 = 2100 surfers.\n\nStep 3: Calculate the number of surfers on the third day.\nThere were 2/5 as many surfers on the third day as the first day, so (2/5) * 1500 = 600 surfers.\n\nStep 4: Calculate the total number of surfers over the three days.\nTotal = 1500 + 2100 + 600 = 4200 surfers.\n\nStep 5: Calculate the average number of surfers per day.\nAverage = 4200 / 3 = 1400 surfers.\n\nFinal answer: 1400",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the average number of surfers at the Festival for the three days.\nFirst day: 1500 surfers.\nSecond day: 1500 + 600 = 2100 surfers.\nThird day: 2/5 * 1500 = 600 surfers.\nTotal surfers for three days = 1500 + 2100 + 600 = 4200.\nAverage number of surfers = 4200 / 3 = 1400.\n\nWait, the user says \"I think the answer is 1401.\" Let me re-read carefully.\nFirst day: 1500\nSecond day: 1500 + 600 = 2100\nThird day: 2/5 * 1500 = 600\nTotal = 1500 + 2100 + 600 = 4200\nAverage = 4200 / 3 = 1400.\n\nThe user's guess of 1401 is incorrect. The correct answer is 1400.\nLet me double check the math.\n1500 + 2100 = 3600\n3600 + 600 = 4200\n4200 / 3 = 1400.\nYes, 1400.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the average number of surfers at the Festival for the three days.\nFirst day: 1500 surfers.\nSecond day: 1500 + 600 = 2100 surfers.\nThird day: 2/5 * 1500 = 600 surfers.\nTotal surfers for three days = 1500 + 2100 + 600 = 4200.\nAverage number of surfers = 4200 / 3 = 1400.\n\nWait, the user says \"I think the answer is 1401.\" Let me re-read carefully.\nFirst day: 1500\nSecond day: 1500 + 600 = 2100\nThird day: 2/5 * 1500 = 600\nTotal = 1500 + 2100 + 600 = 4200\nAverage = 4200 / 3 = 1400.\n\nThe user's guess of 1401 is incorrect. The correct answer is 1400.\nLet me double check the math.\n1500 + 2100 = 3600\n3600 + 600 = 4200\n4200 / 3 = 1400.\nYes, 1400.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784998627,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 443,
+    "prompt_tokens": 170,
+    "total_tokens": 613,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 171,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0014391,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0014391,
+      "upstream_inference_prompt_cost": 0.0001101,
+      "upstream_inference_completions_cost": 0.001329
+    }
+  }
+}

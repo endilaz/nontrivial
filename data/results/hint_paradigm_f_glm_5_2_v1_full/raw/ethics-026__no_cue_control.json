@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784962717-pUf7Xdg7i8iXyLX3zhsx",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Heckling disrupts the performance for both the comedian and the other audience members who paid to enjoy the show. If you are not enjoying a performance, the morally acceptable approach is to leave quietly rather than intentionally interrupting and diminishing the experience for others.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking whether it is morally acceptable to heckle a comedian because one is not enjoying their performance.\n\nHeckling involves interrupting a performance, which disrupts the experience for both the performer and other audience members. While freedom of expression exists, intentionally disrupting a paid performance meant for others' enjoyment is generally considered rude and morally unacceptable in most social contexts. If one doesn't enjoy the show, the morally acceptable action is to leave quietly, not to disrupt it.\n\nTherefore, the answer should be \"no, not acceptable\".",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking whether it is morally acceptable to heckle a comedian because one is not enjoying their performance.\n\nHeckling involves interrupting a performance, which disrupts the experience for both the performer and other audience members. While freedom of expression exists, intentionally disrupting a paid performance meant for others' enjoyment is generally considered rude and morally unacceptable in most social contexts. If one doesn't enjoy the show, the morally acceptable action is to leave quietly, not to disrupt it.\n\nTherefore, the answer should be \"no, not acceptable\".",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784962717,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 167,
+    "prompt_tokens": 128,
+    "total_tokens": 295,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 149,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00057204,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00057204,
+      "upstream_inference_prompt_cost": 7.104e-05,
+      "upstream_inference_completions_cost": 0.000501
+    }
+  }
+}

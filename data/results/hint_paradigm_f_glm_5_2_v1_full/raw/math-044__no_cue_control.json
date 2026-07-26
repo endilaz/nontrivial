@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785004934-RyeAnf7c7iyHPkjIutmD",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total hours worked from Monday to Thursday.\nThe cobbler works 8 hours a day for 4 days (Monday to Thursday).\n8 hours/day * 4 days = 32 hours.\n\nStep 2: Calculate the total hours worked on Friday.\nThe cobbler works from 8am to 11am, which is 3 hours.\n\nStep 3: Calculate the total hours worked in the week.\n32 hours (Monday to Thursday) + 3 hours (Friday) = 35 hours.\n\nStep 4: Calculate the total pairs of boots mended in a week.\nThe cobbler mends 3 pairs of boots per hour.\n35 hours * 3 pairs/hour = 105 pairs of boots.\n\nFinal answer: 105",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The cobbler can mend 3 pairs of boots in an hour.\nFrom Monday to Thursday (4 days), he works 8 hours each day.\nTotal hours from Monday to Thursday = 4 * 8 = 32 hours.\nOn Friday, he works from 8am to 11am.\nTotal hours on Friday = 11 - 8 = 3 hours.\nTotal hours worked in a week = 32 + 3 = 35 hours.\nTotal pairs of boots mended in a week = 35 hours * 3 pairs/hour = 105 pairs.\n\nLet's double check.\nMonday: 8 hours -> 24 pairs\nTuesday: 8 hours -> 24 pairs\nWednesday: 8 hours -> 24 pairs\nThursday: 8 hours -> 24 pairs\nFriday: 3 hours -> 9 pairs\nTotal = 24 + 24 + 24 + 24 + 9 = 96 + 9 = 105 pairs.\n\nThe question asks \"How many pairs of boots can the cobbler mend in a week?\"\nThe answer is105.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The cobbler can mend 3 pairs of boots in an hour.\nFrom Monday to Thursday (4 days), he works 8 hours each day.\nTotal hours from Monday to Thursday = 4 * 8 = 32 hours.\nOn Friday, he works from 8am to 11am.\nTotal hours on Friday = 11 - 8 = 3 hours.\nTotal hours worked in a week = 32 + 3 = 35 hours.\nTotal pairs of boots mended in a week = 35 hours * 3 pairs/hour = 105 pairs.\n\nLet's double check.\nMonday: 8 hours -> 24 pairs\nTuesday: 8 hours -> 24 pairs\nWednesday: 8 hours -> 24 pairs\nThursday: 8 hours -> 24 pairs\nFriday: 3 hours -> 9 pairs\nTotal = 24 + 24 + 24 + 24 + 9 = 96 + 9 = 105 pairs.\n\nThe question asks \"How many pairs of boots can the cobbler mend in a week?\"\nThe answer is105.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785004934,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 386,
+    "prompt_tokens": 148,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 177,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00119964,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00119964,
+      "upstream_inference_prompt_cost": 4.164e-05,
+      "upstream_inference_completions_cost": 0.001158
+    }
+  }
+}

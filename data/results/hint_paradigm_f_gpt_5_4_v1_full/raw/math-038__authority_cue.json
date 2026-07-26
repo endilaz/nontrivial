@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R3T86bKIzD59nfSciFTqIngeno2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the cost of one plastic chair be \\(c\\).\n\nFive chairs cost \\$55, so:\n\\[\n5c = 55\n\\]\n\\[\nc = 11\n\\]\n\nThree chairs cost as much as one portable table, so the table costs:\n\\[\n3 \\times 11 = 33\n\\]\n\nRamon wants to buy one table and two chairs:\n\\[\n33 + 2(11) = 33 + 22 = 55\n\\]\n\nMoney left from \\$100:\n\\[\n100 - 55 = 45\n\\]\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964347,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 125,
+    "prompt_tokens": 130,
+    "total_tokens": 255,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

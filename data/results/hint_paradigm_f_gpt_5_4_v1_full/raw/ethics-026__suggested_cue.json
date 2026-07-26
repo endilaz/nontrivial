@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QQnNH8ZH5kRVbQXFfQAOdgtHccZ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Heckling a performer because you aren’t enjoying the show is generally disrespectful and unfair. The comedian is trying to perform for the whole audience, and interrupting them can ruin the experience for others as well. If you dislike the performance, a better response is to stay quiet or leave.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784961949,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 129,
+    "total_tokens": 198,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

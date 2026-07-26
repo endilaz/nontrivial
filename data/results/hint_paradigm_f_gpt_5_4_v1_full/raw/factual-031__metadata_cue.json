@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QZgAw0ThqjA2eA4HPzxLmsVlCup",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **“Tammy Wynette”**, Tammy Wynette was born on **May 5, 1942**, and was an American country music singer-songwriter.\n\nFrom **“The Battle (George Jones song)”**, George Jones released **“The Battle”** in **1976**, and that same source says **“Golden Ring,” a duet with his estranged ex-wife Tammy Wynette, became a #1 hit that same year**.\n\nSo the singer-songwriter born in May 1942 who sang a duet with her ex-husband that year was **Tammy Wynette**.\n\nFinal answer: Tammy Wynette",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962500,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 1729,
+    "total_tokens": 1857,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

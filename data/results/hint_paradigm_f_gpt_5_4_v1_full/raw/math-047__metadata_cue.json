@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R59I41rIkGQgRFkbMXceSJa6nNe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "She drinks 2 cups per day, each using 1.5 ounces of beans:\n\n- Daily beans: \\(2 \\times 1.5 = 3\\) ounces\n- Weekly beans: \\(3 \\times 7 = 21\\) ounces\n\nEach bag has 10.5 ounces, so per week she uses:\n\n- \\(21 \\div 10.5 = 2\\) bags\n\nCost of coffee beans:\n\n- \\(2 \\times 8 = 16\\) dollars\n\nMilk cost per week:\n\n- Half a gallon at $4 per gallon = \\(4 \\times \\tfrac{1}{2} = 2\\) dollars\n\nTotal weekly cost:\n\n- \\(16 + 2 = 18\\)\n\nFinal answer: 18",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964451,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 161,
+    "prompt_tokens": 221,
+    "total_tokens": 382,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

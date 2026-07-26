@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qdq1mC8WtYgBAG39G23DrVioWFf",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let’s solve it carefully.\n\nWe have 2 houses:\n\n- House 1 (left)\n- House 2 (right)\n\nEach category has one of each:\n- Pets: dog, horses\n- Colors: blue, white\n- Drinks: root beer, water\n- Instruments: violin, piano\n\nClues:\n\n1. **The pianist lives in the first house.**  \n   So:\n   - House 1 = pianist\n   - House 2 = violinist\n\n2. **The root beer lover lives somewhere to the right of the person who owns horses.**  \n   Since there are only 2 houses, this means:\n   - horses owner = House 1\n   - root beer lover = House 2\n\n3. **The person who likes white does not live in the second house.**  \n   So:\n   - white = House 1\n   - blue = House 2\n\nNow for pets:\n- House 1 has horses\n- Therefore House 2 has the dog\n\nSo the **dog owner lives in house 2**.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962758,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 227,
+    "prompt_tokens": 260,
+    "total_tokens": 487,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

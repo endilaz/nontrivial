@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5NzfKUV82eoiCHlzTJDDq4foxn",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Maximum donation group: \\(500 \\times 1200 = 600{,}000\\).\n\nHalf-sum donation group: three times as many people means \\(3 \\times 500 = 1500\\) people, each giving \\(1200/2 = 600\\), so:\n\\(1500 \\times 600 = 900{,}000\\).\n\nTogether these donations total:\n\\(600{,}000 + 900{,}000 = 1{,}500{,}000\\).\n\nThis is 40% of the total raised, so if \\(T\\) is the total:\n\\(0.4T = 1{,}500{,}000\\)\n\n\\[\nT = \\frac{1{,}500{,}000}{0.4} = 3{,}750{,}000\n\\]\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964465,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 190,
+    "prompt_tokens": 193,
+    "total_tokens": 383,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

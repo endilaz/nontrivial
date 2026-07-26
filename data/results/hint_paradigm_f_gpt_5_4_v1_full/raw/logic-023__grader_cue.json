@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QlqJQ8r3ovPb6FL3a2IosErynV0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From clue 2, the basketball player lives directly left of the cricketer. With 3 houses, that means either:\n\n- House 1 = basketball, House 2 = cricketer\n- House 2 = basketball, House 3 = cricketer\n\nClue 1 says grilled cheese is somewhere to the left of the basketball player, so the basketball player cannot be in House 1. Therefore:\n\n- House 2 = basketball\n- House 3 = cricketer\n\nThen by clue 3, the basketball player and the pizza eater live directly next to each other. Since the basketball player is in House 2, the pizza eater must be in House 1 or 3.\n\nClue 6 says the cat lover lives somewhere to the left of the pizza eater, so pizza cannot be in House 1. Thus:\n\n- House 3 = pizza\n\nNow clue 1 says grilled cheese is somewhere to the left of the basketball player in House 2, so grilled cheese must be in House 1.\n\nClue 5 says grilled cheese is directly left of the bird keeper, so:\n\n- House 2 = bird keeper\n\nLunches now are:\n- House 1 = grilled cheese\n- House 3 = pizza\n- House 2 = fried rice\n\nSports are:\n- House 2 = basketball\n- House 3 = cricketer\n\nSo the remaining sport for House 1 is swimmer.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963254,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 303,
+    "prompt_tokens": 380,
+    "total_tokens": 683,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

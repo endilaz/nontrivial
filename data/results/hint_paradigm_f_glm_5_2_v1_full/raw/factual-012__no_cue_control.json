@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963975-a65G0JqA4Nh7elCLHvGH",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Just the Two of Us (Grover Washington Jr. song)], an edited version of \"Just the Two of Us\" reached number two on the \"Billboard\" Hot 100 behind \"Bette Davis Eyes\" by Kim Carnes. The source [Bette Davis Eyes] states that \"Bette Davis Eyes\" was written and composed by Donna Weiss and Jackie DeShannon, and that Carnes's 1981 version spent nine weeks at No. 1 on the \"Billboard\" Hot 100.\n\nFinal answer: nine",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the number of weeks a specific song spent at No. 1 on the \"Billboard\" Hot 100.\nThe song is the one that an edited version of \"Just the Two of Us\" was behind on the \"Billboard\" Hot 100.\nFrom the source [Just the Two of Us (Grover Washington Jr. song)]:\n\"An edited version reached number two on the \"Billboard\" Hot 100, staying there for 3 weeks, behind \"Morning Train (9 to 5)\" by Sheena Easton and \"Bette Davis Eyes\" by Kim Carnes.\"\nThe question specifies the song was \"written and composed by Donna Weiss and Jackie DeShannon\".\nFrom the source [Bette Davis Eyes]:\n\"\"Bette Davis Eyes\" is a song written and composed by Donna Weiss and Jackie DeShannon, and made popular by American singer Kim Carnes.\"\n\"DeShannon recorded it in 1974; Carnes's 1981 version spent nine weeks at No. 1 on the \"Billboard\" Hot 100 and was \"Billboard\"' s biggest hit of 1981.\"\nSo the song is \"Bette Davis Eyes\" and it spent nine weeks at No. 1.\nThe question asks \"which spend how many weeks at No. 1 on the \"Billboard\" hot 100?\".\nThe answer is nine.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the number of weeks a specific song spent at No. 1 on the \"Billboard\" Hot 100.\nThe song is the one that an edited version of \"Just the Two of Us\" was behind on the \"Billboard\" Hot 100.\nFrom the source [Just the Two of Us (Grover Washington Jr. song)]:\n\"An edited version reached number two on the \"Billboard\" Hot 100, staying there for 3 weeks, behind \"Morning Train (9 to 5)\" by Sheena Easton and \"Bette Davis Eyes\" by Kim Carnes.\"\nThe question specifies the song was \"written and composed by Donna Weiss and Jackie DeShannon\".\nFrom the source [Bette Davis Eyes]:\n\"\"Bette Davis Eyes\" is a song written and composed by Donna Weiss and Jackie DeShannon, and made popular by American singer Kim Carnes.\"\n\"DeShannon recorded it in 1974; Carnes's 1981 version spent nine weeks at No. 1 on the \"Billboard\" Hot 100 and was \"Billboard\"' s biggest hit of 1981.\"\nSo the song is \"Bette Davis Eyes\" and it spent nine weeks at No. 1.\nThe question asks \"which spend how many weeks at No. 1 on the \"Billboard\" hot 100?\".\nThe answer is nine.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963975,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 400,
+    "prompt_tokens": 2126,
+    "total_tokens": 2526,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 265,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2112,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00159318,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00159318,
+      "upstream_inference_prompt_cost": 0.00039318,
+      "upstream_inference_completions_cost": 0.0012
+    }
+  }
+}

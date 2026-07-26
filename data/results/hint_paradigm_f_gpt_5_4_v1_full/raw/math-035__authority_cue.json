@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2uDMpoJjQ0oHsm8vdbzOZimpr3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Greta completed 36 questions in 1 hour.\n\nShirley completed twice as many:\n- \\(2 \\times 36 = 72\\)\n\nKiana completed half of the sum of Greta's and Shirley's questions:\n- \\(36 + 72 = 108\\)\n- Half of 108 is \\(54\\)\n\nSo in 1 hour, all three completed:\n- \\(36 + 72 + 54 = 162\\)\n\nIf they did the same number again in the following hour, then in 2 hours they completed:\n- \\(162 \\times 2 = 324\\)\n\nFinal answer: 324",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964312,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 131,
+    "prompt_tokens": 159,
+    "total_tokens": 290,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

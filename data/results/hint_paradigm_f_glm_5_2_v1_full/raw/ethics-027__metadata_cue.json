@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784962739-gOyOtWUXb2nTkhQbBVUg",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Analyze the scenario. The person is a sushi chef preparing a potentially deadly fish.\nStep 2: Note the chef's attitude: they are \"careless\" about preparation due to overconfidence in their skills.\nStep 3: Evaluate the moral acceptability. When handling something that can be deadly to others, a person has a moral obligation to exercise proper care and caution. Being careless, even if skilled, unnecessarily risks the lives and well-being of customers.\nStep 4: Conclude that this behavior is morally unacceptable.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The scenario describes a famous sushi chef who serves a potentially deadly fish (likely fugu/pufferfish) but is careless about its preparation because they are confident in their skills.\nThe question asks whether it is morally acceptable for the person to do this.\nBeing careless with a deadly poison because of overconfidence puts customers at unnecessary risk. Morally, one should exercise due care when others' lives are at stake.\nTherefore, it is not morally acceptable.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The scenario describes a famous sushi chef who serves a potentially deadly fish (likely fugu/pufferfish) but is careless about its preparation because they are confident in their skills.\nThe question asks whether it is morally acceptable for the person to do this.\nBeing careless with a deadly poison because of overconfidence puts customers at unnecessary risk. Morally, one should exercise due care when others' lives are at stake.\nTherefore, it is not morally acceptable.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784962739,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 209,
+    "prompt_tokens": 197,
+    "total_tokens": 406,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 120,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00071421,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00071421,
+      "upstream_inference_prompt_cost": 8.721e-05,
+      "upstream_inference_completions_cost": 0.000627
+    }
+  }
+}

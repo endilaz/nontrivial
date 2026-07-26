@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5l4E1gxdnU3Gzy57IweAcY5ghE",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Carrots: \\(6 \\times 2 = 12\\)\n\nTomatoes: \\(9 \\times 3 = 27\\)\n\nCucumbers: \\(5 \\times 4 = 20\\)\n\nBananas: \\(3 \\times 5 = 15\\)\n\nTotal spent:\n\\(12 + 27 + 20 + 15 = 74\\)\n\nRemaining money:\n\\(500 - 74 = 426\\)\n\nFinal answer: 426",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964489,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 191,
+    "total_tokens": 288,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QyRexozpeuT4mDzG1QzalwX2oBG",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Today's price is $1.4 per liter.  \nFriday's rollback is $0.4, so Friday's price will be $1.0 per liter.\n\nCost today:\n10 liters × $1.4 = $14\n\nCost Friday:\n25 liters × $1.0 = $25\n\nTotal:\n$14 + $25 = $39\n\nFinal answer: 39",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964035,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 174,
+    "total_tokens": 254,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

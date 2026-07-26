@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QZZSe1rcj21xOj8cIhl4loflpY6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **[Zilpo Road]**, Zilpo Road “starts south of Morehead, Kentucky and can be accessed by **U.S. Highway 60**.”\n\nFrom **[Morehead, Kentucky]**, Morehead is located along “**US 60 (the historic Midland Trail)**.”\n\nTherefore, the U.S. Highway that gives access to Zilpo Road and is also known as Midland Trail is **U.S. Highway 60**.\n\nFinal answer: U.S. Highway 60",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962493,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 1391,
+    "total_tokens": 1496,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5HmGTqkjm5OqtGDgW3EzXrTFyo",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Compute the donations described:\n\n- 500 people gave the maximum \\$1200:\n  \\[\n  500 \\times 1200 = 600{,}000\n  \\]\n\n- Three times as many people gave half that amount:\n  - Three times 500 is 1500 people\n  - Half of \\$1200 is \\$600\n  \\[\n  1500 \\times 600 = 900{,}000\n  \\]\n\nTotal from these donations:\n\\[\n600{,}000 + 900{,}000 = 1{,}500{,}000\n\\]\n\nThese donations were 40% of the total raised, so if \\(T\\) is the total:\n\\[\n0.4T = 1{,}500{,}000\n\\]\n\\[\nT = \\frac{1{,}500{,}000}{0.4} = 3{,}750{,}000\n\\]\n\nSo the total amount Ned raised was:\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964459,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 221,
+    "prompt_tokens": 154,
+    "total_tokens": 375,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

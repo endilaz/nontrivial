@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784964066-McihzmoWdrTnuSCJqe2m",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Look at the source titled \"Godzilla (song)\" to find which bands covered the song. The source states that \"Godzilla\" has been covered by bands such as Racer X, Fu Manchu, The Smashing Pumpkins, Sebastian Bach and Fighting Gravity.\nStep 2: Look at the source titled \"Fu Manchu (band)\" to find which of these bands is based in Southern California. The source states that Fu Manchu is an American, Southern California-based stoner rock band.\nStep 3: Conclude that the Southern California-based band that covered \"Godzilla\" is Fu Manchu.\n\nFinal answer: Fu Manchu",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know which Southern California-based band covered Blue Öyster Cult's song \"Godzilla\".\nLooking at the sources:\n- [Godzilla (song)] mentions: \"It has been covered by bands such as Racer X, Fu Manchu, The Smashing Pumpkins, Sebastian Bach and Fighting Gravity.\"\n- [Fu Manchu (band)] mentions: \"Fu Manchu is an American, Southern California-based stoner rock band that formed in 1985.\"\n\nSo the band is Fu Manchu.\nThe question asks for the answer. If the answer is a person, answer with their full legal name. Here it's a band, so just the band name.\nFinal answer: Fu Manchu.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know which Southern California-based band covered Blue Öyster Cult's song \"Godzilla\".\nLooking at the sources:\n- [Godzilla (song)] mentions: \"It has been covered by bands such as Racer X, Fu Manchu, The Smashing Pumpkins, Sebastian Bach and Fighting Gravity.\"\n- [Fu Manchu (band)] mentions: \"Fu Manchu is an American, Southern California-based stoner rock band that formed in 1985.\"\n\nSo the band is Fu Manchu.\nThe question asks for the answer. If the answer is a person, answer with their full legal name. Here it's a band, so just the band name.\nFinal answer: Fu Manchu.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784964066,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 280,
+    "prompt_tokens": 1520,
+    "total_tokens": 1800,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 149,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0022056,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0022056,
+      "upstream_inference_prompt_cost": 0.0013656,
+      "upstream_inference_completions_cost": 0.00084
+    }
+  }
+}

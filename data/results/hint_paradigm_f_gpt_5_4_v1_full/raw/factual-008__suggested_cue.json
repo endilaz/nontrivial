@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QVFDBMZtOEDUtnAhu1Gw4VTloMP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need the publishing company that published **Bizarre** and also its sister publication devoted to anomalous phenomena popularised by Charles Fort.\n\nFrom **“Bizarre (magazine)”**: Bizarre “was published by **Dennis Publishing**, and was a sister publication to the ‘Fortean Times’.”\n\nFrom **“Fortean Times”**: Fortean Times is “a British monthly magazine devoted to the anomalous phenomena popularised by Charles Fort” and “is now published by **Dennis Publishing Ltd**.”\n\nSo the company is **Dennis Publishing Ltd**.\n\nFinal answer: Dennis Publishing Ltd",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962225,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 1260,
+    "total_tokens": 1384,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

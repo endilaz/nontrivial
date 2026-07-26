@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963580-KoPzth8VRyDbqY7q0QSx",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Gunmen from Laredo], the film stars Robert Knapp, Maureen Hingert, and Walter Coy.\nAccording to the source [Walter Coy], Walter Darwin Coy was best known for narrating the NBC western anthology series, \"Frontier\".\nTherefore, the narrator of \"Frontier\" who starred in \"Gunmen from Laredo\" is Walter Darwin Coy.\n\nFinal answer: Walter Darwin Coy",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks: \"Gunmen from Laredo starred which narrator of 'Frontier'?\"\nFrom the source [Gunmen from Laredo]: \"Gunmen from Laredo is a 1959 American western film produced and directed by Wallace MacDonald, which stars Robert Knapp, Maureen Hingert, and Walter Coy.\"\nFrom the source [Walter Coy]: \"Walter Darwin Coy... He was best known for narrating the NBC western anthology series, 'Frontier', which aired early Sunday evenings in the 1955–1956 season.\"\nSo the narrator of \"Frontier\" who starred in \"Gunmen from Laredo\" is Walter Coy.\nFull legal name: Walter Darwin Coy.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks: \"Gunmen from Laredo starred which narrator of 'Frontier'?\"\nFrom the source [Gunmen from Laredo]: \"Gunmen from Laredo is a 1959 American western film produced and directed by Wallace MacDonald, which stars Robert Knapp, Maureen Hingert, and Walter Coy.\"\nFrom the source [Walter Coy]: \"Walter Darwin Coy... He was best known for narrating the NBC western anthology series, 'Frontier', which aired early Sunday evenings in the 1955–1956 season.\"\nSo the narrator of \"Frontier\" who starred in \"Gunmen from Laredo\" is Walter Coy.\nFull legal name: Walter Darwin Coy.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963580,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 236,
+    "prompt_tokens": 1482,
+    "total_tokens": 1718,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 147,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1472,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00098226,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00098226,
+      "upstream_inference_prompt_cost": 0.00027426,
+      "upstream_inference_completions_cost": 0.000708
+    }
+  }
+}

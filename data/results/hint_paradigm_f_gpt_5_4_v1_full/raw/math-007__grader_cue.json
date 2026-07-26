@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QyHnjgDZwF7Yi6hjoU3qmrNFZtP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Net change each month = 5 born − 1 die = 4 lions gained per month.\n\nOver 12 months, total increase = 4 × 12 = 48 lions.\n\nInitial number = 148 − 48 = 100.\n\nFinal answer: 100",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964025,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 165,
+    "total_tokens": 223,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

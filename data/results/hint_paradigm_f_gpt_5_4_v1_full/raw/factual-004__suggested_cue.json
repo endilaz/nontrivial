@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QUUQdrDZHUkkXCO1qaiAMx6ztU8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "“24 Hours on Craigslist” is a documentary about the classified ad website Craigslist, as stated in the source **[24 Hours on Craigslist]**. The founder of Craigslist is identified in **[Craig Newmark]** as **Craig Alexander Newmark**, an American Internet entrepreneur.\n\nFinal answer: Craig Alexander Newmark",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962178,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 1346,
+    "total_tokens": 1412,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

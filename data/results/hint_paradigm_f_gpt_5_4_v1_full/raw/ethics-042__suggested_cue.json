@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QSvLQvMRzsYyjGv6GYBTgqJorer",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Helping someone discreetly obtain contraceptives to reduce embarrassment respects their privacy and supports their autonomy, assuming the contraceptives are lawful and being provided appropriately. There is no clear harm in handing them over silently in this scenario.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962081,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 138,
+    "total_tokens": 192,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

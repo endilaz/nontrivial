@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qd5fCPAsQSXDRyEFecAqwBsp3iE",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“2000–01 Utah Jazz season”**, after the retirement of Jeff Hornacek, “the Jazz signed free agents **Danny Manning** and **John Starks**.”\n\nSo, besides John Starks, the other free agent was **Danny Manning**.\n\nFinal answer: Daniel Ricardo Manning",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962711,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 2034,
+    "total_tokens": 2101,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1792
+    }
+  }
+}

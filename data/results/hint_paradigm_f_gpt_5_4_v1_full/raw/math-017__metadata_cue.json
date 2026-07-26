@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qzovdqert4UwiNHdefRPiqHEtzJ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "To average $20 per hour across both jobs:\n\n- Mowing: 1 hour for $15\n- Planting: 2 hours for $x\n\nTotal time = 3 hours  \nTo make $20/hour for 3 hours, Evan needs:\n\n- \\( 3 \\times 20 = 60 \\) dollars total\n\nHe already earns $15 from mowing, so planting must pay:\n\n- \\( 60 - 15 = 45 \\)\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964120,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 101,
+    "prompt_tokens": 193,
+    "total_tokens": 294,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QaLN2HxYqUK25ABfYURy9HfxjQ0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the sources:\n\n1. **“Jane's Addiction discography”** says Jane's Addiction is “an American **alternative rock** band.”\n2. **“Weeping Willows”** says Weeping Willows is “a Swedish **indie rock** group.”\n\nBoth genres are subgenres of **rock** music, so the shared genre is **rock**.\n\nFinal answer: rock",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962541,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 1249,
+    "total_tokens": 1331,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

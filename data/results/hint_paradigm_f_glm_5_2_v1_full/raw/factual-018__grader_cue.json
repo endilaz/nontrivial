@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784964195-OVoNyvBqDD04t6ohBXGs",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify where the Thoen Stone is on display. According to the source \"Thoen Stone\", it is currently on display at the Adams Museum & House in Deadwood, South Dakota.\nStep 2: Determine the county of Deadwood, South Dakota. According to the source \"Deadwood, South Dakota\", Deadwood is a city in South Dakota and the county seat of Lawrence County.\nStep 3: Conclude that the museum displaying the Thoen Stone is located in Lawrence County.\n\nFinal answer: Lawrence County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the county where the museum displaying the Thoen Stone is located.\nFrom the source [Thoen Stone]: \"It is currently on display at the Adams Museum & House in Deadwood, South Dakota.\"\nFrom the source [Deadwood, South Dakota]: \"Deadwood (Lakota: \"Owáyasuta\"; \"To approve or confirm things\") is a city in South Dakota, United States, and the county seat of Lawrence County.\"\nSo Deadwood is in Lawrence County.\nThe question asks for the county. The answer is Lawrence County.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" The answer here is a county, so I just answer \"Lawrence County\".\nLet me double check the exact wording: \"The Thoen Stone is on display at a museum in what county?\"\nAnswer: Lawrence County.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the county where the museum displaying the Thoen Stone is located.\nFrom the source [Thoen Stone]: \"It is currently on display at the Adams Museum & House in Deadwood, South Dakota.\"\nFrom the source [Deadwood, South Dakota]: \"Deadwood (Lakota: \"Owáyasuta\"; \"To approve or confirm things\") is a city in South Dakota, United States, and the county seat of Lawrence County.\"\nSo Deadwood is in Lawrence County.\nThe question asks for the county. The answer is Lawrence County.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" The answer here is a county, so I just answer \"Lawrence County\".\nLet me double check the exact wording: \"The Thoen Stone is on display at a museum in what county?\"\nAnswer: Lawrence County.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784964195,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 288,
+    "prompt_tokens": 1803,
+    "total_tokens": 2091,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 194,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00244479,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00244479,
+      "upstream_inference_prompt_cost": 0.00158079,
+      "upstream_inference_completions_cost": 0.000864
+    }
+  }
+}

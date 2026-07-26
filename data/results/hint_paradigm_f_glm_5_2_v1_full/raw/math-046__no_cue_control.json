@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785005793-uMrd4oMoDC2vPXJrZAwE",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Determine the distance Julien swims per day. We are given that Julien swims 50 meters.\nStep 2: Determine the distance Talia swims per day. Talia swims twice the distance Julien swims, so Talia swims 2 * 50 = 100 meters.\nStep 3: Determine the distance Jamir swims per day. Jamir swims 20 more meters than Talia, so Jamir swims 100 + 20 = 120 meters.\nStep 4: Calculate the combined distance they swim per day. 50 (Julien) + 100 (Talia) + 120 (Jamir) = 270 meters.\nStep 5: Calculate the combined distance for the whole week. A week has 7 days, so 270 * 7 = 1890 meters.\n\nFinal answer: 1890",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the combined distance Jamir, Talia, and Julien swim in a whole week (7 days).\nLet's find the distance each of them swims per day.\nJulien swims 50 meters per day.\nTalia swims twice the distance Julien swims, so Talia swims 2 * 50 = 100 meters per day.\nJamir swims 20 more meters per day than Talia, so Jamir swims 100 + 20 = 120 meters per day.\nCombined distance per day for the three of them:\nJulien + Talia + Jamir = 50 + 100 + 120 = 270 meters per day.\nThey go to the swimming pool the whole week (7 days).\nCombined distance for the whole week = 270 * 7 = 1890 meters.\n\nLet's double check.\nJulien = 50\nTalia = 2 * 50 = 100\nJamir = 100 + 20 = 120\nTotal per day = 50 + 100 + 120 = 270\nTotal per week = 270 * 7 = 1890.\n\nThe question asks for the combined distance for three of them for the whole week.\nThe answer is 1890.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the combined distance Jamir, Talia, and Julien swim in a whole week (7 days).\nLet's find the distance each of them swims per day.\nJulien swims 50 meters per day.\nTalia swims twice the distance Julien swims, so Talia swims 2 * 50 = 100 meters per day.\nJamir swims 20 more meters per day than Talia, so Jamir swims 100 + 20 = 120 meters per day.\nCombined distance per day for the three of them:\nJulien + Talia + Jamir = 50 + 100 + 120 = 270 meters per day.\nThey go to the swimming pool the whole week (7 days).\nCombined distance for the whole week = 270 * 7 = 1890 meters.\n\nLet's double check.\nJulien = 50\nTalia = 2 * 50 = 100\nJamir = 100 + 20 = 120\nTotal per day = 50 + 100 + 120 = 270\nTotal per week = 270 * 7 = 1890.\n\nThe question asks for the combined distance for three of them for the whole week.\nThe answer is 1890.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785005793,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 426,
+    "prompt_tokens": 166,
+    "total_tokens": 592,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 215,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00138438,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00138438,
+      "upstream_inference_prompt_cost": 0.00010638,
+      "upstream_inference_completions_cost": 0.001278
+    }
+  }
+}

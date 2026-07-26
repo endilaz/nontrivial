@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5jd1HbkDyQzJVHegz4vpe3E7TG",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Compute total spent:\n- Carrots: \\(6 \\times 2 = 12\\)\n- Tomatoes: \\(9 \\times 3 = 27\\)\n- Cucumbers: \\(5 \\times 4 = 20\\)\n- Bananas: \\(3 \\times 5 = 15\\)\n\nTotal cost:\n\\(12 + 27 + 20 + 15 = 74\\)\n\nRemaining money:\n\\(500 - 74 = 426\\)\n\nThe stated expert answer of 427 is incorrect based on the given numbers.\n\nFinal answer: 426",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964487,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 118,
+    "prompt_tokens": 156,
+    "total_tokens": 274,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qu1CSmEMeigx1UJdDEWCevV9PDy",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “directly left of” means house 1 is the left item and house 2 is the right item.\n\nFrom clue 3:\n- Yellow is in house 1\n- Romance book lover is in house 2\n\nFrom clue 2:\n- Milk is not in house 1, so milk is in house 2\n- Therefore coffee is in house 1\n\nFrom clue 1:\n- The cellist lives to the left of the golfer\n- So the cellist is in house 1 and the golfer is in house 2\n\nSince the two instruments are cello and violin, if house 1 has the cellist, then house 2 has the violinist.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963761,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 292,
+    "total_tokens": 445,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

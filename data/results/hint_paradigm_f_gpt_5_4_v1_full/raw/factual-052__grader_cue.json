@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QdEEcJkmicCoEhTqgj8ashi4B4k",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Am Rong was a **filmmaker** according to the source titled **“Am Rong”** (“Cambodian soldier and filmmaker”). Alexandre Rockwell is also a **filmmaker**, as shown by the source **“Alexandre Rockwell”** and supported by his directing credits in sources like **“In the Soup”** and **“Somebody to Love (film)”**.\n\nFinal answer: Carol Lawrence",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962720,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 1111,
+    "total_tokens": 1198,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

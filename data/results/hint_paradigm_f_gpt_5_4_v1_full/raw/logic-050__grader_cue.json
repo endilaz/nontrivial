@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QxKbrqp0EntlidP1iRrKGhPEDmd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are only 2 houses: House 1 (left) and House 2 (right).\n\nFrom clue 2:\n- “The cricketer does not live in the first house.”\n\nSo the cricketer must live in House 2.\n\nWe can quickly check consistency:\n- Clue 1 says the bird keeper is to the left of the lilies, so bird keeper must be in House 1 and lilies in House 2.\n- Clue 3 says pizza and lilies are in adjacent houses; with only 2 houses, that works fine.\n\nThus the cricketer is in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963966,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 133,
+    "prompt_tokens": 303,
+    "total_tokens": 436,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

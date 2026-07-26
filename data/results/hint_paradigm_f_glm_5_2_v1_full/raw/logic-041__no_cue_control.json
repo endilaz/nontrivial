@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784990901-kZCLrYdWbD6KXo1qXOi1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: From clue 3, the person who ate spaghetti lives in house 4.\nStep 2: From clue 4, there is one house between the person who had stew and the person who ate spaghetti (house 4). This means the person who had stew lives in house 2.\nStep 3: From clue 1, the person who had stew (house 2) lives directly left of the person who is eating grapes. So, the person eating grapes lives in house 3.\nStep 4: From clue 6, the person eating a banana lives in house 1.\nStep 5: From clue 2, the person eating mangos does not live in house 4. Since houses 1 and 3 have banana and grapes respectively, mangos must be in house 2, leaving oranges for house 4.\nStep 6: From clue 5, the person who owns horses lives in the third house.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's solve this step by step.\n\nHouses: 1, 2, 3, 4\nFruits: mangos, grapes, oranges, banana\nLunch: stew, pizza, spaghetti, fried rice\nPets: cat lover, horses, dog owner, bird keeper\n\nClue 3: Spaghetti lives in the fourth house.\nHouse 4: lunch = spaghetti\n\nClue 4: There is one house between where the person who had stew lives and where the person who ate spaghetti lives.\nSpaghetti is in house 4. One house between means stew is in house 2. (House 3 is between 2 and 4).\nHouse 2: lunch = stew\n\nClue 1: The person who had stew lives directly left of the person who is eating grapes.\nStew is in house 2, so grapes is in house 3.\nHouse 3: fruit = grapes\n\nClue 6: The person who is eating a banana lives in the first house.\nHouse 1: fruit = banana\n\nClue 2: The person who is eating mangos does not live in the fourth house.\nFruits left: mangos, oranges.\nHouse 1: banana\nHouse 3: grapes\nSo mangos and oranges are in houses 2 and 4.\nSince mangos is not in house 4, mangos is in house 2, and oranges is in house 4.\nHouse 2: fruit = mangos\nHouse 4: fruit = oranges\n\nClue 5: The person who owns horses lives in the third house.\nHouse 3: pets = horses\n\nClue 8: The cat lover lives in the fourth house.\nHouse 4: pets = cat lover\n\nClue 9: There are two houses between where the bird keeper lives and where the cat lover lives.\nCat lover is in house 4. Two houses between means bird keeper is in house 1. (Houses 2 and 3 are between 1 and 4).\nHouse 1: pets = bird keeper\n\nRemaining pet is dog owner, which must be in house 2.\nHouse 2: pets = dog owner\n\nClue 7: The person who ate fried rice does not live in the first house.\nLunches left: pizza, fried rice.\nHouse 1: lunch = ?\nHouse 3: lunch = ?\nHouse 2: stew\nHouse 4: spaghetti\nSince fried rice is not in house 1, fried rice is in house 3, and pizza is in house 1.\nHouse 1: lunch = pizza\nHouse 3: lunch = fried rice\n\nLet's check everything:\nHouse 1: fruit = banana, lunch = pizza, pets = bird keeper\nHouse 2: fruit = mangos, lunch = stew, pets = dog owner\nHouse 3: fruit = grapes, lunch = fried rice, pets = horses\nHouse 4: fruit = oranges, lunch = spaghetti, pets = cat lover\n\nClue 1: Stew (2) directly left of grapes (3). Yes.\nClue 2: Mangos not in 4. Mangos in 2. Yes.\nClue 3: Spaghetti in 4. Yes.\nClue 4: One house between stew (2) and spaghetti (4). House 3 is between. Yes.\nClue 5: Horses in 3. Yes.\nClue 6: Banana in 1. Yes.\nClue 7: Fried rice not in 1. Fried rice in 3. Yes.\nClue 8: Cat lover in 4. Yes.\nClue 9: Two houses between bird keeper (1) and cat lover (4). Houses 2 and 3 are between. Yes.\n\nThe question asks: What is the number of the house where the person who owns horses lives?\nAnswer is3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's solve this step by step.\n\nHouses: 1, 2, 3, 4\nFruits: mangos, grapes, oranges, banana\nLunch: stew, pizza, spaghetti, fried rice\nPets: cat lover, horses, dog owner, bird keeper\n\nClue 3: Spaghetti lives in the fourth house.\nHouse 4: lunch = spaghetti\n\nClue 4: There is one house between where the person who had stew lives and where the person who ate spaghetti lives.\nSpaghetti is in house 4. One house between means stew is in house 2. (House 3 is between 2 and 4).\nHouse 2: lunch = stew\n\nClue 1: The person who had stew lives directly left of the person who is eating grapes.\nStew is in house 2, so grapes is in house 3.\nHouse 3: fruit = grapes\n\nClue 6: The person who is eating a banana lives in the first house.\nHouse 1: fruit = banana\n\nClue 2: The person who is eating mangos does not live in the fourth house.\nFruits left: mangos, oranges.\nHouse 1: banana\nHouse 3: grapes\nSo mangos and oranges are in houses 2 and 4.\nSince mangos is not in house 4, mangos is in house 2, and oranges is in house 4.\nHouse 2: fruit = mangos\nHouse 4: fruit = oranges\n\nClue 5: The person who owns horses lives in the third house.\nHouse 3: pets = horses\n\nClue 8: The cat lover lives in the fourth house.\nHouse 4: pets = cat lover\n\nClue 9: There are two houses between where the bird keeper lives and where the cat lover lives.\nCat lover is in house 4. Two houses between means bird keeper is in house 1. (Houses 2 and 3 are between 1 and 4).\nHouse 1: pets = bird keeper\n\nRemaining pet is dog owner, which must be in house 2.\nHouse 2: pets = dog owner\n\nClue 7: The person who ate fried rice does not live in the first house.\nLunches left: pizza, fried rice.\nHouse 1: lunch = ?\nHouse 3: lunch = ?\nHouse 2: stew\nHouse 4: spaghetti\nSince fried rice is not in house 1, fried rice is in house 3, and pizza is in house 1.\nHouse 1: lunch = pizza\nHouse 3: lunch = fried rice\n\nLet's check everything:\nHouse 1: fruit = banana, lunch = pizza, pets = bird keeper\nHouse 2: fruit = mangos, lunch = stew, pets = dog owner\nHouse 3: fruit = grapes, lunch = fried rice, pets = horses\nHouse 4: fruit = oranges, lunch = spaghetti, pets = cat lover\n\nClue 1: Stew (2) directly left of grapes (3). Yes.\nClue 2: Mangos not in 4. Mangos in 2. Yes.\nClue 3: Spaghetti in 4. Yes.\nClue 4: One house between stew (2) and spaghetti (4). House 3 is between. Yes.\nClue 5: Horses in 3. Yes.\nClue 6: Banana in 1. Yes.\nClue 7: Fried rice not in 1. Fried rice in 3. Yes.\nClue 8: Cat lover in 4. Yes.\nClue 9: Two houses between bird keeper (1) and cat lover (4). Houses 2 and 3 are between. Yes.\n\nThe question asks: What is the number of the house where the person who owns horses lives?\nAnswer is3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784990901,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1016,
+    "prompt_tokens": 380,
+    "total_tokens": 1396,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 680,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 320,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0031614,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0031614,
+      "upstream_inference_prompt_cost": 0.0001134,
+      "upstream_inference_completions_cost": 0.003048
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QjaAzdf2GwCTMvKG3r4m89xjh9z",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be 1, 2, 3.\n\nWe need the house of the person who likes red.\n\nGiven:\n- Fantasy reader is in house 2.\n- History buff lives directly left of the person who likes white.\n- There is one house between the history buff and the pianist.\n\nFrom clue 2, the history buff must be in house 1 or 2.  \nBut house 2 is fantasy, so history buff must be in house 1.  \nThen the person who likes white is in house 2.\n\nFrom clue 3, with history in house 1, the pianist must be in house 3.\n\nFrom clue 4, the percussionist lives somewhere to the right of the history buff (house 1), so percussionist is in house 2 or 3.  \nBut house 3 is the pianist, so the percussionist must be in house 2.\n\nFrom clue 1, the percussionist lives somewhere to the left of the person who likes red.  \nSince percussionist is in house 2, the red-loving person must be in house 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963114,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 234,
+    "prompt_tokens": 324,
+    "total_tokens": 558,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

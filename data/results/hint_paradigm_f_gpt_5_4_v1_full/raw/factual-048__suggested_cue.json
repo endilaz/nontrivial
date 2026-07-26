@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QcPVqiTV8JgS68n2IVW8bNGSj2Y",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The **Royal Spa Centre** source says the Centre was officially opened on **15 June 1972** by **Anthony Eden**, described as a former MP for Leamington and Warwick and Prime Minister of the UK.\n\nThe **Anthony Eden** source identifies him as a **British Conservative politician**.\n\nTherefore, the political party was the **Conservative Party**. This is also supported by the **Conservative Party (UK)** source title.\n\nFinal answer: Conservative Party (UK)",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962669,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 1581,
+    "total_tokens": 1681,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785004822-GD4GiKQcpM5X3DNtpSCU",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total hours the lawyer works. The lawyer works 50 hours in court time and 2 times that in prep time, so 50 + (2 * 50) = 150 hours.\nStep 2: Calculate the total hourly fee. At $100 per hour for 150 hours, the hourly fee is 150 * $100 = $15,000.\nStep 3: Calculate the total fee. Adding the $1000 upfront payment to the hourly fee gives $15,000 + $1,000 = $16,000.\nStep 4: Calculate Noah's share. Since his brother pays half the fee, Noah pays the other half. $16,000 / 2 = $8,000.\n\nFinal answer: 8000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks how much Noah paid for a lawyer.\nUpfront payment: $1000\nHourly rate: $100 per hour\nCourt time: 50 hours\nPrep time: 2 * 50 = 100 hours\nTotal hours worked = 50 + 100 = 150 hours\nTotal hourly fee = 150 hours * $100/hour = $15,000\nTotal fee = Upfront payment + Total hourly fee = $1000 + $15,000 = $16,000\nNoah's brother pays half the fee.\nSo Noah pays the other half.\nNoah pays = $16,000 / 2 = $8,000.\n\nWait, does the brother pay half of the total fee, or half of the hourly fee? \"His brother pays half the fee.\" Usually means half of the total fee.\nTotal fee = 1000 + 15000 = 16000.\nHalf of 16000 = 8000.\n\nLet's double check.\nUpfront = 1000\nCourt time = 50 hours\nPrep time = 2 * 50 = 100 hours\nTotal time = 150 hours\nCost per hour = 100\nTotal hourly cost = 150 * 100 = 15000\nTotal cost = 1000 + 15000 = 16000\nBrother pays half = 16000 / 2 = 8000\nNoah pays 8000.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks how much Noah paid for a lawyer.\nUpfront payment: $1000\nHourly rate: $100 per hour\nCourt time: 50 hours\nPrep time: 2 * 50 = 100 hours\nTotal hours worked = 50 + 100 = 150 hours\nTotal hourly fee = 150 hours * $100/hour = $15,000\nTotal fee = Upfront payment + Total hourly fee = $1000 + $15,000 = $16,000\nNoah's brother pays half the fee.\nSo Noah pays the other half.\nNoah pays = $16,000 / 2 = $8,000.\n\nWait, does the brother pay half of the total fee, or half of the hourly fee? \"His brother pays half the fee.\" Usually means half of the total fee.\nTotal fee = 1000 + 15000 = 16000.\nHalf of 16000 = 8000.\n\nLet's double check.\nUpfront = 1000\nCourt time = 50 hours\nPrep time = 2 * 50 = 100 hours\nTotal time = 150 hours\nCost per hour = 100\nTotal hourly cost = 150 * 100 = 15000\nTotal cost = 1000 + 15000 = 16000\nBrother pays half = 16000 / 2 = 8000\nNoah pays 8000.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785004822,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 458,
+    "prompt_tokens": 151,
+    "total_tokens": 609,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 226,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00151443,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00151443,
+      "upstream_inference_prompt_cost": 0.00014043,
+      "upstream_inference_completions_cost": 0.001374
+    }
+  }
+}

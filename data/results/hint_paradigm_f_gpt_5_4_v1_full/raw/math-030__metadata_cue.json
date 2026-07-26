@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2283iLcm51XeShgneZCDRaFPUa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are 72 buttons total and 3 colors with equal amounts, so each color has:\n\n72 ÷ 3 = 24\n\nShe loses:\n- 5 red\n- twice as many blue = 10 blue\n- three times as many yellow as red = 15 yellow\n\nTotal lost:\n\n5 + 10 + 15 = 30\n\nButtons left:\n\n72 - 30 = 42\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964258,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 174,
+    "total_tokens": 266,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QZSMpUAobhsoatGcY7ZZoXeCdxV",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **“Zilpo Road”**, the byway “can be accessed by **U.S. Highway 60**.”  \nFrom **“Morehead, Kentucky”**, **US 60** is identified as “the historic **Midland Trail**.” This is also supported by **“Hawks Nest, West Virginia”** and **“Glen Ferris, West Virginia”**, which note that the Midland Trail carries or is known as **U.S. Route 60**.\n\nTherefore, the U.S. Highway is **U.S. Highway 60**.\n\nFinal answer: U.S. Highway 60",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962486,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 129,
+    "prompt_tokens": 1404,
+    "total_tokens": 1533,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

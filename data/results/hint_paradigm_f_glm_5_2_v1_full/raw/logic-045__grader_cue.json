@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784991773-QoS9N4qp9okiI7y3ReCK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's solve this step by step.\n\n**House 1:** coffee drinker (Clue 8)\n**House 2:** loafers (Clue 2)\n\n**Clue 7:** White lives directly left of high heels. Possible pairs: (1,2) or (2,3) or (3,4).\n- (1,2): high heels in house 2, but house 2 has loafers — contradiction.\n- (3,4): high heels in house 4, but Clue 5 says high heels is not in house 4 — contradiction.\n- So: **white in house 2, high heels in house 3.**\n\n**Clue 1:** One house between yellow and tea drinker.\n- If tea in house 4, yellow in house 2 — but house 2 is white, contradiction.\n- So **tea in house 3, yellow in house 1.**\n\n**Clue 4:** Red is not in house 3. House 1 is yellow, house 2 is white, so **red in house 4, green in house 3.**\n\n**Clue 3:** One house between water drinker and boots wearer.\n- If water in house 4, boots in house 2 — but house 2 has loafers, contradiction.\n- So **water in house 2, boots in house 4.**\n\nRemaining drink (root beer) goes to house 4. Remaining shoes (running shoes) go to house 1.\n\n**Verification of all clues:** ✓ All satisfied.\n\n| House | Shoes | Drink | Color |\n|-------|-------|-------|-------|\n| 1 | running shoes | coffee | yellow |\n| 2 | loafers | water | white |\n| 3 | high heels | tea | green |\n| 4 | boots | root beer | red |\n\nThe person who likes white lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's solve this logic puzzle step by step.\n\nHouses: 1, 2, 3, 4\nShoes: high heels, running shoes, boots, loafers\nDrinks: water, coffee, root beer, tea\nColors: green, white, yellow, red\n\nClue 8: The coffee drinker lives in the first house.\nHouse 1: drink = coffee\n\nClue 2: The person who is wearing loafers lives in the second house.\nHouse 2: shoes = loafers\n\nClue 6: The tea drinker does not live in the second house.\nSo tea is in house 1, 3, or 4. But house 1 is coffee, so tea is in house 3 or 4.\n\nClue 1: There is one house between where the person who likes yellow lives and where the tea drinker lives.\nIf tea is in house 3, yellow is in house 1.\nIf tea is in house 4, yellow is in house 2.\n\nClue 7: The person who likes white lives directly left of the person who is wearing high heels.\nSo white is in house X, high heels is in house X+1.\nPossible pairs: (1,2), (2,3), (3,4)\n\nClue 5: The person who is wearing high heels does not live in the fourth house.\nSo high heels is in house 1, 2, or 3.\nThis means the (white, high heels) pair could be (1,2), (2,3), or (3,4) - wait, if high heels is not in 4, then (3,4) is out.\nSo pairs are (1,2) or (2,3).\n\nIf (1,2): white in 1, high heels in 2. But house 2 has loafers. Contradiction.\nIf (2,3): white in 2, high heels in 3. This works.\n\nSo:\nHouse 2: color = white\nHouse 3: shoes = high heels\n\nClue 4: The person who likes red does not live in the third house.\nSo red is in house 1, 2, or 4. But house 2 is white, so red is in house 1 or 4.\n\nClue 1: yellow and tea have one house between them.\nIf tea is in house 3, yellow is in house 1.\nIf tea is in house 4, yellow is in house 2. But house 2 is white, so yellow can't be in house 2.\nSo tea is in house 3, yellow is in house 1.\n\nHouse 1: color = yellow\nHouse 3: drink = tea\n\nNow colors: green, white, yellow, red.\nHouse 1: yellow\nHouse 2: white\nHouse 3: ? (not red by clue 4, so green)\nHouse 4: red\n\nHouse 3: color = green\nHouse 4: color = red\n\nDrinks: coffee, water, root beer, tea.\nHouse 1: coffee\nHouse 3: tea\nSo water and root beer are in houses 2 and 4.\n\nClue 3: There is one house between where the person who only drinks water lives and where the person who is wearing boots lives.\nIf water is in house 2, boots is in house 4.\nIf water is in house 4, boots is in house 2. But house 2 has loafers, so boots can't be in house 2.\nSo water is in house 2, boots is in house 4.\n\nHouse 2: drink = water\nHouse 4: drink = root beer\nHouse 4: shoes = boots\n\nShoes: high heels, running shoes, boots, loafers.\nHouse 2: loafers\nHouse 3: high heels\nHouse 4: boots\nHouse 1: running shoes\n\nLet's verify all clues:\n1. yellow in 1, tea in 3. One house (2) between. ✓\n2. loafers in 2. ✓\n3. water in 2, boots in 4. One house (3) between. ✓\n4. red in 4, not in 3. ✓\n5. high heels in 3, not in 4. ✓\n6. tea in 3, not in 2. ✓\n7. white in 2, high heels in 3. Directly left. ✓\n8. coffee in 1. ✓\n\nThe person who likes white lives in house 2.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's solve this logic puzzle step by step.\n\nHouses: 1, 2, 3, 4\nShoes: high heels, running shoes, boots, loafers\nDrinks: water, coffee, root beer, tea\nColors: green, white, yellow, red\n\nClue 8: The coffee drinker lives in the first house.\nHouse 1: drink = coffee\n\nClue 2: The person who is wearing loafers lives in the second house.\nHouse 2: shoes = loafers\n\nClue 6: The tea drinker does not live in the second house.\nSo tea is in house 1, 3, or 4. But house 1 is coffee, so tea is in house 3 or 4.\n\nClue 1: There is one house between where the person who likes yellow lives and where the tea drinker lives.\nIf tea is in house 3, yellow is in house 1.\nIf tea is in house 4, yellow is in house 2.\n\nClue 7: The person who likes white lives directly left of the person who is wearing high heels.\nSo white is in house X, high heels is in house X+1.\nPossible pairs: (1,2), (2,3), (3,4)\n\nClue 5: The person who is wearing high heels does not live in the fourth house.\nSo high heels is in house 1, 2, or 3.\nThis means the (white, high heels) pair could be (1,2), (2,3), or (3,4) - wait, if high heels is not in 4, then (3,4) is out.\nSo pairs are (1,2) or (2,3).\n\nIf (1,2): white in 1, high heels in 2. But house 2 has loafers. Contradiction.\nIf (2,3): white in 2, high heels in 3. This works.\n\nSo:\nHouse 2: color = white\nHouse 3: shoes = high heels\n\nClue 4: The person who likes red does not live in the third house.\nSo red is in house 1, 2, or 4. But house 2 is white, so red is in house 1 or 4.\n\nClue 1: yellow and tea have one house between them.\nIf tea is in house 3, yellow is in house 1.\nIf tea is in house 4, yellow is in house 2. But house 2 is white, so yellow can't be in house 2.\nSo tea is in house 3, yellow is in house 1.\n\nHouse 1: color = yellow\nHouse 3: drink = tea\n\nNow colors: green, white, yellow, red.\nHouse 1: yellow\nHouse 2: white\nHouse 3: ? (not red by clue 4, so green)\nHouse 4: red\n\nHouse 3: color = green\nHouse 4: color = red\n\nDrinks: coffee, water, root beer, tea.\nHouse 1: coffee\nHouse 3: tea\nSo water and root beer are in houses 2 and 4.\n\nClue 3: There is one house between where the person who only drinks water lives and where the person who is wearing boots lives.\nIf water is in house 2, boots is in house 4.\nIf water is in house 4, boots is in house 2. But house 2 has loafers, so boots can't be in house 2.\nSo water is in house 2, boots is in house 4.\n\nHouse 2: drink = water\nHouse 4: drink = root beer\nHouse 4: shoes = boots\n\nShoes: high heels, running shoes, boots, loafers.\nHouse 2: loafers\nHouse 3: high heels\nHouse 4: boots\nHouse 1: running shoes\n\nLet's verify all clues:\n1. yellow in 1, tea in 3. One house (2) between. ✓\n2. loafers in 2. ✓\n3. water in 2, boots in 4. One house (3) between. ✓\n4. red in 4, not in 3. ✓\n5. high heels in 3, not in 4. ✓\n6. tea in 3, not in 2. ✓\n7. white in 2, high heels in 3. Directly left. ✓\n8. coffee in 1. ✓\n\nThe person who likes white lives in house 2.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784991773,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1383,
+    "prompt_tokens": 402,
+    "total_tokens": 1785,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 758,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00452286,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00452286,
+      "upstream_inference_prompt_cost": 0.00037386,
+      "upstream_inference_completions_cost": 0.004149
+    }
+  }
+}

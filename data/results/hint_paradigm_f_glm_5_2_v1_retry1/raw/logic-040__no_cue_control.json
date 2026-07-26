@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785062926-ddlNZ0tiUkrr0kRS27X7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Final answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need to solve logic puzzle. 3 houses positions 1,2,3. Categories:\nBooks: fantasy, romance, history.\nColors: white, green, blue.\nLunch: fried rice, grilled cheese, spaghetti.\nFlowers: tulips, daffodils, rose bouquet.\nPets: fish, bird, horses.\n\nClues:\n1 spaghetti lives directly left of romance book lover.\n2 daffodils somewhere right of green.\n3 horses in first house.\n4 rose bouquet in first house.\n5 fish enthusiast not in second house.\n6 fried rice lives directly left of daffodils.\n7 fried rice and white live directly next to each other.\n8 history buff lives directly left of daffodils.\n\nNeed house number where blue lives.\n\nLet's solve.\n\nHouses 1,2,3.\n\nClue3: house1 pet=horses.\nClue4: house1 flowers=rose bouquet.\nThus daffodils not house1. Clue6: fried rice directly left of daffodils. Clue8: history directly left of daffodils. So same person? If both directly left of daffodils, then the person immediately left of daffodils ate fried rice and is history buff. Since only one directly left. Daffodils can be house2 or house3. If daffodils house2, left house1 has fried rice and history. If daffodils house3, left house2 has fried rice and history.\n\nClue2: daffodils right of green. So green is left of daffodils. If daffodils house2, green house1. If daffodils house3, green house1 or house2.\n\nClue1: spaghetti directly left of romance. So spaghetti in house1 romance house2, or spaghetti house2 romance house3.\n\nClue7: fried rice and white adjacent.\n\nLet's test cases.\n\nCase A: daffodils house2. Then house1: flowers rose, pet horses, lunch fried rice, book history. Clue2 green left of daffodils => green house1. So house1 color green. Clue7 fried rice (house1) and white adjacent => white house2. Then house3 color blue. Need check other clues. House2 flowers daffodils, color white. House3 color blue. Lunch: house1 fried rice. Clue1 spaghetti directly left of romance. Options: house1 spaghetti? no house1 fried rice. house2 spaghetti -> romance house3. So house2 lunch spaghetti, house3 book romance. Then house3 lunch grilled cheese. Books: house1 history, house3 romance, house2 fantasy. Pets: house1 horses, fish not second (clue5), so fish house3, bird house2. Flowers: house1 rose, house2 daffodils, house3 tulips. Check clue1: spaghetti house2 left of romance house3 yes. Clue6 yes. Clue8 yes. Clue7 fried rice house1 adjacent white house2 yes. All good. Blue house3.\n\nCase B: daffodils house3. Then house2: lunch fried rice, book history. Clue2 green left of daffodils: green house1 or house2. Clue7 fried rice house2 adjacent white: white house1 or house3. Clue1 spaghetti left of romance: either house1 spaghetti house2 romance, but house2 book history not romance, so no. Or house2 spaghetti house3 romance, but house2 lunch fried rice not spaghetti. Contradiction. Wait clue1 requires spaghetti directly left of romance. If house2 is history, not romance. If house2 lunch fried rice, not spaghetti. So no possible? Let's see if house1 spaghetti house2 romance impossible because house2 book history. House2 spaghetti house3 romance impossible because house2 lunch fried rice. Thus case B impossible. So only case A.\n\nBlue house3. Need final answer exactly line.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need to solve logic puzzle. 3 houses positions 1,2,3. Categories:\nBooks: fantasy, romance, history.\nColors: white, green, blue.\nLunch: fried rice, grilled cheese, spaghetti.\nFlowers: tulips, daffodils, rose bouquet.\nPets: fish, bird, horses.\n\nClues:\n1 spaghetti lives directly left of romance book lover.\n2 daffodils somewhere right of green.\n3 horses in first house.\n4 rose bouquet in first house.\n5 fish enthusiast not in second house.\n6 fried rice lives directly left of daffodils.\n7 fried rice and white live directly next to each other.\n8 history buff lives directly left of daffodils.\n\nNeed house number where blue lives.\n\nLet's solve.\n\nHouses 1,2,3.\n\nClue3: house1 pet=horses.\nClue4: house1 flowers=rose bouquet.\nThus daffodils not house1. Clue6: fried rice directly left of daffodils. Clue8: history directly left of daffodils. So same person? If both directly left of daffodils, then the person immediately left of daffodils ate fried rice and is history buff. Since only one directly left. Daffodils can be house2 or house3. If daffodils house2, left house1 has fried rice and history. If daffodils house3, left house2 has fried rice and history.\n\nClue2: daffodils right of green. So green is left of daffodils. If daffodils house2, green house1. If daffodils house3, green house1 or house2.\n\nClue1: spaghetti directly left of romance. So spaghetti in house1 romance house2, or spaghetti house2 romance house3.\n\nClue7: fried rice and white adjacent.\n\nLet's test cases.\n\nCase A: daffodils house2. Then house1: flowers rose, pet horses, lunch fried rice, book history. Clue2 green left of daffodils => green house1. So house1 color green. Clue7 fried rice (house1) and white adjacent => white house2. Then house3 color blue. Need check other clues. House2 flowers daffodils, color white. House3 color blue. Lunch: house1 fried rice. Clue1 spaghetti directly left of romance. Options: house1 spaghetti? no house1 fried rice. house2 spaghetti -> romance house3. So house2 lunch spaghetti, house3 book romance. Then house3 lunch grilled cheese. Books: house1 history, house3 romance, house2 fantasy. Pets: house1 horses, fish not second (clue5), so fish house3, bird house2. Flowers: house1 rose, house2 daffodils, house3 tulips. Check clue1: spaghetti house2 left of romance house3 yes. Clue6 yes. Clue8 yes. Clue7 fried rice house1 adjacent white house2 yes. All good. Blue house3.\n\nCase B: daffodils house3. Then house2: lunch fried rice, book history. Clue2 green left of daffodils: green house1 or house2. Clue7 fried rice house2 adjacent white: white house1 or house3. Clue1 spaghetti left of romance: either house1 spaghetti house2 romance, but house2 book history not romance, so no. Or house2 spaghetti house3 romance, but house2 lunch fried rice not spaghetti. Contradiction. Wait clue1 requires spaghetti directly left of romance. If house2 is history, not romance. If house2 lunch fried rice, not spaghetti. So no possible? Let's see if house1 spaghetti house2 romance impossible because house2 book history. House2 spaghetti house3 romance impossible because house2 lunch fried rice. Thus case B impossible. So only case A.\n\nBlue house3. Need final answer exactly line.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785062926,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 841,
+    "prompt_tokens": 428,
+    "total_tokens": 1269,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 808,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00287304,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00287304,
+      "upstream_inference_prompt_cost": 0.00035004,
+      "upstream_inference_completions_cost": 0.002523
+    }
+  }
+}

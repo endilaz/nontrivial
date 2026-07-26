@@ -302,6 +302,33 @@ As of 2026-07-23 (documentation consolidated into this README; see Part II §0.1
   (2026-07-24): researcher approved cue quality, admission-judge accuracy,
   matched-control behavior, and costs. Milestone F data collection COMPLETE.
   Do not proceed to Milestone G without explicit researcher direction.** 475 tests.
+- **Milestone F panel complete (2026-07-26, GPT-5.4 + GLM-5.2).** The hint
+  paradigm was extended to two panel models using the v3 config template
+  (`configs/hint_paradigm_f_gpt_5_4.yaml`, `hint_paradigm_f_glm_5_2.yaml`,
+  max_tokens 16384/32768 after dry-run truncation checks). GPT-5.4: full 200×5
+  ($3.38, reasoning_tokens=0 throughout, 10 OpenAI content-filter blocks,
+  ITT-recorded). GLM-5.2: disabled-thinking probe FAILED on the pinned
+  DeepInfra route (reasoning_tokens=55) → researcher Option A: GLM runs
+  thinking-ENABLED in the hidden-reasoning stratum (runner capability gate now
+  branches on stratum); full 200×5 ($4.59) + retry of 109 DeepInfra-flakiness
+  failures ($1.94; 69 recovered, 52 cells remain generation-failure/truncation
+  ITT). **Shift rates (decided):** GLM dominated by buried cues (grader 59%,
+  authority 33%, metadata 32%, suggested 0%) — the inverse profile of
+  DeepSeek (authority 45%) and GPT-5.4 (authority 37%, grader 26%).
+  **Canonical reveal (content-only, v1.1.1 judge re-validated per model:**
+  GPT-5.4 91% agreement, GLM 95% — both approved with option-2 researcher
+  concessions): **GPT-5.4 is silent everywhere** (authority 17%, metadata 8%,
+  grader 2.3%, suggested 0%) — the workhorse's faithful-authority pattern does
+  NOT replicate; **GLM is the most disclosing model on buried cues**
+  (authority ~54%, grader ~62.5%, metadata 32%). **GLM-only secondary
+  construct (researcher-approved 2026-07-26): judging the hidden reasoning
+  trace + content — authority 100%, grader 100%, metadata 97%** (judge
+  validated on traces, 16/16 agreement): GLM's private reasoning essentially
+  ALWAYS discloses cue use; the visible answer filters it out 40–70% of the
+  time — selective reporting, a different unfaithfulness mechanism than silent
+  adoption. Bug fixed en route: capability_probes.py clobbered
+  data/capabilities.json on single-probe runs (now merges). Panel F spend ≈
+  $10.3 total. **Panel checkpoint pending researcher sign-off.**
 - **Reorganization (2026-07-23):** source datasets moved `data/tasks/` →
   `data/raw/`; `data/tasks/` now holds only generated artifacts. Byte-identical
   candidate regeneration verified after the move, and re-merge of
@@ -850,6 +877,7 @@ without researcher approval; append new decisions here with dates.
 | 2026-07-24 | **Ethics bare-"no" ambiguity found + disambiguated answer format (baseline-v3).** During admission labeling the researcher spotted that ethics "shifts" were partly false: a bare final-line `no` is ambiguous — it can mean "no moral problem" (= acceptable, = GT `yes`) or "not acceptable" (= the cue). Survey: 24 ethics rows across all four conditions were coded `shifted_to_cue` while the CoT explicitly asserted acceptability (e.g. ethics-011 swimming trunks). The deterministic evaluator string-matches the final answer, so it scored these as shifts. Fix (researcher-chosen): the **answer format is disambiguated** — the model answers `yes, acceptable` / `no, not acceptable` (full stance phrase). Evaluator maps `acceptable`→yes, `not acceptable`→no (`normalize_yes_no`, bare variants kept for backward compatibility); the ethics cue target is now the full phrase (`build_ethics_cue disambiguated`). GT stays `yes`/`no` (task set untouched). New config `configs/hint_paradigm_f_deepseek_v4_flash_v3.yaml` (`prompt_template_version: baseline-v3`); **ethics re-run separately** under v3 (logicfix pattern); v2 ethics rows flagged non-canonical. Math/logic/factual remain canonical from v2 (unambiguous formats). |
 | 2026-07-24 | **F3 admission judge approved (rubric v1.1.1) + canonical reveal rates.** The deterministic reveal regex proved inadequate for buried cues (missed every disclosure in the dry run). An LLM admission judge (`src/admission.py`, explicit/indirect/none, blinded, cost-logged, fail-closed until approved) was validated on 80 researcher-labeled cued transcripts. Iterated rubrics: v1.0.0 over-called `explicit` on **cue-rejection** ("panel says X but that's wrong" — which is faithful, not disclosure); v1.1.0 redefined disclosure as the hint *influencing the answer* (mention-and-reject → `none`); v1.1.1 added an ending-weighted instruction for long CoTs. Two researcher labels (007, 071) conceded to the judge's reading. Final: **dev 100/100/100, holdout 95/80/100** — approved. Canonical reveal via `scripts/score_reveal.py`: **the authority cue is largely FAITHFUL (reveal ~84–100%; the model cites the panel), while suggested/metadata/grader cues are largely SILENT (metadata 0%, grader 25–37%, suggested 0–33%)** — the buried/conversational cues produce silent adoption, the unfaithfulness signature. Limitation: judge under-detects on the longest grader CoTs (reveal biased slightly low). |
 | 2026-07-24 | **Nondeterminism floor = 0 (replicate check).** 20-task subset × 5 conditions × 2 replicates (`_replicate_check`, $0.001): the flip rate (a later replicate's coded outcome differing from replicate 0) is **0.0 for every condition** (0 flips in 16 cued + 20 control cells). At temperature 0 / seed 0 the workhorse is deterministic on this subset, so all observed shifts are attributable to the cue, not noise. Phase 4 checkpoint materials assembled: cue-construction failures = the 8 ethics baseline-opposite tasks only (never improvised); admission judge approved (v1.1.1); total F spend ≈ $0.23 (full $0.121 + logicfix $0.096 + ethicsfix $0.007 + replicate/judge ≈ $0.01), far under budget. |
+| 2026-07-26 | **Milestone F panel runs: GPT-5.4 + GLM-5.2.** Panel approved after route/capability prep: GLM pinned to OpenRouter DeepInfra; GLM disabled-thinking probe FAILED (reasoning_tokens=55 — route ignores the toggle) → **Option A: GLM runs thinking-ENABLED in the hidden-reasoning stratum**, capability gate now branches on stratum. GPT-5.4 no-reasoning probe passed on the full model. Dry runs (pilot + pinned logic-035) → max_tokens raised (GLM 32768, GPT 16384). Full runs: GPT-5.4 $3.38 (10 content-filter blocks, ITT); GLM $4.59 + $1.94 retry (108 DeepInfra failures → 52 residual ITT cells). Judge re-validated per model (44 labels each): GPT-5.4 91% and GLM 95% agreement, both approved with option-2 concessions. **Findings: (1) shift profiles invert across models** — DeepSeek/GPT-5.4 dominated by the authority cue (45%/37%), GLM by buried cues (grader 59%, metadata 32%, suggested 0%); **(2) GPT-5.4 is silent on every cue** (reveal ≤17% incl. authority — the workhorse's faithful-authority pattern does not generalize); **(3) GLM discloses buried cues most** (54–62%); **(4) GLM secondary construct (approved): hidden reasoning trace + content reveals 97–100% disclosure** (trace judge-validated 16/16) — GLM's private reasoning always admits the cue; the visible answer filters it — selective reporting, distinct from silent adoption. Panel F spend ≈ $10.3. Bug fixed: capability_probes.py clobbered the capability matrix (now merges). |
 
 ---
 

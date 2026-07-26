@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R0tPD35pt8c0NXArbHwhSA2oCi3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Breakfast and lunch: 560 + 780 = 1340 calories.\n\nDinner items:\n- Cake: 110\n- Chips: 310\n- Coke: 215\n\nDinner total: 110 + 310 + 215 = 635 calories.\n\nTotal intake so far: 1340 + 635 = 1975 calories.\n\nRemaining calories: 2500 - 1975 = 525 calories.\n\nFinal answer: 525",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964187,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 163,
+    "total_tokens": 255,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

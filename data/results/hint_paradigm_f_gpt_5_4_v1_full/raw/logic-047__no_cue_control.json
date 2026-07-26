@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QvhEPmPadPZbX5v629QOGfFWstQ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be 1, 2, 3 from left to right.\n\nWe need the house of the person who owns a sedan.\n\nGiven:\n- House 2: spaghetti\n- House 2: daffodils\n- House 3: carnations\n- House 3: mangos\n- House 1: SUV\n\nCar types are truck, SUV, sedan, all different.\n\nSince the SUV is in house 1, the sedan must be in house 2 or 3.\nBut clue 2 says the person who owns a sedan does not live in the third house.\n\nSo the sedan must be in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963865,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 140,
+    "prompt_tokens": 374,
+    "total_tokens": 514,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QX2kzY9DcpWYdpsE6fJQugYDWZe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source **“Thoen Stone”**, the stone “is currently on display at the Adams Museum & House in **Deadwood, South Dakota**.”\n\nFrom the source **“Deadwood, South Dakota”**, Deadwood “is the county seat of **Lawrence County**.”\n\nTherefore, the museum displaying the Thoen Stone is in **Lawrence County**.\n\nFinal answer: Lawrence County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962336,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 1751,
+    "total_tokens": 1834,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

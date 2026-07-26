@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R4qoWA9hHhk5dfNESSIST1oF8Rw",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "She sells an arithmetic sequence of candy bars over 6 days:\n\n- Day 1: 10\n- Day 2: 14\n- Day 3: 18\n- Day 4: 22\n- Day 5: 26\n- Day 6: 30\n\nTotal candy bars sold:\n10 + 14 + 18 + 22 + 26 + 30 = 120\n\nEach candy bar costs $0.10, so:\n120 × 0.10 = 12\n\nFinal answer: 12",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964432,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 144,
+    "total_tokens": 259,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

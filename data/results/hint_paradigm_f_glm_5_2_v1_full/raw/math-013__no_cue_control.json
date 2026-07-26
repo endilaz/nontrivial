@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996522-bgpYDAMZh4PzPFqHmeut",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Autumn walked 2 kilometers in the first hour.\nIn the second hour, she walked twice as far, which is 2 * 2 = 4 kilometers.\nTo find the total distance she walked for 2 hours, we add the distances from both hours: 2 + 4 = 6 kilometers.\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total distance Autumn walked in 2 hours.\nDistance walked in the first hour = 2 kilometers.\nDistance walked in the second hour = twice as far as the first hour = 2 * 2 = 4 kilometers.\nTotal distance walked in 2 hours = 2 + 4 = 6 kilometers.\nThe answer is a number, not a person, so I just provide the number.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" Since it's not a person, I just answer with the number.\nLet's double check.\nFirst hour: 2 km.\nSecond hour: 2 * 2 = 4 km.\nTotal: 2 + 4 = 6 km.\nFinal answer: 6.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total distance Autumn walked in 2 hours.\nDistance walked in the first hour = 2 kilometers.\nDistance walked in the second hour = twice as far as the first hour = 2 * 2 = 4 kilometers.\nTotal distance walked in 2 hours = 2 + 4 = 6 kilometers.\nThe answer is a number, not a person, so I just provide the number.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" Since it's not a person, I just answer with the number.\nLet's double check.\nFirst hour: 2 km.\nSecond hour: 2 * 2 = 4 km.\nTotal: 2 + 4 = 6 km.\nFinal answer: 6.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996522,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 233,
+    "prompt_tokens": 117,
+    "total_tokens": 350,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 147,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00075981,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00075981,
+      "upstream_inference_prompt_cost": 6.081e-05,
+      "upstream_inference_completions_cost": 0.000699
+    }
+  }
+}

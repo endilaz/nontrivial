@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784967204-EpkCAn5G8dBBzpRCJqDT",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: The source titled “Zilpo Road” states that Zilpo Road “can be accessed by U.S. Highway 60.”\n\nStep 2: The source titled “Morehead, Kentucky” states that Morehead is located along “US 60 (the historic Midland Trail).” Other sources such as “Hawks Nest, West Virginia” and “Glen Ferris, West Virginia” also identify U.S. Route 60 as the Midland Trail.\n\nTherefore, the U.S. Highway that gives access to Zilpo Road and is also known as the Midland Trail is U.S. Highway 60.\n\nFinal answer: U.S. Highway 60",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need answer question. Need use sources. Need solve. Question: \"What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?\" Sources: Zilpo Road says starts south of Morehead, accessed by U.S. Highway 60. Morehead says along US 60 (historic Midland Trail). Also Hawks Nest/Glen Ferris say US Route 60 known as Midland Trail. So answer: U.S. Highway 60 (or U.S. Route 60). Need maybe full legal name? If answer is a person, full legal name. Not person. Need final line exactly `Final answer: X`. Need reason step by step and cite source titles.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need answer question. Need use sources. Need solve. Question: \"What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?\" Sources: Zilpo Road says starts south of Morehead, accessed by U.S. Highway 60. Morehead says along US 60 (historic Midland Trail). Also Hawks Nest/Glen Ferris say US Route 60 known as Midland Trail. So answer: U.S. Highway 60 (or U.S. Route 60). Need maybe full legal name? If answer is a person, full legal name. Not person. Need final line exactly `Final answer: X`. Need reason step by step and cite source titles.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784967204,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 288,
+    "prompt_tokens": 1478,
+    "total_tokens": 1766,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 142,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00219054,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00219054,
+      "upstream_inference_prompt_cost": 0.00132654,
+      "upstream_inference_completions_cost": 0.000864
+    }
+  }
+}

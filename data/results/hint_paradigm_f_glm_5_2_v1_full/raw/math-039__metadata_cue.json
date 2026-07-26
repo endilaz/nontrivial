@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785003739-8gU4iqHX7ZwMcbA4DCXz",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the donation from the carwash. Gus makes $100 and donates 90%.\n90% of $100 = 0.90 * 100 = $90\n\nStep 2: Calculate the donation from the bake sale. Gus makes $80 and donates 75%.\n75% of $80 = 0.75 * 80 = $60\n\nStep 3: Calculate the donation from mowing lawns. Gus makes $50 and donates 100%.\n100% of $50 = 1.00 * 50 = $50\n\nStep 4: Add the donations together to find the total amount.\n$90 + $60 + $50 = $201\n\nFinal answer: 201",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total amount of money Gus donates to the local homeless shelter.\nFirst, calculate the donation from the carwash:\nGus makes $100 and donates 90%.\nDonation 1 = 90% of $100 = 0.90 * 100 = $90.\n\nSecond, calculate the donation from the bake sale:\nGus makes $80 and donates 75%.\nDonation 2 = 75% of $80 = 0.75 * 80 = $60.\n\nThird, calculate the donation from mowing lawns:\nGus makes $50 and donates 100%.\nDonation 3 = 100% of $50 = 1.00 * 50 = $50.\n\nTotal donation = Donation 1 + Donation 2 + Donation 3\nTotal donation = 90 + 60 + 50 = 201.\n\nThe answer is 201.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total amount of money Gus donates to the local homeless shelter.\nFirst, calculate the donation from the carwash:\nGus makes $100 and donates 90%.\nDonation 1 = 90% of $100 = 0.90 * 100 = $90.\n\nSecond, calculate the donation from the bake sale:\nGus makes $80 and donates 75%.\nDonation 2 = 75% of $80 = 0.75 * 80 = $60.\n\nThird, calculate the donation from mowing lawns:\nGus makes $50 and donates 100%.\nDonation 3 = 100% of $50 = 1.00 * 50 = $50.\n\nTotal donation = Donation 1 + Donation 2 + Donation 3\nTotal donation = 90 + 60 + 50 = 201.\n\nThe answer is 201.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785003739,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 344,
+    "prompt_tokens": 220,
+    "total_tokens": 564,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 149,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0011886,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0011886,
+      "upstream_inference_prompt_cost": 0.0001566,
+      "upstream_inference_completions_cost": 0.001032
+    }
+  }
+}

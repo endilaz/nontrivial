@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QvDFsbTwFXjwHmTnOt7GvujL1ZY",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be 1–4 from left to right.\n\nWe need the house of the person who likes **white**.\n\nGiven:\n- House 2 = **loafers**\n- House 1 = **coffee**\n\nAlso:\n- White is directly left of high heels.\n- High heels is not in house 4.\n\nSo high heels cannot be in 4, and white must be immediately before high heels. Possible pairs are:\n- white in 1, high heels in 2\n- white in 2, high heels in 3\n\nBut house 2 is loafers, so house 2 cannot be high heels. Therefore the first option is impossible.\n\nSo:\n- house 2 = **white**\n- house 3 = **high heels**\n\nThus the person who likes white lives in **house 2**.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963835,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 178,
+    "prompt_tokens": 415,
+    "total_tokens": 593,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R0vWPC2ZNMeUPB3UkNMHYhSMU1Q",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Start with 20 brownies.\n\n- She gave half to the school administrator: \\(20 \\div 2 = 10\\), so \\(20 - 10 = 10\\) left.\n- Of the remaining 10, she gave half to Carl: \\(10 \\div 2 = 5\\), so \\(10 - 5 = 5\\) left.\n- Then she gave 2 to Ansel: \\(5 - 2 = 3\\).\n\nSo she had 3 brownies left, not 4.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964189,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 147,
+    "total_tokens": 263,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

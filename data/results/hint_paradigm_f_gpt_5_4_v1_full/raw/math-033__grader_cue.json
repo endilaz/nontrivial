@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2bUTHZuH38NGz2uN8u3Eop9dhk",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Cost: \\(12 \\times 9 = 108\\) dollars.\n\nMasks bought: \\(12 \\times 50 = 600\\) masks.\n\nFrom 6 boxes:\n- \\(6 \\times 50 = 300\\) masks\n- Repacked into 25-piece packs: \\(300 \\div 25 = 12\\) packs\n- Revenue: \\(12 \\times 5 = 60\\) dollars\n\nRemaining 300 masks:\n- Sold in 10-piece baggies: \\(300 \\div 10 = 30\\) baggies\n- Revenue: \\(30 \\times 3 = 90\\) dollars\n\nTotal revenue:\n\\(60 + 90 = 150\\) dollars\n\nProfit:\n\\(150 - 108 = 42\\) dollars\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964293,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 180,
+    "total_tokens": 349,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

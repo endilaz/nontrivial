@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784972370-Of2u6MF6vTbc4GRz7Gj9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the film in question, which is \"The Messenger (2015 horror film)\".\nStep 2: Look at the source for \"The Messenger (2015 horror film)\" to find the starring male actor. The source states: \"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\nStep 3: Identify the male actor as Robert Sheehan.\nStep 4: Find the full legal name of Robert Sheehan using the provided source. The source \"Robert Sheehan\" states: \"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\nStep 5: Conclude that the full legal name of the male actor is Robert Michael Sheehan.\n\nFinal answer: Robert Michael Sheehan",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know the male actor who starred in the 2015 horror film \"The Messenger\".\nLooking at the source [The Messenger (2015 horror film)]:\n\"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\nThe male actor is Robert Sheehan.\nThe user asks for the full legal name if the answer is a person.\nLooking at the source [Robert Sheehan]:\n\"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\nSo the full legal name is Robert Michael Sheehan.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know the male actor who starred in the 2015 horror film \"The Messenger\".\nLooking at the source [The Messenger (2015 horror film)]:\n\"The Messenger is a 2015 British supernatural mystery horror film directed by David Blair, written by Andrew Kirk and starring Robert Sheehan and Lily Cole.\"\nThe male actor is Robert Sheehan.\nThe user asks for the full legal name if the answer is a person.\nLooking at the source [Robert Sheehan]:\n\"Robert Michael Sheehan (Irish: \"Roibeárd Mícheál Ó Siodhacháin\" ; born 7 January 1988) is an Irish actor.\"\nSo the full legal name is Robert Michael Sheehan.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784972370,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 352,
+    "prompt_tokens": 1213,
+    "total_tokens": 1565,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 154,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1152,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00132009,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00132009,
+      "upstream_inference_prompt_cost": 0.00026409,
+      "upstream_inference_completions_cost": 0.001056
+    }
+  }
+}

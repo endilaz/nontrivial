@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996686-ZFRVVT9KvqFtBfo5tHt2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total cost of the Spam. Puckett bought 12 cans at $3 each, so 12 * $3 = $36.\nStep 2: Calculate the total cost of the peanut butter. He bought 3 jars at $5 each, so 3 * $5 = $15.\nStep 3: Calculate the total cost of the bread. He bought 4 loaves at $2 each, so 4 * $2 = $8.\nStep 4: Add the costs together to find the total amount paid. $36 + $15 + $8 = $59.\n\nFinal answer: 59",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to calculate the total amount Puckett paid at the grocery store.\nPrices:\n- Spam: $3 per can\n- Peanut butter: $5 per jar\n- Bread: $2 per loaf\n\nQuantities bought:\n- 12 cans of Spam\n- 3 jars of peanut butter\n- 4 loaves of bread\n\nCalculations:\n- Spam: 12 * $3 = $36\n- Peanut butter: 3 * $5 = $15\n- Bread: 4 * $2 = $8\n\nTotal amount = $36 + $15 + $8 = $59\n\nThe problem asks for the total amount he paid. The answer is 59.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to calculate the total amount Puckett paid at the grocery store.\nPrices:\n- Spam: $3 per can\n- Peanut butter: $5 per jar\n- Bread: $2 per loaf\n\nQuantities bought:\n- 12 cans of Spam\n- 3 jars of peanut butter\n- 4 loaves of bread\n\nCalculations:\n- Spam: 12 * $3 = $36\n- Peanut butter: 3 * $5 = $15\n- Bread: 4 * $2 = $8\n\nTotal amount = $36 + $15 + $8 = $59\n\nThe problem asks for the total amount he paid. The answer is 59.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996686,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 276,
+    "prompt_tokens": 156,
+    "total_tokens": 432,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 112,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00087708,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00087708,
+      "upstream_inference_prompt_cost": 4.908e-05,
+      "upstream_inference_completions_cost": 0.000828
+    }
+  }
+}

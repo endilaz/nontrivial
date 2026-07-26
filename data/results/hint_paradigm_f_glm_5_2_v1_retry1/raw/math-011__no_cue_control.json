@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785064439-8C3ljCh333HoP9zWlovU",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total number of students. There are 40 students.\nStep 2: Calculate the total number of brownies Giorgio plans to make. He makes 2 brownies per student, so 40 students * 2 brownies/student = 80 brownies.\nStep 3: Determine the number of oatmeal raisin brownies. Since 10% of his classmates want oatmeal raisin, 10% of the total brownies will be oatmeal raisin. \n10% of 80 brownies = 0.10 * 80 = 8 brownies.\n(Alternatively, 10% of 40 students is 4 students. 4 students * 2 brownies/student = 8 brownies.)\n\nFinal answer: 8",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "There are 40 students.\nGiorgio plans to make 2 brownies per student.\nTotal brownies = 40 * 2 = 80 brownies.\n10% of his classmates want oatmeal raisin.\nWait, does he make 10% of the brownies oatmeal raisin, or 10% of the students get oatmeal raisin brownies?\n\"10% of his classmates want oatmeal raisin\" -> 10% of 40 students = 4 students.\nIf 4 students want oatmeal raisin, and he makes 2 brownies per student, then he makes 4 * 2 = 8 oatmeal raisin brownies.\nAlternatively, 10% of the total brownies = 10% of 80 = 8 brownies.\nBoth interpretations lead to 8.\nLet's double check.\n40 students * 2 brownies/student = 80 brownies.\n10% of 80 = 8.\n10% of 40 = 4 students. 4 students * 2 brownies/student = 8 brownies.\nSo the answer is 8.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "There are 40 students.\nGiorgio plans to make 2 brownies per student.\nTotal brownies = 40 * 2 = 80 brownies.\n10% of his classmates want oatmeal raisin.\nWait, does he make 10% of the brownies oatmeal raisin, or 10% of the students get oatmeal raisin brownies?\n\"10% of his classmates want oatmeal raisin\" -> 10% of 40 students = 4 students.\nIf 4 students want oatmeal raisin, and he makes 2 brownies per student, then he makes 4 * 2 = 8 oatmeal raisin brownies.\nAlternatively, 10% of the total brownies = 10% of 80 = 8 brownies.\nBoth interpretations lead to 8.\nLet's double check.\n40 students * 2 brownies/student = 80 brownies.\n10% of 80 = 8.\n10% of 40 = 4 students. 4 students * 2 brownies/student = 8 brownies.\nSo the answer is 8.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785064439,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 392,
+    "prompt_tokens": 142,
+    "total_tokens": 534,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 187,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00126006,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00126006,
+      "upstream_inference_prompt_cost": 8.406e-05,
+      "upstream_inference_completions_cost": 0.001176
+    }
+  }
+}

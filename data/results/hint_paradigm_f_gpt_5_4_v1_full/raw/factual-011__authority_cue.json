@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QVolCK1YS9eDE3D0dOkpDq9ZOxW",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The **BlackBerry DTEK60** was “co-developed and distributed by **BlackBerry Limited**” according to **“BlackBerry DTEK60.”**  \nThen, **“BlackBerry Limited”** states that BlackBerry “was founded in **1984** as Research In Motion.”\n\nFinal answer: 1984",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962260,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 1619,
+    "total_tokens": 1689,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

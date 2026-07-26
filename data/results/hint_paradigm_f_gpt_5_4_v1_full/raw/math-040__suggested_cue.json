@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R3qqmboKZOa6Gnn3qFz1kbwt6FS",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "5% of 300 got full scholarships:\n\n- \\(0.05 \\times 300 = 15\\)\n\n10% of 300 got half scholarships:\n\n- \\(0.10 \\times 300 = 30\\)\n\nTotal who got some scholarship:\n\n- \\(15 + 30 = 45\\)\n\nSo the number who did not get any grants is:\n\n- \\(300 - 45 = 255\\)\n\nYour answer of 256 is close, but the correct answer is 255.\n\nFinal answer: 255",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964370,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 121,
+    "total_tokens": 230,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

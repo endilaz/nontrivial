@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785005590-g46YzEpqiHXUqtsd27TP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of candy bars Ines sells each day for 6 days.\n- Day 1: 10 candy bars\n- Day 2: 10 + 4 = 14 candy bars\n- Day 3: 14 + 4 = 18 candy bars\n- Day 4: 18 + 4 = 22 candy bars\n- Day 5: 22 + 4 = 26 candy bars\n- Day 6: 26 + 4 = 30 candy bars\n\nStep 2: Calculate the total number of candy bars sold in the week.\nTotal = 10 + 14 + 18 + 22 + 26 + 30 = 120 candy bars\n\nStep 3: Calculate the total earnings in cents.\nEach candy bar costs 10 cents.\nTotal earnings in cents = 120 * 10 = 1200 cents\n\nStep 4: Convert the earnings to dollars.\n1200 cents = 1200 / 100 = 12 dollars\n\nFinal answer: 12",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for Ines's earnings in a week in dollars.\nShe sells candy bars for 6 days a week.\nDay 1: 10 candy bars.\nEach day afterward, she sells 4 more candy bars than the previous day.\nDay 2: 10 + 4 = 14\nDay 3: 14 + 4 = 18\nDay 4: 18 + 4 = 22\nDay 5: 22 + 4 = 26\nDay 6: 26 + 4 = 30\n\nTotal candy bars sold in 6 days = 10 + 14 + 18 + 22 + 26 + 30\nSum = 10 + 14 = 24\n24 + 18 = 42\n42 + 22 = 64\n64 + 26 = 90\n90 + 30 = 120\n\nTotal candy bars = 120.\nEach candy bar costs 10 cents.\nTotal earnings in cents = 120 * 10 = 1200 cents.\nEarnings in dollars = 1200 / 100 = 12 dollars.\n\nLet me double check the arithmetic.\nDay 1: 10\nDay 2: 14\nDay 3: 18\nDay 4: 22\nDay 5: 26\nDay 6: 30\nSum = 6/2 * (10 + 30) = 3 * 40 = 120.\n120 * 10 cents = 1200 cents = $12.\n\nThe question asks \"how much will she earn in a week in dollars?\"\nThe answer is 12.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for Ines's earnings in a week in dollars.\nShe sells candy bars for 6 days a week.\nDay 1: 10 candy bars.\nEach day afterward, she sells 4 more candy bars than the previous day.\nDay 2: 10 + 4 = 14\nDay 3: 14 + 4 = 18\nDay 4: 18 + 4 = 22\nDay 5: 22 + 4 = 26\nDay 6: 26 + 4 = 30\n\nTotal candy bars sold in 6 days = 10 + 14 + 18 + 22 + 26 + 30\nSum = 10 + 14 = 24\n24 + 18 = 42\n42 + 22 = 64\n64 + 26 = 90\n90 + 30 = 120\n\nTotal candy bars = 120.\nEach candy bar costs 10 cents.\nTotal earnings in cents = 120 * 10 = 1200 cents.\nEarnings in dollars = 1200 / 100 = 12 dollars.\n\nLet me double check the arithmetic.\nDay 1: 10\nDay 2: 14\nDay 3: 18\nDay 4: 22\nDay 5: 26\nDay 6: 30\nSum = 6/2 * (10 + 30) = 3 * 40 = 120.\n120 * 10 cents = 1200 cents = $12.\n\nThe question asks \"how much will she earn in a week in dollars?\"\nThe answer is 12.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785005590,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 557,
+    "prompt_tokens": 151,
+    "total_tokens": 708,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 216,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00176343,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00176343,
+      "upstream_inference_prompt_cost": 9.243e-05,
+      "upstream_inference_completions_cost": 0.001671
+    }
+  }
+}

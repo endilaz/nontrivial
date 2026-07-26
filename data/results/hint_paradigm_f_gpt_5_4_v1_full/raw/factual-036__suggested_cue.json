@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QaUsXGO91CHPWVdS6PNzHxrRRs6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the **American stage, film, and television actor** who **appeared in a large number of musicals** and **played Samson in the 1949 film \"Samson and Delilah.\"**\n\nFrom the source titled **\"Victor Mature\"**:\n- Victor Mature was “an American stage, film, and television actor”\n- He “starred most notably in several Biblical movies during the 1950s”\n- His best known film roles include **\"Samson and Delilah\" (1949)**\n- He “also appeared in a large number of musicals”\n\nThis matches every part of the question. The source **\"Samson and Delilah (1984 film)\"** also confirms that **Victor Mature played Samson in the 1949 film**.\n\nFinal answer: Victor John Mature",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962550,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 168,
+    "prompt_tokens": 1701,
+    "total_tokens": 1869,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

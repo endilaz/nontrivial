@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QvOmjp4Y9q2JFGkHJcAxGQZ12ZG",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are 2 houses: 1 and 2.\n\n- Clue 2 says the person wearing loafers lives in house 1.\n- Clue 1 says the person wearing loafers and the person who had stew live directly next to each other.\n- Since house 1’s occupant wears loafers, the stew eater must be in the adjacent house, which is house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963846,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 225,
+    "total_tokens": 313,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

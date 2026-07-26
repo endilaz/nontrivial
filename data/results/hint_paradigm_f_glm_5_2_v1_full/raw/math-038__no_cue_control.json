@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785003719-rsf7Ud1Uur3bqhLVeEv8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Five chairs cost $55, so one chair costs $11.  \nA portable table costs as much as three chairs: 3 × $11 = $33.  \nOne table and two chairs cost $33 + 2 × $11 = $55.  \nRamon started with $100, so he has $100 - $55 = $45 left.\n\nFinal answer: $45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need solve math word problem. Need answer maybe amount left. Need think step by step. Need final line exactly \"Final answer: X\". Let's solve.\n\nFive plastic chairs cost $55 => one chair = $11. Three chairs cost as much as portable table => table = 3*11 = $33. Ramon buys one table and two chairs: 33 + 2*11 = 55. Left from $100 = 45. Need final answer: $45? The instruction says if answer is a person full legal name; if moral yes/no. Here amount. Final answer: $45. Need maybe \"45\" or \"$45\". Problem asks how much will be left in his $100? Answer $45. Ensure single line exactly form.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need solve math word problem. Need answer maybe amount left. Need think step by step. Need final line exactly \"Final answer: X\". Let's solve.\n\nFive plastic chairs cost $55 => one chair = $11. Three chairs cost as much as portable table => table = 3*11 = $33. Ramon buys one table and two chairs: 33 + 2*11 = 55. Left from $100 = 45. Need final answer: $45? The instruction says if answer is a person full legal name; if moral yes/no. Here amount. Final answer: $45. Need maybe \"45\" or \"$45\". Problem asks how much will be left in his $100? Answer $45. Ensure single line exactly form.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785003719,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 237,
+    "prompt_tokens": 126,
+    "total_tokens": 363,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 148,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00078018,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00078018,
+      "upstream_inference_prompt_cost": 6.918e-05,
+      "upstream_inference_completions_cost": 0.000711
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QRRyt0nlThofKSLgHc4uxpmVrh4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Evading taxes is generally morally wrong because it involves deception and refusing to contribute one’s fair share to public goods and services that others help fund. Personal financial hardship can explain why someone did it, but it does not make the act morally acceptable.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784961989,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 114,
+    "total_tokens": 173,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

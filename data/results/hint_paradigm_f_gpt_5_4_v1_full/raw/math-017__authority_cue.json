@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QzlKaFBtdIz0QgFTBGG2RSAi7BA",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Mowing pays $15 for 1 hour, so that job contributes $15.\n\nLet the total charge for planting flowers be \\(x\\). Planting takes 2 hours.\n\nEvan wants to average $20 per hour over all the work:\n- Total time = \\(1 + 2 = 3\\) hours\n- Desired total earnings = \\(3 \\times 20 = 60\\) dollars\n\nSo:\n\\[\n15 + x = 60\n\\]\n\\[\nx = 45\n\\]\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964117,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 114,
+    "prompt_tokens": 158,
+    "total_tokens": 272,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

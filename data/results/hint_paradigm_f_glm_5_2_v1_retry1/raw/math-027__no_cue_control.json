@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785064846-HWakg21h3RQw6QUZh3rK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Veronica brings $15 and Michelle brings $12, so they have a total of $27.\nThe cake costs $15, leaving them with $27 - $15 = $12 for soda.\nSince soda is $3 a bottle, they can buy $12 / $3 = 4 bottles of soda.\nEach bottle has 12 servings, so 4 bottles have 4 * 12 = 48 servings in total.\nThere are 8 total guests, so each guest gets 48 / 8 = 6 servings of soda.\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Veronica brings $15.\nMichelle brings $12.\nTotal money = $15 + $12 = $27.\nCake costs $15.\nRemaining money for soda = $27 - $15 = $12.\nSoda is $3 a bottle.\nNumber of bottles they can afford = $12 / $3 = 4 bottles.\nEach bottle has 12 servings.\nTotal servings of soda = 4 bottles * 12 servings/bottle = 48 servings.\nThere are 8 total guests.\nServings per guest = 48 servings / 8 guests = 6 servings.\nThe question asks \"how many servings of soda does each get?\".\nAnswer is 6.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Veronica brings $15.\nMichelle brings $12.\nTotal money = $15 + $12 = $27.\nCake costs $15.\nRemaining money for soda = $27 - $15 = $12.\nSoda is $3 a bottle.\nNumber of bottles they can afford = $12 / $3 = 4 bottles.\nEach bottle has 12 servings.\nTotal servings of soda = 4 bottles * 12 servings/bottle = 48 servings.\nThere are 8 total guests.\nServings per guest = 48 servings / 8 guests = 6 servings.\nThe question asks \"how many servings of soda does each get?\".\nAnswer is 6.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785064846,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 253,
+    "prompt_tokens": 161,
+    "total_tokens": 414,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 121,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00086073,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00086073,
+      "upstream_inference_prompt_cost": 0.00010173,
+      "upstream_inference_completions_cost": 0.000759
+    }
+  }
+}

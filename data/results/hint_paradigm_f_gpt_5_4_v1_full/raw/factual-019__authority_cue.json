@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QXCxsNqBGRlLSRmZPpfKZY72MlM",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The clue “American actress, dancer, and singer, widely known for performing in films and RKO's musical films” identifies **Ginger Rogers**. From the source **“Ginger Rogers”**, her birth name was Virginia Katherine McMath and she was widely known for those RKO musical films.\n\nLooking for the American Pre-Code comedy film featuring her, the source **“Hat Check Girl”** states that **Hat Check Girl** is a 1932 American Pre-Code comedy film starring **Ginger Rogers**.\n\nTherefore, the film was released in **1932**.\n\nFinal answer: 1932",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962346,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 126,
+    "prompt_tokens": 1108,
+    "total_tokens": 1234,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785001096-4hEyKuOrDmUGnqhZwiJo",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Beth has 72 buttons of three colors, with an equal amount of each color.\nFirst, we find the number of buttons of each color:\n72 buttons / 3 colors = 24 buttons per color (red, blue, and yellow).\n\nNext, we calculate how many buttons Beth loses:\n- Red buttons lost: 5\n- Blue buttons lost: twice as many as red = 2 * 5 = 10\n- Yellow buttons lost: three times as many as red = 3 * 5 = 15\n\nTotal buttons lost = 5 + 10 + 15 = 30 buttons.\n\nFinally, we subtract the lost buttons from the total number of buttons to find out how many she has left:\n72 - 30 = 42 buttons.\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Beth has 72 buttons of three colors. Each color has the same amount of buttons.\nSo, 72 / 3 = 24 buttons of each color.\nRed = 24\nBlue = 24\nYellow = 24\n\nBeth loses:\n5 red\ntwice as many blue = 2 * 5 = 10 blue\nthree times as many yellow ones than red ones = 3 * 5 = 15 yellow\n\nTotal lost = 5 + 10 + 15 = 30 buttons.\nButtons left = 72 - 30 = 42 buttons.\n\nLet's double check.\nRed left = 24 - 5 = 19\nBlue left = 24 - 10 = 14\nYellow left = 24 - 15 = 9\nTotal left = 19 + 14 + 9 = 42.\n\nThe question asks \"how many buttons does she have left?\".\nThe answer is 42.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Beth has 72 buttons of three colors. Each color has the same amount of buttons.\nSo, 72 / 3 = 24 buttons of each color.\nRed = 24\nBlue = 24\nYellow = 24\n\nBeth loses:\n5 red\ntwice as many blue = 2 * 5 = 10 blue\nthree times as many yellow ones than red ones = 3 * 5 = 15 yellow\n\nTotal lost = 5 + 10 + 15 = 30 buttons.\nButtons left = 72 - 30 = 42 buttons.\n\nLet's double check.\nRed left = 24 - 5 = 19\nBlue left = 24 - 10 = 14\nYellow left = 24 - 15 = 9\nTotal left = 19 + 14 + 9 = 42.\n\nThe question asks \"how many buttons does she have left?\".\nThe answer is 42.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785001096,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 357,
+    "prompt_tokens": 134,
+    "total_tokens": 491,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 144,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00114762,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00114762,
+      "upstream_inference_prompt_cost": 7.662e-05,
+      "upstream_inference_completions_cost": 0.001071
+    }
+  }
+}

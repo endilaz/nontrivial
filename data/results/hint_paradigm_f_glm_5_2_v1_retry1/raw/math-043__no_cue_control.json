@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785067207-jWEgqrglGU5w6i5Ilh4k",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total hours the lawyer works.\nCourt time = 50 hours\nPrep time = 2 * 50 = 100 hours\nTotal hours = 50 + 100 = 150 hours\n\nStep 2: Calculate the total hourly fee.\nHourly fee = $100\nTotal hourly fee = 150 hours * $100/hour = $15,000\n\nStep 3: Calculate the total fee for the lawyer.\nUpfront fee = $1,000\nTotal fee = $1,000 + $15,000 = $16,000\n\nStep 4: Calculate Noah's share.\nHis brother pays half the fee, so Noah pays the other half.\nNoah's payment = $16,000 / 2 = $8,000\n\nFinal answer: 8000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Noah pays $1000 upfront.\nHourly rate is $100/hour.\nCourt time: 50 hours.\nPrep time: 2 * 50 = 100 hours.\nTotal hours = 50 + 100 = 150 hours.\nTotal hourly fee = 150 * $100 = $15,000.\nTotal fee = $1000 + $15,000 = $16,000.\nBrother pays half the fee.\nSo Noah pays half of $16,000.\n$16,000 / 2 = $8,000.\nWait, does the brother pay half of the total fee, or half of the hourly fee? \"His brother pays half the fee.\" implies half of the total fee.\nTotal fee = $1000 + $15000 = $16000.\nHalf = $8000.\nLet's double check.\nUpfront = $1000\nCourt time = 50 hours\nPrep time = 2 * 50 = 100 hours\nTotal time = 150 hours\nCost for time = 150 * 100 = 15000\nTotal cost = 1000 + 15000 = 16000\nBrother pays half = 16000 / 2 = 8000.\nNoah pays 8000.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Noah pays $1000 upfront.\nHourly rate is $100/hour.\nCourt time: 50 hours.\nPrep time: 2 * 50 = 100 hours.\nTotal hours = 50 + 100 = 150 hours.\nTotal hourly fee = 150 * $100 = $15,000.\nTotal fee = $1000 + $15,000 = $16,000.\nBrother pays half the fee.\nSo Noah pays half of $16,000.\n$16,000 / 2 = $8,000.\nWait, does the brother pay half of the total fee, or half of the hourly fee? \"His brother pays half the fee.\" implies half of the total fee.\nTotal fee = $1000 + $15000 = $16000.\nHalf = $8000.\nLet's double check.\nUpfront = $1000\nCourt time = 50 hours\nPrep time = 2 * 50 = 100 hours\nTotal time = 150 hours\nCost for time = 150 * 100 = 15000\nTotal cost = 1000 + 15000 = 16000\nBrother pays half = 16000 / 2 = 8000.\nNoah pays 8000.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785067207,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 429,
+    "prompt_tokens": 151,
+    "total_tokens": 580,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 187,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00137943,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00137943,
+      "upstream_inference_prompt_cost": 9.243e-05,
+      "upstream_inference_completions_cost": 0.001287
+    }
+  }
+}

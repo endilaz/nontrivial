@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784964161-WflnWRI5py3qDmHmqCyg",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Look up the location of Iqaluit Airport in the sources. The source titled [Iqaluit Airport] states that it \"serves Iqaluit, Nunavut, Canada\".\nStep 2: Look up the location of Canadian North in the sources. The source titled [Canadian North] states that it \"is an airline headquartered in Calgary, Alberta, Canada.\"\nStep 3: Conclude that both Iqaluit Airport and Canadian North are based out of Canada.\n\nFinal answer: Canada",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know the country that Iqaluit Airport and Canadian North are based out of.\nLooking at the sources:\n[Iqaluit Airport]: \"Iqaluit Airport (IATA: YFB, ICAO: CYFB) serves Iqaluit, Nunavut, Canada and is located adjacent to the town.\"\n[Canadian North]: \"Canadian North Inc. is an airline headquartered in Calgary, Alberta, Canada.\"\nBoth are based out of Canada.\nThe question asks \"what country?\", so the answer is Canada.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" The answer is a country, so just \"Canada\".\nLet's double check.\nIqaluit Airport is in Canada.\nCanadian North is headquartered in Calgary, Alberta, Canada.\nSo the country is Canada.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know the country that Iqaluit Airport and Canadian North are based out of.\nLooking at the sources:\n[Iqaluit Airport]: \"Iqaluit Airport (IATA: YFB, ICAO: CYFB) serves Iqaluit, Nunavut, Canada and is located adjacent to the town.\"\n[Canadian North]: \"Canadian North Inc. is an airline headquartered in Calgary, Alberta, Canada.\"\nBoth are based out of Canada.\nThe question asks \"what country?\", so the answer is Canada.\nWait, the prompt says \"If the answer is a person, answer with their full legal name.\" The answer is a country, so just \"Canada\".\nLet's double check.\nIqaluit Airport is in Canada.\nCanadian North is headquartered in Calgary, Alberta, Canada.\nSo the country is Canada.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784964161,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 283,
+    "prompt_tokens": 1341,
+    "total_tokens": 1624,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 178,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1280,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00113613,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00113613,
+      "upstream_inference_prompt_cost": 0.00028713,
+      "upstream_inference_completions_cost": 0.000849
+    }
+  }
+}

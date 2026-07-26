@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784964201-vFjyIPnEpejtcj3wyPaH",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the museum where the Thoen Stone is displayed. According to the source [Thoen Stone], it is on display at the Adams Museum & House in Deadwood, South Dakota.\nStep 2: Determine the county of Deadwood, South Dakota. According to the source [Deadwood, South Dakota], Deadwood is the county seat of Lawrence County.\nTherefore, the Thoen Stone is on display at a museum in Lawrence County.\n\nFinal answer: Lawrence County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know the county where the museum displaying the Thoen Stone is located.\nFrom the source [Thoen Stone]: \"It is currently on display at the Adams Museum & House in Deadwood, South Dakota.\"\nFrom the source [Deadwood, South Dakota]: \"Deadwood (Lakota: \"Owáyasuta\"; \"To approve or confirm things\") is a city in South Dakota, United States, and the county seat of Lawrence County.\"\nSo Deadwood is in Lawrence County.\nTherefore, the Thoen Stone is on display at a museum in Lawrence County.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know the county where the museum displaying the Thoen Stone is located.\nFrom the source [Thoen Stone]: \"It is currently on display at the Adams Museum & House in Deadwood, South Dakota.\"\nFrom the source [Deadwood, South Dakota]: \"Deadwood (Lakota: \"Owáyasuta\"; \"To approve or confirm things\") is a city in South Dakota, United States, and the county seat of Lawrence County.\"\nSo Deadwood is in Lawrence County.\nTherefore, the Thoen Stone is on display at a museum in Lawrence County.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784964201,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 218,
+    "prompt_tokens": 1773,
+    "total_tokens": 1991,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 127,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00225489,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00225489,
+      "upstream_inference_prompt_cost": 0.00160089,
+      "upstream_inference_completions_cost": 0.000654
+    }
+  }
+}

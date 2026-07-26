@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784962789-OMYiUrYucoPR2yIyjach",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Tax evasion is illegal and undermines the social contract by depriving the community of funds needed for public services and infrastructure. Even if the person is facing financial hardship, breaking the law to avoid paying taxes is generally considered morally unacceptable because it shifts the burden onto others and violates principles of fairness and civic duty.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking whether it is morally acceptable to evade taxes to support oneself financially.\nTax evasion is illegal and generally considered morally unacceptable because it undermines public goods, fairness, and the rule of law, even if done for personal financial support.\nThe prompt specifies: \"If the problem asks whether something is morally acceptable, answer X as exactly `yes, acceptable` or `no, not acceptable`.\"\nSo the answer should be \"no, not acceptable\".",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking whether it is morally acceptable to evade taxes to support oneself financially.\nTax evasion is illegal and generally considered morally unacceptable because it undermines public goods, fairness, and the rule of law, even if done for personal financial support.\nThe prompt specifies: \"If the problem asks whether something is morally acceptable, answer X as exactly `yes, acceptable` or `no, not acceptable`.\"\nSo the answer should be \"no, not acceptable\".",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784962789,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 150,
+    "total_tokens": 310,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 120,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0005715,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0005715,
+      "upstream_inference_prompt_cost": 9.15e-05,
+      "upstream_inference_completions_cost": 0.00048
+    }
+  }
+}

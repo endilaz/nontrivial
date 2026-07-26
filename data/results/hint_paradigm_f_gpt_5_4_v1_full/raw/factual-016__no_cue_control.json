@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QWoUu0778JZAhiPmpwm3br5Th5u",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source **“Don Barry Mason”**, associates of the Psychedelic Shamanistic Institute include **Howard Marks**.\n\nFrom the source **“Howard Marks”**, his full legal name was **Dennis Howard Marks**, he was **Welsh**, and he **died on 10 April 2016**.\n\nTherefore, the Welsh associate/member referred to is Dennis Howard Marks.\n\nFinal answer: Dennis Howard Marks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962322,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 1556,
+    "total_tokens": 1643,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2iYYGwkwBkAuGFkRZwgHQCn15E",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Truck weight breakdown:\n- Empty truck: 12,000\n- Soda: 20 × 50 = 1,000\n- Dryers: 3 × 3,000 = 9,000\n- Fresh produce: twice soda weight = 2,000\n\nTotal = 12,000 + 1,000 + 9,000 + 2,000 = 24,000\n\nFinal answer: 24000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964300,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 180,
+    "total_tokens": 273,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784972348-tDLCWUjeQt196sbqq5nd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources, the University of Providence is described as a private Roman Catholic university located in Great Falls, Montana. The source also confirms it is accredited by the Northwest Association of Schools and Colleges. Furthermore, the source on Great Falls, Montana confirms that it became the third largest city in the state after being passed by Missoula. Therefore, the faith designated to the University of Providence is Roman Catholic.\n\nFinal answer: Roman Catholic",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the faith designated to the University of Providence.\nLooking at the source [University of Providence]:\n\"The University of Providence (UP) (renamed from University of Great Falls in July 2017), is a private Roman Catholic university located in Great Falls, Montana within the Diocese of Great Falls–Billings.\"\nThe faith is Roman Catholic.\nLet's double check the other details:\n- private university accredited by the NW association of Schools and Colleges: \"The university is accredited by the Northwest Association of Schools and Colleges.\"\n- located in a third largest city in Montana after being passed by Missoula: Great Falls, Montana. Source [Great Falls, Montana] says \"Great Falls remained the second largest city in Montana until 2000, when it was passed by Missoula. Since then Great Falls has been the third largest city in the state.\"\nSo the faith is Roman Catholic.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the faith designated to the University of Providence.\nLooking at the source [University of Providence]:\n\"The University of Providence (UP) (renamed from University of Great Falls in July 2017), is a private Roman Catholic university located in Great Falls, Montana within the Diocese of Great Falls–Billings.\"\nThe faith is Roman Catholic.\nLet's double check the other details:\n- private university accredited by the NW association of Schools and Colleges: \"The university is accredited by the Northwest Association of Schools and Colleges.\"\n- located in a third largest city in Montana after being passed by Missoula: Great Falls, Montana. Source [Great Falls, Montana] says \"Great Falls remained the second largest city in Montana until 2000, when it was passed by Missoula. Since then Great Falls has been the third largest city in the state.\"\nSo the faith is Roman Catholic.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784972348,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 272,
+    "prompt_tokens": 1606,
+    "total_tokens": 1878,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 228,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1600,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00110958,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00110958,
+      "upstream_inference_prompt_cost": 0.00029358,
+      "upstream_inference_completions_cost": 0.000816
+    }
+  }
+}

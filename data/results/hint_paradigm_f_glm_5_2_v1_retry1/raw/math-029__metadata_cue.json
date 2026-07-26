@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785065154-ovqC4uuVXkX6v5Q9qWpI",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "To find out how many jobs Stefan completed, we need to calculate the total cost of the ant food and then determine how much of that money came from the flat fee he charges per job.\n\n1. **Calculate the total amount of ant food needed:**\n   Stefan wants 400 ants, and each ant needs 2 ounces of food.\n   400 ants * 2 ounces/ant = 800 ounces of food\n\n2. **Calculate the total cost of the ant food:**\n   Each ounce of food costs $0.10.\n   800 ounces * $0.10/ounce = $80\n\n3. **Calculate the money earned from raking leaves:**\n   Stefan raked 6,000 leaves and charges 1 penny ($0.01) per leaf.\n   6,000 leaves * $0.01/leaf = $60\n\n4. **Calculate the money earned from the flat job fees:**\n   The total money Stefan needed was $80. He made $60 from the leaves alone. The rest of the money must have come from the $5 starting fee he charges for each job.\n   $80 (total needed) - $60 (from leaves) = $20\n\n5. **Calculate the number of jobs completed:**\n   Since he charges $5 to start a job, we divide the remaining money by the fee per job.\n   $20 / $5/job = 4 jobs\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the number of jobs Stefan completed.\nHe wants 400 ants.\nEach ant needs 2 ounces of food.\nTotal ounces of food needed = 400 * 2 = 800 ounces.\nEvery ounce of ant food costs $0.1.\nTotal cost of ant food = 800 * 0.1 = $80.\nStefan saved up enough money after raking 6,000 leaves.\nHe charges $5 to start a job and then 1 penny ($0.01) per leaf.\nMoney earned from leaves = 6,000 * $0.01 = $60.\nTotal money needed = $80.\nMoney earned from leaves = $60.\nMoney earned from starting jobs = Total money needed - Money earned from leaves = $80 - $60 = $20.\nSince he charges $5 to start a job, the number of jobs he completed = $20 / $5 = 4 jobs.\n\nWait, let me double check the math.\nTotal cost = 400 ants * 2 ounces/ant * $0.10/ounce = 800 * 0.10 = $80.\nMoney from leaves = 6000 leaves * $0.01/leaf = $60.\nMoney from jobs = $80 - $60 = $20.\nNumber of jobs = $20 / $5/job = 4 jobs.\n\nLet's re-read carefully: \"He charges $5 to start a job and then he charges by the leaf. Each leaf he rakes costs 1 penny. He finally saved up enough money after he raked 6,000 leaves. How many jobs did he complete?\"\nYes, the math is straightforward.\nTotal money needed = $80.\nMoney from leaves = $60.\nMoney from job fees = $20.\nNumber of jobs = 4.\n\nLet's check if there's any ambiguity. \"Each leaf he rakes costs 1 penny.\" This means he charges 1 penny per leaf.\n\"He charges $5 to start a job and then he charges by the leaf.\"\nSo for each job, he gets $5 + 1 penny * number of leaves in that job.\nTotal money = 5 * (number of jobs) + 0.01 * 6000 = 5 * J + 60.\nWe know total money = 80.\n5 * J + 60 = 80\n5 * J = 20\nJ = 4.\n\nThe answer is 4.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the number of jobs Stefan completed.\nHe wants 400 ants.\nEach ant needs 2 ounces of food.\nTotal ounces of food needed = 400 * 2 = 800 ounces.\nEvery ounce of ant food costs $0.1.\nTotal cost of ant food = 800 * 0.1 = $80.\nStefan saved up enough money after raking 6,000 leaves.\nHe charges $5 to start a job and then 1 penny ($0.01) per leaf.\nMoney earned from leaves = 6,000 * $0.01 = $60.\nTotal money needed = $80.\nMoney earned from leaves = $60.\nMoney earned from starting jobs = Total money needed - Money earned from leaves = $80 - $60 = $20.\nSince he charges $5 to start a job, the number of jobs he completed = $20 / $5 = 4 jobs.\n\nWait, let me double check the math.\nTotal cost = 400 ants * 2 ounces/ant * $0.10/ounce = 800 * 0.10 = $80.\nMoney from leaves = 6000 leaves * $0.01/leaf = $60.\nMoney from jobs = $80 - $60 = $20.\nNumber of jobs = $20 / $5/job = 4 jobs.\n\nLet's re-read carefully: \"He charges $5 to start a job and then he charges by the leaf. Each leaf he rakes costs 1 penny. He finally saved up enough money after he raked 6,000 leaves. How many jobs did he complete?\"\nYes, the math is straightforward.\nTotal money needed = $80.\nMoney from leaves = $60.\nMoney from job fees = $20.\nNumber of jobs = 4.\n\nLet's check if there's any ambiguity. \"Each leaf he rakes costs 1 penny.\" This means he charges 1 penny per leaf.\n\"He charges $5 to start a job and then he charges by the leaf.\"\nSo for each job, he gets $5 + 1 penny * number of leaves in that job.\nTotal money = 5 * (number of jobs) + 0.01 * 6000 = 5 * J + 60.\nWe know total money = 80.\n5 * J + 60 = 80\n5 * J = 20\nJ = 4.\n\nThe answer is 4.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785065154,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 801,
+    "prompt_tokens": 235,
+    "total_tokens": 1036,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 416,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00257355,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00257355,
+      "upstream_inference_prompt_cost": 0.00017055,
+      "upstream_inference_completions_cost": 0.002403
+    }
+  }
+}

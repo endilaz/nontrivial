@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785000155-TVrGK58lqb1edCIb89Ow",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total amount of ant food Stefan needs.\nStefan wants 400 ants, and each ant needs 2 ounces of food.\n400 ants * 2 ounces/ant = 800 ounces of food.\n\nStep 2: Calculate the total cost of the ant food.\nEach ounce of food costs $0.10.\n800 ounces * $0.10/ounce = $80.\n\nStep 3: Calculate how much money Stefan made from raking leaves.\nHe raked 6,000 leaves and charges 1 penny ($0.01) per leaf.\n6,000 leaves * $0.01/leaf = $60.\n\nStep 4: Calculate how much money he needs to make from the starting fees.\nHe needs $80 in total and made $60 from the leaves.\n$80 - $60 = $20.\n\nStep 5: Calculate the number of jobs he completed.\nHe charges $5 to start a job.\n$20 / $5 per job = 4 jobs.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem step by step.\n\n1. Stefan wants 400 ants in his farm.\n2. Each ant needs 2 ounces of food.\n   Total ounces of food needed = 400 ants * 2 ounces/ant = 800 ounces.\n3. Every ounce of ant food costs $0.10.\n   Total cost of ant food = 800 ounces * $0.10/ounce = $80.\n4. Stefan charges $5 to start a job and then 1 penny ($0.01) per leaf.\n5. He raked 6,000 leaves.\n   Money earned from leaves = 6,000 leaves * $0.01/leaf = $60.\n6. Total money saved up = Money from starting jobs + Money from leaves.\n   Let J be the number of jobs he completed.\n   Total money = $5 * J + $60.\n7. He saved up enough money to buy the ant food, which costs $80.\n   So, $5 * J + $60 = $80.\n8. Solve for J:\n   $5 * J = $80 - $60\n   $5 * J = $20\n   J = 20 / 5 = 4.\n\nLet's double check.\nTotal cost = 400 * 2 * 0.1 = 80 dollars.\nMoney from leaves = 6000 * 0.01 = 60 dollars.\nMoney needed from starting jobs = 80 - 60 = 20 dollars.\nCost to start a job = 5 dollars.\nNumber of jobs = 20 / 5 = 4 jobs.\n\nThe question asks \"How many jobs did he complete?\"\nThe answer is 4.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem step by step.\n\n1. Stefan wants 400 ants in his farm.\n2. Each ant needs 2 ounces of food.\n   Total ounces of food needed = 400 ants * 2 ounces/ant = 800 ounces.\n3. Every ounce of ant food costs $0.10.\n   Total cost of ant food = 800 ounces * $0.10/ounce = $80.\n4. Stefan charges $5 to start a job and then 1 penny ($0.01) per leaf.\n5. He raked 6,000 leaves.\n   Money earned from leaves = 6,000 leaves * $0.01/leaf = $60.\n6. Total money saved up = Money from starting jobs + Money from leaves.\n   Let J be the number of jobs he completed.\n   Total money = $5 * J + $60.\n7. He saved up enough money to buy the ant food, which costs $80.\n   So, $5 * J + $60 = $80.\n8. Solve for J:\n   $5 * J = $80 - $60\n   $5 * J = $20\n   J = 20 / 5 = 4.\n\nLet's double check.\nTotal cost = 400 * 2 * 0.1 = 80 dollars.\nMoney from leaves = 6000 * 0.01 = 60 dollars.\nMoney needed from starting jobs = 80 - 60 = 20 dollars.\nCost to start a job = 5 dollars.\nNumber of jobs = 20 / 5 = 4 jobs.\n\nThe question asks \"How many jobs did he complete?\"\nThe answer is 4.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785000155,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 564,
+    "prompt_tokens": 190,
+    "total_tokens": 754,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 273,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0018687,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0018687,
+      "upstream_inference_prompt_cost": 0.0001767,
+      "upstream_inference_completions_cost": 0.001692
+    }
+  }
+}

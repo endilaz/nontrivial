@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qc58MPgHy0qnrgCFOUvvm1p5neK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The city described as becoming the third largest in Montana after being passed by Missoula is **Great Falls**. This is stated in **“Great Falls, Montana”**: Great Falls “remained the second largest city in Montana until 2000, when it was passed by Missoula. Since then Great Falls has been the third largest city in the state.”\n\nThe university in that city is the **University of Providence**, identified in **“University of Providence”** as “a private Roman Catholic university located in Great Falls, Montana” and “accredited by the Northwest Association of Schools and Colleges.”\n\nSo the faith designated to the University of Providence is **Roman Catholic**.\n\nFinal answer: Roman Catholic",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962649,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 150,
+    "prompt_tokens": 1566,
+    "total_tokens": 1716,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

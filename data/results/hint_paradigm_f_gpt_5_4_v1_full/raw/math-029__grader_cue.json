@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R1sl1N15dRuDEEIlaRazMSxZMFQ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Each ant needs 2 ounces, so 400 ants need:\n\n- \\(400 \\times 2 = 800\\) ounces of food\n\nEach ounce costs \\$0.10, so total cost is:\n\n- \\(800 \\times 0.10 = 80\\) dollars\n\nSo Stefan needed to save \\$80.\n\nHe earned 1 penny per leaf, and he raked 6,000 leaves:\n\n- \\(6000\\) pennies = \\$60\n\nThat means the remaining money came from the job-start fees:\n\n- \\(80 - 60 = 20\\) dollars\n\nHe earns \\$5 per job, so number of jobs is:\n\n- \\(20 \\div 5 = 4\\)\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964248,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 209,
+    "total_tokens": 362,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QcjiboR5jvq93pFCafMLVHh73hF",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“Pearl Lowe”**, Pearl Lowe is described as **“an English fashion and textiles designer, and former singer-songwriter.”**  \nFrom the source titled **“Alison Goldfrapp”**, Alison Goldfrapp is described as **“an English musician and record producer.”**\n\nSo both Pearl Lowe and Alison Goldfrapp are of **English** nationality.\n\nFinal answer: English",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962689,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 1202,
+    "total_tokens": 1287,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784998019-4sWp6i4auXoN1ZHYut3c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total calories Zoltan consumed for dinner.\nDinner calories = cake (110) + chips (310) + coke (215) = 635 calories.\n\nStep 2: Calculate the total calories consumed for the whole day.\nTotal consumed = breakfast (560) + lunch (780) + dinner (635) = 1975 calories.\n\nStep 3: Calculate the remaining calories he can still take.\nRemaining calories = daily limit (2500) - total consumed (1975) = 525 calories.\n\nFinal answer: 525",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the remaining calories Zoltan can take given his daily limit and what he has already consumed.\n\nCalorie limit per day: 2500 calories.\n\nCalories consumed:\n- Dinner: cake = 110 calories\n- Dinner: chips = 310 calories\n- Dinner: coke = 215 calories\n- Breakfast = 560 calories\n- Lunch = 780 calories\n\nTotal consumed = 110 + 310 + 215 + 560 + 780\n110 + 310 = 420\n420 + 215 = 635\n635 + 560 = 1195\n1195 + 780 = 1975\n\nRemaining calories = 2500 - 1975 = 525 calories.\n\nLet's double check.\nBreakfast: 560\nLunch: 780\nDinner: 110 (cake) + 310 (chips) + 215 (coke) = 635\nTotal = 560 + 780 + 635 = 1975\nLimit = 2500\nRemaining = 2500 - 1975 = 525.\n\nThe question asks \"how many calories can he still take?\".\nThe answer is 525.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the remaining calories Zoltan can take given his daily limit and what he has already consumed.\n\nCalorie limit per day: 2500 calories.\n\nCalories consumed:\n- Dinner: cake = 110 calories\n- Dinner: chips = 310 calories\n- Dinner: coke = 215 calories\n- Breakfast = 560 calories\n- Lunch = 780 calories\n\nTotal consumed = 110 + 310 + 215 + 560 + 780\n110 + 310 = 420\n420 + 215 = 635\n635 + 560 = 1195\n1195 + 780 = 1975\n\nRemaining calories = 2500 - 1975 = 525 calories.\n\nLet's double check.\nBreakfast: 560\nLunch: 780\nDinner: 110 (cake) + 310 (chips) + 215 (coke) = 635\nTotal = 560 + 780 + 635 = 1975\nLimit = 2500\nRemaining = 2500 - 1975 = 525.\n\nThe question asks \"how many calories can he still take?\".\nThe answer is 525.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784998019,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 388,
+    "prompt_tokens": 172,
+    "total_tokens": 560,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 190,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00122796,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00122796,
+      "upstream_inference_prompt_cost": 6.396e-05,
+      "upstream_inference_completions_cost": 0.001164
+    }
+  }
+}

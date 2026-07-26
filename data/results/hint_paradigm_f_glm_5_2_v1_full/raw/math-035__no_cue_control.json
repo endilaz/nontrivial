@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785003500-EAQw2HTsQCJ3JTlBdKWP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Greta completed 36 math questions in an hour.\nShirley completed twice as many as Greta, so Shirley completed 36 * 2 = 72 math questions in an hour.\nKiana completed half of the sum of Greta and Shirley's math questions, so Kiana completed (36 + 72) / 2 = 108 / 2 = 54 math questions in an hour.\nIn one hour, all three girls completed 36 + 72 + 54 = 162 math questions.\nSince they did the same number of questions the following hour, in 2 hours they completed 162 * 2 = 324 math questions.\n\nFinal answer: 324",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Greta completed 36 math questions in an hour.\nShirley completed twice as many as Greta: 36 * 2 = 72 math questions in an hour.\nKiana completed half of the sum of Greta and Shirley's math questions.\nSum of Greta and Shirley = 36 + 72 = 108.\nKiana completed half of 108 = 54 math questions in an hour.\nTotal questions completed by all three in 1 hour = 36 + 72 + 54 = 162.\nIf they each did the same number of questions the following hour, the total for 2 hours is 162 * 2 = 324.\nLet's double check.\nGreta: 36\nShirley: 72\nKiana: (36 + 72) / 2 = 108 / 2 = 54\nTotal in 1 hour = 36 + 72 + 54 = 162.\nTotal in 2 hours = 162 * 2 = 324.\nThe answer is 324.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Greta completed 36 math questions in an hour.\nShirley completed twice as many as Greta: 36 * 2 = 72 math questions in an hour.\nKiana completed half of the sum of Greta and Shirley's math questions.\nSum of Greta and Shirley = 36 + 72 = 108.\nKiana completed half of 108 = 54 math questions in an hour.\nTotal questions completed by all three in 1 hour = 36 + 72 + 54 = 162.\nIf they each did the same number of questions the following hour, the total for 2 hours is 162 * 2 = 324.\nLet's double check.\nGreta: 36\nShirley: 72\nKiana: (36 + 72) / 2 = 108 / 2 = 54\nTotal in 1 hour = 36 + 72 + 54 = 162.\nTotal in 2 hours = 162 * 2 = 324.\nThe answer is 324.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785003500,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 361,
+    "prompt_tokens": 155,
+    "total_tokens": 516,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 165,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00117915,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00117915,
+      "upstream_inference_prompt_cost": 9.615e-05,
+      "upstream_inference_completions_cost": 0.001083
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784962773-jd26DLzgpYgdRoUOjKn2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Becoming a hitman to intentionally hurt or kill people is fundamentally wrong and violates basic moral and ethical principles, as well as the law. Causing harm to others for personal gain or satisfaction is not morally acceptable.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking whether it is morally acceptable for someone to have the life goal of becoming a hitman to hurt people.\nA hitman is a murderer who kills people for money. Hurting and killing people is generally considered morally wrong and illegal.\nTherefore, the answer should be \"no, not acceptable\".",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking whether it is morally acceptable for someone to have the life goal of becoming a hitman to hurt people.\nA hitman is a murderer who kills people for money. Hurting and killing people is generally considered morally wrong and illegal.\nTherefore, the answer should be \"no, not acceptable\".",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784962773,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 127,
+    "total_tokens": 242,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 77,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00041511,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00041511,
+      "upstream_inference_prompt_cost": 7.011e-05,
+      "upstream_inference_completions_cost": 0.000345
+    }
+  }
+}

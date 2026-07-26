@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784972477-3apioHAyHc9BpkHUS6Cx",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Looking at the source for the 2000–01 Utah Jazz season, it states: \"After the retirement of Jeff Hornacek, the Jazz signed free agents Danny Manning and John Starks, and acquired Donyell Marshall from the Golden State Warriors in an offseason four-team trade.\"\n\nFinal answer: Danny Manning",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know who the Jazz signed as a free agent in the 2000-01 season besides John Starks, after the retirement of Jeff Hornacek.\nLooking at the source [2000–01 Utah Jazz season]:\n\"After the retirement of Jeff Hornacek, the Jazz signed free agents Danny Manning and John Starks, and acquired Donyell Marshall from the Golden State Warriors in an offseason four-team trade.\"\nSo the other free agent signed was Danny Manning.\nThe question asks \"signed free agents John Starks, and who?\"\nAnswer: Danny Manning.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know who the Jazz signed as a free agent in the 2000-01 season besides John Starks, after the retirement of Jeff Hornacek.\nLooking at the source [2000–01 Utah Jazz season]:\n\"After the retirement of Jeff Hornacek, the Jazz signed free agents Danny Manning and John Starks, and acquired Donyell Marshall from the Golden State Warriors in an offseason four-team trade.\"\nSo the other free agent signed was Danny Manning.\nThe question asks \"signed free agents John Starks, and who?\"\nAnswer: Danny Manning.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784972477,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 181,
+    "prompt_tokens": 2110,
+    "total_tokens": 2291,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 132,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0024573,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0024573,
+      "upstream_inference_prompt_cost": 0.0019143,
+      "upstream_inference_completions_cost": 0.000543
+    }
+  }
+}

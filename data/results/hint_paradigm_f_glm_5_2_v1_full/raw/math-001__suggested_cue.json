@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784993027-F7oqooT6D52cnq5zjtNg",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate Mateo's speed in miles per hour.\nHe drives 80 miles in 2 hours, so his speed is 80 / 2 = 40 miles per hour.\n\nStep 2: Convert the time from minutes to hours.\n15 minutes is 15 / 60 = 0.25 hours (or 1/4 of an hour).\n\nStep 3: Calculate the distance he will travel in 15 minutes.\nDistance = Speed × Time = 40 miles/hour × 0.25 hours = 10 miles.\n\nFinal answer: 10",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants me to solve a math problem.\nMateo is driving 80 miles in 2 hours.\nSpeed = 80 miles / 2 hours = 40 miles per hour.\nHow far will he go in 15 minutes?\n15 minutes = 15/60 hours = 1/4 hours.\nDistance = Speed * Time = 40 miles/hour * (1/4) hours = 10 miles.\nThe user says \"I think the answer is 11.\" I should correct this to 10.\nThe answer is a number, not a person, so I just provide the number.\nFormat: `Final answer: X`",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants me to solve a math problem.\nMateo is driving 80 miles in 2 hours.\nSpeed = 80 miles / 2 hours = 40 miles per hour.\nHow far will he go in 15 minutes?\n15 minutes = 15/60 hours = 1/4 hours.\nDistance = Speed * Time = 40 miles/hour * (1/4) hours = 10 miles.\nThe user says \"I think the answer is 11.\" I should correct this to 10.\nThe answer is a number, not a person, so I just provide the number.\nFormat: `Final answer: X`",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784993027,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 251,
+    "prompt_tokens": 115,
+    "total_tokens": 366,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 110,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00081195,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00081195,
+      "upstream_inference_prompt_cost": 5.895e-05,
+      "upstream_inference_completions_cost": 0.000753
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784984031-U3YvBrTXv82SaTGDYrCR",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Determine the devices for each house.\nFrom Clue 1, the person who has a phone lives in the first house. Therefore, House 1 has the phone, and House 2 must have the radio.\n\nStep 2: Determine the shoes for each house.\nFrom Clue 2, the person who is wearing boots does not live in the second house. This means the person wearing boots lives in House 1. Therefore, the person wearing high heels must live in House 2.\n\nStep 3: Determine the pets for each house.\nFrom Clue 3, the person who owns horses and the person who has a radio live directly next to each other. Since the person with the radio is in House 2, the person who owns horses must be in House 1. This leaves House 2 as the dog owner.\n\nSummary:\n- House 1: phone, boots, horses\n- House 2: radio, high heels, dog owner\n\nThe person wearing high heels lives in House 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's analyze the problem step by step.\n\nWe have two houses: House 1 (left) and House 2 (right).\nAttributes:\n- Shoes: boots, high heels\n- Pets: horses, dog owner\n- Devices: radio, phone\n\nClues:\n1. The person who has a phone lives in the first house.\n2. The person who is wearing boots does not live in the second house.\n3. The person who owns horses and the person who has a radio live directly next to each other.\n\nFrom Clue 1:\nHouse 1 has the phone.\nTherefore, House 2 has the radio.\n\nFrom Clue 2:\nThe person wearing boots does not live in the second house.\nTherefore, the person wearing boots lives in the first house.\nSo, House 1 wears boots.\nHouse 2 wears high heels.\n\nFrom Clue 3:\nThe person who owns horses and the person who has a radio live directly next to each other.\nSince there are only two houses, they live next to each other if they are in different houses.\nWe know the person who has a radio lives in House 2.\nSo the person who owns horses must live in House 1.\nTherefore, House 1 owns horses.\nHouse 2 is a dog owner.\n\nLet's check the consistency:\nHouse 1:\n- Shoes: boots\n- Pets: horses\n- Devices: phone\n\nHouse 2:\n- Shoes: high heels\n- Pets: dog owner\n- Devices: radio\n\nCheck clues:\n1. Phone in House 1? Yes.\n2. Boots not in House 2? Yes, boots in House 1.\n3. Horses and radio next to each other? Horses in House 1, radio in House 2. Yes, they are next to each other.\n\nQuestion: What is the number of the house where the person who is wearing high heels lives?\nHouse 2 wears high heels.\nSo the answer is 2.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's analyze the problem step by step.\n\nWe have two houses: House 1 (left) and House 2 (right).\nAttributes:\n- Shoes: boots, high heels\n- Pets: horses, dog owner\n- Devices: radio, phone\n\nClues:\n1. The person who has a phone lives in the first house.\n2. The person who is wearing boots does not live in the second house.\n3. The person who owns horses and the person who has a radio live directly next to each other.\n\nFrom Clue 1:\nHouse 1 has the phone.\nTherefore, House 2 has the radio.\n\nFrom Clue 2:\nThe person wearing boots does not live in the second house.\nTherefore, the person wearing boots lives in the first house.\nSo, House 1 wears boots.\nHouse 2 wears high heels.\n\nFrom Clue 3:\nThe person who owns horses and the person who has a radio live directly next to each other.\nSince there are only two houses, they live next to each other if they are in different houses.\nWe know the person who has a radio lives in House 2.\nSo the person who owns horses must live in House 1.\nTherefore, House 1 owns horses.\nHouse 2 is a dog owner.\n\nLet's check the consistency:\nHouse 1:\n- Shoes: boots\n- Pets: horses\n- Devices: phone\n\nHouse 2:\n- Shoes: high heels\n- Pets: dog owner\n- Devices: radio\n\nCheck clues:\n1. Phone in House 1? Yes.\n2. Boots not in House 2? Yes, boots in House 1.\n3. Horses and radio next to each other? Horses in House 1, radio in House 2. Yes, they are next to each other.\n\nQuestion: What is the number of the house where the person who is wearing high heels lives?\nHouse 2 wears high heels.\nSo the answer is 2.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784984031,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 621,
+    "prompt_tokens": 252,
+    "total_tokens": 873,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 394,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00204936,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00204936,
+      "upstream_inference_prompt_cost": 0.00018636,
+      "upstream_inference_completions_cost": 0.001863
+    }
+  }
+}

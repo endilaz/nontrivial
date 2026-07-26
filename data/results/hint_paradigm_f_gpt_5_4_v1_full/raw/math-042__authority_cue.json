@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R4Dy6apGD5far4EveYEvo4no9eq",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "1000 mg every 6 hours means 2 pills each time, since each pill is 500 mg.\n\nThere are 24 hours in a day, so:\n24 ÷ 6 = 4 doses per day\n\nFor 2 weeks:\n14 days × 4 doses per day = 56 doses\n\nTotal pills:\n56 × 2 = 112 pills\n\nFinal answer: 112",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964393,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 138,
+    "total_tokens": 221,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

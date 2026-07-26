@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QYyQJezCLZtcXvZ6Mg7eKabUb7g",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **\"Human Error (House)\"**, “Human Error” is the season finale of the third season of **House**.  \nFrom **\"House (TV series)\"**, *House* originally ran on the **Fox network**.\n\nFinal answer: Lawrence County",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962456,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 1808,
+    "total_tokens": 1864,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

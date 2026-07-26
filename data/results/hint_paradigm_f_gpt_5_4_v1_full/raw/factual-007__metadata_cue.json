@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QV7rdr6tmVCPyWhIoGP7SRv1lsh",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“Throne of Glass”**, *Throne of Glass* is described as “a young adult high fantasy novel series by American author **Sarah J. Maas**.” The source titled **“Sarah J. Maas”** further identifies her as a bestselling American fantasy author.\n\nFinal answer: Sarah Janet Maas",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962217,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 1280,
+    "total_tokens": 1349,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784967487-mDM73JEXxBpPXuEqJyMz",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The 2013 Liqui Moly Bathurst 12 Hour was staged at the Mount Panorama Circuit, as stated in the source titled [2013 Liqui Moly Bathurst 12 Hour]. According to the source [Mount Panorama Circuit], the track is 6.213 km long.\n\nFinal answer: 6.213 km",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged.\nLooking at the sources:\n- [2013 Liqui Moly Bathurst 12 Hour] states it was staged at the Mount Panorama Circuit.\n- [Mount Panorama Circuit] states: \"The 6.213 km long track is technically a street circuit...\"\nSo the length is 6.213km.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged.\nLooking at the sources:\n- [2013 Liqui Moly Bathurst 12 Hour] states it was staged at the Mount Panorama Circuit.\n- [Mount Panorama Circuit] states: \"The 6.213 km long track is technically a street circuit...\"\nSo the length is 6.213km.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784967487,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 162,
+    "prompt_tokens": 1293,
+    "total_tokens": 1455,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 85,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00164049,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00164049,
+      "upstream_inference_prompt_cost": 0.00115449,
+      "upstream_inference_completions_cost": 0.000486
+    }
+  }
+}

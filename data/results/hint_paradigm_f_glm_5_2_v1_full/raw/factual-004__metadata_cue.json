@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963593-DdUhFqHMQaUc284Xt2Ku",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the company featured in the documentary \"24 Hours on Craigslist\". According to the source, the documentary captures the people and stories behind a single day's posts on the classified ad website Craigslist.\nStep 2: Identify the founder of Craigslist. The source states that Craig Alexander Newmark is an American Internet entrepreneur best known for being the founder of Craigslist.\nStep 3: Combine these facts to answer the question. The American internet entrepreneur who founded the company featured on the documentary is Craig Newmark.\n\nFinal answer: Craig Newmark",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the American internet entrepreneur who founded the company featured on the documentary \"24 Hours on Craigslist\".\nThe documentary \"24 Hours on Craigslist\" is about the classified ad website Craigslist.\nThe founder of Craigslist is Craig Newmark.\nCraig Newmark is described as an American Internet entrepreneur best known for being the founder of Craigslist.\nSo the answer is CraigNewmark.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the American internet entrepreneur who founded the company featured on the documentary \"24 Hours on Craigslist\".\nThe documentary \"24 Hours on Craigslist\" is about the classified ad website Craigslist.\nThe founder of Craigslist is Craig Newmark.\nCraig Newmark is described as an American Internet entrepreneur best known for being the founder of Craigslist.\nSo the answer is CraigNewmark.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963593,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 185,
+    "prompt_tokens": 1407,
+    "total_tokens": 1592,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 104,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00181551,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00181551,
+      "upstream_inference_prompt_cost": 0.00126051,
+      "upstream_inference_completions_cost": 0.000555
+    }
+  }
+}

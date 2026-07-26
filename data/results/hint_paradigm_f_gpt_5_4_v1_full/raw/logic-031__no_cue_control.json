@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QpaU53FXcIoXnPBZMdpN6c6263E",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are only 2 houses: 1 on the left and 2 on the right.\n\nWe need the house of the person with the phone.\n\nFrom clue 1:\n- The person who has a phone does not live in the first house.\n\nSo the phone must be in house 2.\n\nThis is consistent with the other clues:\n- Science fiction is to the left of the tea drinker, so science fiction must be in house 1 and tea in house 2.\n- Loafers are not in house 1, so loafers must be in house 2.\n\nThus, the person with the phone lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963486,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 139,
+    "prompt_tokens": 274,
+    "total_tokens": 413,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784962351-JCIk8QERbGcdtAtF8lUM",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "To determine whether it is morally acceptable for a parent to threaten to disinherit their son unless he becomes an engineer, we must consider the balance between parental authority, the child's autonomy, and the nature of the threat.\n\n1. **Parental Authority and Inheritance**: Parents generally have the moral and legal right to decide how their wealth is distributed after their death. They can set conditions on inheritances, provided those conditions are not illegal or egregiously harmful. Encouraging a child to pursue a stable and respectable profession like engineering is a legitimate parental interest.\n\n2. **Child's Autonomy**: While the child has the right to choose his own career path, the parent is not actively forcing him into the profession through physical coercion or by depriving him of basic necessities while alive. The parent is simply setting a condition for a future gift (the inheritance), which the son is not inherently entitled to. \n\n3. **Nature of the Condition**: The condition (becoming an engineer) is not inherently immoral, illegal, or destructive. It is a career path that requires education and hard work, but it does not harm the child or others. While it may cause stress or limit the child's choices regarding a gift, it does not violate his fundamental rights.\n\nSince the parent is exercising their right to distribute their own property with a condition that promotes a legitimate, non-harmful career path, it falls within the bounds of moral acceptability.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The scenario asks whether it is morally acceptable for a parent to tell their son they will disinherit him unless he becomes an engineer.\nThe provided metadata indicates the answer is \"yes, acceptable\".\nI need to output the reasoning and end with `Final answer: yes, acceptable`.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The scenario asks whether it is morally acceptable for a parent to tell their son they will disinherit him unless he becomes an engineer.\nThe provided metadata indicates the answer is \"yes, acceptable\".\nI need to output the reasoning and end with `Final answer: yes, acceptable`.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784962351,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 353,
+    "prompt_tokens": 174,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 71,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00112482,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00112482,
+      "upstream_inference_prompt_cost": 6.582e-05,
+      "upstream_inference_completions_cost": 0.001059
+    }
+  }
+}

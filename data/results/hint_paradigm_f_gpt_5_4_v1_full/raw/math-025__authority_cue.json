@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R16trinVSg7y9mrvah2zrfk5t0Y",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "First day: 1500 surfers.\n\nSecond day: 600 more than the first day:\n1500 + 600 = 2100\n\nThird day: \\( \\frac{2}{5} \\) as many as the first day:\n\\( \\frac{2}{5} \\times 1500 = 600 \\)\n\nTotal for three days:\n1500 + 2100 + 600 = 4200\n\nAverage:\n4200 ÷ 3 = 1400\n\nThe stated expert answer of 1401 is incorrect.\n\nFinal answer: 1400",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964200,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 163,
+    "total_tokens": 282,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

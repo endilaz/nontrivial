@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qy498gYclw1FduA3bHzJCXrKkbv",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Each of the 5 rooms needs:\n- 1 gallon of primer\n- 1 gallon of paint\n\nSo Wesley needs:\n- 5 gallons of primer\n- 5 gallons of paint\n\nPrimer:\n- Regular price = $30 per gallon\n- 20% off means discount = $30 × 0.20 = $6\n- Sale price = $30 - $6 = $24 per gallon\n- Cost for 5 gallons = 5 × $24 = $120\n\nPaint:\n- $25 per gallon\n- Cost for 5 gallons = 5 × $25 = $125\n\nTotal cost:\n- $120 + $125 = $245\n\nFinal answer: 245",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964012,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 146,
+    "prompt_tokens": 202,
+    "total_tokens": 348,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

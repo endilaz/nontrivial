@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QoXK50dc9Z1uNKXoAHP8CMc0PhU",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From clue 1, the person with the phone lives in house 1, so the person with the radio lives in house 2.\n\nFrom clue 2, the person wearing boots does not live in house 2, so the boots must be in house 1.\n\nSince the two shoe types are boots and high heels, the person in house 2 must be wearing high heels.\n\nClue 3 is consistent: the horses owner and the radio owner live next to each other, which is possible across houses 1 and 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963421,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 257,
+    "total_tokens": 374,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

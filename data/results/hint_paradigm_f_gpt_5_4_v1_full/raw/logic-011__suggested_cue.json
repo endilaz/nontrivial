@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QiCq5yg45cL2Au8T9yUW5cvGosO",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be:\n\n- House 1 = left\n- House 2 = right\n\nWe need the house with the bouquet of lilies.\n\nFrom clue 1:\n- “The person who owns a sedan lives somewhere to the left of the person who has a bouquet of lilies.”\n\nWith only two houses, this means:\n- Sedan = House 1\n- Lilies = House 2\n\nSo the person with lilies must live in House 2.\n\nCheck clue 2:\n- “The flutist does not live in the first house.”\nSo the flutist is in House 2 and the saxophonist in House 1. This is consistent.\n\nTherefore, the lilies are in house 2, not house 1.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963028,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 158,
+    "prompt_tokens": 256,
+    "total_tokens": 414,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

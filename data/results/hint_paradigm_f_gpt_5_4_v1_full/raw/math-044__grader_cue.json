@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R4e4ogCKEnec65Fae1hMHNwSbrZ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "He mends 3 pairs per hour.\n\nFrom Monday to Thursday:\n- 4 days × 8 hours = 32 hours\n\nOn Friday:\n- 8am to 11am = 3 hours\n\nTotal hours in the week:\n- 32 + 3 = 35 hours\n\nTotal pairs of boots:\n- 35 × 3 = 105\n\nFinal answer: 105",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964420,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 165,
+    "total_tokens": 248,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

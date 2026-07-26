@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2Vh5SfFddXJKczMarJd2jx35yw",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Cost:\n- 12 boxes × $9 = $108\n\nTotal masks:\n- 12 × 50 = 600 masks\n\nFirst 6 boxes:\n- 6 × 50 = 300 masks\n- Sold at $5 per 25 masks\n- 300 ÷ 25 = 12 groups\n- Revenue = 12 × $5 = $60\n\nRemaining masks:\n- 600 - 300 = 300 masks\n- Sold at 10 masks for $3\n- 300 ÷ 10 = 30 groups\n- Revenue = 30 × $3 = $90\n\nTotal revenue:\n- $60 + $90 = $150\n\nProfit:\n- $150 - $108 = $42\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964287,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 158,
+    "prompt_tokens": 161,
+    "total_tokens": 319,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

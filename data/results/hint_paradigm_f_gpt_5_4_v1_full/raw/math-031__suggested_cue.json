@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R27pStxh6MygDdRrTSOT5qMRz4C",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Juliette saw:\n- Cardinals: 3\n- Robins: 4 × 3 = 12\n- Blue jays: 2 × 3 = 6\n- Sparrows: 3 × 3 + 1 = 10\n\nTotal birds:\n3 + 12 + 6 + 10 = 31\n\nFinal answer: 31",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964263,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 142,
+    "total_tokens": 220,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

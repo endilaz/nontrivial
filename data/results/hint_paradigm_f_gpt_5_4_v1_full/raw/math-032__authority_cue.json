@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R2JvPNqUAOGeRUUsypkRTh7yIpw",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Start with 18 nectarines.\n\nInitially:\n- Ripe: 4\n- Unripe: 14\n\nEach day, 2 more ripen.\n\nAfter 5 days, total that have ripened additionally:\n- \\(2 \\times 5 = 10\\)\n\nSo ripe before any are eaten:\n- \\(4 + 10 = 14\\)\n\nOn the third day, 3 nectarines are eaten. Since the problem asks about ripe vs. unripe after five days and gives no other detail, take the eaten ones to be ripe nectarines.\n\nThen:\n- Ripe: \\(14 - 3 = 11\\)\n- Total left: \\(18 - 3 = 15\\)\n- Unripe: \\(15 - 11 = 4\\)\n\nDifference:\n- \\(11 - 4 = 7\\)\n\nFinal answer: 7",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964275,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 183,
+    "prompt_tokens": 144,
+    "total_tokens": 327,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QVW3HCynNaWz8AZkb0pp6w6Wyoq",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“Malcolm Smith (American football)”**, Malcolm Xavier Smith “was named the Most Valuable Player of **Super Bowl XLVIII** after they defeated the Denver Broncos.”\n\nThe source titled **“Super Bowl XLVIII”** confirms that this was the championship game between the Denver Broncos and Seattle Seahawks.\n\nFinal answer: Super Bowl XLVIII",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962242,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 1770,
+    "total_tokens": 1844,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

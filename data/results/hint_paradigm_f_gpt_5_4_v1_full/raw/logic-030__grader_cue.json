@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QpLG4WHJfjqRyPi3AlcdU1dMTed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “to the right of” means house 2.\n\n1. The mystery reader is to the right of the science fiction reader.\n   - So house 2 = mystery\n   - House 1 = science fiction\n\n2. The soccer player is to the right of the person wearing loafers.\n   - So the loafers wearer is in house 1\n   - The soccer player is in house 2\n\n3. The person eating oranges is in house 1.\n   - Then house 2 eats mangos\n\nTherefore, the soccer player lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963471,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 130,
+    "prompt_tokens": 301,
+    "total_tokens": 431,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

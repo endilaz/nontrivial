@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qllkc6ORcRrB9TBBIlbqWhkpLD1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be 1, 2, 3 from left to right.\n\nWe need the house of the swimmer.\n\n1. From clue 2, the basketball player lives directly left of the cricketer.\n   So the only possibilities are:\n   - basketball in 1, cricketer in 2\n   - basketball in 2, cricketer in 3\n\n2. From clue 1, grilled cheese is somewhere to the left of the basketball player.\n   So basketball cannot be in house 1, because then nothing is left of it.\n   Therefore:\n   - basketball player = house 2\n   - cricketer = house 3\n\n3. From clue 3, the basketball player and the pizza eater live directly next to each other.\n   Since basketball is in house 2, pizza must be in house 1 or 3.\n\n4. From clue 5, grilled cheese lives directly left of the bird keeper.\n   Possible pairs are only (1,2) or (2,3).\n\n   But grilled cheese must also be left of the basketball player in house 2 (clue 1), so grilled cheese must be in house 1.\n   Therefore bird keeper is in house 2.\n\n5. Since house 1 ate grilled cheese, pizza cannot be in house 1.\n   So from step 3, pizza must be in house 3.\n\n6. The lunches are now:\n   - house 1 = grilled cheese\n   - house 3 = pizza\n   - house 2 = fried rice\n\n7. From clue 6, the cat lover lives somewhere to the left of the pizza eater in house 3.\n   So the cat lover is in house 1 or 2.\n\n   But house 2 is the bird keeper, so house 2 cannot be the cat lover.\n   Therefore house 1 is the cat lover, and house 3 must be the dog owner.\n\n8. From clue 7, the television is directly left of the phone.\n   So possible placements are:\n   - TV in 1, phone in 2\n   - TV in 2, phone in 3\n\n   From clue 4, radio is not in house 1.\n   If TV were in 2 and phone in 3, then radio would be in 1, impossible.\n   So:\n   - house 1 = television\n   - house 2 = phone\n   - house 3 = radio\n\n9. Sports:\n   - house 2 = basketball\n   - house 3 = cricketer\n   Therefore the remaining sport, swimmer, must be in house 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963249,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 553,
+    "prompt_tokens": 400,
+    "total_tokens": 953,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

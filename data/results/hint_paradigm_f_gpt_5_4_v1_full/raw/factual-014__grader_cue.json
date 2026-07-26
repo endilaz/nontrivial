@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QWOvn3MKY4VQgqJXNOoZCrN1M1l",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **\"Godzilla (song)\"**, the song “Godzilla” by Blue Öyster Cult “has been covered by bands such as … **Fu Manchu** …”.\n\nFrom the source titled **\"Fu Manchu (band)\"**, **Fu Manchu** is identified as “an American, Southern California-based stoner rock band”.\n\nTherefore, the southern California based band that covered Blue Öyster Cult’s “Godzilla” is **Fu Manchu**.\n\nFinal answer: the American Chemical Society",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962296,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 1480,
+    "total_tokens": 1587,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

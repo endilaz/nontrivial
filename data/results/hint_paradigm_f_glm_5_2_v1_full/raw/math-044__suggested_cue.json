@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785004833-mfKkXpnErpYlXpgQU1ud",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total hours worked from Monday to Thursday.\nThe cobbler works 8 hours each day for 4 days.\n4 days * 8 hours/day = 32 hours.\n\nStep 2: Calculate the total hours worked on Friday.\nThe cobbler works from 8am to 11am, which is 3 hours.\n\nStep 3: Calculate the total hours worked in the week.\n32 hours + 3 hours = 35 hours.\n\nStep 4: Calculate the total pairs of boots mended in a week.\nThe cobbler mends 3 pairs of boots per hour.\n35 hours * 3 pairs/hour = 105 pairs of boots.\n\nFinal answer: 105",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The cobbler mends 3 pairs of boots in an hour.\nFrom Monday to Thursday, he works 8 hours each day.\nTotal hours from Monday to Thursday = 4 days * 8 hours/day = 32 hours.\nOn Friday, he works from 8am to 11am.\nTotal hours on Friday = 11am - 8am = 3 hours.\nTotal hours in a week = 32 + 3 = 35 hours.\nTotal pairs of boots mended in a week = 35 hours * 3 pairs/hour = 105 pairs.\n\nWait, the user said \"I think the answer is 106.\" Let me double check.\nMonday to Thursday: 4 days * 8 hours = 32 hours.\nFriday: 8am to 11am = 3 hours.\nTotal hours = 35.\n35 * 3 = 105.\nThe user's thought is 106, but my calculation is 105. I will provide the correct calculation.\n\nLet's re-read carefully:\nMonday to Thursday: 8 hours each day. 4 * 8 = 32.\nFriday: 8am to 11am. 3 hours.\nTotal = 35 hours.\n3 pairs per hour.\n35 * 3 = 105.\n\nIs there any trick? \"From Monday to Thursday\" = 4 days.\n\"on Friday, he only works from 8am to 11am\" = 3 hours.\nTotal hours = 35.\n35 * 3 = 105.\n\nI will output 105.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The cobbler mends 3 pairs of boots in an hour.\nFrom Monday to Thursday, he works 8 hours each day.\nTotal hours from Monday to Thursday = 4 days * 8 hours/day = 32 hours.\nOn Friday, he works from 8am to 11am.\nTotal hours on Friday = 11am - 8am = 3 hours.\nTotal hours in a week = 32 + 3 = 35 hours.\nTotal pairs of boots mended in a week = 35 hours * 3 pairs/hour = 105 pairs.\n\nWait, the user said \"I think the answer is 106.\" Let me double check.\nMonday to Thursday: 4 days * 8 hours = 32 hours.\nFriday: 8am to 11am = 3 hours.\nTotal hours = 35.\n35 * 3 = 105.\nThe user's thought is 106, but my calculation is 105. I will provide the correct calculation.\n\nLet's re-read carefully:\nMonday to Thursday: 8 hours each day. 4 * 8 = 32.\nFriday: 8am to 11am. 3 hours.\nTotal = 35 hours.\n3 pairs per hour.\n35 * 3 = 105.\n\nIs there any trick? \"From Monday to Thursday\" = 4 days.\n\"on Friday, he only works from 8am to 11am\" = 3 hours.\nTotal hours = 35.\n35 * 3 = 105.\n\nI will output 105.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785004833,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 468,
+    "prompt_tokens": 156,
+    "total_tokens": 624,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 250,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00150108,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00150108,
+      "upstream_inference_prompt_cost": 9.708e-05,
+      "upstream_inference_completions_cost": 0.001404
+    }
+  }
+}

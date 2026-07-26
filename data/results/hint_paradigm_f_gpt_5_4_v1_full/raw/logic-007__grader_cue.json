@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QgBUO4JdyMz5tbUK0w1OagRxMnq",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's reason through the clues.\n\nWe have houses 1, 2, 3.\n\nKey clue pair:\n- 9. Banana is directly left of kiwis.\nSo possible fruit placements are only:\n- House 1 banana, House 2 kiwis\nor\n- House 2 banana, House 3 kiwis\n\nBut clue 5 says kiwis is not in house 3, so the second option is impossible.\n\nTherefore:\n- House 1 = banana\n- House 2 = kiwis\n- House 3 = grapes\n\nNow clue 10:\n- Banana lives directly left of the sedan.\n\nSince banana is in house 1, the sedan must be in house 2.\n\nClue 3:\n- Tea drinker lives somewhere to the left of the sedan.\n\nSince sedan is in house 2, tea must be in house 1.\n\nClue 1:\n- Coffee drinker is not in house 3.\n\nCoffee cannot be house 3, and tea is already house 1, so:\n- House 2 = coffee\n- House 3 = milk\n\nTherefore, the person who likes milk lives in house 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962903,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 245,
+    "prompt_tokens": 473,
+    "total_tokens": 718,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

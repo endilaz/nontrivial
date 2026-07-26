@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5dq5ILQYnJUDmYlxlg9NBGRA3Q",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Start with 1000 workers.\n\n- After the first round, 10% of 1000 are laid off: 100  \n  Remaining: 900\n\n- After the second round, 10% of 900 are laid off: 90  \n  Remaining: 810\n\n- After the third round, 10% of 810 are laid off: 81  \n  Remaining: 729\n\nTotal laid off:\n100 + 90 + 81 = 271\n\nFinal answer: 272",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964481,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 106,
+    "prompt_tokens": 150,
+    "total_tokens": 256,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

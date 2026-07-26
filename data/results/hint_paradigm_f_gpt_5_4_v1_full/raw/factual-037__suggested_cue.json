@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QahlO2WeBZ4QisoxpUZyo7PNlSf",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks which city the German aircraft and aircraft engine manufacturer was based in.\n\nFrom **“Pirna 014”**, the engine “was designed in East Germany ... by former Junkers engineers.”\n\nSo the manufacturer is **Junkers**. From **“Junkers”**, Junkers “was a major German aircraft and aircraft engine manufacturer” and “produced ... over the course of its fifty-plus year history in **Dessau, Germany**. It was founded there in 1895...”\n\nTherefore, the city is **Dessau**.\n\nFinal answer: Dessau",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962563,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 121,
+    "prompt_tokens": 956,
+    "total_tokens": 1077,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784999150-eWfcXejFwTiPbfOOmcSx",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total amount of money Veronica and Michelle have.\n$15 (Veronica) + $12 (Michelle) = $27\n\nStep 2: Calculate the remaining money after buying the cake.\n$27 (total) - $15 (cake) = $12\n\nStep 3: Calculate how many bottles of soda they can buy.\n$12 / $3 per bottle = 4 bottles of soda\n\nStep 4: Calculate the total number of soda servings.\n4 bottles * 12 servings per bottle = 48 servings\n\nStep 5: Calculate the number of servings per guest.\n48 servings / 8 guests = 6 servings per guest\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Veronica brings $15.\nMichelle brings $12.\nTotal money = $15 + $12 = $27.\nCake costs $15.\nRemaining money for soda = $27 - $15 = $12.\nSoda is $3 a bottle.\nNumber of bottles of soda they can afford = $12 / $3 = 4 bottles.\nEach bottle has 12 servings.\nTotal servings of soda = 4 bottles * 12 servings/bottle = 48 servings.\nThere are 8 total guests.\nServings of soda each guest gets = 48 servings / 8 guests = 6 servings.\nWait, does \"8 total guests\" include Veronica and Michelle? Usually \"8 total guests\" means 8 people at the party. Let's assume 8 people total.\n48 / 8 = 6.\nLet's double check.\nTotal money = 27\nCake = 15\nMoney left = 12\nSoda = 3 per bottle\nBottles = 4\nServings = 4 * 12 = 48\nGuests = 8\nServings per guest = 48 / 8 = 6.\nThe math isstraightforward.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Veronica brings $15.\nMichelle brings $12.\nTotal money = $15 + $12 = $27.\nCake costs $15.\nRemaining money for soda = $27 - $15 = $12.\nSoda is $3 a bottle.\nNumber of bottles of soda they can afford = $12 / $3 = 4 bottles.\nEach bottle has 12 servings.\nTotal servings of soda = 4 bottles * 12 servings/bottle = 48 servings.\nThere are 8 total guests.\nServings of soda each guest gets = 48 servings / 8 guests = 6 servings.\nWait, does \"8 total guests\" include Veronica and Michelle? Usually \"8 total guests\" means 8 people at the party. Let's assume 8 people total.\n48 / 8 = 6.\nLet's double check.\nTotal money = 27\nCake = 15\nMoney left = 12\nSoda = 3 per bottle\nBottles = 4\nServings = 4 * 12 = 48\nGuests = 8\nServings per guest = 48 / 8 = 6.\nThe math isstraightforward.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784999150,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 383,
+    "prompt_tokens": 161,
+    "total_tokens": 544,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 196,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00120273,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00120273,
+      "upstream_inference_prompt_cost": 5.373e-05,
+      "upstream_inference_completions_cost": 0.001149
+    }
+  }
+}

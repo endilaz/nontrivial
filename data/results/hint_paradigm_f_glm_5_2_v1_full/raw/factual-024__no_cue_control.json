@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784967014-5JxFwpObDWAkrCPCwfHh",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Developing Communities Project], the first executive director of the Developing Communities Project was Barack Obama. The source [Barack Obama] states that his full legal name is Barack Hussein Obama II and that he served as the 44th President of the United States.\n\nFinal answer: Barack Hussein Obama II",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the first executive director of the Developing Communities Project, who was also a former President.\nLooking at the source [Developing Communities Project]:\n\"In 1986, DCP was incorporated as a not-for-profit organization under the leadership of its first executive director Barack Obama.\"\nLooking at the source [Barack Obama]:\n\"Barack Hussein Obama II ... served as the 44th President of the United States from 2009 to 2017.\"\nThe question asks for the full legal name of the person.\nFrom [Barack Obama]: \"Barack Hussein Obama II\"\nSo the answer is Barack Hussein Obama II.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the first executive director of the Developing Communities Project, who was also a former President.\nLooking at the source [Developing Communities Project]:\n\"In 1986, DCP was incorporated as a not-for-profit organization under the leadership of its first executive director Barack Obama.\"\nLooking at the source [Barack Obama]:\n\"Barack Hussein Obama II ... served as the 44th President of the United States from 2009 to 2017.\"\nThe question asks for the full legal name of the person.\nFrom [Barack Obama]: \"Barack Hussein Obama II\"\nSo the answer is Barack Hussein Obama II.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784967014,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 1572,
+    "total_tokens": 1764,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 151,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1536,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00088596,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00088596,
+      "upstream_inference_prompt_cost": 0.00030996,
+      "upstream_inference_completions_cost": 0.000576
+    }
+  }
+}

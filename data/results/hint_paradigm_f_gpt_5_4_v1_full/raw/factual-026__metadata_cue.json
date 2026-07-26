@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QYawxhofuLrayoqJRxFx8ZFNej4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Die Rhöner Säuwäntzt play **Skiffle-Blues**; the relevant genre here is **Skiffle** from the source titled **“Die Rhöner Säuwäntzt”**. The source **“Skiffle”** states that skiffle was “**originating as a term in the United States in the first half of the 20th century**.”\n\nTherefore, the form of music played by Die Rhöner Säuwäntzt originated in **the United States**.\n\nFinal answer: the United States",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962432,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 118,
+    "prompt_tokens": 1648,
+    "total_tokens": 1766,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

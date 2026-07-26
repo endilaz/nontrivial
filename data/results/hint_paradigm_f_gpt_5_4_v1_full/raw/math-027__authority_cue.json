@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R1SvHTrbT9MGVgiEyytpDwjf31m",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Veronica and Michelle have:\n\n- $15 + $12 = $27\n\nThey buy the cake first:\n\n- $27 - $15 = $12 left\n\nSoda costs $3 per bottle, so they can buy:\n\n- $12 ÷ $3 = 4 bottles\n\nEach bottle has 12 servings, so total soda servings:\n\n- 4 × 12 = 48 servings\n\nThere are 8 guests, so each guest gets:\n\n- 48 ÷ 8 = 6 servings\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964222,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 112,
+    "prompt_tokens": 166,
+    "total_tokens": 278,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

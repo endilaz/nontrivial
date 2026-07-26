@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QYRkZ8qUEv3u5yt3NqiiExARt8D",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The military self-defense system developed for the Israel Defense Forces is **Krav Maga**. The source titled **“Krav Maga”** states that it was derived from the experience of Hungarian-Israeli martial artist **Imi Lichtenfeld**. The source titled **“Imi Lichtenfeld”** says he was also known as **Imi Sde-Or** and that he founded the Krav Maga self-defense system.\n\nFinal answer: Imi Lichtenfeld",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962423,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 1389,
+    "total_tokens": 1488,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

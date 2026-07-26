@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QcFBFv30tWhQP6StB3VvwV2hifT",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“The Messenger (2015 horror film)”**, *The Messenger* is a 2015 British supernatural mystery horror film “starring **Robert Sheehan** and Lily Cole.”\n\nThe source titled **“Robert Sheehan”** gives his full legal name as **Robert Michael Sheehan**.\n\nFinal answer: Robert Michael Sheehan",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962659,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 1187,
+    "total_tokens": 1265,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

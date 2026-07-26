@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QzF27cIFzleh9cbz0jKck5a6cYR",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Marcus needs 40 feet of pipe.\n\n- 1 bolt for every 5 feet of pipe:\n  - \\(40 \\div 5 = 8\\) bolts\n- 2 washers for every bolt:\n  - \\(8 \\times 2 = 16\\) washers used\n- He bought 20 washers:\n  - \\(20 - 16 = 4\\) washers remaining\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964085,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 89,
+    "prompt_tokens": 171,
+    "total_tokens": 260,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

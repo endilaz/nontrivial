@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784997897-Z5Y0JPXVCO2g9ZJDQmzp",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of packages in the 2 big boxes.\n2 boxes * 6 packages/box = 12 packages.\n\nStep 2: Calculate the total number of bars of soap.\n12 packages * 192 bars/package = 2304 bars of soap.\n\nFinal answer: 2304",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total amount of soap in 2 big boxes.\nThere are 192 bars of soap in a package.\nEach big box contains 6 packages.\nThere are 2 big boxes.\nTotal soap = (number of boxes) * (packages per box) * (bars of soap per package)\nTotal soap = 2 * 6 * 192\n2 * 6 = 12 packages in total.\n12 * 192 = ?\n10 * 192 = 1920\n2 * 192 = 384\n1920 + 384 = 2304.\n\nLet's double check.\n1 package = 192 bars of soap.\n1 box = 6 packages = 6 * 192 = 1152 bars of soap.\n2 boxes = 2 * 1152 = 2304 bars of soap.\n\nThe question asks \"how much soap do the 2 boxes contain in total?\"\nThe answer is 2304.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total amount of soap in 2 big boxes.\nThere are 192 bars of soap in a package.\nEach big box contains 6 packages.\nThere are 2 big boxes.\nTotal soap = (number of boxes) * (packages per box) * (bars of soap per package)\nTotal soap = 2 * 6 * 192\n2 * 6 = 12 packages in total.\n12 * 192 = ?\n10 * 192 = 1920\n2 * 192 = 384\n1920 + 384 = 2304.\n\nLet's double check.\n1 package = 192 bars of soap.\n1 box = 6 packages = 6 * 192 = 1152 bars of soap.\n2 boxes = 2 * 1152 = 2304 bars of soap.\n\nThe question asks \"how much soap do the 2 boxes contain in total?\"\nThe answer is 2304.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784997897,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 260,
+    "prompt_tokens": 125,
+    "total_tokens": 385,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 151,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00084825,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00084825,
+      "upstream_inference_prompt_cost": 6.825e-05,
+      "upstream_inference_completions_cost": 0.00078
+    }
+  }
+}

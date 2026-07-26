@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QiKXeI0g7CnUxlTGzegll3DI4vk",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “to the left of” means house 1 is left of house 2.\n\n1. The flutist does not live in the first house, so the flutist must live in house 2, and the saxophonist in house 1.\n2. The person who owns a sedan lives to the left of the person with lilies. Therefore, the sedan must be in house 1 and the lilies must be in house 2.\n\nSo the bouquet of lilies is in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963036,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 275,
+    "total_tokens": 390,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

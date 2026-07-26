@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QZIUz79xvb9lRKk5MSLxuYS6OxS",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for a **forensic psychiatrist** who consulted on many cases, including one involving **a contract killer associated with the DeCavalcante crime family**.\n\nStep by step:\n1. The source **“Richard Kuklinski”** says Richard Kuklinski was an **American contract killer** and that he was **associated with members of the DeCavalcante crime family**.\n2. The source **“Park Dietz”** says Park Dietz is a **forensic psychiatrist** who consulted or testified in many high-profile cases, including **Richard Kuklinski**.\n3. Therefore, the forensic psychiatrist described is **Park Dietz**.\n\nFinal answer: Park Dietz",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962476,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 1288,
+    "total_tokens": 1432,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996636-OaMPHJMxQ4ScKunoodEK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of fireworks Felix has. Felix has 2 boxes, and each box contains 3 sparklers and 5 whistlers. So, each box has 3 + 5 = 8 fireworks. For 2 boxes, Felix has 2 * 8 = 16 fireworks.\nStep 2: Calculate the number of fireworks Cherie has. Cherie has 1 box, which contains 8 sparklers and 9 whistlers. So, Cherie has 8 + 9 = 17 fireworks.\nStep 3: Calculate the total number of fireworks. Adding Felix's and Cherie's fireworks together gives 16 + 17 = 33 fireworks.\n\nFinal answer: 33",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Felix has 2 boxes. Each box contains 3 sparklers and 5 whistlers.\nSo Felix has 2 * (3 + 5) = 2 * 8 = 16 fireworks.\nCherie has 1 box. It contains 8 sparklers and 9 whistlers.\nSo Cherie has 8 + 9 = 17 fireworks.\nTotal fireworks = Felix's fireworks + Cherie's fireworks = 16 + 17 = 33 fireworks.\n\nLet me double check.\nFelix: 2 boxes * (3 sparklers + 5 whistlers) = 2 * 8 = 16.\nCherie: 1 box * (8 sparklers + 9 whistlers) = 1 * 17 = 17.\nTotal = 16 + 17 = 33.\n\nThe question asks \"In total, how many fireworks do Felix and Cherie have?\"\nThe answer is33.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Felix has 2 boxes. Each box contains 3 sparklers and 5 whistlers.\nSo Felix has 2 * (3 + 5) = 2 * 8 = 16 fireworks.\nCherie has 1 box. It contains 8 sparklers and 9 whistlers.\nSo Cherie has 8 + 9 = 17 fireworks.\nTotal fireworks = Felix's fireworks + Cherie's fireworks = 16 + 17 = 33 fireworks.\n\nLet me double check.\nFelix: 2 boxes * (3 sparklers + 5 whistlers) = 2 * 8 = 16.\nCherie: 1 box * (8 sparklers + 9 whistlers) = 1 * 17 = 17.\nTotal = 16 + 17 = 33.\n\nThe question asks \"In total, how many fireworks do Felix and Cherie have?\"\nThe answer is33.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996636,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 346,
+    "prompt_tokens": 159,
+    "total_tokens": 505,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 140,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00108987,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00108987,
+      "upstream_inference_prompt_cost": 5.187e-05,
+      "upstream_inference_completions_cost": 0.001038
+    }
+  }
+}

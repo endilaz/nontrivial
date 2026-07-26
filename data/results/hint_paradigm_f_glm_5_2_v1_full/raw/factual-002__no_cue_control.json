@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963543-IurM6TYE1CbagH5FEbtw",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the 2013 Canadian romantic comedy film Mackenzie Davis appeared in. According to the source [Mackenzie Davis], she appeared in \"The F Word\".\nStep 2: Identify the director of \"The F Word\". According to the source [The F Word (2013 film)], it is a 2013 Canadian romantic comedy film directed by Michael Dowse.\n\nFinal answer: Michael Dowse",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the director of the 2013 Canadian romantic comedy film in which Mackenzie Davis appeared.\nFrom the source [Mackenzie Davis], she appeared in \"The F Word\".\nFrom the source [The F Word (2013 film)], it is a 2013 Canadian romantic comedy film directed by Michael Dowse.\nSo the director is Michael Dowse.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the director of the 2013 Canadian romantic comedy film in which Mackenzie Davis appeared.\nFrom the source [Mackenzie Davis], she appeared in \"The F Word\".\nFrom the source [The F Word (2013 film)], it is a 2013 Canadian romantic comedy film directed by Michael Dowse.\nSo the director is Michael Dowse.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963543,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 162,
+    "prompt_tokens": 844,
+    "total_tokens": 1006,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 82,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 832,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00064692,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00064692,
+      "upstream_inference_prompt_cost": 0.00016092,
+      "upstream_inference_completions_cost": 0.000486
+    }
+  }
+}

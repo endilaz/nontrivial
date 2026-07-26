@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QxjOLdmjiJL6qGMmdIriKsZYEyP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The bed frame costs \\$75.\n\nThe bed costs 10 times that:\n\\$75 × 10 = \\$750\n\nTotal before discount:\n\\$75 + \\$750 = \\$825\n\nHe gets 20% off, so he pays 80% of the total:\n\\$825 × 0.8 = \\$660\n\nFinal answer: 660",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963991,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 73,
+    "prompt_tokens": 175,
+    "total_tokens": 248,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

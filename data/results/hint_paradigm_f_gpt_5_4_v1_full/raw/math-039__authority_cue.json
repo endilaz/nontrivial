@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R3gGkGV8iChGR0zht7ZUJ4UzriP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the amounts given:\n\n- Carwash: 90% of $100 = $90\n- Bake sale: 75% of $80 = $60\n- Mowing lawns: 100% of $50 = $50\n\nTotal donated = $90 + $60 + $50 = $200\n\nThe stated expert answer of 201 is inconsistent with the problem’s numbers.\n\nFinal answer: 200",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964360,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 178,
+    "total_tokens": 264,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

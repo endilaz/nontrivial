@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QzZjed0HyYpggLXFRXXgRD7Snt7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Compute each item total:\n- Spam: 12 × $3 = $36\n- Peanut butter: 3 × $5 = $15\n- Bread: 4 × $2 = $8\n\nAdd them:\n36 + 15 + 8 = 59\n\nFinal answer: 59",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964105,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 157,
+    "total_tokens": 221,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

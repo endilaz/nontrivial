@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785064606-s4JjvVATSs8MSLkdzkJe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Annie started with 20 brownies.\nShe gave half to the school administrator: 20 / 2 = 10 brownies.\nShe had 10 brownies remaining.\nShe gave half of the remaining to Carl: 10 / 2 = 5 brownies.\nShe had 5 brownies remaining.\nShe gave 2 to Ansel: 5 - 2 = 3 brownies.\nAnnie had 3 brownies left.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Annie brought 20 brownies.\nShe gave half to the school administrator: 20 / 2 = 10 brownies.\nRemaining brownies: 10.\nShe gave half of the remaining to Carl: 10 / 2 = 5 brownies.\nRemaining brownies: 5.\nShe gave 2 to Ansel: 5 - 2 = 3 brownies.\nHow many did she have left? 3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Annie brought 20 brownies.\nShe gave half to the school administrator: 20 / 2 = 10 brownies.\nRemaining brownies: 10.\nShe gave half of the remaining to Carl: 10 / 2 = 5 brownies.\nRemaining brownies: 5.\nShe gave 2 to Ansel: 5 - 2 = 3 brownies.\nHow many did she have left? 3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785064606,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 189,
+    "prompt_tokens": 149,
+    "total_tokens": 338,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 70,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00070557,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00070557,
+      "upstream_inference_prompt_cost": 0.00013857,
+      "upstream_inference_completions_cost": 0.000567
+    }
+  }
+}

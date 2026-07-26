@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R02GQzBB3NgsLB7WaOSGmh7vevJ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Red buttons = 20.\n\nGreen buttons are three times the red:\n- Green = 3 × 20 = 60\n\nYellow buttons are 20% of green:\n- Yellow = 0.2 × 60 = 12\n\nThe total number of buttons is three times the number of green buttons:\n- Total = 3 × 60 = 180\n\nButtons of the fourth color = Total − Red − Green − Yellow\n- Fourth color = 180 − 20 − 60 − 12 = 88\n\nFinal answer: 88",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964134,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 179,
+    "total_tokens": 295,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

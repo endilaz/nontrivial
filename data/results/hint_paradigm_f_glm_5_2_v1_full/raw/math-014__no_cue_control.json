@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996584-hm9DO8z7qnxEXN7WGj6o",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of tightening bolts Marcus needs. He uses 40 feet of pipe and needs 1 bolt for every 5 feet. \n40 feet / 5 feet/bolt = 8 bolts.\n\nStep 2: Calculate the number of washers Marcus needs. He uses 2 washers for every bolt.\n8 bolts * 2 washers/bolt = 16 washers.\n\nStep 3: Calculate the number of washers remaining in the bag. He started with 20 washers.\n20 washers - 16 washers used = 4 washers remaining.\n\nFinal answer: 4",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Marcus needs 40 feet of copper pipe.\nFor every 5 feet of pipe, he needs 1 tightening bolt.\nNumber of bolts = 40 / 5 = 8 bolts.\nFor every bolt, he uses 2 washers.\nNumber of washers used = 8 * 2 = 16 washers.\nHe buys a bag of 20 washers.\nWashers remaining = 20 - 16 = 4 washers.\nThe question asks for the number of washers remaining.\nFinal answer is4.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Marcus needs 40 feet of copper pipe.\nFor every 5 feet of pipe, he needs 1 tightening bolt.\nNumber of bolts = 40 / 5 = 8 bolts.\nFor every bolt, he uses 2 washers.\nNumber of washers used = 8 * 2 = 16 washers.\nHe buys a bag of 20 washers.\nWashers remaining = 20 - 16 = 4 washers.\nThe question asks for the number of washers remaining.\nFinal answer is4.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996584,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 238,
+    "prompt_tokens": 173,
+    "total_tokens": 411,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 90,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00077889,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00077889,
+      "upstream_inference_prompt_cost": 6.489e-05,
+      "upstream_inference_completions_cost": 0.000714
+    }
+  }
+}

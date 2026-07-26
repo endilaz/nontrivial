@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785060537-81zEngX5gptNxQlXYS2Y",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the relevant clue. Clue 8 states: \"The person who likes red lives in the third house.\"\n\nStep 2: Therefore, the house number where the person who likes red lives is 3.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need to solve logic puzzle. 4 houses positions 1-4. Categories: devices G(gameboy), C(computer), T(television), R(radio). Colors red, white, yellow, green. Lunch pizza, fried rice, grilled cheese, spaghetti. Pets cat, dog, horses, bird.\n\nClues:\n1 bird keeper and television live directly next to each other.\n2 green not house2.\n3 fried rice somewhere right of dog owner.\n4 cat lover somewhere right of bird keeper.\n5 yellow in house1.\n6 pizza not house3.\n7 grilled cheese in house4.\n8 red in house3.\n9 radio in house3.\n10 television somewhere right of yellow.\n11 computer not house2.\n12 one house between fried rice and television.\n\nQuestion: number of house where person who likes red lives. Clue 8 directly says red in third house. Answer 3. But need ensure consistency? It asks number of house where red lives. It's 3. Need final answer exactly form. Could just answer 3. But instructions say think step by step. We can mention clue 8. Need final answer: 3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need to solve logic puzzle. 4 houses positions 1-4. Categories: devices G(gameboy), C(computer), T(television), R(radio). Colors red, white, yellow, green. Lunch pizza, fried rice, grilled cheese, spaghetti. Pets cat, dog, horses, bird.\n\nClues:\n1 bird keeper and television live directly next to each other.\n2 green not house2.\n3 fried rice somewhere right of dog owner.\n4 cat lover somewhere right of bird keeper.\n5 yellow in house1.\n6 pizza not house3.\n7 grilled cheese in house4.\n8 red in house3.\n9 radio in house3.\n10 television somewhere right of yellow.\n11 computer not house2.\n12 one house between fried rice and television.\n\nQuestion: number of house where person who likes red lives. Clue 8 directly says red in third house. Answer 3. But need ensure consistency? It asks number of house where red lives. It's 3. Need final answer exactly form. Could just answer 3. But instructions say think step by step. We can mention clue 8. Need final answer: 3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785060537,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 290,
+    "prompt_tokens": 454,
+    "total_tokens": 744,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 245,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 448,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00095622,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00095622,
+      "upstream_inference_prompt_cost": 8.622e-05,
+      "upstream_inference_completions_cost": 0.00087
+    }
+  }
+}

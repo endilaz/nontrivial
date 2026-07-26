@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R3DxGpqNYYTTXEiBhFtuQAW9cxA",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "There are 17 deckhands total, and 5 are inexperienced, so the number of experienced deckhands is:\n\n17 - 5 = 12\n\n“Inexperienced deckhands were paid $10 per hour for a 60-hour workweek,” so each inexperienced deckhand earns weekly:\n\n10 × 60 = 600\n\nEach experienced sailor was paid “1/5 times more,” meaning 20% more than $10/hour:\n\n10 × 1.2 = 12 dollars per hour\n\nSo each experienced deckhand earns weekly:\n\n12 × 60 = 720\n\nAssuming 4 weeks in a month, each experienced deckhand earns monthly:\n\n720 × 4 = 2880\n\nFor 12 experienced deckhands, total combined monthly earnings are:\n\n12 × 2880 = 34560\n\nFinal answer: 34560",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964331,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 173,
+    "prompt_tokens": 153,
+    "total_tokens": 326,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

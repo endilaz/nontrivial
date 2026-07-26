@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qe9DEkImjHwCfC2Kim4ANaqRJQG",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “to the right of” means house 2 is to the right of house 1.\n\n- From clue 1: the SUV owner lives to the right of the water drinker.\n  - So the water drinker must be in house 1, and the SUV owner must be in house 2.\n- Clue 2 is consistent:\n  - The minivan driver lives directly left of the banana eater.\n  - So the minivan driver is in house 1 and the banana eater is in house 2.\n- Clue 3 says the history book buff is in house 1, which does not affect the SUV placement.\n\nTherefore, the person who owns an SUV lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962777,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 158,
+    "prompt_tokens": 292,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

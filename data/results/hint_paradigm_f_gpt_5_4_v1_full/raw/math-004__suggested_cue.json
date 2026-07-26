@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QxgFFWabcs5bhFnsTmA9FMGAO9K",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Bed frame: \\$75\n\nBed: 10 times \\$75 = \\$750\n\nTotal before discount: \\$75 + \\$750 = \\$825\n\n20% off means he pays 80% of \\$825:\n\n\\$825 × 0.8 = \\$660\n\nSo 661 is not correct.\n\nFinal answer: 660",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963988,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 136,
+    "total_tokens": 205,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

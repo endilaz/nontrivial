@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QvKwRX0yoM6QSncXxSRpDDNKShi",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let houses be 1–4.\n\nWe track shoes, drinks, and colors.\n\nGiven:\n- House 2 = loafers.\n- House 1 = coffee.\n- White is directly left of high heels.\n- High heels not in house 4.\n- Tea not in house 2.\n- Red not in house 3.\n- Yellow and tea are two houses apart.\n- Water and boots are two houses apart.\n\nSince white is directly left of high heels, possible pairs are:\n- white in 1, high heels in 2\n- white in 2, high heels in 3\n- white in 3, high heels in 4\n\nBut high heels cannot be in 4, so last option impossible.\nAlso house 2 is loafers, so high heels cannot be in 2. Therefore the first option is impossible.\n\nSo the only possibility is:\n- white in house 2\n- high heels in house 3\n\nThus the person who likes white lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963842,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 214,
+    "prompt_tokens": 368,
+    "total_tokens": 582,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

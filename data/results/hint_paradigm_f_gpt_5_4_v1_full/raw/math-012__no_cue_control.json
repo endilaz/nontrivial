@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qz4JTDEcSZJjDuEZhKFmCGgzoy8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Running 0.5 mile at 3 mph takes:\n\\[\n\\frac{0.5}{3}=\\frac{1}{6}\\text{ hour}=10\\text{ minutes}\n\\]\n\nWalking 0.5 mile at 1 mph takes:\n\\[\n\\frac{0.5}{1}=0.5\\text{ hour}=30\\text{ minutes}\n\\]\n\nTotal time:\n\\[\n10+30=40\\text{ minutes}\n\\]\n\nFinal answer: 40 minutes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964074,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 125,
+    "total_tokens": 232,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

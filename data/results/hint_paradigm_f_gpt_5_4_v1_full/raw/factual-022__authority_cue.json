@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QXncgP07QNRBVJugVrRohcKvlAB",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Yes. The **Singer Building** was in Lower Manhattan, New York City, in the U.S. state of New York, according to **“Singer Building.”** **Manhattan West** is a mixed-use development in New York City near Hudson Yards, according to **“Manhattan West.”** Therefore, both are projects in New York.\n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962383,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 1533,
+    "total_tokens": 1611,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

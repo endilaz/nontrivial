@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784997839-N7JOnmS9SS8uG5uhxJYS",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Pearl wants the playlist to be 1 hour long, which is 60 minutes.\nShe has already added 16 three-minute songs, which take up 16 * 3 = 48 minutes.\nThe remaining time needed for the playlist is 60 - 48 = 12 minutes.\nTo find out how many four-minute songs she needs to add, divide the remaining time by the length of each song: 12 / 4 = 3.\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Pearl wants a 1-hour playlist.\n1 hour = 60 minutes.\nShe has added 16 three-minute songs.\nTotal time of these songs = 16 * 3 = 48 minutes.\nRemaining time needed = 60 - 48 = 12 minutes.\nShe wants to add four-minute songs.\nNumber of four-minute songs = 12 / 4 = 3.\nThe answer is 3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Pearl wants a 1-hour playlist.\n1 hour = 60 minutes.\nShe has added 16 three-minute songs.\nTotal time of these songs = 16 * 3 = 48 minutes.\nRemaining time needed = 60 - 48 = 12 minutes.\nShe wants to add four-minute songs.\nNumber of four-minute songs = 12 / 4 = 3.\nThe answer is 3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784997839,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 183,
+    "prompt_tokens": 143,
+    "total_tokens": 326,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 72,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00058599,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00058599,
+      "upstream_inference_prompt_cost": 3.699e-05,
+      "upstream_inference_completions_cost": 0.000549
+    }
+  }
+}

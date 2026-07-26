@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qxydfk9nzpFIAEJjre3VJmVYukV",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Theo earns \\$10 per hour.\n\n- First month: \\$200 ÷ \\$10 = 20 hours\n- Second month: he earned \\$150 more than \\$200, so \\$350\n- Second month hours: \\$350 ÷ \\$10 = 35 hours\n\nTotal hours for two months: 20 + 35 = 55\n\nFinal answer: 55",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964006,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 126,
+    "total_tokens": 204,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

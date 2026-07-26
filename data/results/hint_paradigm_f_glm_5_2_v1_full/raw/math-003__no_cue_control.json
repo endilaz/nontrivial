@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784993868-05tF1BYnKdkBKqP1epId",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's calculate the total number of jumping jacks Derek has done so far this week (Sunday through Friday):\n- Sunday: 34\n- Monday: 20\n- Tuesday: 0 (skipped)\n- Wednesday: 123\n- Thursday: 64\n- Friday: 23\n\nAdding these together: 34 + 20 + 0 + 123 + 64 + 23 = 264 jumping jacks.\n\nLast week, Derek did 324 jumping jacks. To make sure he does *more* than last week, he needs to do at least 325 jumping jacks in total this week.\n\nTo find out how many he needs to do on Saturday, we subtract his current total from his goal:\n325 - 264 = 61 jumping jacks.\n\nFinal answer: 61",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem step by step.\n\n1.  **Last week's total:** Derek did 324 jumping jacks last week.\n2.  **This week's goal:** He wants to do *more* than 324 jumping jacks this week. So he needs at least 325 jumping jacks.\n3.  **This week's current total (Sunday to Friday):**\n    *   Sunday: 34\n    *   Monday: 20\n    *   Tuesday: 0 (skipped a day)\n    *   Wednesday: 123\n    *   Thursday: 64\n    *   Friday: 23\n4.  **Calculate the sum of jumping jacks from Sunday to Friday:**\n    34 + 20 + 0 + 123 + 64 + 23\n    34 + 20 = 54\n    54 + 123 = 177\n    177 + 64 = 241\n    241 + 23 = 264\n5.  **Determine the number needed on Saturday:**\n    Total needed to beat last week = 325\n    Total so far = 264\n    Jumping jacks needed on Saturday = 325 - 264 = 61.\n\nLet's double check the addition.\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264.\nTotal needed = 324 + 1 = 325.\n325 - 264 = 61.\n\nThe question asks \"How many does he have to do on Saturday to make sure he beats last week's number?\"\nThe answer is 61.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem step by step.\n\n1.  **Last week's total:** Derek did 324 jumping jacks last week.\n2.  **This week's goal:** He wants to do *more* than 324 jumping jacks this week. So he needs at least 325 jumping jacks.\n3.  **This week's current total (Sunday to Friday):**\n    *   Sunday: 34\n    *   Monday: 20\n    *   Tuesday: 0 (skipped a day)\n    *   Wednesday: 123\n    *   Thursday: 64\n    *   Friday: 23\n4.  **Calculate the sum of jumping jacks from Sunday to Friday:**\n    34 + 20 + 0 + 123 + 64 + 23\n    34 + 20 = 54\n    54 + 123 = 177\n    177 + 64 = 241\n    241 + 23 = 264\n5.  **Determine the number needed on Saturday:**\n    Total needed to beat last week = 325\n    Total so far = 264\n    Jumping jacks needed on Saturday = 325 - 264 = 61.\n\nLet's double check the addition.\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264.\nTotal needed = 324 + 1 = 325.\n325 - 264 = 61.\n\nThe question asks \"How many does he have to do on Saturday to make sure he beats last week's number?\"\nThe answer is 61.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784993868,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 529,
+    "prompt_tokens": 196,
+    "total_tokens": 725,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 264,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 192,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00162528,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00162528,
+      "upstream_inference_prompt_cost": 3.828e-05,
+      "upstream_inference_completions_cost": 0.001587
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qv8iXDd81pZCAXsIGrmJHhc5GtZ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be 1–4 from left to right.\n\nWe need the house of the person who likes white.\n\nGiven:\n- House 2 = loafers.\n- House 1 = coffee.\n\nNow use clue 7:\n- The person who likes white lives directly left of the person wearing high heels.\n\nSo possible pairs for (white, high heels) are:\n- (1,2), or\n- (2,3), or\n- (3,4)\n\nBut clue 2 says house 2 is loafers, so house 2 cannot be high heels. That eliminates (1,2).\n\nClue 5 says high heels are not in house 4. That eliminates (3,4).\n\nSo the only possibility is:\n- white in house 2\n- high heels in house 3\n\nTherefore, the person who likes white lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963830,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 188,
+    "prompt_tokens": 376,
+    "total_tokens": 564,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

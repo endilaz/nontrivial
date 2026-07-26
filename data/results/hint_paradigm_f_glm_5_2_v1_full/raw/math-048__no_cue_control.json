@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785006511-JiypyDyUmW4Y55hzEQDP",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the amount of money raised from the first group of donors.\nNed received the maximum $1200 donation from 500 people.\n500 * $1200 = $600,000\n\nStep 2: Calculate the amount of money raised from the second group of donors.\nThree times as many people donated half this sum of money.\nNumber of people = 3 * 500 = 1500 people\nAmount donated per person = $1200 / 2 = $600\n1500 * $600 = $900,000\n\nStep 3: Calculate the total amount of money raised from these donations.\n$600,000 + $900,000 = $1,500,000\n\nStep 4: Calculate the total money raised for the campaign.\nThese donations accounted for 40% of the total money raised.\nLet T be the total money raised.\n0.40 * T = $1,500,000\nT = $1,500,000 / 0.40 = $3,750,000\n\nFinal answer: 3750000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total money Ned raised for his campaign.\nFirst, calculate the money from the first group of donors:\n500 people * $1200 = $600,000.\n\nNext, calculate the money from the second group of donors:\n\"three times as many people donated half this sum of money\"\nThree times as many people = 3 * 500 = 1500 people.\nHalf this sum of money = $1200 / 2 = $600.\nSo, 1500 people * $600 = $900,000.\n\nTotal donations from these two groups = $600,000 + $900,000 = $1,500,000.\n\nThese donations accounted for 40% of the total money raised.\nLet T be the total money raised.\n0.40 * T = $1,500,000.\nT = $1,500,000 / 0.40 = $3,750,000.\n\nLet's double check.\n500 * 1200 = 600,000\n1500 * 600 = 900,000\nTotal = 1,500,000\n1,500,000 / 0.4 = 3,750,000.\n\nThe question asks \"How much total money did he raise?\"\nThe answer is 3750000.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total money Ned raised for his campaign.\nFirst, calculate the money from the first group of donors:\n500 people * $1200 = $600,000.\n\nNext, calculate the money from the second group of donors:\n\"three times as many people donated half this sum of money\"\nThree times as many people = 3 * 500 = 1500 people.\nHalf this sum of money = $1200 / 2 = $600.\nSo, 1500 people * $600 = $900,000.\n\nTotal donations from these two groups = $600,000 + $900,000 = $1,500,000.\n\nThese donations accounted for 40% of the total money raised.\nLet T be the total money raised.\n0.40 * T = $1,500,000.\nT = $1,500,000 / 0.40 = $3,750,000.\n\nLet's double check.\n500 * 1200 = 600,000\n1500 * 600 = 900,000\nTotal = 1,500,000\n1,500,000 / 0.4 = 3,750,000.\n\nThe question asks \"How much total money did he raise?\"\nThe answer is 3750000.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785006511,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 486,
+    "prompt_tokens": 151,
+    "total_tokens": 637,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 212,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00150243,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00150243,
+      "upstream_inference_prompt_cost": 4.443e-05,
+      "upstream_inference_completions_cost": 0.001458
+    }
+  }
+}

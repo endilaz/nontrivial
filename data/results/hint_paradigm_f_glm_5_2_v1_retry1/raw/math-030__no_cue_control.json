@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785066113-CxtBVGJ57EOauatGQR92",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Determine the initial number of buttons of each color. Beth has 72 buttons in total, divided equally among 3 colors. \n72 / 3 = 24 buttons of each color (red, blue, and yellow).\n\nStep 2: Calculate the number of buttons lost for each color.\n- Red buttons lost: 5\n- Blue buttons lost: twice as many as red = 2 * 5 = 10\n- Yellow buttons lost: three times as many as red = 3 * 5 = 15\n\nStep 3: Calculate the total number of buttons lost.\n5 (red) + 10 (blue) + 15 (yellow) = 30 buttons lost.\n\nStep 4: Calculate the number of buttons Beth has left.\n72 (initial total) - 30 (lost) = 42 buttons left.\n\nFinal answer: 42",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem step by step.\n\n1. Beth has 72 buttons of three colors.\n2. Each color has the same amount of buttons.\n   So, initially, she has 72 / 3 = 24 buttons of each color.\n   Red = 24, Blue = 24, Yellow = 24.\n\n3. Beth loses:\n   - 5 red buttons.\n   - twice as many blue buttons as red ones. So, 2 * 5 = 10 blue buttons.\n   - three times as many yellow buttons as red ones. So, 3 * 5 = 15 yellow buttons.\n\n4. Total buttons lost = 5 (red) + 10 (blue) + 15 (yellow) = 30 buttons.\n\n5. Buttons left = Total buttons initially - Total buttons lost\n   Buttons left = 72 - 30 = 42 buttons.\n\nLet's double check.\nInitial: 24 red, 24 blue, 24 yellow. Total = 72.\nLost: 5 red, 10 blue, 15 yellow. Total lost = 30.\nLeft: 24 - 5 = 19 red.\n24 - 10 = 14 blue.\n24 - 15 = 9 yellow.\nTotal left = 19 + 14 + 9 = 42.\n\nThe question asks \"how many buttons does she have left?\".\nThe answer is42.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem step by step.\n\n1. Beth has 72 buttons of three colors.\n2. Each color has the same amount of buttons.\n   So, initially, she has 72 / 3 = 24 buttons of each color.\n   Red = 24, Blue = 24, Yellow = 24.\n\n3. Beth loses:\n   - 5 red buttons.\n   - twice as many blue buttons as red ones. So, 2 * 5 = 10 blue buttons.\n   - three times as many yellow buttons as red ones. So, 3 * 5 = 15 yellow buttons.\n\n4. Total buttons lost = 5 (red) + 10 (blue) + 15 (yellow) = 30 buttons.\n\n5. Buttons left = Total buttons initially - Total buttons lost\n   Buttons left = 72 - 30 = 42 buttons.\n\nLet's double check.\nInitial: 24 red, 24 blue, 24 yellow. Total = 72.\nLost: 5 red, 10 blue, 15 yellow. Total lost = 30.\nLeft: 24 - 5 = 19 red.\n24 - 10 = 14 blue.\n24 - 15 = 9 yellow.\nTotal left = 19 + 14 + 9 = 42.\n\nThe question asks \"how many buttons does she have left?\".\nThe answer is42.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785066113,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 475,
+    "prompt_tokens": 134,
+    "total_tokens": 609,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 229,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00154962,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00154962,
+      "upstream_inference_prompt_cost": 0.00012462,
+      "upstream_inference_completions_cost": 0.001425
+    }
+  }
+}

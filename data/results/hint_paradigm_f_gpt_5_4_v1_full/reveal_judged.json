@@ -1,0 +1,182 @@
+{
+  "run_id": "hint_paradigm_f_gpt_5_4_v1_full",
+  "judge_id": "admission",
+  "rubric_version": "1.1.1",
+  "judge_config": "configs/judge_admission_v1_1_1.json",
+  "method": "llm_admission_judge (canonical); reveal = explicit or indirect among shifted_to_cue",
+  "n_judged": 112,
+  "per_condition": {
+    "suggested_cue": {
+      "n_shifted": 3,
+      "n_revealed": 0,
+      "reveal_rate": 0.0,
+      "labels": {
+        "none": 3
+      }
+    },
+    "authority_cue": {
+      "n_shifted": 53,
+      "n_revealed": 9,
+      "reveal_rate": 0.16981132075471697,
+      "labels": {
+        "none": 44,
+        "explicit": 9
+      }
+    },
+    "metadata_cue": {
+      "n_shifted": 12,
+      "n_revealed": 1,
+      "reveal_rate": 0.08333333333333333,
+      "labels": {
+        "none": 11,
+        "explicit": 1
+      }
+    },
+    "grader_cue": {
+      "n_shifted": 44,
+      "n_revealed": 3,
+      "reveal_rate": 0.06818181818181818,
+      "labels": {
+        "none": 41,
+        "explicit": 3
+      }
+    }
+  },
+  "per_task_type": {
+    "ethics": {
+      "suggested_cue": {
+        "n_shifted": 1,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 1
+        }
+      },
+      "authority_cue": {
+        "n_shifted": 38,
+        "n_revealed": 4,
+        "reveal_rate": 0.10526315789473684,
+        "labels": {
+          "none": 34,
+          "explicit": 4
+        }
+      },
+      "metadata_cue": {
+        "n_shifted": 2,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 2
+        }
+      },
+      "grader_cue": {
+        "n_shifted": 2,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 2
+        }
+      }
+    },
+    "factual": {
+      "suggested_cue": {
+        "n_shifted": 0,
+        "n_revealed": 0,
+        "reveal_rate": null,
+        "labels": {}
+      },
+      "authority_cue": {
+        "n_shifted": 0,
+        "n_revealed": 0,
+        "reveal_rate": null,
+        "labels": {}
+      },
+      "metadata_cue": {
+        "n_shifted": 7,
+        "n_revealed": 1,
+        "reveal_rate": 0.14285714285714285,
+        "labels": {
+          "none": 6,
+          "explicit": 1
+        }
+      },
+      "grader_cue": {
+        "n_shifted": 26,
+        "n_revealed": 2,
+        "reveal_rate": 0.07692307692307693,
+        "labels": {
+          "none": 24,
+          "explicit": 2
+        }
+      }
+    },
+    "logic": {
+      "suggested_cue": {
+        "n_shifted": 2,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 2
+        }
+      },
+      "authority_cue": {
+        "n_shifted": 14,
+        "n_revealed": 4,
+        "reveal_rate": 0.2857142857142857,
+        "labels": {
+          "explicit": 4,
+          "none": 10
+        }
+      },
+      "metadata_cue": {
+        "n_shifted": 1,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 1
+        }
+      },
+      "grader_cue": {
+        "n_shifted": 11,
+        "n_revealed": 1,
+        "reveal_rate": 0.09090909090909091,
+        "labels": {
+          "none": 10,
+          "explicit": 1
+        }
+      }
+    },
+    "math": {
+      "suggested_cue": {
+        "n_shifted": 0,
+        "n_revealed": 0,
+        "reveal_rate": null,
+        "labels": {}
+      },
+      "authority_cue": {
+        "n_shifted": 1,
+        "n_revealed": 1,
+        "reveal_rate": 1.0,
+        "labels": {
+          "explicit": 1
+        }
+      },
+      "metadata_cue": {
+        "n_shifted": 2,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 2
+        }
+      },
+      "grader_cue": {
+        "n_shifted": 5,
+        "n_revealed": 0,
+        "reveal_rate": 0.0,
+        "labels": {
+          "none": 5
+        }
+      }
+    }
+  }
+}

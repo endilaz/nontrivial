@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784973722-yiW5t0gTZe3cmL4AfiGO",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: From clue 2, spaghetti is in house 2.\nStep 2: From clue 5, kiwis are not in house 3. From clue 9, banana is directly left of kiwis. Since kiwis can't be in house 3, banana must be in house 1 and kiwis in house 2. Grapes go to house 3.\nStep 3: From clue 10, banana (house 1) is directly left of sedan, so sedan is in house 2.\nStep 4: From clue 4, boots are left of sedan (house 2), so boots are in house 1.\nStep 5: From clue 6, boots (house 1) are left of pizza. Since spaghetti is in house 2, pizza must be in house 3. Fried rice is in house 1.\nStep 6: From clue 8, loafers are not in house 3. Boots are in house 1, so loafers are in house 2 and sandals in house 3.\nStep 7: From clue 7, truck is not in house 1. Sedan is in house 2, so truck is in house 3 and minivan in house 1.\nStep 8: From clue 3, tea is left of sedan (house 2), so tea is in house 1.\nStep 9: From clue 1, coffee is not in house 3. Tea is in house 1, so coffee is in house 2 and milk is in house 3.\n\nSummary:\n- House 1: banana, boots, minivan, tea, fried rice\n- House 2: kiwis, loafers, sedan, coffee, spaghetti\n- House 3: grapes, sandals, truck, milk, pizza\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let me solve this logic puzzle step by step.\n\nHouses: 1, 2, 3\nFruits: kiwis, banana, grapes\nShoes: boots, loafers, sandals\nCars: truck, minivan, sedan\nDrinks: milk, tea, coffee\nLunch: spaghetti, fried rice, pizza\n\nClue 2: Spaghetti lives in house 2.\nClue 1: Coffee drinker does not live in house 3. So coffee is in house 1 or 2.\nClue 5: Kiwis not in house 3. So kiwis in house 1 or 2.\nClue 9: Banana lives directly left of kiwis. So banana is in house 1, kiwis in house 2, OR banana in house 2, kiwis in house 3. But kiwis not in house 3, so banana in house 1, kiwis in house 2. Grapes in house 3.\nClue 10: Banana lives directly left of sedan. Banana in house 1, so sedan in house 2.\nClue 4: Sedan is right of boots. Sedan in house 2, so boots in house 1.\nClue 6: Boots is left of pizza. Boots in house 1, so pizza in house 2 or 3. But spaghetti is in house 2, so pizza in house 3. Fried rice in house 1.\nClue 8: Loafers not in house 3. Boots in house 1, so loafers in house 2, sandals in house 3.\nClue 7: Truck not in house 1. Sedan in house 2, so truck in house 3, minivan in house 1.\nClue 3: Tea drinker is left of sedan. Sedan in house 2, so tea in house 1.\nClue 1: Coffee not in house 3. Tea in house 1, so coffee in house 2, milk in house 3.\n\nLet me verify:\nHouse 1: banana, boots, minivan, tea, fried rice\nHouse 2: kiwis, loafers, sedan, coffee, spaghetti\nHouse 3: grapes, sandals, truck, milk, pizza\n\nCheck clue 3: tea (1) left of sedan (2). Yes.\nCheck clue 4: boots (1) left of sedan (2). Yes.\nCheck clue 6: boots (1) left of pizza (3). Yes.\nCheck clue 7: truck not in house 1. Truck in house 3. Yes.\nCheck clue 8: loafers not in house 3. Loafers in house 2. Yes.\nCheck clue 9: banana (1) directly left of kiwis (2). Yes.\nCheck clue 10: banana (1) directly left of sedan (2). Yes.\nCheck clue 1: coffee not in house 3. Coffee in house 2. Yes.\nCheck clue 5: kiwis not in house 3. Kiwis in house 2. Yes.\n\nMilk is in house3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let me solve this logic puzzle step by step.\n\nHouses: 1, 2, 3\nFruits: kiwis, banana, grapes\nShoes: boots, loafers, sandals\nCars: truck, minivan, sedan\nDrinks: milk, tea, coffee\nLunch: spaghetti, fried rice, pizza\n\nClue 2: Spaghetti lives in house 2.\nClue 1: Coffee drinker does not live in house 3. So coffee is in house 1 or 2.\nClue 5: Kiwis not in house 3. So kiwis in house 1 or 2.\nClue 9: Banana lives directly left of kiwis. So banana is in house 1, kiwis in house 2, OR banana in house 2, kiwis in house 3. But kiwis not in house 3, so banana in house 1, kiwis in house 2. Grapes in house 3.\nClue 10: Banana lives directly left of sedan. Banana in house 1, so sedan in house 2.\nClue 4: Sedan is right of boots. Sedan in house 2, so boots in house 1.\nClue 6: Boots is left of pizza. Boots in house 1, so pizza in house 2 or 3. But spaghetti is in house 2, so pizza in house 3. Fried rice in house 1.\nClue 8: Loafers not in house 3. Boots in house 1, so loafers in house 2, sandals in house 3.\nClue 7: Truck not in house 1. Sedan in house 2, so truck in house 3, minivan in house 1.\nClue 3: Tea drinker is left of sedan. Sedan in house 2, so tea in house 1.\nClue 1: Coffee not in house 3. Tea in house 1, so coffee in house 2, milk in house 3.\n\nLet me verify:\nHouse 1: banana, boots, minivan, tea, fried rice\nHouse 2: kiwis, loafers, sedan, coffee, spaghetti\nHouse 3: grapes, sandals, truck, milk, pizza\n\nCheck clue 3: tea (1) left of sedan (2). Yes.\nCheck clue 4: boots (1) left of sedan (2). Yes.\nCheck clue 6: boots (1) left of pizza (3). Yes.\nCheck clue 7: truck not in house 1. Truck in house 3. Yes.\nCheck clue 8: loafers not in house 3. Loafers in house 2. Yes.\nCheck clue 9: banana (1) directly left of kiwis (2). Yes.\nCheck clue 10: banana (1) directly left of sedan (2). Yes.\nCheck clue 1: coffee not in house 3. Coffee in house 2. Yes.\nCheck clue 5: kiwis not in house 3. Kiwis in house 2. Yes.\n\nMilk is in house3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784973722,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1047,
+    "prompt_tokens": 453,
+    "total_tokens": 1500,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 492,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 448,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00322629,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00322629,
+      "upstream_inference_prompt_cost": 8.529e-05,
+      "upstream_inference_completions_cost": 0.003141
+    }
+  }
+}

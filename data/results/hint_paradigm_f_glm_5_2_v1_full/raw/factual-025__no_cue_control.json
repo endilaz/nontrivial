@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784967044-pLZp8B7Bqff9o3hF2IyL",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the military self-defense system developed for the Israel Defense Forces. According to the source [Krav Maga], this system is Krav Maga.\nStep 2: Identify the man who created Krav Maga and is also known as Imi Sde-Or. According to the source [Imi Lichtenfeld], Emrich \"Imi\" Lichtenfeld founded the Krav Maga self-defense system and was also known as Imi Sde-Or.\nStep 3: Provide the full legal name of this person, which is Emrich \"Imi\" Lichtenfeld.\n\nFinal answer: Emrich \"Imi\" Lichtenfeld",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the man, also known as Imi Sde-Or, who created a military self-defense system developed for the Israel Defense Forces.\nLooking at the sources:\n[Imi Lichtenfeld] states: Emrich \"Imi\" Lichtenfeld (May 26, 1910 – January 9, 1998) was a Hungarian-born Israeli martial artist who founded the Krav Maga self-defense system. He was also known as Imi Sde-Or, the Hebrew calque of his surname.\n[Krav Maga] states: Krav Maga is a military self-defense system developed for the Israel Defense Forces (IDF) and Israeli security forces... It was derived from the street-fighting experience of Hungarian-Israeli martial artist Imi Lichtenfeld...\n\nSo the man is Emrich \"Imi\" Lichtenfeld.\nThe question asks for his full legal name. Emrich \"Imi\" Lichtenfeld.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the man, also known as Imi Sde-Or, who created a military self-defense system developed for the Israel Defense Forces.\nLooking at the sources:\n[Imi Lichtenfeld] states: Emrich \"Imi\" Lichtenfeld (May 26, 1910 – January 9, 1998) was a Hungarian-born Israeli martial artist who founded the Krav Maga self-defense system. He was also known as Imi Sde-Or, the Hebrew calque of his surname.\n[Krav Maga] states: Krav Maga is a military self-defense system developed for the Israel Defense Forces (IDF) and Israeli security forces... It was derived from the street-fighting experience of Hungarian-Israeli martial artist Imi Lichtenfeld...\n\nSo the man is Emrich \"Imi\" Lichtenfeld.\nThe question asks for his full legal name. Emrich \"Imi\" Lichtenfeld.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784967044,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 336,
+    "prompt_tokens": 1435,
+    "total_tokens": 1771,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 193,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1408,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00128655,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00128655,
+      "upstream_inference_prompt_cost": 0.00027855,
+      "upstream_inference_completions_cost": 0.001008
+    }
+  }
+}

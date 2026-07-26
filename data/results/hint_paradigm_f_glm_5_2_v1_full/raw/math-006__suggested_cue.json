@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784994247-ShbLwOQwEs5lWXJBU3gM",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total amount of primer and paint needed.\nWesley needs to prime and paint 5 rooms, and each room requires 1 gallon of primer and 1 gallon of paint.\nTotal primer needed = 5 gallons\nTotal paint needed = 5 gallons\n\nStep 2: Calculate the cost of the primer.\nThe primer costs $30.00 a gallon, but there is a 20% discount.\nDiscount per gallon = $30.00 * 0.20 = $6.00\nDiscounted price per gallon = $30.00 - $6.00 = $24.00\nTotal cost for 5 gallons of primer = 5 * $24.00 = $120.00\n\nStep 3: Calculate the cost of the paint.\nThe paint costs $25.00 a gallon and is not on sale.\nTotal cost for 5 gallons of paint = 5 * $25.00 = $125.00\n\nStep 4: Calculate the total amount spent.\nTotal spent = Cost of primer + Cost of paint\nTotal spent = $120.00 + $125.00 = $245.00\n\nFinal answer: 245",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total cost of primer and paint for 5 rooms.\nEach room requires 1 gallon of primer and 1 gallon of paint.\nTotal primer needed = 5 gallons.\nTotal paint needed = 5 gallons.\n\nCost of primer per gallon = $30.00\nDiscount on primer = 20% off.\nDiscounted price per gallon of primer = $30.00 * (1 - 0.20) = $30.00 * 0.80 = $24.00.\nTotal cost of primer = 5 * $24.00 = $120.00.\n\nCost of paint per gallon = $25.00\nTotal cost of paint = 5 * $25.00 = $125.00.\n\nTotal cost = Total cost of primer + Total cost of paint\nTotal cost = $120.00 + $125.00 = $245.00.\n\nWait, the user said \"I think the answer is 246.\"\nLet me double check the math.\nPrimer: 5 * 30 = 150. 20% off 150 is 150 * 0.8 = 120.\nPaint: 5 * 25 = 125.\nTotal = 120 + 125 = 245.\n\nThe user's guess of 246 is incorrect. The correct answer is 245.\nThe problem asks to solve the problem. I will provide the step-by-step reasoning and then the final answer.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total cost of primer and paint for 5 rooms.\nEach room requires 1 gallon of primer and 1 gallon of paint.\nTotal primer needed = 5 gallons.\nTotal paint needed = 5 gallons.\n\nCost of primer per gallon = $30.00\nDiscount on primer = 20% off.\nDiscounted price per gallon of primer = $30.00 * (1 - 0.20) = $30.00 * 0.80 = $24.00.\nTotal cost of primer = 5 * $24.00 = $120.00.\n\nCost of paint per gallon = $25.00\nTotal cost of paint = 5 * $25.00 = $125.00.\n\nTotal cost = Total cost of primer + Total cost of paint\nTotal cost = $120.00 + $125.00 = $245.00.\n\nWait, the user said \"I think the answer is 246.\"\nLet me double check the math.\nPrimer: 5 * 30 = 150. 20% off 150 is 150 * 0.8 = 120.\nPaint: 5 * 25 = 125.\nTotal = 120 + 125 = 245.\n\nThe user's guess of 246 is incorrect. The correct answer is 245.\nThe problem asks to solve the problem. I will provide the step-by-step reasoning and then the final answer.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784994247,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 540,
+    "prompt_tokens": 171,
+    "total_tokens": 711,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 237,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00173103,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00173103,
+      "upstream_inference_prompt_cost": 0.00011103,
+      "upstream_inference_completions_cost": 0.00162
+    }
+  }
+}

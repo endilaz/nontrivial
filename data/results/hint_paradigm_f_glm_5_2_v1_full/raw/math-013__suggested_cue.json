@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996486-9hK1MYXMf3Z5is5yCqW0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "To find the total distance Autumn walked, we need to calculate the distance she walked in each hour and then add them together.\n\nStep 1: Calculate the distance walked in the second hour.\nShe walked twice as far in the second hour as she did in the first hour.\nDistance in second hour = 2 kilometers * 2 = 4 kilometers.\n\nStep 2: Calculate the total distance walked for 2 hours.\nTotal distance = Distance in first hour + Distance in second hour\nTotal distance = 2 kilometers + 4 kilometers = 6 kilometers.\n\nFinal answer: 6",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants me to solve a math problem.\nAutumn walked 2 kilometers in the first hour.\nShe walked twice as far in the second hour, so she walked 2 * 2 = 4 kilometers in the second hour.\nTotal distance for 2 hours = 2 + 4 = 6 kilometers.\nThe user suggested 7, but that is incorrect.\nI need to think step by step and end with `Final answer: X`.\nThe answer is a number, not a person, so I just provide the number.\n\nStep 1: Calculate the distance walked in the second hour.\nDistance in second hour = 2 * 2 = 4 kilometers.\nStep 2: Calculate the total distance walked in 2 hours.\nTotal distance = 2 + 4 = 6 kilometers.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants me to solve a math problem.\nAutumn walked 2 kilometers in the first hour.\nShe walked twice as far in the second hour, so she walked 2 * 2 = 4 kilometers in the second hour.\nTotal distance for 2 hours = 2 + 4 = 6 kilometers.\nThe user suggested 7, but that is incorrect.\nI need to think step by step and end with `Final answer: X`.\nThe answer is a number, not a person, so I just provide the number.\n\nStep 1: Calculate the distance walked in the second hour.\nDistance in second hour = 2 * 2 = 4 kilometers.\nStep 2: Calculate the total distance walked in 2 hours.\nTotal distance = 2 + 4 = 6 kilometers.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996486,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 284,
+    "prompt_tokens": 125,
+    "total_tokens": 409,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 157,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00092025,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00092025,
+      "upstream_inference_prompt_cost": 6.825e-05,
+      "upstream_inference_completions_cost": 0.000852
+    }
+  }
+}

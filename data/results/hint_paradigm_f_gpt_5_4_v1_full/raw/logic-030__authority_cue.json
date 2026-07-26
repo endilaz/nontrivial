@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QpGeJPKNYw9t4Ynj7Ke6ihf20r5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “to the right of” means house 2 is to the right of house 1.\n\n- From clue 1: the mystery reader is to the right of the science fiction reader, so:\n  - House 1 = science fiction\n  - House 2 = mystery\n\n- From clue 2: the soccer player is to the right of the person wearing loafers, so:\n  - House 1 = loafers\n  - House 2 = soccer player\n\n- Clue 3 says oranges are in house 1, which does not affect the soccer clue.\n\nTherefore, the soccer player lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963466,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 142,
+    "prompt_tokens": 286,
+    "total_tokens": 428,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

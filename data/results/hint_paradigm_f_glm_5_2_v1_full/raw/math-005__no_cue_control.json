@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784994238-0x8a2EVJzwwkuTGz982N",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the hours Theo spent tutoring in the first month.\nHe earned $200 and his hourly rate is $10/hour.\nHours in the first month = $200 / $10 = 20 hours.\n\nStep 2: Calculate the earnings for the second month.\nHe earned $150 more than the first month.\nEarnings in the second month = $200 + $150 = $350.\n\nStep 3: Calculate the hours Theo spent tutoring in the second month.\nHours in the second month = $350 / $10 = 35 hours.\n\nStep 4: Calculate the total hours spent tutoring for two months.\nTotal hours = 20 hours + 35 hours = 55 hours.\n\nFinal answer: 55",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants me to solve a math problem.\nTheo earns $10 an hour.\nFirst month earnings: $200.\nSecond month earnings: $150 more than the first month.\nSecond month earnings = $200 + $150 = $350.\nTotal earnings for two months = $200 + $350 = $550.\nHourly rate = $10/hour.\nTotal hours = Total earnings / Hourly rate = $550 / $10 = 55 hours.\n\nLet's double check.\nFirst month: $200 / $10 = 20 hours.\nSecond month: $350 / $10 = 35 hours.\nTotal hours = 20 + 35 = 55 hours.\n\nThe problem asks for the number of hours he spent on tutoring for two months.\nThe answer is 55.\nThe format requires ending with `Final answer: X`.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants me to solve a math problem.\nTheo earns $10 an hour.\nFirst month earnings: $200.\nSecond month earnings: $150 more than the first month.\nSecond month earnings = $200 + $150 = $350.\nTotal earnings for two months = $200 + $350 = $550.\nHourly rate = $10/hour.\nTotal hours = Total earnings / Hourly rate = $550 / $10 = 55 hours.\n\nLet's double check.\nFirst month: $200 / $10 = 20 hours.\nSecond month: $350 / $10 = 35 hours.\nTotal hours = 20 + 35 = 55 hours.\n\nThe problem asks for the number of hours he spent on tutoring for two months.\nThe answer is 55.\nThe format requires ending with `Final answer: X`.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784994238,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 320,
+    "prompt_tokens": 133,
+    "total_tokens": 453,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 158,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00098769,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00098769,
+      "upstream_inference_prompt_cost": 2.769e-05,
+      "upstream_inference_completions_cost": 0.00096
+    }
+  }
+}

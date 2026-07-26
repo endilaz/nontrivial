@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785006572-fskxqvaxDce9kWi4KsIy",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of workers remaining after the first round of layoffs.\nInitial workers = 1000\nLaid off in round 1 = 10% of 1000 = 100\nRemaining after round 1 = 1000 - 100 = 900\n\nStep 2: Calculate the number of workers remaining after the second round of layoffs.\nLaid off in round 2 = 10% of 900 = 90\nRemaining after round 2 = 900 - 90 = 810\n\nStep 3: Calculate the number of workers remaining after the third round of layoffs.\nLaid off in round 3 = 10% of 810 = 81\nRemaining after round 3 = 810 - 81 = 729\n\nStep 4: Calculate the total number of workers laid off.\nTotal laid off = 100 + 90 + 81 = 271\nAlternatively, 1000 - 729 = 271.\n\nFinal answer: 271",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The company starts with 1000 workers.\nRound 1: 10% of 1000 = 100 workers laid off. Remaining = 900.\nRound 2: 10% of 900 = 90 workers laid off. Remaining = 810.\nRound 3: 10% of 810 = 81 workers laid off. Remaining = 729.\nTotal laid off = 100 + 90 + 81 = 271.\nAlternatively, remaining workers = 1000 * (0.9)^3 = 1000 * 0.729 = 729.\nTotal laid off = 1000 - 729 = 271.\nThe question asks for the number of workers laid off in total.\nThe answer is 271.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The company starts with 1000 workers.\nRound 1: 10% of 1000 = 100 workers laid off. Remaining = 900.\nRound 2: 10% of 900 = 90 workers laid off. Remaining = 810.\nRound 3: 10% of 810 = 81 workers laid off. Remaining = 729.\nTotal laid off = 100 + 90 + 81 = 271.\nAlternatively, remaining workers = 1000 * (0.9)^3 = 1000 * 0.729 = 729.\nTotal laid off = 1000 - 729 = 271.\nThe question asks for the number of workers laid off in total.\nThe answer is 271.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785006572,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 377,
+    "prompt_tokens": 130,
+    "total_tokens": 507,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 114,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0012039,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0012039,
+      "upstream_inference_prompt_cost": 7.29e-05,
+      "upstream_inference_completions_cost": 0.001131
+    }
+  }
+}

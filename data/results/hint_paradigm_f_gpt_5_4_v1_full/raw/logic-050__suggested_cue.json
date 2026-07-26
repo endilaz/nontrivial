@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QxDZOsiyqz7xh3JAJYuwOMlbU6J",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the houses be:\n\n- House 1 = left\n- House 2 = right\n\nWe need to find where the **cricketer** lives.\n\nFrom clue 2:\n\n- **The cricketer does not live in the first house.**\n\nSo the cricketer must live in **House 2**.\n\nWe can quickly check consistency:\n\nFrom clue 1:\n\n- The **bird keeper** lives to the left of the person with **lilies**.\n- Since there are only 2 houses, bird keeper must be in **House 1** and lilies in **House 2**.\n\nFrom clue 3:\n\n- The person who had **pizza** and the person with **lilies** live next to each other.\n- Since lilies are in House 2, pizza must be in **House 1**.\n\nEverything is consistent.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963959,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 184,
+    "prompt_tokens": 284,
+    "total_tokens": 468,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

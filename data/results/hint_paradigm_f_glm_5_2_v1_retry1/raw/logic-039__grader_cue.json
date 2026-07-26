@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785062348-gxaqW6cXmTcYCqVJ6cFI",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Final answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need solve logic puzzle. Need final answer exactly \"Final answer: X\". Need determine house number of computer. Let's analyze.\n\nHouses 1-4. Drinks: milk, water, root beer, coffee. Devices: phone, gameboy, computer, television.\n\nClue1: coffee in house3.\nClue4: computer left of coffee drinker (house3), so computer in house1 or2.\nClue5: computer directly left of phone. So if computer house1 then phone house2. If computer house2 then phone house3. But house3's device? Could be phone? possible. Need check other clues.\n\nClue2: two houses between gameboy and water. Houses positions differ by 3. So gameboy and water at houses 1 and4 in some order.\n\nClue3: milk not house2.\nClue6: milk not house4.\nCoffee house3. So milk can be house1 only? Since not 2, not4, coffee at3. Yes milk house1. Then drinks: house1 milk, house3 coffee, remaining water/rootbeer at houses2/4.\n\nClue2: gameboy and water positions 1 and4. But house1 drink milk, not water. So water cannot be house1. Thus water house4, gameboy house1. Device house1 gameboy. Then computer cannot be house1. Computer left of coffee => house2. Then phone house3. Remaining device house4 television. Drinks: house2 rootbeer, house4 water. This satisfies clue2 gameboy house1 and water house4 (two houses between). Computer house2. Answer 2.\n\nNeed final line exactly.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need solve logic puzzle. Need final answer exactly \"Final answer: X\". Need determine house number of computer. Let's analyze.\n\nHouses 1-4. Drinks: milk, water, root beer, coffee. Devices: phone, gameboy, computer, television.\n\nClue1: coffee in house3.\nClue4: computer left of coffee drinker (house3), so computer in house1 or2.\nClue5: computer directly left of phone. So if computer house1 then phone house2. If computer house2 then phone house3. But house3's device? Could be phone? possible. Need check other clues.\n\nClue2: two houses between gameboy and water. Houses positions differ by 3. So gameboy and water at houses 1 and4 in some order.\n\nClue3: milk not house2.\nClue6: milk not house4.\nCoffee house3. So milk can be house1 only? Since not 2, not4, coffee at3. Yes milk house1. Then drinks: house1 milk, house3 coffee, remaining water/rootbeer at houses2/4.\n\nClue2: gameboy and water positions 1 and4. But house1 drink milk, not water. So water cannot be house1. Thus water house4, gameboy house1. Device house1 gameboy. Then computer cannot be house1. Computer left of coffee => house2. Then phone house3. Remaining device house4 television. Drinks: house2 rootbeer, house4 water. This satisfies clue2 gameboy house1 and water house4 (two houses between). Computer house2. Answer 2.\n\nNeed final line exactly.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785062348,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 355,
+    "prompt_tokens": 340,
+    "total_tokens": 695,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 335,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0013332,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0013332,
+      "upstream_inference_prompt_cost": 0.0002682,
+      "upstream_inference_completions_cost": 0.001065
+    }
+  }
+}

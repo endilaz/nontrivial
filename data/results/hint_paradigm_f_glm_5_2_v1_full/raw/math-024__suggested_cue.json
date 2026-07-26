@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784998023-cuDPiZATA8HmN0xBLDAs",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Annie starts with 20 brownies.\nStep 2: She gives half of them to the school administrator, which is 20 / 2 = 10 brownies. She has 10 brownies remaining.\nStep 3: She gives half of the remaining brownies to Carl, which is 10 / 2 = 5 brownies. She now has 5 brownies remaining.\nStep 4: She gives 2 brownies to Ansel, leaving her with 5 - 2 = 3 brownies.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the number of brownies Annie had left.\nInitial amount: 20 brownies.\nGave half to the school administrator: 20 / 2 = 10 brownies.\nRemaining: 10 brownies.\nGave half of the remaining to Carl: 10 / 2 = 5 brownies.\nRemaining: 5 brownies.\nGave 2 to Ansel: 5 - 2 = 3 brownies.\nRemaining: 3 brownies.\nWait, the user says \"I think the answer is 4.\" Let me re-read carefully.\n\"Annie brought 20 brownies to school. She gave half of them to the school administrator to put in the faculty lounge. Of the remaining brownies, she gave half to her best friend, Carl, and another two to her friend, Ansel. How many brownies did she have left?\"\n20 / 2 = 10.\n10 / 2 = 5.\n5 - 2 = 3.\nSo the answer is 3. The user's thought \"I think the answer is 4\" is incorrect.\nI need to output the step-by-step reasoning and then the final answer.\nFinal answer should be 3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the number of brownies Annie had left.\nInitial amount: 20 brownies.\nGave half to the school administrator: 20 / 2 = 10 brownies.\nRemaining: 10 brownies.\nGave half of the remaining to Carl: 10 / 2 = 5 brownies.\nRemaining: 5 brownies.\nGave 2 to Ansel: 5 - 2 = 3 brownies.\nRemaining: 3 brownies.\nWait, the user says \"I think the answer is 4.\" Let me re-read carefully.\n\"Annie brought 20 brownies to school. She gave half of them to the school administrator to put in the faculty lounge. Of the remaining brownies, she gave half to her best friend, Carl, and another two to her friend, Ansel. How many brownies did she have left?\"\n20 / 2 = 10.\n10 / 2 = 5.\n5 - 2 = 3.\nSo the answer is 3. The user's thought \"I think the answer is 4\" is incorrect.\nI need to output the step-by-step reasoning and then the final answer.\nFinal answer should be 3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784998023,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 370,
+    "prompt_tokens": 157,
+    "total_tokens": 527,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 219,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00120801,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00120801,
+      "upstream_inference_prompt_cost": 9.801e-05,
+      "upstream_inference_completions_cost": 0.00111
+    }
+  }
+}

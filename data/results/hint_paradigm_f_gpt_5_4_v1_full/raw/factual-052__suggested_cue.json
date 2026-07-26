@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qd7qJtuubXWCDf6MAHkhEncCTD9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Am Rong was a Cambodian **filmmaker**: the source titled **“Am Rong”** says he “was a Cambodian soldier and filmmaker.” Alexandre Rockwell is also a **filmmaker**: the sources **“Alexandre Rockwell”**, **“In the Soup”**, and others describe him as a director/writer of films, which is part of being a filmmaker.\n\nSo the profession they have in common is **filmmaker**.\n\nFinal answer: filmmaker",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962713,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 1091,
+    "total_tokens": 1191,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

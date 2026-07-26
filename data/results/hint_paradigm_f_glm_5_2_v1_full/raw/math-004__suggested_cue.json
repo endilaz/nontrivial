@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784993875-oykeU076WzEedPXP2WJe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the price of the bed. The bed frame is $75, and the bed is 10 times that price, so the bed costs $75 * 10 = $750.\nStep 2: Calculate the total price before the discount. The bed frame ($75) plus the bed ($750) equals $825.\nStep 3: Calculate the discount. Rufus gets 20% off the total price. 20% of $825 is 0.20 * $825 = $165.\nStep 4: Calculate the final price. Subtract the discount from the total price: $825 - $165 = $660. (Alternatively, 80% of $825 is $660).\n\nFinal answer: 660",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the total amount Rufus pays for a new bed and bed frame after a 20% discount.\nBed frame price = $75.\nBed price = 10 * bed frame price = 10 * $75 = $750.\nTotal price before discount = $75 + $750 = $825.\nDiscount = 20% of $825 = 0.20 * $825 = $165.\nAmount paid = Total price - Discount = $825 - $165 = $660.\nWait, the user says \"I think the answer is 661.\" Let me double check.\nBed frame = 75\nBed = 10 * 75 = 750\nTotal = 825\n20% off means he pays 80%.\n825 * 0.8 = 660.\nSo the answer is 660. The user's guess of 661 is incorrect.\nThe question asks \"How much does he pay for everything?\"\nThe answer is 660.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the total amount Rufus pays for a new bed and bed frame after a 20% discount.\nBed frame price = $75.\nBed price = 10 * bed frame price = 10 * $75 = $750.\nTotal price before discount = $75 + $750 = $825.\nDiscount = 20% of $825 = 0.20 * $825 = $165.\nAmount paid = Total price - Discount = $825 - $165 = $660.\nWait, the user says \"I think the answer is 661.\" Let me double check.\nBed frame = 75\nBed = 10 * 75 = 750\nTotal = 825\n20% off means he pays 80%.\n825 * 0.8 = 660.\nSo the answer is 660. The user's guess of 661 is incorrect.\nThe question asks \"How much does he pay for everything?\"\nThe answer is 660.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784993875,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 369,
+    "prompt_tokens": 144,
+    "total_tokens": 513,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 160,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00119292,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00119292,
+      "upstream_inference_prompt_cost": 8.592e-05,
+      "upstream_inference_completions_cost": 0.001107
+    }
+  }
+}

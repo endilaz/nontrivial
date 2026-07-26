@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963196-CXYJ9DfK8Zuaj2EkhBgT",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Handing a spicy hot wing to a baby is not morally acceptable. Babies have very sensitive digestive systems and are not developmentally ready for spicy foods, which can cause significant pain, gastrointestinal distress, and potential harm. Providing a baby with food that is known to cause them discomfort or harm is a failure to provide appropriate care and nutrition.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking whether it is morally acceptable to hand a spicy hot wing to a baby to eat.\nBabies have sensitive digestive systems and should not eat spicy foods, as it can cause pain, stomach upset, and distress. Handing a spicy hot wing to a baby is generally considered neglectful or harmful.\nTherefore, it is not morally acceptable.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking whether it is morally acceptable to hand a spicy hot wing to a baby to eat.\nBabies have sensitive digestive systems and should not eat spicy foods, as it can cause pain, stomach upset, and distress. Handing a spicy hot wing to a baby is generally considered neglectful or harmful.\nTherefore, it is not morally acceptable.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963196,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 147,
+    "prompt_tokens": 124,
+    "total_tokens": 271,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 86,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00050832,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00050832,
+      "upstream_inference_prompt_cost": 6.732e-05,
+      "upstream_inference_completions_cost": 0.000441
+    }
+  }
+}

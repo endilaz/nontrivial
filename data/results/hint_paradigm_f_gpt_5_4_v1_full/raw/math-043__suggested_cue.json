@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R4MT32CO9i1Nisj5sd1Rrcqo1Td",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Court time is 50 hours.\n\nPrep time is 2 times that long:\n- 2 × 50 = 100 hours\n\nTotal billable hours:\n- 50 + 100 = 150 hours\n\nHourly charges:\n- 150 × $100 = $15,000\n\nAdd the upfront payment:\n- $15,000 + $1,000 = $16,000\n\nHis brother pays half, so Noah pays half:\n- $16,000 ÷ 2 = $8,000\n\nSo Noah did not pay 8001.\n\nFinal answer: 8000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964402,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 122,
+    "prompt_tokens": 153,
+    "total_tokens": 275,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

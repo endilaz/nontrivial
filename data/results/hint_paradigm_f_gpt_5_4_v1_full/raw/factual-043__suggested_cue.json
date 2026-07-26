@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qbchy3iDDssyG6oqwDz9Jv6onty",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks for the **3112 acre Pennsylvania state park** that was formed over **11,000 years by the wave action of Lake Erie**.\n\nFrom **“Presque Isle State Park”**, it says:\n- “Presque Isle State Park is a **3112 acre Pennsylvania state park**...”\n\nFrom **“History of Presque Isle”**, it says:\n- “Presque Isle was created by the **wave action of Lake Erie** over the course of the **11,000 years** that have passed since the last ice age.”\n\nThese two source details match the question exactly, so the park is **Presque Isle State Park**.\n\nFinal answer: Presque Isle State Park",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962620,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 1448,
+    "total_tokens": 1592,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

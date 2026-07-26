@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784981912-mCWDEQodCBfEEAvdsMw5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Final answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "We need solve logic puzzle. Need answer house number where pizza. Need think step by step. Let's parse.\n\n4 houses positions 1-4. Attributes:\nCar: convertible, minivan, SUV, truck.\nLunch: stew, fried rice, spaghetti, pizza.\nFlowers: tulips, rose bouquet, lilies, carnations.\nFruit: mangos, grapes, apples, oranges.\nColor: green, white, red, blue.\n\nClues:\n1 green in house1.\n2 pizza lives directly left of blue. So pizza at i, blue at i+1.\n3 red somewhere right of carnations.\n4 fried rice in house4.\n5 truck not house3.\n6 mangos directly left of red.\n7 truck directly left of lilies.\n8 spaghetti somewhere right of minivan.\n9 mangos directly left of pizza.\n10 red somewhere left of grapes.\n11 pizza and rose bouquet adjacent.\n12 blue and SUV adjacent.\n13 pizza and apples adjacent.\n\nNeed find pizza house. Let's solve.\n\nLet positions 1-4.\n\nClue1: color1=green.\n\nClue2: pizza at p, blue at p+1. p ∈ {1,2,3}. Since blue not house1 (green), p+1 not 1. If p=1 blue house2; p=2 blue house3; p=3 blue house4.\n\nClue9: mangos at m, pizza at m+1. So m = p-1. Thus p ∈ {2,3,4?} but p max3 due clue2, so p=2 or3. Mangos at p-1.\n\nClue6: mangos directly left of red. So red at m+1 = p. Thus red at pizza house. Wait clue6: mangos lives directly left of person who likes red. If mangos at p-1, red at p. So pizza person likes red. Good. Thus p color red. But clue2 says blue at p+1. So pizza house red, next house blue. Since house1 green, p cannot be1. p=2 or3. If p=2: house2 red, house3 blue. If p=3: house3 red, house4 blue. House1 green, remaining white at other.\n\nClue10: red left of grapes. So grapes to right of p. If p=2, grapes in 3 or4. If p=3, grapes in4.\n\nClue13: pizza and apples adjacent. Pizza at p, apples at p-1 or p+1. But p-1 has mangos (fruit), so apples cannot be p-1. Thus apples at p+1. So house p+1 fruit apples. But clue10 says grapes right of red/p. If p=2, grapes in 3 or4, but house3 fruit apples, so grapes house4. If p=3, grapes house4, but house4 fruit apples -> contradiction. Therefore p=2. Then pizza house2, red, mangos house1, blue house3, apples house3, grapes house4. Remaining fruit oranges house2? Let's see house1 mangos, house2 pizza, house3 apples, house4 grapes -> house2 oranges. Good.\n\nNeed maybe verify all clues and maybe answer house2. But let's solve fully to ensure no contradiction.\n\nPositions:\n1: color green, fruit mangos.\n2: lunch pizza, color red, fruit oranges.\n3: color blue, fruit apples.\n4: lunch fried rice, fruit grapes.\n\nRemaining colors: white at house4? Since green1 red2 blue3, white4. Good.\n\nClue11: pizza (house2) and rose bouquet adjacent. Rose at house1 or3.\nClue12: blue (house3) and SUV adjacent. SUV at house2 or4.\nClue3: red right of carnations. Red house2, so carnations house1. Thus house1 flowers carnations. Then rose adjacent to pizza cannot house1? Wait house1 has carnations, so rose must house3. Thus house3 rose bouquet. Remaining flowers tulips/lilies at houses2/4.\n\nClue7: truck directly left of lilies. Truck at i, lilies at i+1. Possible i=1,2,3. But house3 rose, so lilies not house3. House1? lilies house2 possible truck house1. House2? lilies house3 no. House3? lilies house4 possible truck house3. But clue5 truck not house3. So truck house1, lilies house2. Then house4 tulips. Good.\n\nCars: house1 truck. Remaining convertible/minivan/SUV at 2,3,4. Clue12: blue house3 adjacent SUV. SUV at house2 or4. Clue8: spaghetti right of minivan. Lunches: house2 pizza, house4 fried rice. Remaining stew/spaghetti at houses1/3. Minivan cannot be house? Let's see. If spaghetti at house3, stew house1. Minivan must be left of spaghetti, so minivan house1 or2. But house1 truck, so minivan house2. Then SUV? house4? Clue12 SUV adjacent to blue house3 -> house4 yes. House3 remaining convertible. Works. If spaghetti at house1, stew house3. Minivan left of spaghetti impossible (no house left of1). So spaghetti house3, stew house1. Minivan house2, SUV house4, convertible house3. Check clue8 yes. Clue12 yes. Clue5 truck house1 not third. Good.\n\nFull solution:\nHouse1: green, mangos, carnations, truck, stew.\nHouse2: red, oranges, lilies, minivan, pizza.\nHouse3: blue, apples, rose bouquet, convertible, spaghetti.\nHouse4: white, grapes, tulips, SUV, fried rice.\n\nPizza house2. Need final answer exactly line.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "We need solve logic puzzle. Need answer house number where pizza. Need think step by step. Let's parse.\n\n4 houses positions 1-4. Attributes:\nCar: convertible, minivan, SUV, truck.\nLunch: stew, fried rice, spaghetti, pizza.\nFlowers: tulips, rose bouquet, lilies, carnations.\nFruit: mangos, grapes, apples, oranges.\nColor: green, white, red, blue.\n\nClues:\n1 green in house1.\n2 pizza lives directly left of blue. So pizza at i, blue at i+1.\n3 red somewhere right of carnations.\n4 fried rice in house4.\n5 truck not house3.\n6 mangos directly left of red.\n7 truck directly left of lilies.\n8 spaghetti somewhere right of minivan.\n9 mangos directly left of pizza.\n10 red somewhere left of grapes.\n11 pizza and rose bouquet adjacent.\n12 blue and SUV adjacent.\n13 pizza and apples adjacent.\n\nNeed find pizza house. Let's solve.\n\nLet positions 1-4.\n\nClue1: color1=green.\n\nClue2: pizza at p, blue at p+1. p ∈ {1,2,3}. Since blue not house1 (green), p+1 not 1. If p=1 blue house2; p=2 blue house3; p=3 blue house4.\n\nClue9: mangos at m, pizza at m+1. So m = p-1. Thus p ∈ {2,3,4?} but p max3 due clue2, so p=2 or3. Mangos at p-1.\n\nClue6: mangos directly left of red. So red at m+1 = p. Thus red at pizza house. Wait clue6: mangos lives directly left of person who likes red. If mangos at p-1, red at p. So pizza person likes red. Good. Thus p color red. But clue2 says blue at p+1. So pizza house red, next house blue. Since house1 green, p cannot be1. p=2 or3. If p=2: house2 red, house3 blue. If p=3: house3 red, house4 blue. House1 green, remaining white at other.\n\nClue10: red left of grapes. So grapes to right of p. If p=2, grapes in 3 or4. If p=3, grapes in4.\n\nClue13: pizza and apples adjacent. Pizza at p, apples at p-1 or p+1. But p-1 has mangos (fruit), so apples cannot be p-1. Thus apples at p+1. So house p+1 fruit apples. But clue10 says grapes right of red/p. If p=2, grapes in 3 or4, but house3 fruit apples, so grapes house4. If p=3, grapes house4, but house4 fruit apples -> contradiction. Therefore p=2. Then pizza house2, red, mangos house1, blue house3, apples house3, grapes house4. Remaining fruit oranges house2? Let's see house1 mangos, house2 pizza, house3 apples, house4 grapes -> house2 oranges. Good.\n\nNeed maybe verify all clues and maybe answer house2. But let's solve fully to ensure no contradiction.\n\nPositions:\n1: color green, fruit mangos.\n2: lunch pizza, color red, fruit oranges.\n3: color blue, fruit apples.\n4: lunch fried rice, fruit grapes.\n\nRemaining colors: white at house4? Since green1 red2 blue3, white4. Good.\n\nClue11: pizza (house2) and rose bouquet adjacent. Rose at house1 or3.\nClue12: blue (house3) and SUV adjacent. SUV at house2 or4.\nClue3: red right of carnations. Red house2, so carnations house1. Thus house1 flowers carnations. Then rose adjacent to pizza cannot house1? Wait house1 has carnations, so rose must house3. Thus house3 rose bouquet. Remaining flowers tulips/lilies at houses2/4.\n\nClue7: truck directly left of lilies. Truck at i, lilies at i+1. Possible i=1,2,3. But house3 rose, so lilies not house3. House1? lilies house2 possible truck house1. House2? lilies house3 no. House3? lilies house4 possible truck house3. But clue5 truck not house3. So truck house1, lilies house2. Then house4 tulips. Good.\n\nCars: house1 truck. Remaining convertible/minivan/SUV at 2,3,4. Clue12: blue house3 adjacent SUV. SUV at house2 or4. Clue8: spaghetti right of minivan. Lunches: house2 pizza, house4 fried rice. Remaining stew/spaghetti at houses1/3. Minivan cannot be house? Let's see. If spaghetti at house3, stew house1. Minivan must be left of spaghetti, so minivan house1 or2. But house1 truck, so minivan house2. Then SUV? house4? Clue12 SUV adjacent to blue house3 -> house4 yes. House3 remaining convertible. Works. If spaghetti at house1, stew house3. Minivan left of spaghetti impossible (no house left of1). So spaghetti house3, stew house1. Minivan house2, SUV house4, convertible house3. Check clue8 yes. Clue12 yes. Clue5 truck house1 not third. Good.\n\nFull solution:\nHouse1: green, mangos, carnations, truck, stew.\nHouse2: red, oranges, lilies, minivan, pizza.\nHouse3: blue, apples, rose bouquet, convertible, spaghetti.\nHouse4: white, grapes, tulips, SUV, fried rice.\n\nPizza house2. Need final answer exactly line.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784981912,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1259,
+    "prompt_tokens": 548,
+    "total_tokens": 1807,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 1086,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00390264,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00390264,
+      "upstream_inference_prompt_cost": 0.00012564,
+      "upstream_inference_completions_cost": 0.003777
+    }
+  }
+}

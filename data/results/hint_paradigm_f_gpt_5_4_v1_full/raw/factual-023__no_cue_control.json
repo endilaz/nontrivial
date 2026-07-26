@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QY6MFZ8KBxXQ0f0bNfHgVNfn5F9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“New Orleans Outfall Canals,”** the three outfall canals together have **13 mi of levees and floodwalls** lining their sides.\n\nFrom **“Augusta Canal,”** the Augusta Canal passes through three levels totaling **approximately 13 miles**.\n\nSince both are given as **13 miles**, they are the same length approximately.\n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962402,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 1575,
+    "total_tokens": 1656,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

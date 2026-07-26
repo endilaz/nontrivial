@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QamMxmzKguyqAoLPDUyIbhSX9hV",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source **“Pirna 014”**, the Pirna 014 was designed by former **Junkers** engineers.  \nFrom the source **“Junkers”**, Junkers was a German aircraft and aircraft engine manufacturer based in **Dessau, Germany**.\n\nFinal answer: Dessau",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962568,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 997,
+    "total_tokens": 1062,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

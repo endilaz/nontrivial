@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QpVK0442vX7AkSbhQ8rZQiPmlZU",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From clue 1, the person with a phone does not live in house 1. Since there are only two houses, that person must live in house 2.\n\nThis is consistent with the other clues:\n- Clue 2 says the science fiction fan is to the left of the tea drinker, so science fiction is in house 1 and tea is in house 2.\n- Clue 3 says loafers are not in house 1, so loafers are in house 2.\n\nTherefore, the person with the phone lives in house 2.\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963481,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 123,
+    "prompt_tokens": 321,
+    "total_tokens": 444,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

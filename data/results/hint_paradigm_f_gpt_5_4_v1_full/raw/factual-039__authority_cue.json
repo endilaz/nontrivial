@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qb7kpdReBwe6CTqdS9SxwmoQ22i",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **“No Fences”**, *No Fences* is the album that reached **#1 on Billboard's Top Country Albums chart**. From **“Friends in Low Places”**, the **lead single** from that album is **“Friends in Low Places”**, and it was **performed by American country pop artist Garth Brooks**.\n\nTherefore, the performer of the lead single on *No Fences* is **Garth Brooks**.\n\nFinal answer: Garth Brooks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962589,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 2163,
+    "total_tokens": 2270,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

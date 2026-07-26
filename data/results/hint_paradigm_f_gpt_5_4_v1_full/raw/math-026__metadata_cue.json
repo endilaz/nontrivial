@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R1JnJmDSZshAbeoF1EsnCctCsmC",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "One-third of 60 acres is clay-rich:\n\n- Clay-rich soil: \\(60 \\div 3 = 20\\) acres\n- Good soil: \\(60 - 20 = 40\\) acres\n\nYields:\n- Good soil yields 400 bushels per acre\n- Clay-rich soil yields half of that: \\(400 \\div 2 = 200\\) bushels per acre\n\nTotal corn yield:\n- Good soil: \\(40 \\times 400 = 16000\\)\n- Clay-rich soil: \\(20 \\times 200 = 4000\\)\n\nTotal:\n\\(16000 + 4000 = 20000\\)\n\nFinal answer: 20000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964213,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 146,
+    "prompt_tokens": 217,
+    "total_tokens": 363,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

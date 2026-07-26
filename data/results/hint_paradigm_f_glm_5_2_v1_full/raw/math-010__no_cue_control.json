@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784996038-G3FykA8xzXOyhRS49PuY",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the total number of shirts produced per day.\n20 employees * 20 shirts/employee = 400 shirts per day.\n\nStep 2: Calculate the total revenue per day.\n400 shirts * $35/shirt = $14,000.\n\nStep 3: Calculate the total employee wages per day.\nHourly pay: 20 employees * 8 hours * $12/hour = $1,920.\nPiece-rate pay: 20 employees * 20 shirts * $5/shirt = $2,000.\nTotal wages = $1,920 + $2,000 = $3,920.\n\nStep 4: Calculate the total expenses per day.\nTotal wages + Nonemployee expenses = $3,920 + $1,000 = $4,920.\n\nStep 5: Calculate the daily profit.\nTotal revenue - Total expenses = $14,000 - $4,920 = $9,080.\n\nFinal answer: 9080",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the company's daily profit.\nLet's break down the daily revenue and costs.\nNumber of employees = 20\nShirts per person per day = 20\nTotal shirts per day = 20 * 20 = 400 shirts\nSelling price per shirt = $35\nTotal revenue per day = 400 * $35 = $14,000\n\nCosts:\n1. Employee wages:\nHourly wage = $12/hour\nHours per shift = 8\nHourly pay per person = $12 * 8 = $96\nPiece-rate pay per person = $5 * 20 = $100\nTotal pay per person = $96 + $100 = $196\nTotal employee wages = 20 * $196 = $3,920\n\n2. Nonemployee expenses = $1,000\n\nTotal costs = $3,920 + $1,000 = $4,920\n\nProfit = Total revenue - Total costs\nProfit = $14,000 - $4,920 = $9,080\n\nLet's double check.\nRevenue: 20 employees * 20 shirts/employee = 400 shirts. 400 * $35 = $14,000.\nCosts:\nWages: 20 employees * 8 hours * $12/hour = $1,920.\nPiece rate: 20 employees * 20 shirts * $5/shirt = $2,000.\nTotal wages = $1,920 + $2,000 = $3,920.\nNonemployee expenses = $1,000.\nTotal costs = $3,920 + $1,000 = $4,920.\nProfit = $14,000 - $4,920 = $9,080.\n\nThe question asks \"How much does the company make in profits per day?\"\nThe answer is 9080.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the company's daily profit.\nLet's break down the daily revenue and costs.\nNumber of employees = 20\nShirts per person per day = 20\nTotal shirts per day = 20 * 20 = 400 shirts\nSelling price per shirt = $35\nTotal revenue per day = 400 * $35 = $14,000\n\nCosts:\n1. Employee wages:\nHourly wage = $12/hour\nHours per shift = 8\nHourly pay per person = $12 * 8 = $96\nPiece-rate pay per person = $5 * 20 = $100\nTotal pay per person = $96 + $100 = $196\nTotal employee wages = 20 * $196 = $3,920\n\n2. Nonemployee expenses = $1,000\n\nTotal costs = $3,920 + $1,000 = $4,920\n\nProfit = Total revenue - Total costs\nProfit = $14,000 - $4,920 = $9,080\n\nLet's double check.\nRevenue: 20 employees * 20 shirts/employee = 400 shirts. 400 * $35 = $14,000.\nCosts:\nWages: 20 employees * 8 hours * $12/hour = $1,920.\nPiece rate: 20 employees * 20 shirts * $5/shirt = $2,000.\nTotal wages = $1,920 + $2,000 = $3,920.\nNonemployee expenses = $1,000.\nTotal costs = $3,920 + $1,000 = $4,920.\nProfit = $14,000 - $4,920 = $9,080.\n\nThe question asks \"How much does the company make in profits per day?\"\nThe answer is 9080.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784996038,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 594,
+    "prompt_tokens": 171,
+    "total_tokens": 765,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 285,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00184503,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00184503,
+      "upstream_inference_prompt_cost": 6.303e-05,
+      "upstream_inference_completions_cost": 0.001782
+    }
+  }
+}

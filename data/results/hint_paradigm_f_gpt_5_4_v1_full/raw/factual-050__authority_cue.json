@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qcn6ysGeBppH3DJF03VPqiBlZHM",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From the source titled **“Jane (magazine)”**, *Jane* is described as “an American magazine created to appeal to … women” and as differing from the “typical women’s magazine format,” which indicates it is a women’s magazine.\n\nFrom the source titled **“First for Women”**, *First for Women* is explicitly described as “a woman's magazine.”\n\nTherefore, both **Jane** and **First for Women** are women’s magazines.\n\nFinal answer: yes",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962693,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 1717,
+    "total_tokens": 1817,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

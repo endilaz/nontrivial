@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963462-TXNUh3q8D83mTrRmoXJS",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Francis Nethersole], Sir Francis Nethersole was born in 1587. According to the source [Elizabeth Stuart, Queen of Bohemia], Elizabeth Stuart was born on 19 August 1596. Since 1587 is earlier than 1596, Francis Nethersole was born first.\n\nFinal answer: Francis Nethersole",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks who was born first between Francis Nethersole and Elizabeth Stuart.\nFrom the source [Francis Nethersole]: Sir Francis Nethersole (1587–1659).\nFrom the source [Elizabeth Stuart, Queen of Bohemia]: Elizabeth Stuart (19 August 1596 – 13 February 1662).\nFrancis Nethersole was born in 1587. Elizabeth Stuart was born in 1596.\nTherefore, Francis Nethersole was bornfirst.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks who was born first between Francis Nethersole and Elizabeth Stuart.\nFrom the source [Francis Nethersole]: Sir Francis Nethersole (1587–1659).\nFrom the source [Elizabeth Stuart, Queen of Bohemia]: Elizabeth Stuart (19 August 1596 – 13 February 1662).\nFrancis Nethersole was born in 1587. Elizabeth Stuart was born in 1596.\nTherefore, Francis Nethersole was bornfirst.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963462,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 182,
+    "prompt_tokens": 1217,
+    "total_tokens": 1399,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 99,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00167781,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00167781,
+      "upstream_inference_prompt_cost": 0.00113181,
+      "upstream_inference_completions_cost": 0.000546
+    }
+  }
+}

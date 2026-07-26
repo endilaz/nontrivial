@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QXFi98XpU45OiI5KsK6tZEyPBzI",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The “American actress, dancer, and singer, widely known for performing in films and RKO's musical films” is **Ginger Rogers**, from the source titled **“Ginger Rogers.”**\n\nLooking at the listed American Pre-Code comedy films, the one that **features** Ginger Rogers is **“Hat Check Girl”**, which says it “stars Sally Eilers, Ben Lyon, **Ginger Rogers** and Monroe Owsley” and that it “was released on October 8, **1932**,” from the source titled **“Hat Check Girl.”**\n\nTherefore, the film was released in **1932**.\n\nFinal answer: 1932",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962349,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 1144,
+    "total_tokens": 1281,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

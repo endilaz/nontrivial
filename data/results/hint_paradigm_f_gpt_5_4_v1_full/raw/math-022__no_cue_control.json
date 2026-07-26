@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R0iJAhp1OR53pIYl6qgR0wBHzUS",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "One student scored 95%.\n\nAnother got 3 wrong out of 40, so they got 37 right out of 40:\n- \\( \\frac{37}{40} = 0.925 = 92.5\\% \\)\n\nSo the highest score to beat is 95%.\n\nOn a 40-question test, 95% correct is:\n- \\( 0.95 \\times 40 = 38 \\)\n\nTo have the highest score, Sierra must score higher than 38 correct, so she needs:\n\n39 questions right.\n\nFinal answer: 39",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964176,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 164,
+    "total_tokens": 283,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

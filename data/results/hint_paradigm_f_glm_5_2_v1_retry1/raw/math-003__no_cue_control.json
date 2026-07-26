@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785063213-62px8tIjDQnGGRNngA6A",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let's calculate the total number of jumping jacks Derek has done so far this week (Sunday through Friday):\n- Sunday: 34\n- Monday: 20\n- Tuesday: 0 (skipped)\n- Wednesday: 123\n- Thursday: 64\n- Friday: 23\n\nTotal so far = 34 + 20 + 0 + 123 + 64 + 23 = 264 jumping jacks.\n\nLast week, he did 324 jumping jacks. To beat last week's number, he needs to do at least 325 jumping jacks this week.\n\nNumber of jumping jacks needed on Saturday = 325 - 264 = 61.\n\nFinal answer: 61",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem.\nDerek wants to do more jumping jacks this week than last week.\nLast week's total: 324 jumping jacks.\nThis week's jumping jacks so far (Sunday to Friday):\nSunday: 34\nMonday: 20\nTuesday: 0 (skipped a day)\nWednesday: 123\nThursday: 64\nFriday: 23\n\nTotal so far = 34 + 20 + 0 + 123 + 64 + 23\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264\n\nHe wants to beat last week's number, which means he needs to do strictly more than 324.\nSo he needs at least 325 jumping jacks this week.\nNumber of jumping jacks he has to do on Saturday = 325 - 264 = 61.\n\nLet's double check the addition.\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264.\nTotal needed to beat 324 is 325.\n325 - 264 = 61.\n\nWait, is there any trick? \"beat last week's number\" means > 324. So 325.\n325 - 264 = 61.\nThe question asks \"How many does he have to do on Saturday to make sure he beats last week's number?\"\nAnswer is 61.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem.\nDerek wants to do more jumping jacks this week than last week.\nLast week's total: 324 jumping jacks.\nThis week's jumping jacks so far (Sunday to Friday):\nSunday: 34\nMonday: 20\nTuesday: 0 (skipped a day)\nWednesday: 123\nThursday: 64\nFriday: 23\n\nTotal so far = 34 + 20 + 0 + 123 + 64 + 23\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264\n\nHe wants to beat last week's number, which means he needs to do strictly more than 324.\nSo he needs at least 325 jumping jacks this week.\nNumber of jumping jacks he has to do on Saturday = 325 - 264 = 61.\n\nLet's double check the addition.\n34 + 20 = 54\n54 + 123 = 177\n177 + 64 = 241\n241 + 23 = 264.\nTotal needed to beat 324 is 325.\n325 - 264 = 61.\n\nWait, is there any trick? \"beat last week's number\" means > 324. So 325.\n325 - 264 = 61.\nThe question asks \"How many does he have to do on Saturday to make sure he beats last week's number?\"\nAnswer is 61.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785063213,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 469,
+    "prompt_tokens": 196,
+    "total_tokens": 665,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 240,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 192,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00144528,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00144528,
+      "upstream_inference_prompt_cost": 3.828e-05,
+      "upstream_inference_completions_cost": 0.001407
+    }
+  }
+}

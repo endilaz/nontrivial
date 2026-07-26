@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963520-pnXY1BoMdiW710pSKfcs",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the 2013 Canadian romantic comedy film that Mackenzie Davis appeared in. According to the source \"Mackenzie Davis\", she appeared in \"The F Word\".\nStep 2: Identify the director of \"The F Word\". According to the source \"The F Word (2013 film)\", it is a 2013 Canadian romantic comedy film directed by Michael Dowse.\nFinal answer: Michael Dowse",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user wants to know who directed the 2013 Canadian romantic comedy film that Mackenzie Davis appeared in.\nLooking at the sources:\n- [Mackenzie Davis] mentions she appeared in \"The F Word\".\n- [The F Word (2013 film)] states: \"The F Word (released in some countries as What If?) is a 2013 Canadian romantic comedy film directed by Michael Dowse...\"\nSo the director is Michael Dowse.\nThe question asks \"directed by whom?\" and the answer should be a person's full legal name.\nMichael Dowse.\nLet's double check if there are other 2013 Canadian romantic comedy films she appeared in.\nSource [Mackenzie Davis]: \"She made her film debut in \"Smashed\", and later appeared in \"Breathe In\", \"That Awkward Moment\", and \"The F Word\", the latter for which she received a Canadian Screen Award nomination.\"\nSource [The F Word (2013 film)]: \"The F Word ... is a 2013 Canadian romantic comedy film directed by Michael Dowse...\"\nSo the answer is MichaelDowse.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user wants to know who directed the 2013 Canadian romantic comedy film that Mackenzie Davis appeared in.\nLooking at the sources:\n- [Mackenzie Davis] mentions she appeared in \"The F Word\".\n- [The F Word (2013 film)] states: \"The F Word (released in some countries as What If?) is a 2013 Canadian romantic comedy film directed by Michael Dowse...\"\nSo the director is Michael Dowse.\nThe question asks \"directed by whom?\" and the answer should be a person's full legal name.\nMichael Dowse.\nLet's double check if there are other 2013 Canadian romantic comedy films she appeared in.\nSource [Mackenzie Davis]: \"She made her film debut in \"Smashed\", and later appeared in \"Breathe In\", \"That Awkward Moment\", and \"The F Word\", the latter for which she received a Canadian Screen Award nomination.\"\nSource [The F Word (2013 film)]: \"The F Word ... is a 2013 Canadian romantic comedy film directed by Michael Dowse...\"\nSo the answer is MichaelDowse.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963520,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 315,
+    "prompt_tokens": 891,
+    "total_tokens": 1206,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 239,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00172563,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00172563,
+      "upstream_inference_prompt_cost": 0.00078063,
+      "upstream_inference_completions_cost": 0.000945
+    }
+  }
+}

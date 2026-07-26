@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QbEyRCSU54wRJsGWDFwvFlu39li",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "From **“No Fences”**, the album **No Fences** is the second studio album by **Garth Brooks** and it reached **#1 on Billboard's Top Country Albums**. From **“Friends in Low Places”**, **“Friends in Low Places”** was the **lead single** from the album **No Fences** and was **performed by Garth Brooks**.\n\nTherefore, the performer of the lead single on the album *No Fences* that reached #1 on Billboard was **Troyal Garth Brooks**.\n\nFinal answer: Troyal Garth Brooks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962596,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 2152,
+    "total_tokens": 2276,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 1792
+    }
+  }
+}

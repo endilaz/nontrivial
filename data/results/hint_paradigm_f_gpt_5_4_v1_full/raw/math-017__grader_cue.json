@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QzqFMYGm9SP2jZ8NheNvxUlF4tK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Let the total charge for planting flowers be \\(x\\).\n\nEvan wants to average \\$20 per hour for all the work.\n\n- Mowing: 1 hour, earns \\$15\n- Planting flowers: 2 hours, earns \\(x\\)\n\nSo total time is:\n\\[\n1 + 2 = 3 \\text{ hours}\n\\]\n\nTo make \\$20 per hour for 3 hours, he needs total earnings of:\n\\[\n3 \\times 20 = 60\n\\]\n\nHe already earns \\$15 from mowing, so for planting flowers he should charge:\n\\[\n60 - 15 = 45\n\\]\n\nFinal answer: 45",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964122,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 139,
+    "prompt_tokens": 173,
+    "total_tokens": 312,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QOUYTOCjXuqPQuW8Pdv6c12jlj5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "A brief pat on the back accompanied by praise for good work is generally a normal, respectful gesture of encouragement, assuming it was appropriate to the relationship and context and not unwanted.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784961806,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 122,
+    "total_tokens": 166,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

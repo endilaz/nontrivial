@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784998618-MdQ8zahX4JcBJkQq5HXp",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Annie starts with 20 brownies.\nStep 2: She gives half of them to the school administrator, which is 20 / 2 = 10 brownies. She now has 20 - 10 = 10 brownies left.\nStep 3: Of the remaining 10 brownies, she gives half to Carl, which is 10 / 2 = 5 brownies. She now has 10 - 5 = 5 brownies left.\nStep 4: She gives 2 brownies to Ansel. She now has 5 - 2 = 3 brownies left.\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's trace the number of brownies Annie has at each step.\n1. Initial amount: 20 brownies.\n2. She gave half of them to the school administrator.\n   Half of 20 is 10.\n   Remaining brownies: 20 - 10 = 10.\n3. Of the remaining brownies (10), she gave half to her best friend, Carl.\n   Half of 10 is 5.\n   Remaining brownies: 10 - 5 = 5.\n4. She gave another two to her friend, Ansel.\n   Remaining brownies: 5 - 2 = 3.\n\nSo she had 3 brownies left.\nThe problem asks \"How many brownies did she have left?\".\nThe answer is 3.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's trace the number of brownies Annie has at each step.\n1. Initial amount: 20 brownies.\n2. She gave half of them to the school administrator.\n   Half of 20 is 10.\n   Remaining brownies: 20 - 10 = 10.\n3. Of the remaining brownies (10), she gave half to her best friend, Carl.\n   Half of 10 is 5.\n   Remaining brownies: 10 - 5 = 5.\n4. She gave another two to her friend, Ansel.\n   Remaining brownies: 5 - 2 = 3.\n\nSo she had 3 brownies left.\nThe problem asks \"How many brownies did she have left?\".\nThe answer is 3.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784998618,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 294,
+    "prompt_tokens": 149,
+    "total_tokens": 443,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 133,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00097257,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00097257,
+      "upstream_inference_prompt_cost": 9.057e-05,
+      "upstream_inference_completions_cost": 0.000882
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784985634-aDJ4FwuaBoQKbw47G9IW",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Analyze the houses and characteristics. There are two houses: House 1 and House 2. Each has one person with a unique device, lunch, and favorite color.\nStep 2: Use Clue 1: \"The person who ate spaghetti does not live in the first house.\" This means spaghetti was eaten in House 2, and fried rice was eaten in House 1.\nStep 3: Use Clue 2: \"The person who has a computer lives in the second house.\" This means the computer is in House 2, and the radio is in House 1.\nStep 4: Use Clue 3: \"The person who likes white does not live in the second house.\" Since there are only two houses, the person who likes white must live in the first house.\nStep 5: The question asks for the number of the house where the person who likes white lives. Based on Step 4, this is House 1.\n\nFinal answer: 1",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the number of the house where the person who likes white lives.\nThere are 2 houses: House 1 (left) and House 2 (right).\nCharacteristics:\n- Device: radio, computer\n- Lunch: fried rice, spaghetti\n- Color: green, white\n\nClues:\n1. The person who ate spaghetti does not live in the first house.\n   -> Spaghetti is in House 2. Fried rice is in House 1.\n2. The person who has a computer lives in the second house.\n   -> Computer is in House 2. Radio is in House 1.\n3. The person who likes white does not live in the second house.\n   -> White is in House 1. Green is in House 2.\n\nQuestion: What is the number of the house where the person who likes white lives?\nFrom clue 3, the person who likes white does not live in the second house, so they must live in the first house.\nHouse number is 1.\n\nWait, let me double check.\nHouse 1: Fried rice, Radio, White.\nHouse 2: Spaghetti, Computer, Green.\nThe question asks for the number of the house where the person who likes white lives.\nThe answer is 1.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the number of the house where the person who likes white lives.\nThere are 2 houses: House 1 (left) and House 2 (right).\nCharacteristics:\n- Device: radio, computer\n- Lunch: fried rice, spaghetti\n- Color: green, white\n\nClues:\n1. The person who ate spaghetti does not live in the first house.\n   -> Spaghetti is in House 2. Fried rice is in House 1.\n2. The person who has a computer lives in the second house.\n   -> Computer is in House 2. Radio is in House 1.\n3. The person who likes white does not live in the second house.\n   -> White is in House 1. Green is in House 2.\n\nQuestion: What is the number of the house where the person who likes white lives?\nFrom clue 3, the person who likes white does not live in the second house, so they must live in the first house.\nHouse number is 1.\n\nWait, let me double check.\nHouse 1: Fried rice, Radio, White.\nHouse 2: Spaghetti, Computer, Green.\nThe question asks for the number of the house where the person who likes white lives.\nThe answer is 1.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784985634,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 468,
+    "prompt_tokens": 286,
+    "total_tokens": 754,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 259,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00166998,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00166998,
+      "upstream_inference_prompt_cost": 0.00026598,
+      "upstream_inference_completions_cost": 0.001404
+    }
+  }
+}

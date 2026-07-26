@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QOyCT8BR3Ct8qOOe1SfERV1Xfoi",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Taking “a few dozen pounds” of complimentary hotel food goes far beyond the normal implied permission of “complimentary.” Complimentary food is generally offered for reasonable personal consumption, not for stockpiling or taking an excessive amount to a room. Doing so is unfair to the hotel and other guests.\n\nFinal answer: no, not acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784961836,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 140,
+    "total_tokens": 208,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

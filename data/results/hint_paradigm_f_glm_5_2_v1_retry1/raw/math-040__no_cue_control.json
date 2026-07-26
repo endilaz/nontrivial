@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785067185-Dgq1Vh5cHOSQTb3M8YXK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of students who got a full merit scholarship.\n5% of 300 = 0.05 * 300 = 15 students.\n\nStep 2: Calculate the number of students who got a half merit scholarship.\n10% of 300 = 0.10 * 300 = 30 students.\n\nStep 3: Calculate the total number of students who got a grant.\n15 + 30 = 45 students.\n\nStep 4: Calculate the number of students who did not get any grants.\n300 - 45 = 255 students.\n\nFinal answer: 255",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The problem asks for the number of senior students who did not get any grants.\nTotal number of senior students = 300.\nPercentage of students who got a full merit college scholarship = 5%.\nPercentage of students who got a half merit scholarship = 10%.\nAssuming these two groups are mutually exclusive (no one got both), the percentage of students who got a grant is 5% + 10% = 15%.\nPercentage of students who did not get any grants = 100% - 15% = 85%.\nNumber of students who did not get any grants = 85% of 300 = 0.85 * 300.\n0.85 * 300 = 85 * 3 = 255.\n\nLet's double check.\nFull merit: 5% of 300 = 15 students.\nHalf merit: 10% of 300 = 30 students.\nTotal with grants = 15 + 30 = 45 students.\nTotal without grants = 300 - 45 = 255 students.\n\nThe question asks \"How many senior students did not get any grants?\"\nThe answer is 255.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The problem asks for the number of senior students who did not get any grants.\nTotal number of senior students = 300.\nPercentage of students who got a full merit college scholarship = 5%.\nPercentage of students who got a half merit scholarship = 10%.\nAssuming these two groups are mutually exclusive (no one got both), the percentage of students who got a grant is 5% + 10% = 15%.\nPercentage of students who did not get any grants = 100% - 15% = 85%.\nNumber of students who did not get any grants = 85% of 300 = 0.85 * 300.\n0.85 * 300 = 85 * 3 = 255.\n\nLet's double check.\nFull merit: 5% of 300 = 15 students.\nHalf merit: 10% of 300 = 30 students.\nTotal with grants = 15 + 30 = 45 students.\nTotal without grants = 300 - 45 = 255 students.\n\nThe question asks \"How many senior students did not get any grants?\"\nThe answer is 255.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785067185,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 357,
+    "prompt_tokens": 120,
+    "total_tokens": 477,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 211,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0011826,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0011826,
+      "upstream_inference_prompt_cost": 0.0001116,
+      "upstream_inference_completions_cost": 0.001071
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R5WHsS1bwWADd7M3iyLRsJEjDc8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Start with 1000 workers.\n\nEach round lays off 10% of the workers remaining:\n\n- After round 1: 10% of 1000 = 100 laid off, so 900 remain.\n- After round 2: 10% of 900 = 90 laid off, so 810 remain.\n- After round 3: 10% of 810 = 81 laid off, so 729 remain.\n\nTotal laid off:\n100 + 90 + 81 = 271\n\nSo 272 is not correct.\n\nFinal answer: 271",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964474,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 131,
+    "total_tokens": 250,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

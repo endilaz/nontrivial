@@ -1,0 +1,58 @@
+{
+  "id": "gen-1785004467-bKQLzvjZIWJWeGZIkw1Y",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of doses Calvin takes per day.\nSince he takes it every 6 hours, and there are 24 hours in a day:\n24 / 6 = 4 doses per day.\n\nStep 2: Calculate the total number of doses over the 2-week period.\n2 weeks is equal to 14 days.\n14 days * 4 doses per day = 56 doses total.\n\nStep 3: Calculate the number of pills per dose.\nEach dose is 1000 mg, and each pill is 500 mg.\n1000 mg / 500 mg per pill = 2 pills per dose.\n\nStep 4: Calculate the total number of pills taken.\n56 doses * 2 pills per dose = 112 pills.\n\nFinal answer: 112",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking for the total number of pills Calvin takes.\nDosage: 1000 mg every 6 hours.\nDuration: 2 weeks.\nPill size: 500 mg.\n\nStep 1: Calculate the number of doses per day.\n24 hours / 6 hours = 4 doses per day.\n\nStep 2: Calculate the total number of doses over 2 weeks.\n2 weeks = 14 days.\n14 days * 4 doses/day = 56 doses.\n\nStep 3: Calculate the number of pills per dose.\n1000 mg / 500 mg/pill = 2 pills per dose.\n\nStep 4: Calculate the total number of pills.\n56 doses * 2 pills/dose = 112 pills.\n\nLet's double check.\n1000 mg every 6 hours = 4000 mg per day.\n4000 mg / 500 mg = 8 pills per day.\n8 pills/day * 14 days = 112 pills.\n\nThe mathis correct.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking for the total number of pills Calvin takes.\nDosage: 1000 mg every 6 hours.\nDuration: 2 weeks.\nPill size: 500 mg.\n\nStep 1: Calculate the number of doses per day.\n24 hours / 6 hours = 4 doses per day.\n\nStep 2: Calculate the total number of doses over 2 weeks.\n2 weeks = 14 days.\n14 days * 4 doses/day = 56 doses.\n\nStep 3: Calculate the number of pills per dose.\n1000 mg / 500 mg/pill = 2 pills per dose.\n\nStep 4: Calculate the total number of pills.\n56 doses * 2 pills/dose = 112 pills.\n\nLet's double check.\n1000 mg every 6 hours = 4000 mg per day.\n4000 mg / 500 mg = 8 pills per day.\n8 pills/day * 14 days = 112 pills.\n\nThe mathis correct.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1785004467,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 361,
+    "prompt_tokens": 133,
+    "total_tokens": 494,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 171,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00115869,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00115869,
+      "upstream_inference_prompt_cost": 7.569e-05,
+      "upstream_inference_completions_cost": 0.001083
+    }
+  }
+}

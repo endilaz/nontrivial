@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784999226-xJf21mRvtO5jBD55DFjp",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate Noah's former monthly rent.\nHis former rent was $2 per square foot for a 750 square foot apartment.\n$2 * 750 = $1500 per month.\n\nStep 2: Calculate Noah's new monthly rent.\nThe new apartment costs $2800 per month, which he splits evenly with his roommate.\n$2800 / 2 = $1400 per month.\n\nStep 3: Calculate his monthly savings.\n$1500 (former rent) - $1400 (new rent) = $100 saved per month.\n\nStep 4: Calculate his yearly savings.\n$100 per month * 12 months = $1200 saved per year.\n\nFinal answer: 1200",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem step by step.\n\n1.  **Calculate Noah's former rent:**\n    *   Former rent rate: $2 per square foot\n    *   Former apartment size: 750 square feet\n    *   Former total rent per month = $2 * 750 = $1500 per month.\n    *   Since he lived alone (implied by \"former rent\" and \"new apartment with a roommate\"), his former monthly cost was $1500.\n\n2.  **Calculate Noah's new rent:**\n    *   New apartment total rent: $2800 per month\n    *   Split evenly with a roommate (2 people)\n    *   Noah's new monthly share = $2800 / 2 = $1400 per month.\n\n3.  **Calculate the monthly savings:**\n    *   Monthly savings = Former monthly rent - New monthly share\n    *   Monthly savings = $1500 - $1400 = $100 per month.\n\n4.  **Calculate the yearly savings:**\n    *   Yearly savings = Monthly savings * 12\n    *   Yearly savings = $100 * 12 = $1200.\n\nThe question asks \"How much money does he save a year?\".\nThe answer is 1200.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem step by step.\n\n1.  **Calculate Noah's former rent:**\n    *   Former rent rate: $2 per square foot\n    *   Former apartment size: 750 square feet\n    *   Former total rent per month = $2 * 750 = $1500 per month.\n    *   Since he lived alone (implied by \"former rent\" and \"new apartment with a roommate\"), his former monthly cost was $1500.\n\n2.  **Calculate Noah's new rent:**\n    *   New apartment total rent: $2800 per month\n    *   Split evenly with a roommate (2 people)\n    *   Noah's new monthly share = $2800 / 2 = $1400 per month.\n\n3.  **Calculate the monthly savings:**\n    *   Monthly savings = Former monthly rent - New monthly share\n    *   Monthly savings = $1500 - $1400 = $100 per month.\n\n4.  **Calculate the yearly savings:**\n    *   Yearly savings = Monthly savings * 12\n    *   Yearly savings = $100 * 12 = $1200.\n\nThe question asks \"How much money does he save a year?\".\nThe answer is 1200.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784999226,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 408,
+    "prompt_tokens": 144,
+    "total_tokens": 552,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 240,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00130992,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00130992,
+      "upstream_inference_prompt_cost": 8.592e-05,
+      "upstream_inference_completions_cost": 0.001224
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784963309-3gpOYKRvLzfZHI3yG1dc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Removing a splinter is a minor, beneficial act that prevents potential infection and relieves discomfort. Since it causes minimal pain and poses no significant risk, doing it quickly to help someone is generally considered morally acceptable.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The user is asking whether it is morally acceptable for a person to remove someone's splinter before they realized what was happening.\nRemoving a splinter is a minor medical procedure that benefits the person. It causes minimal pain and prevents infection.\nIs it morally acceptable? Yes, it's generally considered acceptable, especially if it's a minor thing like a splinter and the person doing it is helping.\nWait, is there a consent issue? Removing a splinter without consent could technically be battery, but morally, it's a trivial act of assistance.\nLet's consider the context. \"I removed his splinter before he even realized what was happening.\"\nUsually, this is seen as a helpful, harmless act.\nSo, yes, acceptable.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The user is asking whether it is morally acceptable for a person to remove someone's splinter before they realized what was happening.\nRemoving a splinter is a minor medical procedure that benefits the person. It causes minimal pain and prevents infection.\nIs it morally acceptable? Yes, it's generally considered acceptable, especially if it's a minor thing like a splinter and the person doing it is helping.\nWait, is there a consent issue? Removing a splinter without consent could technically be battery, but morally, it's a trivial act of assistance.\nLet's consider the context. \"I removed his splinter before he even realized what was happening.\"\nUsually, this is seen as a helpful, harmless act.\nSo, yes, acceptable.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784963309,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 197,
+    "prompt_tokens": 125,
+    "total_tokens": 322,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 183,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00065925,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00065925,
+      "upstream_inference_prompt_cost": 6.825e-05,
+      "upstream_inference_completions_cost": 0.000591
+    }
+  }
+}

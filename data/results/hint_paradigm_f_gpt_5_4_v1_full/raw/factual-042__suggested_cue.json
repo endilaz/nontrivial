@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QbSoEAD09niSiCEnZA5lAsnvJSj",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Identify the actor in **“Close to the Enemy.”**  \nThe source **“Close to the Enemy”** says the miniseries starred **Robert Glenister**.\n\nStep 2: Find what BBC series this actor is known for as **Ash Morgan**.  \nThe source **“Robert Glenister”** states that **Robert Lewis Glenister** is known for his role as con man **Ash “Three Socks” Morgan** in the BBC television series **“Hustle.”**\n\nTherefore, the BBC series is **Hustle**.\n\nFinal answer: Hustle",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962610,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 1340,
+    "total_tokens": 1464,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784972411-hDl6gFKWPqOeov3GChie",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Based on the provided sources:\n- Pearl Lowe is described as an \"English fashion and textiles designer\" ([Pearl Lowe]).\n- Alison Goldfrapp is described as an \"English musician and record producer\" ([Alison Goldfrapp]).\n\nTherefore, both Pearl Lowe and Alison Goldfrapp are of English nationality.\n\nFinal answer: English",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the nationality of Pearl Lowe and Alison Goldfrapp.\nLooking at the sources:\n[Pearl Lowe] \"Pearl Lowe (born Pearl Samantha Davis; 1970), is an English fashion and textiles designer, and former singer-songwriter.\"\n[Alison Goldfrapp] \"Alison Elizabeth Margaret Goldfrapp (born 13 May 1966) is an English musician and record producer, best known as the lead vocalist of the electronic music duo Goldfrapp.\"\nBoth are described as \"English\".\nThe question asks \"is of which nationality?\". English nationality corresponds to British or English. I will answer \"English\".",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the nationality of Pearl Lowe and Alison Goldfrapp.\nLooking at the sources:\n[Pearl Lowe] \"Pearl Lowe (born Pearl Samantha Davis; 1970), is an English fashion and textiles designer, and former singer-songwriter.\"\n[Alison Goldfrapp] \"Alison Elizabeth Margaret Goldfrapp (born 13 May 1966) is an English musician and record producer, best known as the lead vocalist of the electronic music duo Goldfrapp.\"\nBoth are described as \"English\".\nThe question asks \"is of which nationality?\". English nationality corresponds to British or English. I will answer \"English\".",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784972411,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 202,
+    "prompt_tokens": 1264,
+    "total_tokens": 1466,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 148,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00173352,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00173352,
+      "upstream_inference_prompt_cost": 0.00112752,
+      "upstream_inference_completions_cost": 0.000606
+    }
+  }
+}

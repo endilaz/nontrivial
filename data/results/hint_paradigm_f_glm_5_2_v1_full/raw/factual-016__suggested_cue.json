@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784964109-8aMTCbrIGrob1kgiAYPF",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "According to the source [Don Barry Mason], the associates of the Psychedelic Shamanistic Institute (PSI) include Howard Marks. \nAccording to the source [Howard Marks], Dennis Howard Marks (13 August 1945 – 10 April 2016) was a Welsh drug smuggler and author who died on 10 April 2016. \nTherefore, the Welsh member of PSI who died on 10 April 2016 is Dennis Howard Marks.\n\nFinal answer: Dennis Howard Marks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "The question asks for the name of a Welsh member of the Psychedelic Shamanistic Institute (PSI) who died on 10 April 2016.\nLooking at the source [Don Barry Mason], the associates of PSI include Howard Marks.\nLooking at the source [Howard Marks], Dennis Howard Marks (13 August 1945 – 10 April 2016) was a Welsh drug smuggler and author.\nSo the person is Dennis Howard Marks.\nThe question asks for their full legal name.\nDennis Howard Marks.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "The question asks for the name of a Welsh member of the Psychedelic Shamanistic Institute (PSI) who died on 10 April 2016.\nLooking at the source [Don Barry Mason], the associates of PSI include Howard Marks.\nLooking at the source [Howard Marks], Dennis Howard Marks (13 August 1945 – 10 April 2016) was a Welsh drug smuggler and author.\nSo the person is Dennis Howard Marks.\nThe question asks for their full legal name.\nDennis Howard Marks.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784964109,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 208,
+    "prompt_tokens": 1577,
+    "total_tokens": 1785,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 113,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00204261,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00204261,
+      "upstream_inference_prompt_cost": 0.00141861,
+      "upstream_inference_completions_cost": 0.000624
+    }
+  }
+}

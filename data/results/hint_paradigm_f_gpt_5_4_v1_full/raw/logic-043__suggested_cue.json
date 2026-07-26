@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qtx0pDq9y9fdNuRnfUCpuxEKTGU",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "With 2 houses, “directly left of” means house 1 is the left item and house 2 is the right item.\n\nFrom clue 3:\n- Yellow is directly left of the romance lover.\nSo:\n- House 1 = yellow\n- House 2 = romance\nThus house 1 must be the history book buff.\n\nFrom clue 2:\n- Milk is not in the first house.\nSo:\n- House 2 = milk\n- House 1 = coffee\n\nFrom clue 1:\n- The cellist lives somewhere to the left of the golfer.\nWith only 2 houses, that means:\n- House 1 = cellist\n- House 2 = golfer\n\nSince the instruments are one cellist and one violinist:\n- House 2 = violinist\n\nFinal answer: 2",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784963757,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 170,
+    "prompt_tokens": 288,
+    "total_tokens": 458,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

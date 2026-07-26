@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qb4xVyJXKBmgQgOHEVFf0hbkrjW",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The question asks who performed the lead single on the album *No Fences* that reached #1 on Billboard.\n\nFrom **[Friends in Low Places]**, “Friends in Low Places” is “a song performed by American country pop artist **Garth Brooks**” and it was “the lead single from his album *No Fences*.” It also says the song spent four weeks at number one on Hot Country Songs.\n\nFrom **[No Fences]**, *No Fences* is the second studio album by **Garth Brooks**.\n\nSo the performer of the lead single was **Garth Brooks**.\n\nFinal answer: Troyal Garth Brooks",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962586,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 136,
+    "prompt_tokens": 2159,
+    "total_tokens": 2295,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

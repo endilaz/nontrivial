@@ -1,0 +1,58 @@
+{
+  "id": "gen-1784998760-Uj8LHMfz3bbHCrxxBpEE",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Step 1: Calculate the number of acres of clay-rich soil. \nDiego has 60 acres in total, and one-third is clay-rich soil. \n60 / 3 = 20 acres of clay-rich soil.\n\nStep 2: Calculate the number of acres of good soil. \nThe rest of the land is good soil. \n60 - 20 = 40 acres of good soil.\n\nStep 3: Calculate the yield per acre for each soil type. \nGood soil yields 400 bushels per acre. \nClay-rich soil yields half as much as good soil, so 400 / 2 = 200 bushels per acre.\n\nStep 4: Calculate the total yield from the good soil. \n40 acres * 400 bushels/acre = 16,000 bushels.\n\nStep 5: Calculate the total yield from the clay-rich soil. \n20 acres * 200 bushels/acre = 4,000 bushels.\n\nStep 6: Calculate the total yield from all the land. \n16,000 bushels + 4,000 bushels = 20,000 bushels.\n\nFinal answer: 20000",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning": "Let's break down the problem step by step.\n\n1. Diego has 60 acres of property.\n2. One-third of the 60 acres is clay-rich soil.\n   - Clay-rich soil = 60 / 3 = 20 acres.\n3. The rest of the land is good soil.\n   - Good soil = 60 - 20 = 40 acres.\n4. Corn grown on good soil yields 400 bushels per acre.\n   - Yield from good soil = 40 acres * 400 bushels/acre = 16,000 bushels.\n5. Corn grown on clay-rich soil yields only half as much per acre as in good soil.\n   - Yield per acre on clay-rich soil = 400 / 2 = 200 bushels/acre.\n   - Yield from clay-rich soil = 20 acres * 200 bushels/acre = 4,000 bushels.\n6. Total yield = Yield from good soil + Yield from clay-rich soil\n   - Total yield = 16,000 + 4,000 = 20,000 bushels.\n\nLet's double check.\nTotal acres = 60\nClay-rich = 1/3 * 60 = 20 acres\nGood = 60 - 20 = 40 acres\nYield on good = 400 bushels/acre\nYield on clay = 400 / 2 = 200 bushels/acre\nTotal yield = 40 * 400 + 20 * 200 = 16000 + 4000 = 20000.\n\nThe question asks for the number of bushels of corn Diego's land yielded last year.\nThe answer is 20000.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.text",
+            "text": "Let's break down the problem step by step.\n\n1. Diego has 60 acres of property.\n2. One-third of the 60 acres is clay-rich soil.\n   - Clay-rich soil = 60 / 3 = 20 acres.\n3. The rest of the land is good soil.\n   - Good soil = 60 - 20 = 40 acres.\n4. Corn grown on good soil yields 400 bushels per acre.\n   - Yield from good soil = 40 acres * 400 bushels/acre = 16,000 bushels.\n5. Corn grown on clay-rich soil yields only half as much per acre as in good soil.\n   - Yield per acre on clay-rich soil = 400 / 2 = 200 bushels/acre.\n   - Yield from clay-rich soil = 20 acres * 200 bushels/acre = 4,000 bushels.\n6. Total yield = Yield from good soil + Yield from clay-rich soil\n   - Total yield = 16,000 + 4,000 = 20,000 bushels.\n\nLet's double check.\nTotal acres = 60\nClay-rich = 1/3 * 60 = 20 acres\nGood = 60 - 20 = 40 acres\nYield on good = 400 bushels/acre\nYield on clay = 400 / 2 = 200 bushels/acre\nTotal yield = 40 * 400 + 20 * 200 = 16000 + 4000 = 20000.\n\nThe question asks for the number of bushels of corn Diego's land yielded last year.\nThe answer is 20000.",
+            "format": "unknown",
+            "index": 0
+          }
+        ]
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1784998760,
+  "model": "z-ai/glm-5.2",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 583,
+    "prompt_tokens": 174,
+    "total_tokens": 757,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 270,
+      "rejected_prediction_tokens": null,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00181482,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00181482,
+      "upstream_inference_prompt_cost": 6.582e-05,
+      "upstream_inference_completions_cost": 0.001749
+    }
+  }
+}

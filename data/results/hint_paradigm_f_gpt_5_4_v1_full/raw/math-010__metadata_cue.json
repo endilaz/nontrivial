@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QyhihgD1wMwAQT8sva0QPHcNTrW",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "20 employees × 20 shirts each = 400 shirts per day.\n\nRevenue:\n400 × $35 = $14,000\n\nEmployee hourly pay:\n20 employees × 8 hours × $12 = $1,920\n\nEmployee per-shirt pay:\n400 × $5 = $2,000\n\nTotal employee pay:\n$1,920 + $2,000 = $3,920\n\nAdd nonemployee expenses:\n$3,920 + $1,000 = $4,920\n\nProfit:\n$14,000 - $4,920 = $9,080\n\nFinal answer: 9080",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964051,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 125,
+    "prompt_tokens": 212,
+    "total_tokens": 337,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

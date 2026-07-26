@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5Qyyqe4fYI8vKhB6f4N9kKHr0mXT",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Time to run half a mile at 3 mph:\n\\[\n\\frac{0.5}{3}=\\frac{1}{6}\\text{ hour}=10\\text{ minutes}\n\\]\n\nTime to walk half a mile at 1 mph:\n\\[\n\\frac{0.5}{1}=0.5\\text{ hour}=30\\text{ minutes}\n\\]\n\nTotal time:\n\\[\n10+30=40\\text{ minutes}\n\\]\n\nSo the correct total is 40 minutes, not 41.\n\nFinal answer: 40",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964068,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 137,
+    "total_tokens": 254,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

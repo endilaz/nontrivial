@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QXY2pR6bBJGJLCMz0N33TrX2rTI",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "We need an actor who was in **“D.C. Cab”** and also had a role in **“Barney Miller.”**\n\nFrom **“D.C. Cab”**, the film starred **Max Gail** among others.  \nFrom **“Max Gail”**, he is identified as the actor who portrayed Detective Stan “Wojo” Wojciehowicz on **“Barney Miller.”**\n\nSo the actor appearing in both is **Maxwell Trowbridge Gail Jr.**\n\nSources used: **“D.C. Cab”**, **“Max Gail”**\n\nFinal answer: Maxwell Trowbridge Gail Jr.",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962368,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 1363,
+    "total_tokens": 1491,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

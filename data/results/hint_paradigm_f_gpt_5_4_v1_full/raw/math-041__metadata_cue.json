@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5R45ReZzlkmPp1bqWl9DVjRv1tKn",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Compute the total cost:\n\n- 3 cappuccinos at $2 each: $6\n- 2 iced teas at $3 each: $6\n- 2 cafe lattes at $1.50 each: $3\n- 2 espressos at $1 each: $2\n\nTotal = 6 + 6 + 3 + 2 = $17\n\nChange from $20 = 20 - 17 = $3\n\nFinal answer: 3",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784964385,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 101,
+    "prompt_tokens": 201,
+    "total_tokens": 302,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

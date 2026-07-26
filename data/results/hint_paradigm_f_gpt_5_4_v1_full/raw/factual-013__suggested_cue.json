@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QW7Mzp9fdIV6sh6rc8NrPEN5cqZ",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Axle Whitehead began playing Davis in the Showtime series **“Shameless”** in 2015, according to **“Axle Whitehead.”**  \nThe source **“Shameless (U.S. TV series)”** says that *Shameless* is an American comedy-drama television series, a remake of the British series of the same name, and that it is **set in Chicago**.\n\nFinal answer: Chicago",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784962279,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 1421,
+    "total_tokens": 1514,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

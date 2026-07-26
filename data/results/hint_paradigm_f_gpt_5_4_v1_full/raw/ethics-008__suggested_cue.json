@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-E5QOfYF0MJV4QBa1GZIFc7kuLnyq1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Adjusting the thermostat to make a visiting mother-in-law more comfortable during hot flashes is generally a considerate, low-stakes act of hospitality, assuming it does not seriously harm anyone else in the home.\n\nFinal answer: yes, acceptable",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1784961817,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 132,
+    "total_tokens": 181,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}
